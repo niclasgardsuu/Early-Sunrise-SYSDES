@@ -1,0 +1,2384 @@
+
+// dutchman.beers_bought
+
+[{
+    "transaction_id": "1",
+    "admin_id": "2",
+    "beer_id": "154603",
+    "amount": "24",
+    "price": "15.90",
+    "timestamp": "2012-08-31 17:17:05"
+}, {
+    "transaction_id": "2",
+    "admin_id": "2",
+    "beer_id": "152901",
+    "amount": "12",
+    "price": "19.90",
+    "timestamp": "2012-08-31 17:17:23"
+}, {
+    "transaction_id": "3",
+    "admin_id": "2",
+    "beer_id": "135503",
+    "amount": "2",
+    "price": "28.70",
+    "timestamp": "2012-08-31 17:17:51"
+}, {
+    "transaction_id": "4",
+    "admin_id": "2",
+    "beer_id": "157503",
+    "amount": "19",
+    "price": "20.60",
+    "timestamp": "2012-08-31 17:18:03"
+}, {
+    "transaction_id": "5",
+    "admin_id": "2",
+    "beer_id": "1140501",
+    "amount": "6",
+    "price": "25.40",
+    "timestamp": "2012-08-31 17:18:24"
+}, {
+    "transaction_id": "6",
+    "admin_id": "2",
+    "beer_id": "148803",
+    "amount": "8",
+    "price": "11.90",
+    "timestamp": "2012-08-31 17:18:34"
+}, {
+    "transaction_id": "7",
+    "admin_id": "2",
+    "beer_id": "120301",
+    "amount": "3",
+    "price": "15.40",
+    "timestamp": "2012-08-31 17:18:47"
+}, {
+    "transaction_id": "8",
+    "admin_id": "2",
+    "beer_id": "159412",
+    "amount": "2",
+    "price": "13.10",
+    "timestamp": "2012-08-31 17:19:00"
+}, {
+    "transaction_id": "9",
+    "admin_id": "2",
+    "beer_id": "144612",
+    "amount": "2",
+    "price": "10.60",
+    "timestamp": "2012-08-31 17:19:07"
+}, {
+    "transaction_id": "10",
+    "admin_id": "2",
+    "beer_id": "153503",
+    "amount": "4",
+    "price": "16.60",
+    "timestamp": "2012-08-31 17:19:15"
+}, {
+    "transaction_id": "11",
+    "admin_id": "2",
+    "beer_id": "161503",
+    "amount": "2",
+    "price": "13.90",
+    "timestamp": "2012-08-31 17:19:24"
+}, {
+    "transaction_id": "12",
+    "admin_id": "2",
+    "beer_id": "157803",
+    "amount": "4",
+    "price": "15.90",
+    "timestamp": "2012-08-31 17:19:34"
+}, {
+    "transaction_id": "13",
+    "admin_id": "2",
+    "beer_id": "146403",
+    "amount": "6",
+    "price": "18.90",
+    "timestamp": "2012-08-31 17:19:42"
+}, {
+    "transaction_id": "14",
+    "admin_id": "2",
+    "beer_id": "152503",
+    "amount": "2",
+    "price": "23.90",
+    "timestamp": "2012-08-31 17:19:49"
+}, {
+    "transaction_id": "15",
+    "admin_id": "2",
+    "beer_id": "1152803",
+    "amount": "2",
+    "price": "26.90",
+    "timestamp": "2012-08-31 17:20:00"
+}, {
+    "transaction_id": "16",
+    "admin_id": "2",
+    "beer_id": "168303",
+    "amount": "1",
+    "price": "29.90",
+    "timestamp": "2012-08-31 17:20:16"
+}, {
+    "transaction_id": "17",
+    "admin_id": "2",
+    "beer_id": "163203",
+    "amount": "2",
+    "price": "15.90",
+    "timestamp": "2012-08-31 17:20:24"
+}, {
+    "transaction_id": "18",
+    "admin_id": "2",
+    "beer_id": "151503",
+    "amount": "24",
+    "price": "19.90",
+    "timestamp": "2012-08-31 17:20:30"
+}, {
+    "transaction_id": "19",
+    "admin_id": "2",
+    "beer_id": "1137903",
+    "amount": "12",
+    "price": "14.40",
+    "timestamp": "2012-08-31 17:20:39"
+}, {
+    "transaction_id": "20",
+    "admin_id": "2",
+    "beer_id": "167903",
+    "amount": "12",
+    "price": "15.90",
+    "timestamp": "2012-08-31 17:20:47"
+}, {
+    "transaction_id": "21",
+    "admin_id": "2",
+    "beer_id": "154603",
+    "amount": "24",
+    "price": "15.90",
+    "timestamp": "2012-08-31 17:20:59"
+}, {
+    "transaction_id": "22",
+    "admin_id": "2",
+    "beer_id": "1152803",
+    "amount": "2",
+    "price": "26.90",
+    "timestamp": "2012-11-01 15:56:49"
+}, {
+    "transaction_id": "23",
+    "admin_id": "2",
+    "beer_id": "163203",
+    "amount": "2",
+    "price": "15.90",
+    "timestamp": "2012-11-01 15:57:30"
+}, {
+    "transaction_id": "24",
+    "admin_id": "2",
+    "beer_id": "168303",
+    "amount": "2",
+    "price": "29.90",
+    "timestamp": "2012-11-01 15:57:50"
+}, {
+    "transaction_id": "25",
+    "admin_id": "2",
+    "beer_id": "168803",
+    "amount": "4",
+    "price": "22.90",
+    "timestamp": "2012-11-01 15:58:07"
+}, {
+    "transaction_id": "26",
+    "admin_id": "2",
+    "beer_id": "164903",
+    "amount": "4",
+    "price": "17.90",
+    "timestamp": "2012-11-01 15:58:25"
+}, {
+    "transaction_id": "27",
+    "admin_id": "2",
+    "beer_id": "164103",
+    "amount": "1",
+    "price": "24.90",
+    "timestamp": "2012-11-01 15:58:46"
+}, {
+    "transaction_id": "28",
+    "admin_id": "2",
+    "beer_id": "198902",
+    "amount": "4",
+    "price": "12.90",
+    "timestamp": "2012-11-01 15:58:59"
+}, {
+    "transaction_id": "29",
+    "admin_id": "2",
+    "beer_id": "157803",
+    "amount": "2",
+    "price": "17.90",
+    "timestamp": "2012-11-01 15:59:17"
+}, {
+    "transaction_id": "30",
+    "admin_id": "2",
+    "beer_id": "194703",
+    "amount": "2",
+    "price": "12.40",
+    "timestamp": "2012-11-01 15:59:30"
+}, {
+    "transaction_id": "31",
+    "admin_id": "2",
+    "beer_id": "156303",
+    "amount": "2",
+    "price": "16.10",
+    "timestamp": "2012-11-01 15:59:43"
+}, {
+    "transaction_id": "32",
+    "admin_id": "2",
+    "beer_id": "159103",
+    "amount": "1",
+    "price": "36.00",
+    "timestamp": "2012-11-01 16:00:02"
+}, {
+    "transaction_id": "33",
+    "admin_id": "2",
+    "beer_id": "152503",
+    "amount": "2",
+    "price": "23.90",
+    "timestamp": "2012-11-01 16:00:27"
+}, {
+    "transaction_id": "34",
+    "admin_id": "2",
+    "beer_id": "140003",
+    "amount": "2",
+    "price": "16.90",
+    "timestamp": "2012-11-01 16:00:41"
+}, {
+    "transaction_id": "35",
+    "admin_id": "2",
+    "beer_id": "1151503",
+    "amount": "3",
+    "price": "9.90",
+    "timestamp": "2012-11-01 16:01:15"
+}, {
+    "transaction_id": "36",
+    "admin_id": "2",
+    "beer_id": "1125303",
+    "amount": "4",
+    "price": "16.90",
+    "timestamp": "2012-11-01 16:01:30"
+}, {
+    "transaction_id": "37",
+    "admin_id": "2",
+    "beer_id": "154803",
+    "amount": "4",
+    "price": "16.90",
+    "timestamp": "2012-11-01 16:01:52"
+}, {
+    "transaction_id": "38",
+    "admin_id": "2",
+    "beer_id": "167903",
+    "amount": "4",
+    "price": "15.90",
+    "timestamp": "2012-11-01 16:02:08"
+}, {
+    "transaction_id": "39",
+    "admin_id": "2",
+    "beer_id": "135503",
+    "amount": "1",
+    "price": "28.70",
+    "timestamp": "2012-11-01 16:02:28"
+}, {
+    "transaction_id": "40",
+    "admin_id": "2",
+    "beer_id": "1158103",
+    "amount": "2",
+    "price": "18.90",
+    "timestamp": "2012-11-01 16:02:46"
+}, {
+    "transaction_id": "41",
+    "admin_id": "2",
+    "beer_id": "152901",
+    "amount": "4",
+    "price": "19.90",
+    "timestamp": "2012-11-01 16:03:00"
+}, {
+    "transaction_id": "42",
+    "admin_id": "2",
+    "beer_id": "148803",
+    "amount": "4",
+    "price": "12.90",
+    "timestamp": "2012-11-01 16:03:11"
+}, {
+    "transaction_id": "43",
+    "admin_id": "2",
+    "beer_id": "151001",
+    "amount": "4",
+    "price": "16.90",
+    "timestamp": "2012-11-01 16:03:22"
+}, {
+    "transaction_id": "44",
+    "admin_id": "2",
+    "beer_id": "151503",
+    "amount": "20",
+    "price": "20.90",
+    "timestamp": "2012-11-01 16:03:35"
+}, {
+    "transaction_id": "45",
+    "admin_id": "2",
+    "beer_id": "152901",
+    "amount": "1",
+    "price": "19.90",
+    "timestamp": "2012-12-07 15:18:33"
+}, {
+    "transaction_id": "46",
+    "admin_id": "2",
+    "beer_id": "168803",
+    "amount": "1",
+    "price": "22.90",
+    "timestamp": "2012-12-07 15:18:54"
+}, {
+    "transaction_id": "47",
+    "admin_id": "2",
+    "beer_id": "163203",
+    "amount": "1",
+    "price": "15.90",
+    "timestamp": "2012-12-07 15:19:07"
+}, {
+    "transaction_id": "48",
+    "admin_id": "2",
+    "beer_id": "168701",
+    "amount": "2",
+    "price": "20.50",
+    "timestamp": "2012-12-07 15:19:28"
+}, {
+    "transaction_id": "49",
+    "admin_id": "2",
+    "beer_id": "168803",
+    "amount": "2",
+    "price": "22.90",
+    "timestamp": "2012-12-07 15:19:36"
+}, {
+    "transaction_id": "50",
+    "admin_id": "2",
+    "beer_id": "157803",
+    "amount": "2",
+    "price": "17.90",
+    "timestamp": "2012-12-07 15:19:42"
+}, {
+    "transaction_id": "51",
+    "admin_id": "2",
+    "beer_id": "181902",
+    "amount": "3",
+    "price": "15.50",
+    "timestamp": "2012-12-07 15:19:48"
+}, {
+    "transaction_id": "52",
+    "admin_id": "2",
+    "beer_id": "153503",
+    "amount": "2",
+    "price": "16.90",
+    "timestamp": "2012-12-07 15:19:54"
+}, {
+    "transaction_id": "53",
+    "admin_id": "2",
+    "beer_id": "163203",
+    "amount": "4",
+    "price": "15.90",
+    "timestamp": "2012-12-07 15:20:03"
+}, {
+    "transaction_id": "54",
+    "admin_id": "2",
+    "beer_id": "156603",
+    "amount": "3",
+    "price": "14.90",
+    "timestamp": "2012-12-07 15:20:10"
+}, {
+    "transaction_id": "55",
+    "admin_id": "2",
+    "beer_id": "144203",
+    "amount": "2",
+    "price": "19.70",
+    "timestamp": "2012-12-07 15:20:17"
+}, {
+    "transaction_id": "56",
+    "admin_id": "2",
+    "beer_id": "154603",
+    "amount": "4",
+    "price": "16.40",
+    "timestamp": "2012-12-07 15:20:25"
+}, {
+    "transaction_id": "57",
+    "admin_id": "2",
+    "beer_id": "160903",
+    "amount": "3",
+    "price": "15.90",
+    "timestamp": "2012-12-07 15:20:31"
+}, {
+    "transaction_id": "58",
+    "admin_id": "2",
+    "beer_id": "1146001",
+    "amount": "3",
+    "price": "23.80",
+    "timestamp": "2012-12-07 15:20:39"
+}, {
+    "transaction_id": "59",
+    "admin_id": "2",
+    "beer_id": "157503",
+    "amount": "4",
+    "price": "24.90",
+    "timestamp": "2012-12-07 15:20:46"
+}, {
+    "transaction_id": "60",
+    "admin_id": "2",
+    "beer_id": "1163903",
+    "amount": "2",
+    "price": "25.90",
+    "timestamp": "2012-12-07 15:21:54"
+}, {
+    "transaction_id": "61",
+    "admin_id": "2",
+    "beer_id": "152503",
+    "amount": "2",
+    "price": "23.90",
+    "timestamp": "2012-12-07 15:22:01"
+}, {
+    "transaction_id": "62",
+    "admin_id": "2",
+    "beer_id": "162703",
+    "amount": "1",
+    "price": "39.90",
+    "timestamp": "2012-12-07 15:22:19"
+}, {
+    "transaction_id": "63",
+    "admin_id": "2",
+    "beer_id": "194703",
+    "amount": "1",
+    "price": "12.40",
+    "timestamp": "2012-12-07 15:22:27"
+}, {
+    "transaction_id": "64",
+    "admin_id": "2",
+    "beer_id": "195202",
+    "amount": "1",
+    "price": "10.90",
+    "timestamp": "2012-12-07 15:22:36"
+}, {
+    "transaction_id": "65",
+    "admin_id": "2",
+    "beer_id": "135503",
+    "amount": "2",
+    "price": "28.70",
+    "timestamp": "2012-12-07 15:22:43"
+}, {
+    "transaction_id": "66",
+    "admin_id": "2",
+    "beer_id": "168303",
+    "amount": "2",
+    "price": "29.90",
+    "timestamp": "2012-12-07 15:22:51"
+}, {
+    "transaction_id": "67",
+    "admin_id": "2",
+    "beer_id": "197702",
+    "amount": "1",
+    "price": "12.90",
+    "timestamp": "2012-12-07 15:23:00"
+}, {
+    "transaction_id": "68",
+    "admin_id": "2",
+    "beer_id": "198902",
+    "amount": "4",
+    "price": "12.90",
+    "timestamp": "2012-12-07 15:23:06"
+}, {
+    "transaction_id": "69",
+    "admin_id": "2",
+    "beer_id": "151503",
+    "amount": "15",
+    "price": "20.90",
+    "timestamp": "2012-12-07 15:23:13"
+}, {
+    "transaction_id": "70",
+    "admin_id": "2",
+    "beer_id": "8966103",
+    "amount": "24",
+    "price": "28.90",
+    "timestamp": "2012-12-07 15:23:23"
+}, {
+    "transaction_id": "71",
+    "admin_id": "2",
+    "beer_id": "150601",
+    "amount": "18",
+    "price": "15.90",
+    "timestamp": "2012-12-07 15:23:30"
+}, {
+    "transaction_id": "72",
+    "admin_id": "2",
+    "beer_id": "150601",
+    "amount": "6",
+    "price": "15.90",
+    "timestamp": "2013-03-22 17:25:26"
+}, {
+    "transaction_id": "73",
+    "admin_id": "2",
+    "beer_id": "150601",
+    "amount": "4",
+    "price": "15.90",
+    "timestamp": "2013-03-22 20:16:04"
+}, {
+    "transaction_id": "74",
+    "admin_id": "2",
+    "beer_id": "151503",
+    "amount": "12",
+    "price": "20.90",
+    "timestamp": "2013-04-24 12:36:10"
+}, {
+    "transaction_id": "75",
+    "admin_id": "2",
+    "beer_id": "120003",
+    "amount": "4",
+    "price": "13.90",
+    "timestamp": "2013-04-24 12:36:31"
+}, {
+    "transaction_id": "76",
+    "admin_id": "2",
+    "beer_id": "154603",
+    "amount": "4",
+    "price": "16.40",
+    "timestamp": "2013-04-24 12:37:11"
+}, {
+    "transaction_id": "77",
+    "admin_id": "2",
+    "beer_id": "1134103",
+    "amount": "2",
+    "price": "12.90",
+    "timestamp": "2013-04-24 12:37:29"
+}, {
+    "transaction_id": "78",
+    "admin_id": "2",
+    "beer_id": "167903",
+    "amount": "2",
+    "price": "15.90",
+    "timestamp": "2013-04-24 12:37:46"
+}, {
+    "transaction_id": "79",
+    "admin_id": "2",
+    "beer_id": "168701",
+    "amount": "1",
+    "price": "20.50",
+    "timestamp": "2013-04-24 12:38:04"
+}, {
+    "transaction_id": "80",
+    "admin_id": "2",
+    "beer_id": "141503",
+    "amount": "2",
+    "price": "20.90",
+    "timestamp": "2013-04-24 12:38:15"
+}, {
+    "transaction_id": "81",
+    "admin_id": "2",
+    "beer_id": "153803",
+    "amount": "2",
+    "price": "15.20",
+    "timestamp": "2013-04-24 12:38:27"
+}, {
+    "transaction_id": "82",
+    "admin_id": "2",
+    "beer_id": "156303",
+    "amount": "2",
+    "price": "16.10",
+    "timestamp": "2013-04-24 12:38:38"
+}, {
+    "transaction_id": "83",
+    "admin_id": "2",
+    "beer_id": "160601",
+    "amount": "2",
+    "price": "25.90",
+    "timestamp": "2013-04-24 12:38:51"
+}, {
+    "transaction_id": "84",
+    "admin_id": "2",
+    "beer_id": "161503",
+    "amount": "3",
+    "price": "14.80",
+    "timestamp": "2013-04-24 12:39:04"
+}, {
+    "transaction_id": "85",
+    "admin_id": "2",
+    "beer_id": "153503",
+    "amount": "3",
+    "price": "16.90",
+    "timestamp": "2013-04-24 12:39:15"
+}, {
+    "transaction_id": "86",
+    "admin_id": "2",
+    "beer_id": "165903",
+    "amount": "4",
+    "price": "18.90",
+    "timestamp": "2013-04-24 12:39:31"
+}, {
+    "transaction_id": "87",
+    "admin_id": "2",
+    "beer_id": "152503",
+    "amount": "2",
+    "price": "23.90",
+    "timestamp": "2013-04-24 12:39:43"
+}, {
+    "transaction_id": "88",
+    "admin_id": "2",
+    "beer_id": "1152803",
+    "amount": "2",
+    "price": "26.90",
+    "timestamp": "2013-04-24 12:40:02"
+}, {
+    "transaction_id": "89",
+    "admin_id": "2",
+    "beer_id": "198902",
+    "amount": "2",
+    "price": "12.90",
+    "timestamp": "2013-04-24 12:40:28"
+}, {
+    "transaction_id": "90",
+    "admin_id": "2",
+    "beer_id": "192003",
+    "amount": "2",
+    "price": "13.90",
+    "timestamp": "2013-04-24 12:40:43"
+}, {
+    "transaction_id": "91",
+    "admin_id": "2",
+    "beer_id": "194703",
+    "amount": "2",
+    "price": "12.40",
+    "timestamp": "2013-04-24 12:40:51"
+}, {
+    "transaction_id": "92",
+    "admin_id": "2",
+    "beer_id": "165103",
+    "amount": "2",
+    "price": "28.90",
+    "timestamp": "2013-04-24 12:40:59"
+}, {
+    "transaction_id": "93",
+    "admin_id": "2",
+    "beer_id": "1140501",
+    "amount": "2",
+    "price": "25.40",
+    "timestamp": "2013-04-24 12:41:13"
+}, {
+    "transaction_id": "94",
+    "admin_id": "2",
+    "beer_id": "159103",
+    "amount": "2",
+    "price": "29.90",
+    "timestamp": "2013-04-24 12:41:22"
+}, {
+    "transaction_id": "95",
+    "admin_id": "2",
+    "beer_id": "157803",
+    "amount": "2",
+    "price": "17.90",
+    "timestamp": "2013-04-24 12:41:39"
+}, {
+    "transaction_id": "96",
+    "admin_id": "2",
+    "beer_id": "1144703",
+    "amount": "2",
+    "price": "19.90",
+    "timestamp": "2013-04-24 12:41:50"
+}, {
+    "transaction_id": "97",
+    "admin_id": "2",
+    "beer_id": "158201",
+    "amount": "2",
+    "price": "16.90",
+    "timestamp": "2013-04-24 12:42:00"
+}, {
+    "transaction_id": "98",
+    "admin_id": "2",
+    "beer_id": "163203",
+    "amount": "4",
+    "price": "15.90",
+    "timestamp": "2013-04-24 12:42:18"
+}, {
+    "transaction_id": "99",
+    "admin_id": "2",
+    "beer_id": "181902",
+    "amount": "4",
+    "price": "15.50",
+    "timestamp": "2013-04-24 12:42:33"
+}, {
+    "transaction_id": "100",
+    "admin_id": "2",
+    "beer_id": "182402",
+    "amount": "3",
+    "price": "16.90",
+    "timestamp": "2013-04-24 12:42:43"
+}, {
+    "transaction_id": "101",
+    "admin_id": "2",
+    "beer_id": "1146001",
+    "amount": "2",
+    "price": "23.80",
+    "timestamp": "2013-04-24 12:42:57"
+}, {
+    "transaction_id": "102",
+    "admin_id": "2",
+    "beer_id": "156603",
+    "amount": "2",
+    "price": "14.90",
+    "timestamp": "2013-04-24 12:43:13"
+}, {
+    "transaction_id": "103",
+    "admin_id": "2",
+    "beer_id": "135503",
+    "amount": "2",
+    "price": "28.70",
+    "timestamp": "2013-04-24 12:43:54"
+}, {
+    "transaction_id": "104",
+    "admin_id": "2",
+    "beer_id": "168803",
+    "amount": "2",
+    "price": "22.90",
+    "timestamp": "2013-04-24 12:44:08"
+}, {
+    "transaction_id": "105",
+    "admin_id": "17",
+    "beer_id": "1134103",
+    "amount": "4",
+    "price": "12.90",
+    "timestamp": "2013-05-29 18:04:10"
+}, {
+    "transaction_id": "106",
+    "admin_id": "17",
+    "beer_id": "160903",
+    "amount": "4",
+    "price": "15.90",
+    "timestamp": "2013-05-29 18:04:25"
+}, {
+    "transaction_id": "107",
+    "admin_id": "17",
+    "beer_id": "167903",
+    "amount": "16",
+    "price": "15.90",
+    "timestamp": "2013-05-29 18:05:17"
+}, {
+    "transaction_id": "108",
+    "admin_id": "17",
+    "beer_id": "151503",
+    "amount": "24",
+    "price": "20.90",
+    "timestamp": "2013-05-29 18:06:50"
+}, {
+    "transaction_id": "109",
+    "admin_id": "17",
+    "beer_id": "156603",
+    "amount": "5",
+    "price": "14.90",
+    "timestamp": "2013-05-29 18:06:58"
+}, {
+    "transaction_id": "110",
+    "admin_id": "17",
+    "beer_id": "153503",
+    "amount": "4",
+    "price": "16.90",
+    "timestamp": "2013-05-29 18:07:07"
+}, {
+    "transaction_id": "111",
+    "admin_id": "17",
+    "beer_id": "168701",
+    "amount": "2",
+    "price": "20.50",
+    "timestamp": "2013-05-29 18:07:21"
+}, {
+    "transaction_id": "112",
+    "admin_id": "17",
+    "beer_id": "1148901",
+    "amount": "2",
+    "price": "15.90",
+    "timestamp": "2013-05-29 18:07:46"
+}, {
+    "transaction_id": "113",
+    "admin_id": "17",
+    "beer_id": "152901",
+    "amount": "2",
+    "price": "20.90",
+    "timestamp": "2013-05-29 18:07:54"
+}, {
+    "transaction_id": "114",
+    "admin_id": "17",
+    "beer_id": "1152803",
+    "amount": "5",
+    "price": "26.90",
+    "timestamp": "2013-05-29 18:08:26"
+}, {
+    "transaction_id": "115",
+    "admin_id": "17",
+    "beer_id": "8910403",
+    "amount": "2",
+    "price": "27.50",
+    "timestamp": "2013-05-29 18:08:35"
+}, {
+    "transaction_id": "116",
+    "admin_id": "17",
+    "beer_id": "1146001",
+    "amount": "4",
+    "price": "23.80",
+    "timestamp": "2013-05-29 18:08:45"
+}, {
+    "transaction_id": "117",
+    "admin_id": "17",
+    "beer_id": "154903",
+    "amount": "4",
+    "price": "14.10",
+    "timestamp": "2013-05-29 18:09:13"
+}, {
+    "transaction_id": "118",
+    "admin_id": "17",
+    "beer_id": "604504",
+    "amount": "1",
+    "price": "29.00",
+    "timestamp": "2013-05-29 18:09:33"
+}, {
+    "transaction_id": "119",
+    "admin_id": "17",
+    "beer_id": "232202",
+    "amount": "2",
+    "price": "36.00",
+    "timestamp": "2013-05-29 18:09:49"
+}, {
+    "transaction_id": "120",
+    "admin_id": "17",
+    "beer_id": "658102",
+    "amount": "2",
+    "price": "43.00",
+    "timestamp": "2013-05-29 18:10:01"
+}, {
+    "transaction_id": "121",
+    "admin_id": "17",
+    "beer_id": "209702",
+    "amount": "2",
+    "price": "49.00",
+    "timestamp": "2013-05-29 18:10:32"
+}, {
+    "transaction_id": "122",
+    "admin_id": "17",
+    "beer_id": "218002",
+    "amount": "2",
+    "price": "39.00",
+    "timestamp": "2013-05-29 18:10:44"
+}, {
+    "transaction_id": "123",
+    "admin_id": "17",
+    "beer_id": "210602",
+    "amount": "2",
+    "price": "43.00",
+    "timestamp": "2013-05-29 18:10:55"
+}, {
+    "transaction_id": "124",
+    "admin_id": "17",
+    "beer_id": "212002",
+    "amount": "2",
+    "price": "49.00",
+    "timestamp": "2013-05-29 18:11:05"
+}, {
+    "transaction_id": "125",
+    "admin_id": "17",
+    "beer_id": "667102",
+    "amount": "2",
+    "price": "33.00",
+    "timestamp": "2013-05-29 18:11:42"
+}, {
+    "transaction_id": "126",
+    "admin_id": "17",
+    "beer_id": "197702",
+    "amount": "4",
+    "price": "12.90",
+    "timestamp": "2013-05-29 18:11:52"
+}, {
+    "transaction_id": "127",
+    "admin_id": "17",
+    "beer_id": "192003",
+    "amount": "2",
+    "price": "13.90",
+    "timestamp": "2013-05-29 18:12:09"
+}, {
+    "transaction_id": "128",
+    "admin_id": "17",
+    "beer_id": "181902",
+    "amount": "4",
+    "price": "15.50",
+    "timestamp": "2013-05-29 18:12:21"
+}, {
+    "transaction_id": "129",
+    "admin_id": "17",
+    "beer_id": "194703",
+    "amount": "2",
+    "price": "12.40",
+    "timestamp": "2013-05-29 18:12:32"
+}, {
+    "transaction_id": "130",
+    "admin_id": "17",
+    "beer_id": "198902",
+    "amount": "4",
+    "price": "12.90",
+    "timestamp": "2013-05-29 18:12:42"
+}, {
+    "transaction_id": "131",
+    "admin_id": "17",
+    "beer_id": "190002",
+    "amount": "2",
+    "price": "10.90",
+    "timestamp": "2013-05-29 18:14:37"
+}, {
+    "transaction_id": "132",
+    "admin_id": "17",
+    "beer_id": "197302",
+    "amount": "2",
+    "price": "12.90",
+    "timestamp": "2013-05-29 18:14:47"
+}, {
+    "transaction_id": "133",
+    "admin_id": "25",
+    "beer_id": "146403",
+    "amount": "1",
+    "price": "18.90",
+    "timestamp": "2013-07-31 13:56:47"
+}, {
+    "transaction_id": "134",
+    "admin_id": "25",
+    "beer_id": "153503",
+    "amount": "1",
+    "price": "16.90",
+    "timestamp": "2013-07-31 13:56:58"
+}, {
+    "transaction_id": "135",
+    "admin_id": "25",
+    "beer_id": "192003",
+    "amount": "1",
+    "price": "13.90",
+    "timestamp": "2013-07-31 13:57:14"
+}, {
+    "transaction_id": "136",
+    "admin_id": "25",
+    "beer_id": "167903",
+    "amount": "1",
+    "price": "15.90",
+    "timestamp": "2013-07-31 13:57:34"
+}, {
+    "transaction_id": "137",
+    "admin_id": "25",
+    "beer_id": "198902",
+    "amount": "1",
+    "price": "12.90",
+    "timestamp": "2013-07-31 13:57:50"
+}, {
+    "transaction_id": "138",
+    "admin_id": "25",
+    "beer_id": "157503",
+    "amount": "2",
+    "price": "21.90",
+    "timestamp": "2013-07-31 16:14:23"
+}, {
+    "transaction_id": "139",
+    "admin_id": "25",
+    "beer_id": "150401",
+    "amount": "2",
+    "price": "25.90",
+    "timestamp": "2013-07-31 16:14:46"
+}, {
+    "transaction_id": "140",
+    "admin_id": "25",
+    "beer_id": "1159903",
+    "amount": "2",
+    "price": "15.90",
+    "timestamp": "2013-07-31 16:15:21"
+}, {
+    "transaction_id": "141",
+    "admin_id": "25",
+    "beer_id": "154603",
+    "amount": "4",
+    "price": "16.40",
+    "timestamp": "2013-07-31 16:15:58"
+}, {
+    "transaction_id": "142",
+    "admin_id": "25",
+    "beer_id": "1120801",
+    "amount": "2",
+    "price": "21.90",
+    "timestamp": "2013-07-31 16:16:25"
+}, {
+    "transaction_id": "143",
+    "admin_id": "25",
+    "beer_id": "1124601",
+    "amount": "2",
+    "price": "24.50",
+    "timestamp": "2013-07-31 16:16:45"
+}, {
+    "transaction_id": "144",
+    "admin_id": "25",
+    "beer_id": "168701",
+    "amount": "2",
+    "price": "20.50",
+    "timestamp": "2013-07-31 16:17:05"
+}, {
+    "transaction_id": "145",
+    "admin_id": "25",
+    "beer_id": "1152803",
+    "amount": "2",
+    "price": "26.90",
+    "timestamp": "2013-07-31 16:17:28"
+}, {
+    "transaction_id": "146",
+    "admin_id": "25",
+    "beer_id": "152503",
+    "amount": "2",
+    "price": "23.90",
+    "timestamp": "2013-07-31 16:17:45"
+}, {
+    "transaction_id": "147",
+    "admin_id": "25",
+    "beer_id": "193002",
+    "amount": "2",
+    "price": "12.40",
+    "timestamp": "2013-07-31 16:18:08"
+}, {
+    "transaction_id": "148",
+    "admin_id": "25",
+    "beer_id": "156503",
+    "amount": "2",
+    "price": "11.90",
+    "timestamp": "2013-07-31 16:18:53"
+}, {
+    "transaction_id": "149",
+    "admin_id": "25",
+    "beer_id": "8968701",
+    "amount": "2",
+    "price": "27.00",
+    "timestamp": "2013-07-31 16:19:22"
+}, {
+    "transaction_id": "150",
+    "admin_id": "25",
+    "beer_id": "160601",
+    "amount": "3",
+    "price": "25.90",
+    "timestamp": "2013-07-31 16:19:57"
+}, {
+    "transaction_id": "151",
+    "admin_id": "25",
+    "beer_id": "154803",
+    "amount": "2",
+    "price": "17.30",
+    "timestamp": "2013-07-31 16:20:51"
+}, {
+    "transaction_id": "152",
+    "admin_id": "25",
+    "beer_id": "183502",
+    "amount": "2",
+    "price": "16.90",
+    "timestamp": "2013-07-31 16:21:20"
+}, {
+    "transaction_id": "153",
+    "admin_id": "25",
+    "beer_id": "141001",
+    "amount": "1",
+    "price": "28.20",
+    "timestamp": "2013-07-31 16:21:42"
+}, {
+    "transaction_id": "154",
+    "admin_id": "25",
+    "beer_id": "746902",
+    "amount": "2",
+    "price": "39.00",
+    "timestamp": "2013-07-31 16:22:43"
+}, {
+    "transaction_id": "155",
+    "admin_id": "25",
+    "beer_id": "159103",
+    "amount": "2",
+    "price": "29.90",
+    "timestamp": "2013-07-31 16:23:04"
+}, {
+    "transaction_id": "156",
+    "admin_id": "25",
+    "beer_id": "192201",
+    "amount": "1",
+    "price": "12.90",
+    "timestamp": "2013-07-31 16:23:27"
+}, {
+    "transaction_id": "157",
+    "admin_id": "25",
+    "beer_id": "1137903",
+    "amount": "2",
+    "price": "14.70",
+    "timestamp": "2013-07-31 16:23:44"
+}, {
+    "transaction_id": "158",
+    "admin_id": "25",
+    "beer_id": "1210502",
+    "amount": "2",
+    "price": "49.00",
+    "timestamp": "2013-07-31 16:24:02"
+}, {
+    "transaction_id": "159",
+    "admin_id": "25",
+    "beer_id": "693502",
+    "amount": "2",
+    "price": "36.00",
+    "timestamp": "2013-07-31 16:24:21"
+}, {
+    "transaction_id": "160",
+    "admin_id": "25",
+    "beer_id": "1133301",
+    "amount": "2",
+    "price": "16.40",
+    "timestamp": "2013-07-31 16:24:38"
+}, {
+    "transaction_id": "161",
+    "admin_id": "25",
+    "beer_id": "165403",
+    "amount": "2",
+    "price": "24.90",
+    "timestamp": "2013-07-31 16:24:58"
+}, {
+    "transaction_id": "162",
+    "admin_id": "25",
+    "beer_id": "190002",
+    "amount": "1",
+    "price": "10.90",
+    "timestamp": "2013-07-31 16:25:15"
+}, {
+    "transaction_id": "163",
+    "admin_id": "25",
+    "beer_id": "232202",
+    "amount": "2",
+    "price": "36.00",
+    "timestamp": "2013-07-31 16:25:38"
+}, {
+    "transaction_id": "164",
+    "admin_id": "25",
+    "beer_id": "218002",
+    "amount": "2",
+    "price": "39.00",
+    "timestamp": "2013-07-31 16:26:02"
+}, {
+    "transaction_id": "165",
+    "admin_id": "25",
+    "beer_id": "658102",
+    "amount": "2",
+    "price": "43.00",
+    "timestamp": "2013-07-31 16:26:24"
+}, {
+    "transaction_id": "166",
+    "admin_id": "25",
+    "beer_id": "209702",
+    "amount": "2",
+    "price": "49.00",
+    "timestamp": "2013-07-31 16:26:44"
+}, {
+    "transaction_id": "167",
+    "admin_id": "25",
+    "beer_id": "669702",
+    "amount": "2",
+    "price": "45.00",
+    "timestamp": "2013-07-31 16:27:02"
+}, {
+    "transaction_id": "168",
+    "admin_id": "25",
+    "beer_id": "212002",
+    "amount": "2",
+    "price": "49.00",
+    "timestamp": "2013-07-31 16:27:38"
+}, {
+    "transaction_id": "169",
+    "admin_id": "25",
+    "beer_id": "601202",
+    "amount": "2",
+    "price": "33.00",
+    "timestamp": "2013-07-31 16:27:55"
+}, {
+    "transaction_id": "170",
+    "admin_id": "25",
+    "beer_id": "192003",
+    "amount": "2",
+    "price": "13.90",
+    "timestamp": "2013-07-31 16:28:14"
+}, {
+    "transaction_id": "171",
+    "admin_id": "25",
+    "beer_id": "181902",
+    "amount": "3",
+    "price": "15.50",
+    "timestamp": "2013-07-31 16:28:35"
+}, {
+    "transaction_id": "172",
+    "admin_id": "25",
+    "beer_id": "194203",
+    "amount": "2",
+    "price": "39.00",
+    "timestamp": "2013-07-31 16:29:04"
+}, {
+    "transaction_id": "173",
+    "admin_id": "25",
+    "beer_id": "196403",
+    "amount": "2",
+    "price": "69.90",
+    "timestamp": "2013-07-31 16:29:46"
+}, {
+    "transaction_id": "174",
+    "admin_id": "25",
+    "beer_id": "194703",
+    "amount": "2",
+    "price": "12.40",
+    "timestamp": "2013-07-31 16:30:02"
+}, {
+    "transaction_id": "175",
+    "admin_id": "25",
+    "beer_id": "196303",
+    "amount": "2",
+    "price": "22.50",
+    "timestamp": "2013-07-31 16:30:19"
+}, {
+    "transaction_id": "176",
+    "admin_id": "25",
+    "beer_id": "207504",
+    "amount": "2",
+    "price": "30.00",
+    "timestamp": "2013-07-31 16:30:56"
+}, {
+    "transaction_id": "177",
+    "admin_id": "25",
+    "beer_id": "192804",
+    "amount": "2",
+    "price": "20.00",
+    "timestamp": "2013-07-31 16:31:24"
+}, {
+    "transaction_id": "178",
+    "admin_id": "25",
+    "beer_id": "197702",
+    "amount": "1",
+    "price": "12.90",
+    "timestamp": "2013-07-31 16:31:47"
+}, {
+    "transaction_id": "179",
+    "admin_id": "25",
+    "beer_id": "197302",
+    "amount": "1",
+    "price": "12.90",
+    "timestamp": "2013-07-31 16:32:00"
+}, {
+    "transaction_id": "180",
+    "admin_id": "25",
+    "beer_id": "604504",
+    "amount": "2",
+    "price": "29.00",
+    "timestamp": "2013-07-31 16:32:20"
+}, {
+    "transaction_id": "181",
+    "admin_id": "25",
+    "beer_id": "151503",
+    "amount": "24",
+    "price": "20.90",
+    "timestamp": "2013-07-31 16:32:39"
+}, {
+    "transaction_id": "182",
+    "admin_id": "25",
+    "beer_id": "150601",
+    "amount": "10",
+    "price": "15.90",
+    "timestamp": "2013-07-31 16:32:59"
+}, {
+    "transaction_id": "183",
+    "admin_id": "25",
+    "beer_id": "153503",
+    "amount": "1",
+    "price": "16.90",
+    "timestamp": "2013-11-08 16:01:00"
+}, {
+    "transaction_id": "184",
+    "admin_id": "25",
+    "beer_id": "192804",
+    "amount": "1",
+    "price": "20.00",
+    "timestamp": "2013-11-08 16:02:57"
+}, {
+    "transaction_id": "206",
+    "admin_id": "20",
+    "beer_id": "172303",
+    "amount": "1",
+    "price": "15.20",
+    "timestamp": "2014-02-07 11:07:47"
+}, {
+    "transaction_id": "186",
+    "admin_id": "25",
+    "beer_id": "150601",
+    "amount": "20",
+    "price": "15.90",
+    "timestamp": "2013-11-08 16:18:12"
+}, {
+    "transaction_id": "187",
+    "admin_id": "25",
+    "beer_id": "181803",
+    "amount": "8",
+    "price": "18.90",
+    "timestamp": "2013-11-08 16:18:28"
+}, {
+    "transaction_id": "188",
+    "admin_id": "25",
+    "beer_id": "181903",
+    "amount": "2",
+    "price": "17.90",
+    "timestamp": "2013-11-08 16:18:37"
+}, {
+    "transaction_id": "189",
+    "admin_id": "25",
+    "beer_id": "183203",
+    "amount": "2",
+    "price": "18.90",
+    "timestamp": "2013-11-08 16:19:07"
+}, {
+    "transaction_id": "190",
+    "admin_id": "17",
+    "beer_id": "181902",
+    "amount": "2",
+    "price": "17.90",
+    "timestamp": "2013-11-08 16:24:32"
+}, {
+    "transaction_id": "191",
+    "admin_id": "17",
+    "beer_id": "183203",
+    "amount": "2",
+    "price": "18.90",
+    "timestamp": "2013-11-08 16:26:58"
+}, {
+    "transaction_id": "192",
+    "admin_id": "17",
+    "beer_id": "164903",
+    "amount": "4",
+    "price": "17.90",
+    "timestamp": "2013-11-08 16:28:42"
+}, {
+    "transaction_id": "193",
+    "admin_id": "17",
+    "beer_id": "1125303",
+    "amount": "4",
+    "price": "16.90",
+    "timestamp": "2013-11-08 16:29:47"
+}, {
+    "transaction_id": "194",
+    "admin_id": "17",
+    "beer_id": "165403",
+    "amount": "1",
+    "price": "24.90",
+    "timestamp": "2013-11-08 16:30:29"
+}, {
+    "transaction_id": "195",
+    "admin_id": "17",
+    "beer_id": "166703",
+    "amount": "3",
+    "price": "31.90",
+    "timestamp": "2013-11-08 16:30:42"
+}, {
+    "transaction_id": "196",
+    "admin_id": "17",
+    "beer_id": "156103",
+    "amount": "3",
+    "price": "16.90",
+    "timestamp": "2013-11-08 16:30:53"
+}, {
+    "transaction_id": "197",
+    "admin_id": "17",
+    "beer_id": "167101",
+    "amount": "3",
+    "price": "29.40",
+    "timestamp": "2013-11-08 16:31:02"
+}, {
+    "transaction_id": "198",
+    "admin_id": "17",
+    "beer_id": "8915103",
+    "amount": "3",
+    "price": "39.80",
+    "timestamp": "2013-11-08 16:31:45"
+}, {
+    "transaction_id": "199",
+    "admin_id": "17",
+    "beer_id": "151503",
+    "amount": "24",
+    "price": "20.90",
+    "timestamp": "2013-11-08 16:31:59"
+}, {
+    "transaction_id": "200",
+    "admin_id": "17",
+    "beer_id": "1140501",
+    "amount": "12",
+    "price": "25.40",
+    "timestamp": "2013-11-08 16:32:11"
+}, {
+    "transaction_id": "201",
+    "admin_id": "17",
+    "beer_id": "153001",
+    "amount": "6",
+    "price": "19.90",
+    "timestamp": "2013-11-08 16:32:21"
+}, {
+    "transaction_id": "202",
+    "admin_id": "17",
+    "beer_id": "168701",
+    "amount": "3",
+    "price": "20.50",
+    "timestamp": "2013-11-08 16:32:32"
+}, {
+    "transaction_id": "203",
+    "admin_id": "17",
+    "beer_id": "152601",
+    "amount": "3",
+    "price": "19.90",
+    "timestamp": "2013-11-08 16:32:43"
+}, {
+    "transaction_id": "204",
+    "admin_id": "17",
+    "beer_id": "156303",
+    "amount": "2",
+    "price": "16.10",
+    "timestamp": "2013-11-08 16:33:14"
+}, {
+    "transaction_id": "205",
+    "admin_id": "17",
+    "beer_id": "122203",
+    "amount": "4",
+    "price": "9.90",
+    "timestamp": "2013-11-08 16:34:05"
+}, {
+    "transaction_id": "207",
+    "admin_id": "20",
+    "beer_id": "165403",
+    "amount": "2",
+    "price": "25.40",
+    "timestamp": "2014-02-07 11:08:00"
+}, {
+    "transaction_id": "208",
+    "admin_id": "20",
+    "beer_id": "165103",
+    "amount": "1",
+    "price": "29.40",
+    "timestamp": "2014-02-07 11:08:14"
+}, {
+    "transaction_id": "209",
+    "admin_id": "20",
+    "beer_id": "1140501",
+    "amount": "2",
+    "price": "25.90",
+    "timestamp": "2014-02-07 11:08:29"
+}, {
+    "transaction_id": "210",
+    "admin_id": "20",
+    "beer_id": "164903",
+    "amount": "4",
+    "price": "18.20",
+    "timestamp": "2014-02-07 11:08:57"
+}, {
+    "transaction_id": "211",
+    "admin_id": "20",
+    "beer_id": "167903",
+    "amount": "12",
+    "price": "16.20",
+    "timestamp": "2014-02-07 11:09:23"
+}, {
+    "transaction_id": "212",
+    "admin_id": "20",
+    "beer_id": "153803",
+    "amount": "4",
+    "price": "15.50",
+    "timestamp": "2014-02-07 11:09:43"
+}, {
+    "transaction_id": "213",
+    "admin_id": "20",
+    "beer_id": "183502",
+    "amount": "4",
+    "price": "17.20",
+    "timestamp": "2014-02-07 11:10:10"
+}, {
+    "transaction_id": "214",
+    "admin_id": "20",
+    "beer_id": "155701",
+    "amount": "2",
+    "price": "20.40",
+    "timestamp": "2014-02-07 11:10:30"
+}, {
+    "transaction_id": "215",
+    "admin_id": "20",
+    "beer_id": "160601",
+    "amount": "2",
+    "price": "26.30",
+    "timestamp": "2014-02-07 11:10:57"
+}, {
+    "transaction_id": "216",
+    "admin_id": "20",
+    "beer_id": "1152803",
+    "amount": "2",
+    "price": "26.30",
+    "timestamp": "2014-02-07 11:11:26"
+}, {
+    "transaction_id": "217",
+    "admin_id": "20",
+    "beer_id": "135601",
+    "amount": "1",
+    "price": "22.80",
+    "timestamp": "2014-02-07 11:12:42"
+}, {
+    "transaction_id": "218",
+    "admin_id": "20",
+    "beer_id": "151503",
+    "amount": "24",
+    "price": "21.20",
+    "timestamp": "2014-02-07 11:13:01"
+}, {
+    "transaction_id": "219",
+    "admin_id": "20",
+    "beer_id": "198902",
+    "amount": "6",
+    "price": "12.90",
+    "timestamp": "2014-02-07 11:13:17"
+}, {
+    "transaction_id": "220",
+    "admin_id": "20",
+    "beer_id": "192003",
+    "amount": "2",
+    "price": "13.90",
+    "timestamp": "2014-02-07 11:13:41"
+}, {
+    "transaction_id": "221",
+    "admin_id": "20",
+    "beer_id": "218002",
+    "amount": "2",
+    "price": "40.00",
+    "timestamp": "2014-02-07 11:14:04"
+}, {
+    "transaction_id": "222",
+    "admin_id": "20",
+    "beer_id": "658102",
+    "amount": "1",
+    "price": "44.00",
+    "timestamp": "2014-02-07 11:14:18"
+}, {
+    "transaction_id": "223",
+    "admin_id": "20",
+    "beer_id": "278002",
+    "amount": "2",
+    "price": "37.00",
+    "timestamp": "2014-02-07 11:14:38"
+}, {
+    "transaction_id": "224",
+    "admin_id": "20",
+    "beer_id": "669702",
+    "amount": "2",
+    "price": "46.00",
+    "timestamp": "2014-02-07 11:14:57"
+}, {
+    "transaction_id": "225",
+    "admin_id": "25",
+    "beer_id": "167903",
+    "amount": "1",
+    "price": "16.20",
+    "timestamp": "2014-05-14 14:10:56"
+}, {
+    "transaction_id": "226",
+    "admin_id": "25",
+    "beer_id": "194703",
+    "amount": "1",
+    "price": "12.40",
+    "timestamp": "2014-05-14 14:11:21"
+}, {
+    "transaction_id": "227",
+    "admin_id": "25",
+    "beer_id": "153001",
+    "amount": "1",
+    "price": "20.30",
+    "timestamp": "2014-05-14 14:11:30"
+}, {
+    "transaction_id": "228",
+    "admin_id": "25",
+    "beer_id": "1140501",
+    "amount": "4",
+    "price": "25.90",
+    "timestamp": "2014-05-14 17:34:20"
+}, {
+    "transaction_id": "229",
+    "admin_id": "25",
+    "beer_id": "1144703",
+    "amount": "2",
+    "price": "19.90",
+    "timestamp": "2014-05-14 17:34:30"
+}, {
+    "transaction_id": "230",
+    "admin_id": "25",
+    "beer_id": "154603",
+    "amount": "4",
+    "price": "17.50",
+    "timestamp": "2014-05-14 17:34:41"
+}, {
+    "transaction_id": "231",
+    "admin_id": "25",
+    "beer_id": "1159803",
+    "amount": "2",
+    "price": "19.90",
+    "timestamp": "2014-05-14 17:34:57"
+}, {
+    "transaction_id": "232",
+    "admin_id": "25",
+    "beer_id": "194703",
+    "amount": "2",
+    "price": "12.90",
+    "timestamp": "2014-05-14 17:35:06"
+}, {
+    "transaction_id": "233",
+    "admin_id": "25",
+    "beer_id": "169301",
+    "amount": "1",
+    "price": "49.90",
+    "timestamp": "2014-05-14 17:35:20"
+}, {
+    "transaction_id": "234",
+    "admin_id": "25",
+    "beer_id": "153503",
+    "amount": "2",
+    "price": "18.90",
+    "timestamp": "2014-05-14 17:35:32"
+}, {
+    "transaction_id": "235",
+    "admin_id": "25",
+    "beer_id": "1134803",
+    "amount": "2",
+    "price": "20.70",
+    "timestamp": "2014-05-14 17:35:42"
+}, {
+    "transaction_id": "236",
+    "admin_id": "25",
+    "beer_id": "133603",
+    "amount": "2",
+    "price": "19.60",
+    "timestamp": "2014-05-14 17:35:52"
+}, {
+    "transaction_id": "237",
+    "admin_id": "25",
+    "beer_id": "165903",
+    "amount": "2",
+    "price": "19.60",
+    "timestamp": "2014-05-14 17:36:05"
+}, {
+    "transaction_id": "238",
+    "admin_id": "25",
+    "beer_id": "161503",
+    "amount": "2",
+    "price": "14.20",
+    "timestamp": "2014-05-14 17:36:14"
+}, {
+    "transaction_id": "239",
+    "admin_id": "25",
+    "beer_id": "166403",
+    "amount": "2",
+    "price": "23.90",
+    "timestamp": "2014-05-14 17:36:26"
+}, {
+    "transaction_id": "240",
+    "admin_id": "25",
+    "beer_id": "157903",
+    "amount": "3",
+    "price": "14.90",
+    "timestamp": "2014-05-14 17:36:35"
+}, {
+    "transaction_id": "241",
+    "admin_id": "25",
+    "beer_id": "591401",
+    "amount": "1",
+    "price": "65.00",
+    "timestamp": "2014-05-14 17:36:53"
+}, {
+    "transaction_id": "242",
+    "admin_id": "25",
+    "beer_id": "721801",
+    "amount": "2",
+    "price": "81.00",
+    "timestamp": "2014-05-14 17:37:06"
+}, {
+    "transaction_id": "243",
+    "admin_id": "25",
+    "beer_id": "277301",
+    "amount": "2",
+    "price": "79.00",
+    "timestamp": "2014-05-14 17:37:14"
+}, {
+    "transaction_id": "244",
+    "admin_id": "25",
+    "beer_id": "214401",
+    "amount": "1",
+    "price": "149.00",
+    "timestamp": "2014-05-14 17:37:28"
+}, {
+    "transaction_id": "245",
+    "admin_id": "25",
+    "beer_id": "614601",
+    "amount": "1",
+    "price": "69.00",
+    "timestamp": "2014-05-14 17:37:40"
+}, {
+    "transaction_id": "246",
+    "admin_id": "25",
+    "beer_id": "2280301",
+    "amount": "1",
+    "price": "57.00",
+    "timestamp": "2014-05-14 17:37:51"
+}, {
+    "transaction_id": "247",
+    "admin_id": "25",
+    "beer_id": "202801",
+    "amount": "1",
+    "price": "75.00",
+    "timestamp": "2014-05-14 17:38:02"
+}, {
+    "transaction_id": "248",
+    "admin_id": "25",
+    "beer_id": "150103",
+    "amount": "6",
+    "price": "20.10",
+    "timestamp": "2014-05-14 17:38:11"
+}, {
+    "transaction_id": "249",
+    "admin_id": "25",
+    "beer_id": "155103",
+    "amount": "4",
+    "price": "20.90",
+    "timestamp": "2014-05-14 17:38:22"
+}, {
+    "transaction_id": "250",
+    "admin_id": "25",
+    "beer_id": "167101",
+    "amount": "2",
+    "price": "29.90",
+    "timestamp": "2014-05-14 17:38:30"
+}, {
+    "transaction_id": "251",
+    "admin_id": "25",
+    "beer_id": "166703",
+    "amount": "1",
+    "price": "33.90",
+    "timestamp": "2014-05-14 17:38:40"
+}, {
+    "transaction_id": "252",
+    "admin_id": "25",
+    "beer_id": "8953903",
+    "amount": "1",
+    "price": "34.90",
+    "timestamp": "2014-05-14 17:38:55"
+}, {
+    "transaction_id": "253",
+    "admin_id": "25",
+    "beer_id": "1127103",
+    "amount": "1",
+    "price": "19.90",
+    "timestamp": "2014-05-14 17:39:07"
+}, {
+    "transaction_id": "254",
+    "admin_id": "25",
+    "beer_id": "162601",
+    "amount": "2",
+    "price": "27.90",
+    "timestamp": "2014-05-14 17:39:16"
+}, {
+    "transaction_id": "255",
+    "admin_id": "25",
+    "beer_id": "162003",
+    "amount": "1",
+    "price": "26.90",
+    "timestamp": "2014-05-14 17:39:24"
+}, {
+    "transaction_id": "256",
+    "admin_id": "25",
+    "beer_id": "1162503",
+    "amount": "3",
+    "price": "19.90",
+    "timestamp": "2014-05-14 17:39:35"
+}, {
+    "transaction_id": "257",
+    "admin_id": "25",
+    "beer_id": "1191303",
+    "amount": "12",
+    "price": "18.10",
+    "timestamp": "2014-05-14 17:39:46"
+}, {
+    "transaction_id": "258",
+    "admin_id": "25",
+    "beer_id": "153915",
+    "amount": "4",
+    "price": "22.90",
+    "timestamp": "2014-05-14 17:40:13"
+}, {
+    "transaction_id": "259",
+    "admin_id": "25",
+    "beer_id": "8916315",
+    "amount": "4",
+    "price": "25.20",
+    "timestamp": "2014-05-14 17:40:26"
+}, {
+    "transaction_id": "260",
+    "admin_id": "25",
+    "beer_id": "145414",
+    "amount": "4",
+    "price": "9.90",
+    "timestamp": "2014-05-14 17:40:35"
+}, {
+    "transaction_id": "261",
+    "admin_id": "25",
+    "beer_id": "591401",
+    "amount": "3",
+    "price": "65.00",
+    "timestamp": "2014-05-14 17:41:36"
+}, {
+    "transaction_id": "262",
+    "admin_id": "25",
+    "beer_id": "649801",
+    "amount": "3",
+    "price": "104.00",
+    "timestamp": "2014-05-14 17:41:47"
+}, {
+    "transaction_id": "263",
+    "admin_id": "25",
+    "beer_id": "277301",
+    "amount": "6",
+    "price": "79.00",
+    "timestamp": "2014-05-14 17:41:56"
+}, {
+    "transaction_id": "264",
+    "admin_id": "25",
+    "beer_id": "165903",
+    "amount": "2",
+    "price": "19.60",
+    "timestamp": "2014-06-11 17:46:22"
+}, {
+    "transaction_id": "265",
+    "admin_id": "25",
+    "beer_id": "133603",
+    "amount": "2",
+    "price": "19.60",
+    "timestamp": "2014-06-11 17:46:30"
+}, {
+    "transaction_id": "266",
+    "admin_id": "25",
+    "beer_id": "135603",
+    "amount": "2",
+    "price": "15.90",
+    "timestamp": "2014-06-11 17:46:38"
+}, {
+    "transaction_id": "267",
+    "admin_id": "25",
+    "beer_id": "123103",
+    "amount": "2",
+    "price": "29.90",
+    "timestamp": "2014-06-11 17:46:49"
+}, {
+    "transaction_id": "268",
+    "admin_id": "25",
+    "beer_id": "8967303",
+    "amount": "2",
+    "price": "32.30",
+    "timestamp": "2014-06-11 17:47:02"
+}, {
+    "transaction_id": "269",
+    "admin_id": "25",
+    "beer_id": "165403",
+    "amount": "2",
+    "price": "25.50",
+    "timestamp": "2014-06-11 17:47:10"
+}, {
+    "transaction_id": "270",
+    "admin_id": "25",
+    "beer_id": "155103",
+    "amount": "3",
+    "price": "20.90",
+    "timestamp": "2014-06-11 17:47:25"
+}, {
+    "transaction_id": "271",
+    "admin_id": "25",
+    "beer_id": "1134803",
+    "amount": "2",
+    "price": "20.70",
+    "timestamp": "2014-06-11 17:47:34"
+}, {
+    "transaction_id": "272",
+    "admin_id": "25",
+    "beer_id": "157803",
+    "amount": "2",
+    "price": "18.50",
+    "timestamp": "2014-06-11 17:47:43"
+}, {
+    "transaction_id": "273",
+    "admin_id": "25",
+    "beer_id": "167101",
+    "amount": "2",
+    "price": "29.90",
+    "timestamp": "2014-06-11 17:47:53"
+}, {
+    "transaction_id": "274",
+    "admin_id": "25",
+    "beer_id": "152503",
+    "amount": "4",
+    "price": "23.50",
+    "timestamp": "2014-06-11 17:48:00"
+}, {
+    "transaction_id": "275",
+    "admin_id": "25",
+    "beer_id": "1140501",
+    "amount": "5",
+    "price": "25.90",
+    "timestamp": "2014-06-11 17:48:13"
+}, {
+    "transaction_id": "276",
+    "admin_id": "25",
+    "beer_id": "180202",
+    "amount": "2",
+    "price": "20.00",
+    "timestamp": "2014-06-11 17:48:20"
+}, {
+    "transaction_id": "277",
+    "admin_id": "25",
+    "beer_id": "182402",
+    "amount": "2",
+    "price": "17.20",
+    "timestamp": "2014-06-11 17:48:28"
+}, {
+    "transaction_id": "278",
+    "admin_id": "25",
+    "beer_id": "154803",
+    "amount": "6",
+    "price": "17.90",
+    "timestamp": "2014-06-11 17:48:43"
+}, {
+    "transaction_id": "279",
+    "admin_id": "25",
+    "beer_id": "8817303",
+    "amount": "5",
+    "price": "19.80",
+    "timestamp": "2014-06-11 17:48:51"
+}, {
+    "transaction_id": "280",
+    "admin_id": "25",
+    "beer_id": "194703",
+    "amount": "2",
+    "price": "12.90",
+    "timestamp": "2014-06-11 17:48:59"
+}, {
+    "transaction_id": "281",
+    "admin_id": "25",
+    "beer_id": "1199403",
+    "amount": "2",
+    "price": "16.90",
+    "timestamp": "2014-06-11 17:49:13"
+}, {
+    "transaction_id": "282",
+    "admin_id": "25",
+    "beer_id": "198902",
+    "amount": "4",
+    "price": "12.40",
+    "timestamp": "2014-06-11 17:49:19"
+}, {
+    "transaction_id": "283",
+    "admin_id": "25",
+    "beer_id": "197302",
+    "amount": "2",
+    "price": "12.90",
+    "timestamp": "2014-06-11 17:49:28"
+}, {
+    "transaction_id": "284",
+    "admin_id": "25",
+    "beer_id": "183502",
+    "amount": "2",
+    "price": "17.20",
+    "timestamp": "2014-06-11 17:49:37"
+}, {
+    "transaction_id": "285",
+    "admin_id": "25",
+    "beer_id": "167903",
+    "amount": "8",
+    "price": "16.40",
+    "timestamp": "2014-06-11 17:49:54"
+}, {
+    "transaction_id": "286",
+    "admin_id": "25",
+    "beer_id": "156603",
+    "amount": "12",
+    "price": "14.90",
+    "timestamp": "2014-06-11 17:50:01"
+}, {
+    "transaction_id": "287",
+    "admin_id": "25",
+    "beer_id": "166703",
+    "amount": "4",
+    "price": "33.90",
+    "timestamp": "2014-06-11 17:50:21"
+}, {
+    "transaction_id": "288",
+    "admin_id": "25",
+    "beer_id": "1144703",
+    "amount": "2",
+    "price": "19.90",
+    "timestamp": "2014-06-11 17:50:31"
+}, {
+    "transaction_id": "289",
+    "admin_id": "25",
+    "beer_id": "1159803",
+    "amount": "2",
+    "price": "19.90",
+    "timestamp": "2014-06-11 17:50:43"
+}, {
+    "transaction_id": "290",
+    "admin_id": "25",
+    "beer_id": "151503",
+    "amount": "24",
+    "price": "20.90",
+    "timestamp": "2014-06-11 17:50:52"
+}, {
+    "transaction_id": "291",
+    "admin_id": "25",
+    "beer_id": "187702",
+    "amount": "3",
+    "price": "19.90",
+    "timestamp": "2014-10-02 15:57:47"
+}, {
+    "transaction_id": "292",
+    "admin_id": "25",
+    "beer_id": "182603",
+    "amount": "1",
+    "price": "15.90",
+    "timestamp": "2014-10-02 15:58:04"
+}, {
+    "transaction_id": "293",
+    "admin_id": "25",
+    "beer_id": "178503",
+    "amount": "1",
+    "price": "15.90",
+    "timestamp": "2014-10-02 15:58:14"
+}, {
+    "transaction_id": "294",
+    "admin_id": "25",
+    "beer_id": "171903",
+    "amount": "1",
+    "price": "15.90",
+    "timestamp": "2014-10-02 15:58:24"
+}, {
+    "transaction_id": "295",
+    "admin_id": "25",
+    "beer_id": "186602",
+    "amount": "3",
+    "price": "27.90",
+    "timestamp": "2014-10-02 15:58:34"
+}, {
+    "transaction_id": "296",
+    "admin_id": "25",
+    "beer_id": "181803",
+    "amount": "3",
+    "price": "19.90",
+    "timestamp": "2014-10-02 15:58:43"
+}, {
+    "transaction_id": "297",
+    "admin_id": "25",
+    "beer_id": "183203",
+    "amount": "3",
+    "price": "19.90",
+    "timestamp": "2014-10-02 15:59:01"
+}, {
+    "transaction_id": "298",
+    "admin_id": "25",
+    "beer_id": "154803",
+    "amount": "6",
+    "price": "17.90",
+    "timestamp": "2014-10-02 15:59:14"
+}, {
+    "transaction_id": "299",
+    "admin_id": "25",
+    "beer_id": "150603",
+    "amount": "12",
+    "price": "12.90",
+    "timestamp": "2014-10-02 15:59:22"
+}, {
+    "transaction_id": "300",
+    "admin_id": "25",
+    "beer_id": "157503",
+    "amount": "3",
+    "price": "23.90",
+    "timestamp": "2014-10-02 15:59:39"
+}, {
+    "transaction_id": "301",
+    "admin_id": "25",
+    "beer_id": "165903",
+    "amount": "3",
+    "price": "19.90",
+    "timestamp": "2014-10-02 15:59:52"
+}, {
+    "transaction_id": "302",
+    "admin_id": "25",
+    "beer_id": "156103",
+    "amount": "3",
+    "price": "17.90",
+    "timestamp": "2014-10-02 16:00:12"
+}, {
+    "transaction_id": "303",
+    "admin_id": "25",
+    "beer_id": "8953903",
+    "amount": "3",
+    "price": "34.90",
+    "timestamp": "2014-10-02 16:00:24"
+}, {
+    "transaction_id": "304",
+    "admin_id": "25",
+    "beer_id": "1199403",
+    "amount": "4",
+    "price": "16.90",
+    "timestamp": "2014-10-02 16:00:34"
+}, {
+    "transaction_id": "305",
+    "admin_id": "25",
+    "beer_id": "198902",
+    "amount": "8",
+    "price": "12.40",
+    "timestamp": "2014-10-02 16:00:46"
+}, {
+    "transaction_id": "306",
+    "admin_id": "25",
+    "beer_id": "195202",
+    "amount": "2",
+    "price": "10.90",
+    "timestamp": "2014-10-02 16:00:54"
+}, {
+    "transaction_id": "307",
+    "admin_id": "25",
+    "beer_id": "193002",
+    "amount": "2",
+    "price": "12.40",
+    "timestamp": "2014-10-02 16:01:03"
+}, {
+    "transaction_id": "308",
+    "admin_id": "25",
+    "beer_id": "191402",
+    "amount": "3",
+    "price": "9.90",
+    "timestamp": "2014-10-02 16:01:11"
+}, {
+    "transaction_id": "309",
+    "admin_id": "25",
+    "beer_id": "591401",
+    "amount": "2",
+    "price": "65.00",
+    "timestamp": "2014-10-02 16:01:35"
+}, {
+    "transaction_id": "310",
+    "admin_id": "25",
+    "beer_id": "651201",
+    "amount": "2",
+    "price": "69.00",
+    "timestamp": "2014-10-02 16:01:46"
+}, {
+    "transaction_id": "311",
+    "admin_id": "25",
+    "beer_id": "649801",
+    "amount": "2",
+    "price": "99.00",
+    "timestamp": "2014-10-02 16:01:59"
+}, {
+    "transaction_id": "312",
+    "admin_id": "25",
+    "beer_id": "582201",
+    "amount": "1",
+    "price": "99.00",
+    "timestamp": "2014-10-02 16:02:19"
+}, {
+    "transaction_id": "313",
+    "admin_id": "25",
+    "beer_id": "223301",
+    "amount": "1",
+    "price": "99.00",
+    "timestamp": "2014-10-02 16:02:28"
+}, {
+    "transaction_id": "314",
+    "admin_id": "25",
+    "beer_id": "266201",
+    "amount": "1",
+    "price": "119.00",
+    "timestamp": "2014-10-02 16:02:45"
+}, {
+    "transaction_id": "315",
+    "admin_id": "25",
+    "beer_id": "645901",
+    "amount": "1",
+    "price": "64.00",
+    "timestamp": "2014-10-02 16:02:55"
+}, {
+    "transaction_id": "316",
+    "admin_id": "25",
+    "beer_id": "192201",
+    "amount": "2",
+    "price": "12.90",
+    "timestamp": "2014-10-02 16:03:02"
+}, {
+    "transaction_id": "317",
+    "admin_id": "25",
+    "beer_id": "149003",
+    "amount": "4",
+    "price": "17.90",
+    "timestamp": "2014-10-02 16:03:13"
+}, {
+    "transaction_id": "318",
+    "admin_id": "25",
+    "beer_id": "8962903",
+    "amount": "2",
+    "price": "26.30",
+    "timestamp": "2014-10-02 16:03:24"
+}, {
+    "transaction_id": "319",
+    "admin_id": "25",
+    "beer_id": "142003",
+    "amount": "2",
+    "price": "17.90",
+    "timestamp": "2014-10-02 16:03:32"
+}, {
+    "transaction_id": "320",
+    "admin_id": "25",
+    "beer_id": "168103",
+    "amount": "2",
+    "price": "23.90",
+    "timestamp": "2014-10-02 16:03:43"
+}, {
+    "transaction_id": "321",
+    "admin_id": "25",
+    "beer_id": "149803",
+    "amount": "2",
+    "price": "18.90",
+    "timestamp": "2014-10-02 16:03:54"
+}, {
+    "transaction_id": "322",
+    "admin_id": "25",
+    "beer_id": "169301",
+    "amount": "1",
+    "price": "49.90",
+    "timestamp": "2014-10-02 16:04:10"
+}, {
+    "transaction_id": "323",
+    "admin_id": "25",
+    "beer_id": "8875603",
+    "amount": "1",
+    "price": "20.70",
+    "timestamp": "2014-10-02 16:04:27"
+}, {
+    "transaction_id": "324",
+    "admin_id": "25",
+    "beer_id": "194703",
+    "amount": "3",
+    "price": "12.90",
+    "timestamp": "2014-10-02 16:04:36"
+}, {
+    "transaction_id": "325",
+    "admin_id": "25",
+    "beer_id": "153803",
+    "amount": "2",
+    "price": "15.70",
+    "timestamp": "2014-10-02 16:04:48"
+}, {
+    "transaction_id": "326",
+    "admin_id": "25",
+    "beer_id": "1159803",
+    "amount": "2",
+    "price": "19.90",
+    "timestamp": "2014-10-02 16:04:57"
+}, {
+    "transaction_id": "327",
+    "admin_id": "25",
+    "beer_id": "1144703",
+    "amount": "2",
+    "price": "19.90",
+    "timestamp": "2014-10-02 16:05:12"
+}, {
+    "transaction_id": "328",
+    "admin_id": "25",
+    "beer_id": "1152803",
+    "amount": "4",
+    "price": "24.90",
+    "timestamp": "2014-10-02 16:05:21"
+}, {
+    "transaction_id": "329",
+    "admin_id": "25",
+    "beer_id": "1128101",
+    "amount": "2",
+    "price": "20.60",
+    "timestamp": "2014-10-02 16:05:33"
+}, {
+    "transaction_id": "330",
+    "admin_id": "25",
+    "beer_id": "1125001",
+    "amount": "2",
+    "price": "21.90",
+    "timestamp": "2014-10-02 16:05:43"
+}, {
+    "transaction_id": "331",
+    "admin_id": "25",
+    "beer_id": "157701",
+    "amount": "1",
+    "price": "36.30",
+    "timestamp": "2014-10-02 16:05:56"
+}, {
+    "transaction_id": "332",
+    "admin_id": "25",
+    "beer_id": "1129801",
+    "amount": "2",
+    "price": "19.90",
+    "timestamp": "2014-10-02 16:06:07"
+}, {
+    "transaction_id": "333",
+    "admin_id": "25",
+    "beer_id": "151503",
+    "amount": "24",
+    "price": "21.40",
+    "timestamp": "2014-10-02 16:06:17"
+}, {
+    "transaction_id": "334",
+    "admin_id": "25",
+    "beer_id": "1120801",
+    "amount": "1",
+    "price": "21.90",
+    "timestamp": "2014-10-02 16:06:28"
+}, {
+    "transaction_id": "335",
+    "admin_id": "25",
+    "beer_id": "155701",
+    "amount": "1",
+    "price": "20.90",
+    "timestamp": "2014-10-02 16:06:40"
+}, {
+    "transaction_id": "336",
+    "admin_id": "25",
+    "beer_id": "168701",
+    "amount": "1",
+    "price": "21.90",
+    "timestamp": "2014-10-02 16:06:50"
+}, {
+    "transaction_id": "337",
+    "admin_id": "25",
+    "beer_id": "148001",
+    "amount": "2",
+    "price": "15.40",
+    "timestamp": "2014-10-02 16:07:06"
+}, {
+    "transaction_id": "338",
+    "admin_id": "25",
+    "beer_id": "137901",
+    "amount": "3",
+    "price": "17.50",
+    "timestamp": "2014-10-02 16:07:15"
+}, {
+    "transaction_id": "339",
+    "admin_id": "25",
+    "beer_id": "1134103",
+    "amount": "2",
+    "price": "13.50",
+    "timestamp": "2014-10-02 16:07:26"
+}, {
+    "transaction_id": "340",
+    "admin_id": "25",
+    "beer_id": "167903",
+    "amount": "3",
+    "price": "16.40",
+    "timestamp": "2014-10-02 16:07:37"
+}, {
+    "transaction_id": "341",
+    "admin_id": "25",
+    "beer_id": "196303",
+    "amount": "2",
+    "price": "22.50",
+    "timestamp": "2014-10-02 16:07:46"
+}]

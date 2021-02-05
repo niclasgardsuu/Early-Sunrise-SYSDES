@@ -1,0 +1,5904 @@
+
+// dutchman.beers_sold
+// 
+[{
+    "transaction_id": "1",
+    "user_id": "2",
+    "beer_id": "154603",
+    "timestamp": "2012-08-31 17:21:13"
+}, {
+    "transaction_id": "2",
+    "user_id": "2",
+    "beer_id": "151503",
+    "timestamp": "2012-08-31 17:21:44"
+}, {
+    "transaction_id": "3",
+    "user_id": "2",
+    "beer_id": "151503",
+    "timestamp": "2012-08-31 17:21:48"
+}, {
+    "transaction_id": "4",
+    "user_id": "2",
+    "beer_id": "151503",
+    "timestamp": "2012-08-31 17:21:51"
+}, {
+    "transaction_id": "5",
+    "user_id": "2",
+    "beer_id": "157803",
+    "timestamp": "2012-08-31 17:21:57"
+}, {
+    "transaction_id": "6",
+    "user_id": "19",
+    "beer_id": "154603",
+    "timestamp": "2012-08-31 17:44:05"
+}, {
+    "transaction_id": "7",
+    "user_id": "18",
+    "beer_id": "157503",
+    "timestamp": "2012-08-31 17:45:05"
+}, {
+    "transaction_id": "8",
+    "user_id": "16",
+    "beer_id": "146403",
+    "timestamp": "2012-08-31 17:46:54"
+}, {
+    "transaction_id": "9",
+    "user_id": "16",
+    "beer_id": "154603",
+    "timestamp": "2012-08-31 17:47:14"
+}, {
+    "transaction_id": "10",
+    "user_id": "16",
+    "beer_id": "151503",
+    "timestamp": "2012-08-31 17:47:49"
+}, {
+    "transaction_id": "11",
+    "user_id": "16",
+    "beer_id": "151503",
+    "timestamp": "2012-08-31 17:47:58"
+}, {
+    "transaction_id": "12",
+    "user_id": "16",
+    "beer_id": "151503",
+    "timestamp": "2012-08-31 17:48:03"
+}, {
+    "transaction_id": "13",
+    "user_id": "16",
+    "beer_id": "151503",
+    "timestamp": "2012-08-31 17:48:07"
+}, {
+    "transaction_id": "14",
+    "user_id": "20",
+    "beer_id": "168303",
+    "timestamp": "2012-08-31 17:48:20"
+}, {
+    "transaction_id": "15",
+    "user_id": "17",
+    "beer_id": "157803",
+    "timestamp": "2012-08-31 17:49:14"
+}, {
+    "transaction_id": "16",
+    "user_id": "17",
+    "beer_id": "151503",
+    "timestamp": "2012-08-31 17:50:14"
+}, {
+    "transaction_id": "17",
+    "user_id": "17",
+    "beer_id": "1152803",
+    "timestamp": "2012-08-31 17:57:06"
+}, {
+    "transaction_id": "18",
+    "user_id": "22",
+    "beer_id": "153503",
+    "timestamp": "2012-08-31 18:01:48"
+}, {
+    "transaction_id": "19",
+    "user_id": "16",
+    "beer_id": "157503",
+    "timestamp": "2012-08-31 18:09:54"
+}, {
+    "transaction_id": "20",
+    "user_id": "21",
+    "beer_id": "157503",
+    "timestamp": "2012-08-31 18:13:25"
+}, {
+    "transaction_id": "21",
+    "user_id": "20",
+    "beer_id": "153503",
+    "timestamp": "2012-08-31 18:32:42"
+}, {
+    "transaction_id": "22",
+    "user_id": "16",
+    "beer_id": "146403",
+    "timestamp": "2012-08-31 18:35:20"
+}, {
+    "transaction_id": "23",
+    "user_id": "22",
+    "beer_id": "154603",
+    "timestamp": "2012-08-31 18:36:42"
+}, {
+    "transaction_id": "24",
+    "user_id": "17",
+    "beer_id": "1152803",
+    "timestamp": "2012-08-31 18:49:33"
+}, {
+    "transaction_id": "25",
+    "user_id": "19",
+    "beer_id": "153503",
+    "timestamp": "2012-08-31 18:56:18"
+}, {
+    "transaction_id": "26",
+    "user_id": "16",
+    "beer_id": "157503",
+    "timestamp": "2012-08-31 19:00:18"
+}, {
+    "transaction_id": "27",
+    "user_id": "16",
+    "beer_id": "154603",
+    "timestamp": "2012-08-31 19:26:52"
+}, {
+    "transaction_id": "28",
+    "user_id": "20",
+    "beer_id": "161503",
+    "timestamp": "2012-08-31 19:28:55"
+}, {
+    "transaction_id": "29",
+    "user_id": "19",
+    "beer_id": "154603",
+    "timestamp": "2012-08-31 19:40:25"
+}, {
+    "transaction_id": "30",
+    "user_id": "19",
+    "beer_id": "154603",
+    "timestamp": "2012-08-31 19:41:07"
+}, {
+    "transaction_id": "31",
+    "user_id": "23",
+    "beer_id": "159412",
+    "timestamp": "2012-08-31 19:42:28"
+}, {
+    "transaction_id": "32",
+    "user_id": "17",
+    "beer_id": "1152803",
+    "timestamp": "2012-08-31 19:43:01"
+}, {
+    "transaction_id": "33",
+    "user_id": "17",
+    "beer_id": "152503",
+    "timestamp": "2012-08-31 19:44:12"
+}, {
+    "transaction_id": "34",
+    "user_id": "16",
+    "beer_id": "157503",
+    "timestamp": "2012-08-31 20:17:43"
+}, {
+    "transaction_id": "35",
+    "user_id": "20",
+    "beer_id": "1140501",
+    "timestamp": "2012-08-31 20:18:17"
+}, {
+    "transaction_id": "36",
+    "user_id": "23",
+    "beer_id": "144612",
+    "timestamp": "2012-08-31 20:36:44"
+}, {
+    "transaction_id": "37",
+    "user_id": "24",
+    "beer_id": "144612",
+    "timestamp": "2012-08-31 20:47:06"
+}, {
+    "transaction_id": "38",
+    "user_id": "24",
+    "beer_id": "157503",
+    "timestamp": "2012-08-31 20:48:08"
+}, {
+    "transaction_id": "39",
+    "user_id": "16",
+    "beer_id": "157503",
+    "timestamp": "2012-08-31 20:51:50"
+}, {
+    "transaction_id": "40",
+    "user_id": "16",
+    "beer_id": "157503",
+    "timestamp": "2012-08-31 21:39:51"
+}, {
+    "transaction_id": "41",
+    "user_id": "20",
+    "beer_id": "157803",
+    "timestamp": "2012-08-31 21:46:31"
+}, {
+    "transaction_id": "42",
+    "user_id": "20",
+    "beer_id": "146403",
+    "timestamp": "2012-08-31 22:26:14"
+}, {
+    "transaction_id": "43",
+    "user_id": "16",
+    "beer_id": "151503",
+    "timestamp": "2012-08-31 22:28:56"
+}, {
+    "transaction_id": "44",
+    "user_id": "17",
+    "beer_id": "151503",
+    "timestamp": "2012-08-31 22:30:25"
+}, {
+    "transaction_id": "45",
+    "user_id": "20",
+    "beer_id": "148803",
+    "timestamp": "2012-08-31 23:49:51"
+}, {
+    "transaction_id": "46",
+    "user_id": "17",
+    "beer_id": "151503",
+    "timestamp": "2012-09-01 00:09:51"
+}, {
+    "transaction_id": "47",
+    "user_id": "17",
+    "beer_id": "151503",
+    "timestamp": "2012-09-01 00:10:00"
+}, {
+    "transaction_id": "48",
+    "user_id": "16",
+    "beer_id": "151503",
+    "timestamp": "2012-09-01 00:10:59"
+}, {
+    "transaction_id": "49",
+    "user_id": "16",
+    "beer_id": "151503",
+    "timestamp": "2012-09-01 00:11:10"
+}, {
+    "transaction_id": "50",
+    "user_id": "16",
+    "beer_id": "151503",
+    "timestamp": "2012-09-01 00:11:21"
+}, {
+    "transaction_id": "51",
+    "user_id": "17",
+    "beer_id": "151503",
+    "timestamp": "2012-09-01 00:11:41"
+}, {
+    "transaction_id": "52",
+    "user_id": "20",
+    "beer_id": "151503",
+    "timestamp": "2012-09-01 00:31:13"
+}, {
+    "transaction_id": "53",
+    "user_id": "16",
+    "beer_id": "151503",
+    "timestamp": "2012-09-01 00:31:30"
+}, {
+    "transaction_id": "54",
+    "user_id": "16",
+    "beer_id": "151503",
+    "timestamp": "2012-09-01 00:59:54"
+}, {
+    "transaction_id": "55",
+    "user_id": "16",
+    "beer_id": "157503",
+    "timestamp": "2012-09-01 02:19:03"
+}, {
+    "transaction_id": "56",
+    "user_id": "16",
+    "beer_id": "157503",
+    "timestamp": "2012-09-01 02:19:28"
+}, {
+    "transaction_id": "57",
+    "user_id": "16",
+    "beer_id": "154603",
+    "timestamp": "2012-09-05 19:27:35"
+}, {
+    "transaction_id": "58",
+    "user_id": "25",
+    "beer_id": "157503",
+    "timestamp": "2012-09-05 19:28:02"
+}, {
+    "transaction_id": "59",
+    "user_id": "25",
+    "beer_id": "157503",
+    "timestamp": "2012-09-07 14:29:22"
+}, {
+    "transaction_id": "60",
+    "user_id": "25",
+    "beer_id": "157503",
+    "timestamp": "2012-09-07 14:29:26"
+}, {
+    "transaction_id": "61",
+    "user_id": "16",
+    "beer_id": "154603",
+    "timestamp": "2012-09-07 14:31:27"
+}, {
+    "transaction_id": "62",
+    "user_id": "16",
+    "beer_id": "154603",
+    "timestamp": "2012-09-07 14:31:32"
+}, {
+    "transaction_id": "63",
+    "user_id": "25",
+    "beer_id": "146403",
+    "timestamp": "2012-09-12 21:04:07"
+}, {
+    "transaction_id": "64",
+    "user_id": "25",
+    "beer_id": "146403",
+    "timestamp": "2012-09-12 21:04:58"
+}, {
+    "transaction_id": "65",
+    "user_id": "25",
+    "beer_id": "146403",
+    "timestamp": "2012-09-12 21:05:41"
+}, {
+    "transaction_id": "66",
+    "user_id": "16",
+    "beer_id": "154603",
+    "timestamp": "2012-09-12 21:06:22"
+}, {
+    "transaction_id": "67",
+    "user_id": "16",
+    "beer_id": "154603",
+    "timestamp": "2012-09-12 21:06:35"
+}, {
+    "transaction_id": "68",
+    "user_id": "16",
+    "beer_id": "154603",
+    "timestamp": "2012-09-12 21:06:41"
+}, {
+    "transaction_id": "69",
+    "user_id": "16",
+    "beer_id": "154603",
+    "timestamp": "2012-09-12 21:12:03"
+}, {
+    "transaction_id": "70",
+    "user_id": "16",
+    "beer_id": "154603",
+    "timestamp": "2012-09-12 21:50:46"
+}, {
+    "transaction_id": "71",
+    "user_id": "25",
+    "beer_id": "163203",
+    "timestamp": "2012-09-12 21:53:17"
+}, {
+    "transaction_id": "72",
+    "user_id": "26",
+    "beer_id": "154603",
+    "timestamp": "2012-09-13 20:14:07"
+}, {
+    "transaction_id": "73",
+    "user_id": "16",
+    "beer_id": "154603",
+    "timestamp": "2012-09-13 20:23:30"
+}, {
+    "transaction_id": "74",
+    "user_id": "17",
+    "beer_id": "151503",
+    "timestamp": "2012-09-13 20:24:51"
+}, {
+    "transaction_id": "75",
+    "user_id": "17",
+    "beer_id": "151503",
+    "timestamp": "2012-09-13 20:25:05"
+}, {
+    "transaction_id": "76",
+    "user_id": "17",
+    "beer_id": "151503",
+    "timestamp": "2012-09-13 20:25:14"
+}, {
+    "transaction_id": "77",
+    "user_id": "17",
+    "beer_id": "151503",
+    "timestamp": "2012-09-13 20:25:23"
+}, {
+    "transaction_id": "78",
+    "user_id": "17",
+    "beer_id": "148803",
+    "timestamp": "2012-09-13 20:26:51"
+}, {
+    "transaction_id": "79",
+    "user_id": "17",
+    "beer_id": "148803",
+    "timestamp": "2012-09-13 20:26:56"
+}, {
+    "transaction_id": "80",
+    "user_id": "17",
+    "beer_id": "157503",
+    "timestamp": "2012-09-13 20:27:07"
+}, {
+    "transaction_id": "81",
+    "user_id": "17",
+    "beer_id": "157503",
+    "timestamp": "2012-09-13 20:27:14"
+}, {
+    "transaction_id": "82",
+    "user_id": "17",
+    "beer_id": "157803",
+    "timestamp": "2012-09-13 20:27:27"
+}, {
+    "transaction_id": "83",
+    "user_id": "17",
+    "beer_id": "154603",
+    "timestamp": "2012-09-13 20:27:52"
+}, {
+    "transaction_id": "84",
+    "user_id": "17",
+    "beer_id": "151503",
+    "timestamp": "2012-09-13 20:29:06"
+}, {
+    "transaction_id": "85",
+    "user_id": "16",
+    "beer_id": "154603",
+    "timestamp": "2012-09-13 20:34:53"
+}, {
+    "transaction_id": "86",
+    "user_id": "17",
+    "beer_id": "154603",
+    "timestamp": "2012-09-13 20:45:17"
+}, {
+    "transaction_id": "87",
+    "user_id": "16",
+    "beer_id": "154603",
+    "timestamp": "2012-09-14 17:34:06"
+}, {
+    "transaction_id": "88",
+    "user_id": "16",
+    "beer_id": "152901",
+    "timestamp": "2012-09-14 17:35:17"
+}, {
+    "transaction_id": "89",
+    "user_id": "17",
+    "beer_id": "154603",
+    "timestamp": "2012-09-14 17:36:38"
+}, {
+    "transaction_id": "90",
+    "user_id": "26",
+    "beer_id": "152901",
+    "timestamp": "2012-09-14 17:37:00"
+}, {
+    "transaction_id": "91",
+    "user_id": "25",
+    "beer_id": "1137903",
+    "timestamp": "2012-09-14 17:38:49"
+}, {
+    "transaction_id": "92",
+    "user_id": "22",
+    "beer_id": "154603",
+    "timestamp": "2012-09-14 17:39:10"
+}, {
+    "transaction_id": "93",
+    "user_id": "20",
+    "beer_id": "135503",
+    "timestamp": "2012-09-14 17:39:37"
+}, {
+    "transaction_id": "94",
+    "user_id": "27",
+    "beer_id": "1140501",
+    "timestamp": "2012-09-14 17:46:11"
+}, {
+    "transaction_id": "95",
+    "user_id": "28",
+    "beer_id": "167903",
+    "timestamp": "2012-09-14 17:52:01"
+}, {
+    "transaction_id": "96",
+    "user_id": "17",
+    "beer_id": "154603",
+    "timestamp": "2012-09-14 17:58:19"
+}, {
+    "transaction_id": "97",
+    "user_id": "16",
+    "beer_id": "152901",
+    "timestamp": "2012-09-14 18:04:38"
+}, {
+    "transaction_id": "98",
+    "user_id": "29",
+    "beer_id": "154603",
+    "timestamp": "2012-09-14 18:08:14"
+}, {
+    "transaction_id": "99",
+    "user_id": "22",
+    "beer_id": "1137903",
+    "timestamp": "2012-09-14 18:08:26"
+}, {
+    "transaction_id": "100",
+    "user_id": "27",
+    "beer_id": "148803",
+    "timestamp": "2012-09-14 18:08:51"
+}, {
+    "transaction_id": "101",
+    "user_id": "28",
+    "beer_id": "153503",
+    "timestamp": "2012-09-14 18:22:04"
+}, {
+    "transaction_id": "102",
+    "user_id": "17",
+    "beer_id": "154603",
+    "timestamp": "2012-09-14 18:28:32"
+}, {
+    "transaction_id": "103",
+    "user_id": "16",
+    "beer_id": "152901",
+    "timestamp": "2012-09-14 18:34:03"
+}, {
+    "transaction_id": "104",
+    "user_id": "27",
+    "beer_id": "157503",
+    "timestamp": "2012-09-14 18:37:57"
+}, {
+    "transaction_id": "105",
+    "user_id": "24",
+    "beer_id": "152901",
+    "timestamp": "2012-09-14 18:40:59"
+}, {
+    "transaction_id": "106",
+    "user_id": "23",
+    "beer_id": "152901",
+    "timestamp": "2012-09-14 18:41:23"
+}, {
+    "transaction_id": "107",
+    "user_id": "20",
+    "beer_id": "161503",
+    "timestamp": "2012-09-14 18:45:05"
+}, {
+    "transaction_id": "108",
+    "user_id": "19",
+    "beer_id": "154603",
+    "timestamp": "2012-09-14 18:46:10"
+}, {
+    "transaction_id": "109",
+    "user_id": "29",
+    "beer_id": "154603",
+    "timestamp": "2012-09-14 18:46:54"
+}, {
+    "transaction_id": "110",
+    "user_id": "22",
+    "beer_id": "154603",
+    "timestamp": "2012-09-14 18:51:43"
+}, {
+    "transaction_id": "111",
+    "user_id": "17",
+    "beer_id": "154603",
+    "timestamp": "2012-09-14 19:06:38"
+}, {
+    "transaction_id": "112",
+    "user_id": "16",
+    "beer_id": "154603",
+    "timestamp": "2012-09-14 19:21:27"
+}, {
+    "transaction_id": "113",
+    "user_id": "24",
+    "beer_id": "157503",
+    "timestamp": "2012-09-14 19:37:24"
+}, {
+    "transaction_id": "114",
+    "user_id": "16",
+    "beer_id": "154603",
+    "timestamp": "2012-09-14 19:46:55"
+}, {
+    "transaction_id": "115",
+    "user_id": "17",
+    "beer_id": "154603",
+    "timestamp": "2012-09-14 19:47:05"
+}, {
+    "transaction_id": "116",
+    "user_id": "19",
+    "beer_id": "154603",
+    "timestamp": "2012-09-14 19:47:11"
+}, {
+    "transaction_id": "117",
+    "user_id": "20",
+    "beer_id": "159412",
+    "timestamp": "2012-09-14 20:09:16"
+}, {
+    "transaction_id": "118",
+    "user_id": "24",
+    "beer_id": "154603",
+    "timestamp": "2012-09-14 20:18:34"
+}, {
+    "transaction_id": "119",
+    "user_id": "16",
+    "beer_id": "154603",
+    "timestamp": "2012-09-14 20:36:11"
+}, {
+    "transaction_id": "120",
+    "user_id": "19",
+    "beer_id": "154603",
+    "timestamp": "2012-09-14 20:36:19"
+}, {
+    "transaction_id": "121",
+    "user_id": "17",
+    "beer_id": "154603",
+    "timestamp": "2012-09-14 20:36:28"
+}, {
+    "transaction_id": "122",
+    "user_id": "24",
+    "beer_id": "167903",
+    "timestamp": "2012-09-14 20:56:02"
+}, {
+    "transaction_id": "123",
+    "user_id": "17",
+    "beer_id": "154603",
+    "timestamp": "2012-09-14 21:13:52"
+}, {
+    "transaction_id": "124",
+    "user_id": "16",
+    "beer_id": "167903",
+    "timestamp": "2012-09-14 21:17:06"
+}, {
+    "transaction_id": "125",
+    "user_id": "24",
+    "beer_id": "1137903",
+    "timestamp": "2012-09-14 21:33:43"
+}, {
+    "transaction_id": "126",
+    "user_id": "16",
+    "beer_id": "154603",
+    "timestamp": "2012-09-14 21:57:13"
+}, {
+    "transaction_id": "127",
+    "user_id": "19",
+    "beer_id": "154603",
+    "timestamp": "2012-09-14 22:11:54"
+}, {
+    "transaction_id": "128",
+    "user_id": "17",
+    "beer_id": "154603",
+    "timestamp": "2012-09-14 22:53:57"
+}, {
+    "transaction_id": "129",
+    "user_id": "24",
+    "beer_id": "120301",
+    "timestamp": "2012-09-14 22:59:40"
+}, {
+    "transaction_id": "130",
+    "user_id": "16",
+    "beer_id": "154603",
+    "timestamp": "2012-09-14 23:52:24"
+}, {
+    "transaction_id": "131",
+    "user_id": "18",
+    "beer_id": "167903",
+    "timestamp": "2012-09-15 00:22:05"
+}, {
+    "transaction_id": "132",
+    "user_id": "16",
+    "beer_id": "167903",
+    "timestamp": "2012-09-15 00:22:42"
+}, {
+    "transaction_id": "133",
+    "user_id": "16",
+    "beer_id": "167903",
+    "timestamp": "2012-09-24 22:18:36"
+}, {
+    "transaction_id": "134",
+    "user_id": "16",
+    "beer_id": "167903",
+    "timestamp": "2012-09-24 22:18:38"
+}, {
+    "transaction_id": "135",
+    "user_id": "16",
+    "beer_id": "154603",
+    "timestamp": "2012-09-24 22:18:47"
+}, {
+    "transaction_id": "136",
+    "user_id": "16",
+    "beer_id": "157503",
+    "timestamp": "2012-09-24 22:18:49"
+}, {
+    "transaction_id": "137",
+    "user_id": "16",
+    "beer_id": "167903",
+    "timestamp": "2012-09-24 22:18:52"
+}, {
+    "transaction_id": "138",
+    "user_id": "16",
+    "beer_id": "163203",
+    "timestamp": "2012-09-29 18:51:15"
+}, {
+    "transaction_id": "139",
+    "user_id": "16",
+    "beer_id": "163203",
+    "timestamp": "2012-09-29 18:51:17"
+}, {
+    "transaction_id": "140",
+    "user_id": "16",
+    "beer_id": "167903",
+    "timestamp": "2012-09-29 18:51:49"
+}, {
+    "transaction_id": "141",
+    "user_id": "16",
+    "beer_id": "167903",
+    "timestamp": "2012-09-29 18:51:53"
+}, {
+    "transaction_id": "142",
+    "user_id": "16",
+    "beer_id": "167903",
+    "timestamp": "2012-09-29 18:51:57"
+}, {
+    "transaction_id": "143",
+    "user_id": "16",
+    "beer_id": "167903",
+    "timestamp": "2012-09-29 18:52:00"
+}, {
+    "transaction_id": "144",
+    "user_id": "16",
+    "beer_id": "167903",
+    "timestamp": "2012-09-29 18:52:03"
+}, {
+    "transaction_id": "145",
+    "user_id": "16",
+    "beer_id": "152901",
+    "timestamp": "2012-10-02 12:06:18"
+}, {
+    "transaction_id": "146",
+    "user_id": "17",
+    "beer_id": "152901",
+    "timestamp": "2012-10-02 12:06:35"
+}, {
+    "transaction_id": "147",
+    "user_id": "16",
+    "beer_id": "1137903",
+    "timestamp": "2012-10-03 17:57:42"
+}, {
+    "transaction_id": "148",
+    "user_id": "25",
+    "beer_id": "1137903",
+    "timestamp": "2012-10-03 17:57:53"
+}, {
+    "transaction_id": "149",
+    "user_id": "16",
+    "beer_id": "1137903",
+    "timestamp": "2012-10-03 18:37:57"
+}, {
+    "transaction_id": "150",
+    "user_id": "25",
+    "beer_id": "1137903",
+    "timestamp": "2012-10-03 18:38:05"
+}, {
+    "transaction_id": "151",
+    "user_id": "16",
+    "beer_id": "152901",
+    "timestamp": "2012-10-03 19:08:09"
+}, {
+    "transaction_id": "152",
+    "user_id": "25",
+    "beer_id": "152901",
+    "timestamp": "2012-10-03 19:08:23"
+}, {
+    "transaction_id": "153",
+    "user_id": "25",
+    "beer_id": "152901",
+    "timestamp": "2012-10-03 20:16:49"
+}, {
+    "transaction_id": "154",
+    "user_id": "16",
+    "beer_id": "152901",
+    "timestamp": "2012-10-03 20:16:50"
+}, {
+    "transaction_id": "155",
+    "user_id": "16",
+    "beer_id": "1137903",
+    "timestamp": "2012-10-10 14:54:41"
+}, {
+    "transaction_id": "156",
+    "user_id": "16",
+    "beer_id": "148803",
+    "timestamp": "2012-10-10 14:55:13"
+}, {
+    "transaction_id": "157",
+    "user_id": "25",
+    "beer_id": "148803",
+    "timestamp": "2012-10-10 14:55:22"
+}, {
+    "transaction_id": "158",
+    "user_id": "25",
+    "beer_id": "148803",
+    "timestamp": "2012-10-10 14:55:29"
+}, {
+    "transaction_id": "159",
+    "user_id": "25",
+    "beer_id": "152901",
+    "timestamp": "2012-10-29 18:14:27"
+}, {
+    "transaction_id": "160",
+    "user_id": "2",
+    "beer_id": "1140501",
+    "timestamp": "2012-10-29 18:14:38"
+}, {
+    "transaction_id": "161",
+    "user_id": "2",
+    "beer_id": "151503",
+    "timestamp": "2012-11-02 16:46:33"
+}, {
+    "transaction_id": "162",
+    "user_id": "25",
+    "beer_id": "151503",
+    "timestamp": "2012-11-02 16:46:44"
+}, {
+    "transaction_id": "163",
+    "user_id": "30",
+    "beer_id": "151503",
+    "timestamp": "2012-11-02 16:50:52"
+}, {
+    "transaction_id": "164",
+    "user_id": "17",
+    "beer_id": "152503",
+    "timestamp": "2012-11-02 16:56:40"
+}, {
+    "transaction_id": "165",
+    "user_id": "2",
+    "beer_id": "151503",
+    "timestamp": "2012-11-02 17:19:46"
+}, {
+    "transaction_id": "166",
+    "user_id": "17",
+    "beer_id": "151503",
+    "timestamp": "2012-11-02 17:21:03"
+}, {
+    "transaction_id": "167",
+    "user_id": "30",
+    "beer_id": "151503",
+    "timestamp": "2012-11-02 17:31:47"
+}, {
+    "transaction_id": "168",
+    "user_id": "25",
+    "beer_id": "1152803",
+    "timestamp": "2012-11-02 18:11:19"
+}, {
+    "transaction_id": "169",
+    "user_id": "2",
+    "beer_id": "151001",
+    "timestamp": "2012-11-02 18:15:01"
+}, {
+    "transaction_id": "170",
+    "user_id": "30",
+    "beer_id": "154603",
+    "timestamp": "2012-11-02 18:15:19"
+}, {
+    "transaction_id": "171",
+    "user_id": "25",
+    "beer_id": "198902",
+    "timestamp": "2012-11-02 18:15:49"
+}, {
+    "transaction_id": "172",
+    "user_id": "17",
+    "beer_id": "151503",
+    "timestamp": "2012-11-02 18:15:57"
+}, {
+    "transaction_id": "173",
+    "user_id": "2",
+    "beer_id": "151503",
+    "timestamp": "2012-11-06 16:42:02"
+}, {
+    "transaction_id": "174",
+    "user_id": "17",
+    "beer_id": "151503",
+    "timestamp": "2012-11-06 16:42:09"
+}, {
+    "transaction_id": "175",
+    "user_id": "25",
+    "beer_id": "157803",
+    "timestamp": "2012-11-06 16:42:51"
+}, {
+    "transaction_id": "176",
+    "user_id": "30",
+    "beer_id": "168803",
+    "timestamp": "2012-11-09 17:20:02"
+}, {
+    "transaction_id": "177",
+    "user_id": "31",
+    "beer_id": "151503",
+    "timestamp": "2012-11-09 17:22:38"
+}, {
+    "transaction_id": "178",
+    "user_id": "32",
+    "beer_id": "167903",
+    "timestamp": "2012-11-09 17:26:29"
+}, {
+    "transaction_id": "179",
+    "user_id": "27",
+    "beer_id": "152901",
+    "timestamp": "2012-11-09 17:26:51"
+}, {
+    "transaction_id": "180",
+    "user_id": "17",
+    "beer_id": "164103",
+    "timestamp": "2012-11-09 17:28:09"
+}, {
+    "transaction_id": "181",
+    "user_id": "25",
+    "beer_id": "140003",
+    "timestamp": "2012-11-09 17:28:35"
+}, {
+    "transaction_id": "182",
+    "user_id": "25",
+    "beer_id": "152503",
+    "timestamp": "2012-11-09 17:29:28"
+}, {
+    "transaction_id": "183",
+    "user_id": "29",
+    "beer_id": "151503",
+    "timestamp": "2012-11-09 17:30:31"
+}, {
+    "transaction_id": "184",
+    "user_id": "26",
+    "beer_id": "152901",
+    "timestamp": "2012-11-09 17:34:26"
+}, {
+    "transaction_id": "185",
+    "user_id": "27",
+    "beer_id": "1125303",
+    "timestamp": "2012-11-09 17:44:47"
+}, {
+    "transaction_id": "186",
+    "user_id": "31",
+    "beer_id": "156303",
+    "timestamp": "2012-11-09 17:50:37"
+}, {
+    "transaction_id": "187",
+    "user_id": "30",
+    "beer_id": "1151503",
+    "timestamp": "2012-11-09 17:55:48"
+}, {
+    "transaction_id": "188",
+    "user_id": "17",
+    "beer_id": "151503",
+    "timestamp": "2012-11-09 18:00:14"
+}, {
+    "transaction_id": "189",
+    "user_id": "25",
+    "beer_id": "152503",
+    "timestamp": "2012-11-09 18:12:32"
+}, {
+    "transaction_id": "190",
+    "user_id": "33",
+    "beer_id": "151001",
+    "timestamp": "2012-11-09 18:24:01"
+}, {
+    "transaction_id": "191",
+    "user_id": "34",
+    "beer_id": "163203",
+    "timestamp": "2012-11-09 18:27:05"
+}, {
+    "transaction_id": "192",
+    "user_id": "31",
+    "beer_id": "1125303",
+    "timestamp": "2012-11-09 18:29:51"
+}, {
+    "transaction_id": "193",
+    "user_id": "17",
+    "beer_id": "151503",
+    "timestamp": "2012-11-09 18:39:54"
+}, {
+    "transaction_id": "194",
+    "user_id": "34",
+    "beer_id": "164903",
+    "timestamp": "2012-11-09 18:57:19"
+}, {
+    "transaction_id": "195",
+    "user_id": "25",
+    "beer_id": "157803",
+    "timestamp": "2012-11-09 18:57:35"
+}, {
+    "transaction_id": "196",
+    "user_id": "33",
+    "beer_id": "151001",
+    "timestamp": "2012-11-09 18:58:05"
+}, {
+    "transaction_id": "197",
+    "user_id": "31",
+    "beer_id": "1158103",
+    "timestamp": "2012-11-09 19:01:51"
+}, {
+    "transaction_id": "198",
+    "user_id": "17",
+    "beer_id": "151503",
+    "timestamp": "2012-11-09 19:09:39"
+}, {
+    "transaction_id": "199",
+    "user_id": "31",
+    "beer_id": "148803",
+    "timestamp": "2012-11-09 19:28:42"
+}, {
+    "transaction_id": "200",
+    "user_id": "32",
+    "beer_id": "198902",
+    "timestamp": "2012-11-09 19:40:48"
+}, {
+    "transaction_id": "201",
+    "user_id": "25",
+    "beer_id": "198902",
+    "timestamp": "2012-11-09 19:41:49"
+}, {
+    "transaction_id": "202",
+    "user_id": "17",
+    "beer_id": "151503",
+    "timestamp": "2012-11-09 19:47:07"
+}, {
+    "transaction_id": "203",
+    "user_id": "25",
+    "beer_id": "148803",
+    "timestamp": "2012-11-09 20:37:06"
+}, {
+    "transaction_id": "204",
+    "user_id": "17",
+    "beer_id": "151503",
+    "timestamp": "2012-11-09 20:37:18"
+}, {
+    "transaction_id": "205",
+    "user_id": "29",
+    "beer_id": "168803",
+    "timestamp": "2012-11-16 15:35:00"
+}, {
+    "transaction_id": "206",
+    "user_id": "29",
+    "beer_id": "151503",
+    "timestamp": "2012-11-16 15:35:29"
+}, {
+    "transaction_id": "207",
+    "user_id": "20",
+    "beer_id": "135503",
+    "timestamp": "2012-11-16 17:20:47"
+}, {
+    "transaction_id": "208",
+    "user_id": "2",
+    "beer_id": "151001",
+    "timestamp": "2012-11-16 17:21:10"
+}, {
+    "transaction_id": "209",
+    "user_id": "32",
+    "beer_id": "167903",
+    "timestamp": "2012-11-16 17:21:52"
+}, {
+    "transaction_id": "210",
+    "user_id": "32",
+    "beer_id": "152901",
+    "timestamp": "2012-11-16 17:22:14"
+}, {
+    "transaction_id": "211",
+    "user_id": "32",
+    "beer_id": "152901",
+    "timestamp": "2012-11-16 17:22:34"
+}, {
+    "transaction_id": "212",
+    "user_id": "17",
+    "beer_id": "151503",
+    "timestamp": "2012-11-16 17:29:02"
+}, {
+    "transaction_id": "213",
+    "user_id": "26",
+    "beer_id": "151503",
+    "timestamp": "2012-11-16 17:32:51"
+}, {
+    "transaction_id": "214",
+    "user_id": "25",
+    "beer_id": "167903",
+    "timestamp": "2012-11-16 17:45:21"
+}, {
+    "transaction_id": "215",
+    "user_id": "35",
+    "beer_id": "163203",
+    "timestamp": "2012-11-16 17:53:04"
+}, {
+    "transaction_id": "216",
+    "user_id": "35",
+    "beer_id": "135503",
+    "timestamp": "2012-11-16 18:43:22"
+}, {
+    "transaction_id": "217",
+    "user_id": "2",
+    "beer_id": "159103",
+    "timestamp": "2012-11-16 18:43:51"
+}, {
+    "transaction_id": "218",
+    "user_id": "25",
+    "beer_id": "140003",
+    "timestamp": "2012-11-16 18:44:08"
+}, {
+    "transaction_id": "219",
+    "user_id": "20",
+    "beer_id": "168303",
+    "timestamp": "2012-11-16 18:44:10"
+}, {
+    "transaction_id": "220",
+    "user_id": "17",
+    "beer_id": "151503",
+    "timestamp": "2012-11-16 18:45:44"
+}, {
+    "transaction_id": "221",
+    "user_id": "2",
+    "beer_id": "1125303",
+    "timestamp": "2012-11-16 18:52:16"
+}, {
+    "transaction_id": "222",
+    "user_id": "33",
+    "beer_id": "156303",
+    "timestamp": "2012-11-16 19:00:19"
+}, {
+    "transaction_id": "223",
+    "user_id": "34",
+    "beer_id": "164903",
+    "timestamp": "2012-11-16 19:01:53"
+}, {
+    "transaction_id": "224",
+    "user_id": "25",
+    "beer_id": "198902",
+    "timestamp": "2012-11-16 19:03:24"
+}, {
+    "transaction_id": "227",
+    "user_id": "2",
+    "beer_id": "154803",
+    "timestamp": "2012-11-16 19:27:55"
+}, {
+    "transaction_id": "226",
+    "user_id": "33",
+    "beer_id": "120301",
+    "timestamp": "2012-11-16 19:21:41"
+}, {
+    "transaction_id": "228",
+    "user_id": "34",
+    "beer_id": "154803",
+    "timestamp": "2012-11-16 19:30:43"
+}, {
+    "transaction_id": "229",
+    "user_id": "25",
+    "beer_id": "1158103",
+    "timestamp": "2012-11-16 19:32:11"
+}, {
+    "transaction_id": "230",
+    "user_id": "20",
+    "beer_id": "168803",
+    "timestamp": "2012-11-16 19:32:24"
+}, {
+    "transaction_id": "231",
+    "user_id": "2",
+    "beer_id": "168803",
+    "timestamp": "2012-11-20 19:30:43"
+}, {
+    "transaction_id": "232",
+    "user_id": "17",
+    "beer_id": "168803",
+    "timestamp": "2012-11-20 19:30:52"
+}, {
+    "transaction_id": "233",
+    "user_id": "2",
+    "beer_id": "1137903",
+    "timestamp": "2012-11-20 23:46:16"
+}, {
+    "transaction_id": "234",
+    "user_id": "2",
+    "beer_id": "1151503",
+    "timestamp": "2012-11-20 23:46:38"
+}, {
+    "transaction_id": "235",
+    "user_id": "17",
+    "beer_id": "154803",
+    "timestamp": "2012-11-20 23:47:00"
+}, {
+    "transaction_id": "236",
+    "user_id": "17",
+    "beer_id": "148803",
+    "timestamp": "2012-11-20 23:47:15"
+}, {
+    "transaction_id": "237",
+    "user_id": "17",
+    "beer_id": "154803",
+    "timestamp": "2012-12-04 22:14:21"
+}, {
+    "transaction_id": "238",
+    "user_id": "17",
+    "beer_id": "1125303",
+    "timestamp": "2012-12-04 22:14:36"
+}, {
+    "transaction_id": "239",
+    "user_id": "17",
+    "beer_id": "164903",
+    "timestamp": "2012-12-04 22:14:50"
+}, {
+    "transaction_id": "240",
+    "user_id": "25",
+    "beer_id": "1151503",
+    "timestamp": "2012-12-05 16:05:04"
+}, {
+    "transaction_id": "241",
+    "user_id": "17",
+    "beer_id": "148803",
+    "timestamp": "2012-12-05 18:13:44"
+}, {
+    "transaction_id": "242",
+    "user_id": "36",
+    "beer_id": "157503",
+    "timestamp": "2012-12-07 14:15:39"
+}, {
+    "transaction_id": "244",
+    "user_id": "36",
+    "beer_id": "1140501",
+    "timestamp": "2012-12-07 15:14:39"
+}, {
+    "transaction_id": "245",
+    "user_id": "36",
+    "beer_id": "1140501",
+    "timestamp": "2012-12-07 15:14:49"
+}, {
+    "transaction_id": "246",
+    "user_id": "36",
+    "beer_id": "1140501",
+    "timestamp": "2012-12-07 15:15:01"
+}, {
+    "transaction_id": "247",
+    "user_id": "36",
+    "beer_id": "120301",
+    "timestamp": "2012-12-07 15:15:05"
+}, {
+    "transaction_id": "248",
+    "user_id": "36",
+    "beer_id": "164903",
+    "timestamp": "2012-12-07 15:15:24"
+}, {
+    "transaction_id": "249",
+    "user_id": "36",
+    "beer_id": "154603",
+    "timestamp": "2012-12-07 15:15:29"
+}, {
+    "transaction_id": "250",
+    "user_id": "36",
+    "beer_id": "154603",
+    "timestamp": "2012-12-07 15:15:31"
+}, {
+    "transaction_id": "251",
+    "user_id": "36",
+    "beer_id": "154603",
+    "timestamp": "2012-12-07 15:15:33"
+}, {
+    "transaction_id": "252",
+    "user_id": "36",
+    "beer_id": "1137903",
+    "timestamp": "2012-12-07 15:15:46"
+}, {
+    "transaction_id": "253",
+    "user_id": "36",
+    "beer_id": "1137903",
+    "timestamp": "2012-12-07 15:15:48"
+}, {
+    "transaction_id": "254",
+    "user_id": "36",
+    "beer_id": "148803",
+    "timestamp": "2012-12-07 15:16:37"
+}, {
+    "transaction_id": "255",
+    "user_id": "17",
+    "beer_id": "8966103",
+    "timestamp": "2012-12-07 17:17:17"
+}, {
+    "transaction_id": "256",
+    "user_id": "25",
+    "beer_id": "150601",
+    "timestamp": "2012-12-07 17:18:40"
+}, {
+    "transaction_id": "257",
+    "user_id": "25",
+    "beer_id": "150601",
+    "timestamp": "2012-12-07 17:20:18"
+}, {
+    "transaction_id": "258",
+    "user_id": "37",
+    "beer_id": "157503",
+    "timestamp": "2012-12-07 17:20:44"
+}, {
+    "transaction_id": "259",
+    "user_id": "21",
+    "beer_id": "150601",
+    "timestamp": "2012-12-07 17:22:52"
+}, {
+    "transaction_id": "260",
+    "user_id": "38",
+    "beer_id": "150601",
+    "timestamp": "2012-12-07 17:26:59"
+}, {
+    "transaction_id": "261",
+    "user_id": "39",
+    "beer_id": "151503",
+    "timestamp": "2012-12-07 17:40:03"
+}, {
+    "transaction_id": "262",
+    "user_id": "39",
+    "beer_id": "162703",
+    "timestamp": "2012-12-07 17:46:19"
+}, {
+    "transaction_id": "263",
+    "user_id": "17",
+    "beer_id": "151503",
+    "timestamp": "2012-12-07 17:59:56"
+}, {
+    "transaction_id": "264",
+    "user_id": "25",
+    "beer_id": "8966103",
+    "timestamp": "2012-12-07 18:00:21"
+}, {
+    "transaction_id": "280",
+    "user_id": "25",
+    "beer_id": "8966103",
+    "timestamp": "2012-12-14 12:05:58"
+}, {
+    "transaction_id": "266",
+    "user_id": "38",
+    "beer_id": "151503",
+    "timestamp": "2012-12-07 18:27:28"
+}, {
+    "transaction_id": "267",
+    "user_id": "39",
+    "beer_id": "8966103",
+    "timestamp": "2012-12-07 18:27:30"
+}, {
+    "transaction_id": "268",
+    "user_id": "21",
+    "beer_id": "1137903",
+    "timestamp": "2012-12-07 18:27:34"
+}, {
+    "transaction_id": "269",
+    "user_id": "17",
+    "beer_id": "8966103",
+    "timestamp": "2012-12-07 18:40:54"
+}, {
+    "transaction_id": "270",
+    "user_id": "24",
+    "beer_id": "150601",
+    "timestamp": "2012-12-07 19:00:10"
+}, {
+    "transaction_id": "271",
+    "user_id": "41",
+    "beer_id": "8966103",
+    "timestamp": "2012-12-07 19:04:53"
+}, {
+    "transaction_id": "272",
+    "user_id": "39",
+    "beer_id": "168303",
+    "timestamp": "2012-12-07 19:13:53"
+}, {
+    "transaction_id": "273",
+    "user_id": "25",
+    "beer_id": "198902",
+    "timestamp": "2012-12-07 19:32:20"
+}, {
+    "transaction_id": "274",
+    "user_id": "38",
+    "beer_id": "152503",
+    "timestamp": "2012-12-07 19:34:55"
+}, {
+    "transaction_id": "279",
+    "user_id": "25",
+    "beer_id": "150601",
+    "timestamp": "2012-12-14 12:05:42"
+}, {
+    "transaction_id": "276",
+    "user_id": "39",
+    "beer_id": "150601",
+    "timestamp": "2012-12-07 20:03:31"
+}, {
+    "transaction_id": "277",
+    "user_id": "24",
+    "beer_id": "150601",
+    "timestamp": "2012-12-07 20:09:23"
+}, {
+    "transaction_id": "278",
+    "user_id": "38",
+    "beer_id": "152503",
+    "timestamp": "2012-12-07 20:12:50"
+}, {
+    "transaction_id": "281",
+    "user_id": "17",
+    "beer_id": "151503",
+    "timestamp": "2012-12-14 17:18:04"
+}, {
+    "transaction_id": "282",
+    "user_id": "42",
+    "beer_id": "8966103",
+    "timestamp": "2012-12-14 17:21:04"
+}, {
+    "transaction_id": "283",
+    "user_id": "17",
+    "beer_id": "151503",
+    "timestamp": "2012-12-14 17:21:55"
+}, {
+    "transaction_id": "284",
+    "user_id": "41",
+    "beer_id": "163203",
+    "timestamp": "2012-12-14 17:28:22"
+}, {
+    "transaction_id": "285",
+    "user_id": "25",
+    "beer_id": "150601",
+    "timestamp": "2012-12-14 17:31:25"
+}, {
+    "transaction_id": "286",
+    "user_id": "21",
+    "beer_id": "157803",
+    "timestamp": "2012-12-14 17:32:02"
+}, {
+    "transaction_id": "287",
+    "user_id": "43",
+    "beer_id": "154603",
+    "timestamp": "2012-12-14 17:43:12"
+}, {
+    "transaction_id": "288",
+    "user_id": "21",
+    "beer_id": "150601",
+    "timestamp": "2012-12-14 17:47:14"
+}, {
+    "transaction_id": "289",
+    "user_id": "24",
+    "beer_id": "150601",
+    "timestamp": "2012-12-14 17:47:31"
+}, {
+    "transaction_id": "290",
+    "user_id": "44",
+    "beer_id": "150601",
+    "timestamp": "2012-12-14 17:51:49"
+}, {
+    "transaction_id": "321",
+    "user_id": "35",
+    "beer_id": "1146001",
+    "timestamp": "2013-01-14 16:03:35"
+}, {
+    "transaction_id": "319",
+    "user_id": "2",
+    "beer_id": "151503",
+    "timestamp": "2013-01-11 17:08:07"
+}, {
+    "transaction_id": "293",
+    "user_id": "40",
+    "beer_id": "194703",
+    "timestamp": "2012-12-14 17:54:59"
+}, {
+    "transaction_id": "294",
+    "user_id": "40",
+    "beer_id": "194703",
+    "timestamp": "2012-12-14 17:55:18"
+}, {
+    "transaction_id": "295",
+    "user_id": "29",
+    "beer_id": "151503",
+    "timestamp": "2012-12-14 17:58:14"
+}, {
+    "transaction_id": "296",
+    "user_id": "25",
+    "beer_id": "150601",
+    "timestamp": "2012-12-14 18:00:59"
+}, {
+    "transaction_id": "297",
+    "user_id": "25",
+    "beer_id": "8966103",
+    "timestamp": "2012-12-14 18:01:30"
+}, {
+    "transaction_id": "298",
+    "user_id": "42",
+    "beer_id": "157803",
+    "timestamp": "2012-12-14 18:08:53"
+}, {
+    "transaction_id": "299",
+    "user_id": "21",
+    "beer_id": "151503",
+    "timestamp": "2012-12-14 18:09:24"
+}, {
+    "transaction_id": "300",
+    "user_id": "25",
+    "beer_id": "8966103",
+    "timestamp": "2012-12-14 18:13:47"
+}, {
+    "transaction_id": "301",
+    "user_id": "43",
+    "beer_id": "150601",
+    "timestamp": "2012-12-14 18:15:58"
+}, {
+    "transaction_id": "302",
+    "user_id": "39",
+    "beer_id": "150601",
+    "timestamp": "2012-12-14 18:17:21"
+}, {
+    "transaction_id": "303",
+    "user_id": "39",
+    "beer_id": "8966103",
+    "timestamp": "2012-12-14 18:17:43"
+}, {
+    "transaction_id": "304",
+    "user_id": "24",
+    "beer_id": "150601",
+    "timestamp": "2012-12-14 18:20:44"
+}, {
+    "transaction_id": "305",
+    "user_id": "41",
+    "beer_id": "156603",
+    "timestamp": "2012-12-14 18:23:45"
+}, {
+    "transaction_id": "306",
+    "user_id": "25",
+    "beer_id": "198902",
+    "timestamp": "2012-12-14 18:32:11"
+}, {
+    "transaction_id": "307",
+    "user_id": "29",
+    "beer_id": "157503",
+    "timestamp": "2012-12-14 18:34:10"
+}, {
+    "transaction_id": "308",
+    "user_id": "17",
+    "beer_id": "151503",
+    "timestamp": "2012-12-14 18:42:18"
+}, {
+    "transaction_id": "309",
+    "user_id": "20",
+    "beer_id": "197702",
+    "timestamp": "2012-12-14 18:47:05"
+}, {
+    "transaction_id": "310",
+    "user_id": "24",
+    "beer_id": "156603",
+    "timestamp": "2012-12-14 19:07:19"
+}, {
+    "transaction_id": "311",
+    "user_id": "20",
+    "beer_id": "198902",
+    "timestamp": "2012-12-14 19:31:03"
+}, {
+    "transaction_id": "312",
+    "user_id": "17",
+    "beer_id": "1163903",
+    "timestamp": "2012-12-14 19:35:39"
+}, {
+    "transaction_id": "313",
+    "user_id": "39",
+    "beer_id": "1163903",
+    "timestamp": "2012-12-14 19:36:04"
+}, {
+    "transaction_id": "320",
+    "user_id": "37",
+    "beer_id": "168701",
+    "timestamp": "2013-01-14 16:03:28"
+}, {
+    "transaction_id": "315",
+    "user_id": "25",
+    "beer_id": "8966103",
+    "timestamp": "2012-12-14 20:09:05"
+}, {
+    "transaction_id": "316",
+    "user_id": "39",
+    "beer_id": "144203",
+    "timestamp": "2012-12-14 20:11:41"
+}, {
+    "transaction_id": "317",
+    "user_id": "17",
+    "beer_id": "151503",
+    "timestamp": "2012-12-14 20:11:57"
+}, {
+    "transaction_id": "322",
+    "user_id": "25",
+    "beer_id": "8966103",
+    "timestamp": "2013-01-14 16:03:53"
+}, {
+    "transaction_id": "323",
+    "user_id": "35",
+    "beer_id": "163203",
+    "timestamp": "2013-01-16 17:27:20"
+}, {
+    "transaction_id": "324",
+    "user_id": "17",
+    "beer_id": "151503",
+    "timestamp": "2013-01-16 17:27:28"
+}, {
+    "transaction_id": "325",
+    "user_id": "26",
+    "beer_id": "144203",
+    "timestamp": "2013-01-16 17:27:37"
+}, {
+    "transaction_id": "326",
+    "user_id": "20",
+    "beer_id": "135503",
+    "timestamp": "2013-03-22 17:24:43"
+}, {
+    "transaction_id": "327",
+    "user_id": "2",
+    "beer_id": "150601",
+    "timestamp": "2013-03-22 17:26:11"
+}, {
+    "transaction_id": "328",
+    "user_id": "39",
+    "beer_id": "154603",
+    "timestamp": "2013-03-22 17:26:26"
+}, {
+    "transaction_id": "329",
+    "user_id": "45",
+    "beer_id": "160903",
+    "timestamp": "2013-03-22 17:27:09"
+}, {
+    "transaction_id": "330",
+    "user_id": "21",
+    "beer_id": "181902",
+    "timestamp": "2013-03-22 17:27:18"
+}, {
+    "transaction_id": "331",
+    "user_id": "21",
+    "beer_id": "8966103",
+    "timestamp": "2013-03-22 17:28:53"
+}, {
+    "transaction_id": "332",
+    "user_id": "40",
+    "beer_id": "194703",
+    "timestamp": "2013-03-22 17:30:01"
+}, {
+    "transaction_id": "336",
+    "user_id": "39",
+    "beer_id": "1146001",
+    "timestamp": "2013-03-22 17:53:39"
+}, {
+    "transaction_id": "334",
+    "user_id": "31",
+    "beer_id": "168803",
+    "timestamp": "2013-03-22 17:30:36"
+}, {
+    "transaction_id": "335",
+    "user_id": "21",
+    "beer_id": "157503",
+    "timestamp": "2013-03-22 17:33:13"
+}, {
+    "transaction_id": "337",
+    "user_id": "29",
+    "beer_id": "154603",
+    "timestamp": "2013-03-22 17:57:21"
+}, {
+    "transaction_id": "338",
+    "user_id": "21",
+    "beer_id": "156603",
+    "timestamp": "2013-03-22 17:58:07"
+}, {
+    "transaction_id": "339",
+    "user_id": "20",
+    "beer_id": "153503",
+    "timestamp": "2013-03-22 18:03:22"
+}, {
+    "transaction_id": "340",
+    "user_id": "46",
+    "beer_id": "157503",
+    "timestamp": "2013-03-22 18:03:40"
+}, {
+    "transaction_id": "341",
+    "user_id": "46",
+    "beer_id": "181902",
+    "timestamp": "2013-03-22 18:03:51"
+}, {
+    "transaction_id": "342",
+    "user_id": "2",
+    "beer_id": "150601",
+    "timestamp": "2013-03-22 18:05:10"
+}, {
+    "transaction_id": "343",
+    "user_id": "17",
+    "beer_id": "151503",
+    "timestamp": "2013-03-22 18:10:07"
+}, {
+    "transaction_id": "344",
+    "user_id": "20",
+    "beer_id": "151503",
+    "timestamp": "2013-03-22 18:29:32"
+}, {
+    "transaction_id": "345",
+    "user_id": "39",
+    "beer_id": "168303",
+    "timestamp": "2013-03-22 18:35:12"
+}, {
+    "transaction_id": "346",
+    "user_id": "24",
+    "beer_id": "150601",
+    "timestamp": "2013-03-22 18:44:21"
+}, {
+    "transaction_id": "347",
+    "user_id": "2",
+    "beer_id": "151503",
+    "timestamp": "2013-03-22 18:50:37"
+}, {
+    "transaction_id": "348",
+    "user_id": "20",
+    "beer_id": "168303",
+    "timestamp": "2013-03-22 19:00:44"
+}, {
+    "transaction_id": "349",
+    "user_id": "17",
+    "beer_id": "168803",
+    "timestamp": "2013-03-22 19:05:17"
+}, {
+    "transaction_id": "350",
+    "user_id": "29",
+    "beer_id": "154603",
+    "timestamp": "2013-03-22 19:06:29"
+}, {
+    "transaction_id": "351",
+    "user_id": "47",
+    "beer_id": "150601",
+    "timestamp": "2013-03-22 19:08:54"
+}, {
+    "transaction_id": "352",
+    "user_id": "24",
+    "beer_id": "8966103",
+    "timestamp": "2013-03-22 19:25:46"
+}, {
+    "transaction_id": "353",
+    "user_id": "2",
+    "beer_id": "150601",
+    "timestamp": "2013-03-22 19:26:42"
+}, {
+    "transaction_id": "354",
+    "user_id": "39",
+    "beer_id": "163203",
+    "timestamp": "2013-03-22 19:26:50"
+}, {
+    "transaction_id": "355",
+    "user_id": "48",
+    "beer_id": "8966103",
+    "timestamp": "2013-03-22 19:36:42"
+}, {
+    "transaction_id": "356",
+    "user_id": "20",
+    "beer_id": "150601",
+    "timestamp": "2013-03-22 19:41:10"
+}, {
+    "transaction_id": "357",
+    "user_id": "39",
+    "beer_id": "8966103",
+    "timestamp": "2013-03-22 19:50:36"
+}, {
+    "transaction_id": "358",
+    "user_id": "17",
+    "beer_id": "151503",
+    "timestamp": "2013-04-26 17:21:14"
+}, {
+    "transaction_id": "359",
+    "user_id": "27",
+    "beer_id": "8966103",
+    "timestamp": "2013-04-26 17:21:41"
+}, {
+    "transaction_id": "360",
+    "user_id": "27",
+    "beer_id": "8966103",
+    "timestamp": "2013-04-26 17:23:40"
+}, {
+    "transaction_id": "361",
+    "user_id": "21",
+    "beer_id": "154603",
+    "timestamp": "2013-04-26 17:26:19"
+}, {
+    "transaction_id": "362",
+    "user_id": "21",
+    "beer_id": "153503",
+    "timestamp": "2013-04-26 17:26:39"
+}, {
+    "transaction_id": "363",
+    "user_id": "2",
+    "beer_id": "151503",
+    "timestamp": "2013-04-26 17:26:45"
+}, {
+    "transaction_id": "364",
+    "user_id": "2",
+    "beer_id": "151503",
+    "timestamp": "2013-04-26 17:27:04"
+}, {
+    "transaction_id": "365",
+    "user_id": "39",
+    "beer_id": "151503",
+    "timestamp": "2013-04-26 17:32:50"
+}, {
+    "transaction_id": "366",
+    "user_id": "21",
+    "beer_id": "168701",
+    "timestamp": "2013-04-26 17:33:27"
+}, {
+    "transaction_id": "367",
+    "user_id": "26",
+    "beer_id": "152503",
+    "timestamp": "2013-04-26 17:36:43"
+}, {
+    "transaction_id": "368",
+    "user_id": "39",
+    "beer_id": "192003",
+    "timestamp": "2013-04-26 17:38:51"
+}, {
+    "transaction_id": "369",
+    "user_id": "21",
+    "beer_id": "194703",
+    "timestamp": "2013-04-26 17:39:50"
+}, {
+    "transaction_id": "370",
+    "user_id": "21",
+    "beer_id": "1144703",
+    "timestamp": "2013-04-26 17:40:31"
+}, {
+    "transaction_id": "371",
+    "user_id": "21",
+    "beer_id": "151503",
+    "timestamp": "2013-04-26 17:40:40"
+}, {
+    "transaction_id": "372",
+    "user_id": "21",
+    "beer_id": "192003",
+    "timestamp": "2013-04-26 17:41:24"
+}, {
+    "transaction_id": "373",
+    "user_id": "44",
+    "beer_id": "150601",
+    "timestamp": "2013-04-26 17:42:21"
+}, {
+    "transaction_id": "374",
+    "user_id": "27",
+    "beer_id": "8966103",
+    "timestamp": "2013-04-26 18:03:47"
+}, {
+    "transaction_id": "375",
+    "user_id": "17",
+    "beer_id": "151503",
+    "timestamp": "2013-04-26 18:03:58"
+}, {
+    "transaction_id": "376",
+    "user_id": "22",
+    "beer_id": "154603",
+    "timestamp": "2013-04-26 18:05:15"
+}, {
+    "transaction_id": "377",
+    "user_id": "48",
+    "beer_id": "1144703",
+    "timestamp": "2013-04-26 18:05:30"
+}, {
+    "transaction_id": "378",
+    "user_id": "39",
+    "beer_id": "161503",
+    "timestamp": "2013-04-26 18:08:28"
+}, {
+    "transaction_id": "379",
+    "user_id": "21",
+    "beer_id": "150601",
+    "timestamp": "2013-04-26 18:08:40"
+}, {
+    "transaction_id": "380",
+    "user_id": "21",
+    "beer_id": "151503",
+    "timestamp": "2013-04-26 18:08:51"
+}, {
+    "transaction_id": "381",
+    "user_id": "24",
+    "beer_id": "150601",
+    "timestamp": "2013-04-26 18:11:33"
+}, {
+    "transaction_id": "382",
+    "user_id": "21",
+    "beer_id": "181902",
+    "timestamp": "2013-04-26 18:12:15"
+}, {
+    "transaction_id": "383",
+    "user_id": "27",
+    "beer_id": "165903",
+    "timestamp": "2013-04-26 18:14:53"
+}, {
+    "transaction_id": "384",
+    "user_id": "2",
+    "beer_id": "168803",
+    "timestamp": "2013-04-26 18:20:09"
+}, {
+    "transaction_id": "385",
+    "user_id": "44",
+    "beer_id": "150601",
+    "timestamp": "2013-04-26 18:30:46"
+}, {
+    "transaction_id": "386",
+    "user_id": "39",
+    "beer_id": "1152803",
+    "timestamp": "2013-04-26 18:31:58"
+}, {
+    "transaction_id": "387",
+    "user_id": "35",
+    "beer_id": "158201",
+    "timestamp": "2013-04-26 18:38:29"
+}, {
+    "transaction_id": "388",
+    "user_id": "17",
+    "beer_id": "159103",
+    "timestamp": "2013-04-26 18:41:00"
+}, {
+    "transaction_id": "389",
+    "user_id": "21",
+    "beer_id": "157803",
+    "timestamp": "2013-04-26 19:05:53"
+}, {
+    "transaction_id": "390",
+    "user_id": "21",
+    "beer_id": "181902",
+    "timestamp": "2013-04-26 19:06:08"
+}, {
+    "transaction_id": "391",
+    "user_id": "24",
+    "beer_id": "153503",
+    "timestamp": "2013-04-26 19:06:32"
+}, {
+    "transaction_id": "392",
+    "user_id": "21",
+    "beer_id": "151503",
+    "timestamp": "2013-04-26 19:06:55"
+}, {
+    "transaction_id": "393",
+    "user_id": "27",
+    "beer_id": "167903",
+    "timestamp": "2013-04-26 19:12:17"
+}, {
+    "transaction_id": "394",
+    "user_id": "39",
+    "beer_id": "154603",
+    "timestamp": "2013-04-26 19:12:27"
+}, {
+    "transaction_id": "395",
+    "user_id": "2",
+    "beer_id": "181902",
+    "timestamp": "2013-04-26 19:18:51"
+}, {
+    "transaction_id": "396",
+    "user_id": "2",
+    "beer_id": "151503",
+    "timestamp": "2013-04-26 19:19:07"
+}, {
+    "transaction_id": "397",
+    "user_id": "17",
+    "beer_id": "1152803",
+    "timestamp": "2013-04-26 19:36:02"
+}, {
+    "transaction_id": "398",
+    "user_id": "47",
+    "beer_id": "1146001",
+    "timestamp": "2013-04-26 19:50:44"
+}, {
+    "transaction_id": "399",
+    "user_id": "39",
+    "beer_id": "159103",
+    "timestamp": "2013-04-26 19:54:51"
+}, {
+    "transaction_id": "400",
+    "user_id": "2",
+    "beer_id": "181902",
+    "timestamp": "2013-04-26 19:55:56"
+}, {
+    "transaction_id": "401",
+    "user_id": "2",
+    "beer_id": "167903",
+    "timestamp": "2013-04-26 19:56:29"
+}, {
+    "transaction_id": "404",
+    "user_id": "21",
+    "beer_id": "1146001",
+    "timestamp": "2013-04-26 20:16:45"
+}, {
+    "transaction_id": "403",
+    "user_id": "24",
+    "beer_id": "120003",
+    "timestamp": "2013-04-26 20:15:50"
+}, {
+    "transaction_id": "405",
+    "user_id": "21",
+    "beer_id": "181902",
+    "timestamp": "2013-04-26 20:18:28"
+}, {
+    "transaction_id": "406",
+    "user_id": "21",
+    "beer_id": "182402",
+    "timestamp": "2013-04-26 20:33:50"
+}, {
+    "transaction_id": "407",
+    "user_id": "39",
+    "beer_id": "168803",
+    "timestamp": "2013-04-26 20:34:19"
+}, {
+    "transaction_id": "408",
+    "user_id": "17",
+    "beer_id": "151503",
+    "timestamp": "2013-04-26 20:37:02"
+}, {
+    "transaction_id": "409",
+    "user_id": "24",
+    "beer_id": "167903",
+    "timestamp": "2013-04-26 21:25:07"
+}, {
+    "transaction_id": "421",
+    "user_id": "17",
+    "beer_id": "1140501",
+    "timestamp": "2013-05-03 20:06:56"
+}, {
+    "transaction_id": "411",
+    "user_id": "39",
+    "beer_id": "156603",
+    "timestamp": "2013-04-26 21:37:23"
+}, {
+    "transaction_id": "412",
+    "user_id": "39",
+    "beer_id": "156603",
+    "timestamp": "2013-04-26 22:22:35"
+}, {
+    "transaction_id": "413",
+    "user_id": "24",
+    "beer_id": "182402",
+    "timestamp": "2013-04-26 22:31:42"
+}, {
+    "transaction_id": "414",
+    "user_id": "31",
+    "beer_id": "151503",
+    "timestamp": "2013-04-26 22:34:45"
+}, {
+    "transaction_id": "415",
+    "user_id": "31",
+    "beer_id": "151503",
+    "timestamp": "2013-04-26 22:45:03"
+}, {
+    "transaction_id": "416",
+    "user_id": "31",
+    "beer_id": "156303",
+    "timestamp": "2013-04-26 22:58:38"
+}, {
+    "transaction_id": "417",
+    "user_id": "17",
+    "beer_id": "141503",
+    "timestamp": "2013-04-26 23:20:27"
+}, {
+    "transaction_id": "418",
+    "user_id": "31",
+    "beer_id": "153803",
+    "timestamp": "2013-04-26 23:20:58"
+}, {
+    "transaction_id": "419",
+    "user_id": "31",
+    "beer_id": "153803",
+    "timestamp": "2013-04-26 23:44:09"
+}, {
+    "transaction_id": "420",
+    "user_id": "31",
+    "beer_id": "120003",
+    "timestamp": "2013-04-27 00:09:22"
+}, {
+    "transaction_id": "422",
+    "user_id": "17",
+    "beer_id": "8966103",
+    "timestamp": "2013-05-03 20:07:06"
+}, {
+    "transaction_id": "423",
+    "user_id": "2",
+    "beer_id": "8966103",
+    "timestamp": "2013-05-03 21:06:18"
+}, {
+    "transaction_id": "424",
+    "user_id": "2",
+    "beer_id": "165903",
+    "timestamp": "2013-05-03 21:06:55"
+}, {
+    "transaction_id": "425",
+    "user_id": "21",
+    "beer_id": "146403",
+    "timestamp": "2013-05-03 21:07:24"
+}, {
+    "transaction_id": "426",
+    "user_id": "31",
+    "beer_id": "151503",
+    "timestamp": "2013-05-31 17:38:52"
+}, {
+    "transaction_id": "427",
+    "user_id": "30",
+    "beer_id": "151503",
+    "timestamp": "2013-05-31 17:39:47"
+}, {
+    "transaction_id": "428",
+    "user_id": "37",
+    "beer_id": "160601",
+    "timestamp": "2013-05-31 17:40:46"
+}, {
+    "transaction_id": "429",
+    "user_id": "47",
+    "beer_id": "163203",
+    "timestamp": "2013-05-31 17:41:18"
+}, {
+    "transaction_id": "430",
+    "user_id": "30",
+    "beer_id": "165903",
+    "timestamp": "2013-05-31 17:58:51"
+}, {
+    "transaction_id": "431",
+    "user_id": "37",
+    "beer_id": "8966103",
+    "timestamp": "2013-05-31 17:59:42"
+}, {
+    "transaction_id": "432",
+    "user_id": "31",
+    "beer_id": "156303",
+    "timestamp": "2013-05-31 18:03:49"
+}, {
+    "transaction_id": "433",
+    "user_id": "48",
+    "beer_id": "161503",
+    "timestamp": "2013-05-31 18:09:09"
+}, {
+    "transaction_id": "434",
+    "user_id": "48",
+    "beer_id": "151503",
+    "timestamp": "2013-05-31 18:10:13"
+}, {
+    "transaction_id": "435",
+    "user_id": "31",
+    "beer_id": "151503",
+    "timestamp": "2013-05-31 18:22:12"
+}, {
+    "transaction_id": "436",
+    "user_id": "48",
+    "beer_id": "135503",
+    "timestamp": "2013-05-31 18:27:44"
+}, {
+    "transaction_id": "437",
+    "user_id": "49",
+    "beer_id": "158201",
+    "timestamp": "2013-05-31 18:34:57"
+}, {
+    "transaction_id": "438",
+    "user_id": "49",
+    "beer_id": "167903",
+    "timestamp": "2013-05-31 18:35:18"
+}, {
+    "transaction_id": "439",
+    "user_id": "49",
+    "beer_id": "167903",
+    "timestamp": "2013-05-31 18:35:31"
+}, {
+    "transaction_id": "440",
+    "user_id": "20",
+    "beer_id": "658102",
+    "timestamp": "2013-05-31 18:37:32"
+}, {
+    "transaction_id": "441",
+    "user_id": "20",
+    "beer_id": "218002",
+    "timestamp": "2013-05-31 18:37:57"
+}, {
+    "transaction_id": "442",
+    "user_id": "25",
+    "beer_id": "212002",
+    "timestamp": "2013-05-31 18:38:28"
+}, {
+    "transaction_id": "443",
+    "user_id": "21",
+    "beer_id": "151503",
+    "timestamp": "2013-05-31 18:42:50"
+}, {
+    "transaction_id": "444",
+    "user_id": "51",
+    "beer_id": "198902",
+    "timestamp": "2013-05-31 18:46:12"
+}, {
+    "transaction_id": "445",
+    "user_id": "51",
+    "beer_id": "120003",
+    "timestamp": "2013-05-31 18:48:26"
+}, {
+    "transaction_id": "446",
+    "user_id": "41",
+    "beer_id": "197702",
+    "timestamp": "2013-05-31 18:50:59"
+}, {
+    "transaction_id": "447",
+    "user_id": "31",
+    "beer_id": "8966103",
+    "timestamp": "2013-05-31 18:51:05"
+}, {
+    "transaction_id": "448",
+    "user_id": "41",
+    "beer_id": "181902",
+    "timestamp": "2013-05-31 18:51:30"
+}, {
+    "transaction_id": "449",
+    "user_id": "42",
+    "beer_id": "1146001",
+    "timestamp": "2013-05-31 18:56:10"
+}, {
+    "transaction_id": "450",
+    "user_id": "42",
+    "beer_id": "167903",
+    "timestamp": "2013-05-31 18:56:51"
+}, {
+    "transaction_id": "451",
+    "user_id": "37",
+    "beer_id": "135503",
+    "timestamp": "2013-05-31 18:58:17"
+}, {
+    "transaction_id": "452",
+    "user_id": "24",
+    "beer_id": "151503",
+    "timestamp": "2013-05-31 18:58:32"
+}, {
+    "transaction_id": "453",
+    "user_id": "24",
+    "beer_id": "160903",
+    "timestamp": "2013-05-31 18:59:08"
+}, {
+    "transaction_id": "454",
+    "user_id": "52",
+    "beer_id": "165103",
+    "timestamp": "2013-05-31 18:59:14"
+}, {
+    "transaction_id": "455",
+    "user_id": "24",
+    "beer_id": "163203",
+    "timestamp": "2013-05-31 18:59:25"
+}, {
+    "transaction_id": "456",
+    "user_id": "52",
+    "beer_id": "151503",
+    "timestamp": "2013-05-31 18:59:34"
+}, {
+    "transaction_id": "457",
+    "user_id": "50",
+    "beer_id": "165103",
+    "timestamp": "2013-05-31 19:01:59"
+}, {
+    "transaction_id": "458",
+    "user_id": "50",
+    "beer_id": "163203",
+    "timestamp": "2013-05-31 19:02:26"
+}, {
+    "transaction_id": "459",
+    "user_id": "50",
+    "beer_id": "165903",
+    "timestamp": "2013-05-31 19:02:55"
+}, {
+    "transaction_id": "460",
+    "user_id": "50",
+    "beer_id": "160601",
+    "timestamp": "2013-05-31 19:03:37"
+}, {
+    "transaction_id": "461",
+    "user_id": "50",
+    "beer_id": "181902",
+    "timestamp": "2013-05-31 19:04:01"
+}, {
+    "transaction_id": "462",
+    "user_id": "53",
+    "beer_id": "168701",
+    "timestamp": "2013-05-31 19:04:57"
+}, {
+    "transaction_id": "463",
+    "user_id": "53",
+    "beer_id": "151503",
+    "timestamp": "2013-05-31 19:05:07"
+}, {
+    "transaction_id": "464",
+    "user_id": "24",
+    "beer_id": "167903",
+    "timestamp": "2013-05-31 19:14:17"
+}, {
+    "transaction_id": "465",
+    "user_id": "52",
+    "beer_id": "182402",
+    "timestamp": "2013-05-31 19:15:34"
+}, {
+    "transaction_id": "466",
+    "user_id": "25",
+    "beer_id": "195202",
+    "timestamp": "2013-05-31 19:20:59"
+}, {
+    "transaction_id": "467",
+    "user_id": "53",
+    "beer_id": "167903",
+    "timestamp": "2013-05-31 19:21:24"
+}, {
+    "transaction_id": "468",
+    "user_id": "50",
+    "beer_id": "153503",
+    "timestamp": "2013-05-31 19:22:43"
+}, {
+    "transaction_id": "469",
+    "user_id": "31",
+    "beer_id": "151503",
+    "timestamp": "2013-05-31 19:23:24"
+}, {
+    "transaction_id": "486",
+    "user_id": "2",
+    "beer_id": "198902",
+    "timestamp": "2013-06-05 17:26:29"
+}, {
+    "transaction_id": "471",
+    "user_id": "31",
+    "beer_id": "192003",
+    "timestamp": "2013-05-31 19:53:49"
+}, {
+    "transaction_id": "472",
+    "user_id": "21",
+    "beer_id": "163203",
+    "timestamp": "2013-05-31 19:59:07"
+}, {
+    "transaction_id": "473",
+    "user_id": "53",
+    "beer_id": "161503",
+    "timestamp": "2013-05-31 20:03:42"
+}, {
+    "transaction_id": "485",
+    "user_id": "17",
+    "beer_id": "1152803",
+    "timestamp": "2013-06-05 17:25:07"
+}, {
+    "transaction_id": "475",
+    "user_id": "24",
+    "beer_id": "135503",
+    "timestamp": "2013-05-31 20:05:52"
+}, {
+    "transaction_id": "476",
+    "user_id": "25",
+    "beer_id": "154903",
+    "timestamp": "2013-05-31 20:17:32"
+}, {
+    "transaction_id": "477",
+    "user_id": "31",
+    "beer_id": "192003",
+    "timestamp": "2013-05-31 20:23:44"
+}, {
+    "transaction_id": "478",
+    "user_id": "31",
+    "beer_id": "151503",
+    "timestamp": "2013-05-31 20:24:32"
+}, {
+    "transaction_id": "479",
+    "user_id": "52",
+    "beer_id": "1140501",
+    "timestamp": "2013-05-31 20:25:28"
+}, {
+    "transaction_id": "480",
+    "user_id": "21",
+    "beer_id": "1134103",
+    "timestamp": "2013-05-31 20:28:07"
+}, {
+    "transaction_id": "481",
+    "user_id": "37",
+    "beer_id": "197702",
+    "timestamp": "2013-05-31 20:39:39"
+}, {
+    "transaction_id": "482",
+    "user_id": "31",
+    "beer_id": "151503",
+    "timestamp": "2013-05-31 21:09:27"
+}, {
+    "transaction_id": "488",
+    "user_id": "21",
+    "beer_id": "8910403",
+    "timestamp": "2013-06-05 17:28:44"
+}, {
+    "transaction_id": "487",
+    "user_id": "25",
+    "beer_id": "156603",
+    "timestamp": "2013-06-05 17:28:16"
+}, {
+    "transaction_id": "489",
+    "user_id": "17",
+    "beer_id": "1152803",
+    "timestamp": "2013-06-05 19:17:59"
+}, {
+    "transaction_id": "490",
+    "user_id": "25",
+    "beer_id": "156603",
+    "timestamp": "2013-06-05 19:18:27"
+}, {
+    "transaction_id": "491",
+    "user_id": "17",
+    "beer_id": "8910403",
+    "timestamp": "2013-06-05 19:19:05"
+}, {
+    "transaction_id": "492",
+    "user_id": "17",
+    "beer_id": "151503",
+    "timestamp": "2013-06-07 16:32:36"
+}, {
+    "transaction_id": "493",
+    "user_id": "17",
+    "beer_id": "151503",
+    "timestamp": "2013-06-07 16:32:50"
+}, {
+    "transaction_id": "494",
+    "user_id": "42",
+    "beer_id": "152901",
+    "timestamp": "2013-06-09 20:16:52"
+}, {
+    "transaction_id": "495",
+    "user_id": "17",
+    "beer_id": "152901",
+    "timestamp": "2013-06-09 20:17:25"
+}, {
+    "transaction_id": "496",
+    "user_id": "17",
+    "beer_id": "160903",
+    "timestamp": "2013-06-09 20:17:44"
+}, {
+    "transaction_id": "497",
+    "user_id": "17",
+    "beer_id": "151503",
+    "timestamp": "2013-06-19 18:48:22"
+}, {
+    "transaction_id": "498",
+    "user_id": "54",
+    "beer_id": "1146001",
+    "timestamp": "2013-06-19 18:50:10"
+}, {
+    "transaction_id": "499",
+    "user_id": "17",
+    "beer_id": "151503",
+    "timestamp": "2013-06-20 17:13:25"
+}, {
+    "transaction_id": "500",
+    "user_id": "25",
+    "beer_id": "1152803",
+    "timestamp": "2013-06-20 17:13:47"
+}, {
+    "transaction_id": "501",
+    "user_id": "17",
+    "beer_id": "151503",
+    "timestamp": "2013-06-24 16:26:50"
+}, {
+    "transaction_id": "502",
+    "user_id": "25",
+    "beer_id": "1152803",
+    "timestamp": "2013-06-24 16:27:13"
+}, {
+    "transaction_id": "503",
+    "user_id": "2",
+    "beer_id": "151503",
+    "timestamp": "2013-06-24 16:27:37"
+}, {
+    "transaction_id": "504",
+    "user_id": "30",
+    "beer_id": "168701",
+    "timestamp": "2013-06-28 17:17:07"
+}, {
+    "transaction_id": "505",
+    "user_id": "52",
+    "beer_id": "168701",
+    "timestamp": "2013-06-28 17:18:33"
+}, {
+    "transaction_id": "506",
+    "user_id": "20",
+    "beer_id": "232202",
+    "timestamp": "2013-06-28 17:48:59"
+}, {
+    "transaction_id": "507",
+    "user_id": "53",
+    "beer_id": "1148901",
+    "timestamp": "2013-06-28 17:49:48"
+}, {
+    "transaction_id": "508",
+    "user_id": "21",
+    "beer_id": "667102",
+    "timestamp": "2013-06-28 17:50:29"
+}, {
+    "transaction_id": "509",
+    "user_id": "52",
+    "beer_id": "153503",
+    "timestamp": "2013-06-28 17:50:55"
+}, {
+    "transaction_id": "510",
+    "user_id": "17",
+    "beer_id": "212002",
+    "timestamp": "2013-06-28 17:51:25"
+}, {
+    "transaction_id": "511",
+    "user_id": "33",
+    "beer_id": "1148901",
+    "timestamp": "2013-06-28 17:51:28"
+}, {
+    "transaction_id": "512",
+    "user_id": "21",
+    "beer_id": "160903",
+    "timestamp": "2013-06-28 17:53:20"
+}, {
+    "transaction_id": "513",
+    "user_id": "21",
+    "beer_id": "151503",
+    "timestamp": "2013-06-28 17:54:56"
+}, {
+    "transaction_id": "514",
+    "user_id": "21",
+    "beer_id": "157803",
+    "timestamp": "2013-06-28 17:55:08"
+}, {
+    "transaction_id": "515",
+    "user_id": "23",
+    "beer_id": "151503",
+    "timestamp": "2013-06-28 17:55:55"
+}, {
+    "transaction_id": "516",
+    "user_id": "23",
+    "beer_id": "151503",
+    "timestamp": "2013-06-28 17:56:08"
+}, {
+    "transaction_id": "517",
+    "user_id": "25",
+    "beer_id": "154903",
+    "timestamp": "2013-06-28 17:56:24"
+}, {
+    "transaction_id": "518",
+    "user_id": "33",
+    "beer_id": "167903",
+    "timestamp": "2013-06-28 18:00:29"
+}, {
+    "transaction_id": "519",
+    "user_id": "55",
+    "beer_id": "209702",
+    "timestamp": "2013-06-28 18:03:19"
+}, {
+    "transaction_id": "520",
+    "user_id": "30",
+    "beer_id": "151503",
+    "timestamp": "2013-06-28 18:09:15"
+}, {
+    "transaction_id": "521",
+    "user_id": "20",
+    "beer_id": "658102",
+    "timestamp": "2013-06-28 18:15:06"
+}, {
+    "transaction_id": "522",
+    "user_id": "25",
+    "beer_id": "194703",
+    "timestamp": "2013-06-28 18:16:59"
+}, {
+    "transaction_id": "523",
+    "user_id": "37",
+    "beer_id": "153503",
+    "timestamp": "2013-06-28 18:17:12"
+}, {
+    "transaction_id": "524",
+    "user_id": "53",
+    "beer_id": "1146001",
+    "timestamp": "2013-06-28 18:19:41"
+}, {
+    "transaction_id": "525",
+    "user_id": "52",
+    "beer_id": "1146001",
+    "timestamp": "2013-06-28 18:30:14"
+}, {
+    "transaction_id": "526",
+    "user_id": "24",
+    "beer_id": "153503",
+    "timestamp": "2013-06-28 18:33:22"
+}, {
+    "transaction_id": "527",
+    "user_id": "37",
+    "beer_id": "156603",
+    "timestamp": "2013-06-28 18:42:52"
+}, {
+    "transaction_id": "528",
+    "user_id": "17",
+    "beer_id": "151503",
+    "timestamp": "2013-06-28 18:44:34"
+}, {
+    "transaction_id": "529",
+    "user_id": "25",
+    "beer_id": "604504",
+    "timestamp": "2013-06-28 18:44:45"
+}, {
+    "transaction_id": "530",
+    "user_id": "21",
+    "beer_id": "1134103",
+    "timestamp": "2013-06-28 18:51:08"
+}, {
+    "transaction_id": "531",
+    "user_id": "33",
+    "beer_id": "1146001",
+    "timestamp": "2013-06-28 18:52:43"
+}, {
+    "transaction_id": "532",
+    "user_id": "24",
+    "beer_id": "156603",
+    "timestamp": "2013-06-28 18:57:30"
+}, {
+    "transaction_id": "533",
+    "user_id": "30",
+    "beer_id": "1134103",
+    "timestamp": "2013-06-28 18:58:54"
+}, {
+    "transaction_id": "534",
+    "user_id": "53",
+    "beer_id": "154903",
+    "timestamp": "2013-06-28 19:17:19"
+}, {
+    "transaction_id": "535",
+    "user_id": "21",
+    "beer_id": "210602",
+    "timestamp": "2013-06-28 19:17:29"
+}, {
+    "transaction_id": "536",
+    "user_id": "24",
+    "beer_id": "156603",
+    "timestamp": "2013-06-28 19:31:00"
+}, {
+    "transaction_id": "537",
+    "user_id": "17",
+    "beer_id": "1152803",
+    "timestamp": "2013-06-28 19:40:16"
+}, {
+    "transaction_id": "538",
+    "user_id": "33",
+    "beer_id": "167903",
+    "timestamp": "2013-06-28 19:40:44"
+}, {
+    "transaction_id": "539",
+    "user_id": "25",
+    "beer_id": "197302",
+    "timestamp": "2013-06-28 19:56:31"
+}, {
+    "transaction_id": "540",
+    "user_id": "52",
+    "beer_id": "192003",
+    "timestamp": "2013-06-28 20:01:58"
+}, {
+    "transaction_id": "541",
+    "user_id": "33",
+    "beer_id": "167903",
+    "timestamp": "2013-06-28 20:24:33"
+}, {
+    "transaction_id": "542",
+    "user_id": "17",
+    "beer_id": "232202",
+    "timestamp": "2013-06-28 20:27:56"
+}, {
+    "transaction_id": "543",
+    "user_id": "20",
+    "beer_id": "153503",
+    "timestamp": "2013-06-28 20:32:54"
+}, {
+    "transaction_id": "544",
+    "user_id": "25",
+    "beer_id": "1134103",
+    "timestamp": "2013-06-28 20:33:13"
+}, {
+    "transaction_id": "545",
+    "user_id": "20",
+    "beer_id": "167903",
+    "timestamp": "2013-06-28 21:09:07"
+}, {
+    "transaction_id": "546",
+    "user_id": "17",
+    "beer_id": "218002",
+    "timestamp": "2013-06-28 21:59:05"
+}, {
+    "transaction_id": "547",
+    "user_id": "52",
+    "beer_id": "153503",
+    "timestamp": "2013-06-28 22:17:17"
+}, {
+    "transaction_id": "548",
+    "user_id": "52",
+    "beer_id": "153503",
+    "timestamp": "2013-06-28 23:04:54"
+}, {
+    "transaction_id": "549",
+    "user_id": "20",
+    "beer_id": "1134103",
+    "timestamp": "2013-06-28 23:09:29"
+}, {
+    "transaction_id": "550",
+    "user_id": "25",
+    "beer_id": "198902",
+    "timestamp": "2013-07-26 18:10:39"
+}, {
+    "transaction_id": "551",
+    "user_id": "52",
+    "beer_id": "163203",
+    "timestamp": "2013-07-26 18:10:59"
+}, {
+    "transaction_id": "552",
+    "user_id": "37",
+    "beer_id": "181902",
+    "timestamp": "2013-07-26 18:20:32"
+}, {
+    "transaction_id": "553",
+    "user_id": "37",
+    "beer_id": "160903",
+    "timestamp": "2013-07-26 18:24:19"
+}, {
+    "transaction_id": "554",
+    "user_id": "25",
+    "beer_id": "667102",
+    "timestamp": "2013-07-26 18:29:37"
+}, {
+    "transaction_id": "555",
+    "user_id": "52",
+    "beer_id": "154903",
+    "timestamp": "2013-07-26 18:41:08"
+}, {
+    "transaction_id": "556",
+    "user_id": "52",
+    "beer_id": "198902",
+    "timestamp": "2013-07-26 19:15:34"
+}, {
+    "transaction_id": "557",
+    "user_id": "25",
+    "beer_id": "194703",
+    "timestamp": "2013-07-26 19:36:28"
+}, {
+    "transaction_id": "558",
+    "user_id": "37",
+    "beer_id": "197302",
+    "timestamp": "2013-07-28 14:23:03"
+}, {
+    "transaction_id": "559",
+    "user_id": "36",
+    "beer_id": "151503",
+    "timestamp": "2013-07-31 13:58:31"
+}, {
+    "transaction_id": "560",
+    "user_id": "36",
+    "beer_id": "151503",
+    "timestamp": "2013-07-31 13:58:36"
+}, {
+    "transaction_id": "561",
+    "user_id": "36",
+    "beer_id": "151503",
+    "timestamp": "2013-07-31 13:58:37"
+}, {
+    "transaction_id": "562",
+    "user_id": "36",
+    "beer_id": "150601",
+    "timestamp": "2013-07-31 13:58:47"
+}, {
+    "transaction_id": "563",
+    "user_id": "36",
+    "beer_id": "150601",
+    "timestamp": "2013-07-31 13:58:49"
+}, {
+    "transaction_id": "564",
+    "user_id": "36",
+    "beer_id": "8966103",
+    "timestamp": "2013-07-31 13:58:59"
+}, {
+    "transaction_id": "565",
+    "user_id": "36",
+    "beer_id": "141503",
+    "timestamp": "2013-07-31 13:59:14"
+}, {
+    "transaction_id": "566",
+    "user_id": "36",
+    "beer_id": "154603",
+    "timestamp": "2013-07-31 14:00:06"
+}, {
+    "transaction_id": "567",
+    "user_id": "36",
+    "beer_id": "152503",
+    "timestamp": "2013-07-31 14:00:16"
+}, {
+    "transaction_id": "568",
+    "user_id": "36",
+    "beer_id": "1134103",
+    "timestamp": "2013-07-31 14:00:27"
+}, {
+    "transaction_id": "569",
+    "user_id": "36",
+    "beer_id": "160903",
+    "timestamp": "2013-07-31 14:00:44"
+}, {
+    "transaction_id": "570",
+    "user_id": "36",
+    "beer_id": "160903",
+    "timestamp": "2013-07-31 14:00:48"
+}, {
+    "transaction_id": "571",
+    "user_id": "36",
+    "beer_id": "190002",
+    "timestamp": "2013-07-31 14:01:00"
+}, {
+    "transaction_id": "572",
+    "user_id": "36",
+    "beer_id": "181902",
+    "timestamp": "2013-07-31 14:01:11"
+}, {
+    "transaction_id": "573",
+    "user_id": "17",
+    "beer_id": "141001",
+    "timestamp": "2013-08-01 17:21:26"
+}, {
+    "transaction_id": "574",
+    "user_id": "25",
+    "beer_id": "150601",
+    "timestamp": "2013-08-01 17:21:51"
+}, {
+    "transaction_id": "575",
+    "user_id": "17",
+    "beer_id": "151503",
+    "timestamp": "2013-08-01 19:03:03"
+}, {
+    "transaction_id": "576",
+    "user_id": "53",
+    "beer_id": "150601",
+    "timestamp": "2013-08-02 17:23:21"
+}, {
+    "transaction_id": "577",
+    "user_id": "25",
+    "beer_id": "746902",
+    "timestamp": "2013-08-02 17:23:36"
+}, {
+    "transaction_id": "578",
+    "user_id": "22",
+    "beer_id": "154603",
+    "timestamp": "2013-08-02 17:24:28"
+}, {
+    "transaction_id": "579",
+    "user_id": "20",
+    "beer_id": "209702",
+    "timestamp": "2013-08-02 17:24:44"
+}, {
+    "transaction_id": "580",
+    "user_id": "52",
+    "beer_id": "160601",
+    "timestamp": "2013-08-02 17:28:24"
+}, {
+    "transaction_id": "581",
+    "user_id": "56",
+    "beer_id": "150401",
+    "timestamp": "2013-08-02 17:30:06"
+}, {
+    "transaction_id": "582",
+    "user_id": "17",
+    "beer_id": "1210502",
+    "timestamp": "2013-08-02 17:30:38"
+}, {
+    "transaction_id": "583",
+    "user_id": "45",
+    "beer_id": "1159903",
+    "timestamp": "2013-08-02 17:38:27"
+}, {
+    "transaction_id": "584",
+    "user_id": "22",
+    "beer_id": "154803",
+    "timestamp": "2013-08-02 17:41:46"
+}, {
+    "transaction_id": "585",
+    "user_id": "35",
+    "beer_id": "150401",
+    "timestamp": "2013-08-02 18:05:06"
+}, {
+    "transaction_id": "586",
+    "user_id": "35",
+    "beer_id": "160601",
+    "timestamp": "2013-08-02 18:05:34"
+}, {
+    "transaction_id": "587",
+    "user_id": "25",
+    "beer_id": "192804",
+    "timestamp": "2013-08-02 18:12:36"
+}, {
+    "transaction_id": "588",
+    "user_id": "20",
+    "beer_id": "218002",
+    "timestamp": "2013-08-02 18:39:35"
+}, {
+    "transaction_id": "589",
+    "user_id": "45",
+    "beer_id": "159103",
+    "timestamp": "2013-08-02 18:53:03"
+}, {
+    "transaction_id": "590",
+    "user_id": "52",
+    "beer_id": "1137903",
+    "timestamp": "2013-08-02 18:54:26"
+}, {
+    "transaction_id": "591",
+    "user_id": "17",
+    "beer_id": "212002",
+    "timestamp": "2013-08-02 19:33:00"
+}, {
+    "transaction_id": "592",
+    "user_id": "52",
+    "beer_id": "1120801",
+    "timestamp": "2013-08-02 20:35:24"
+}, {
+    "transaction_id": "593",
+    "user_id": "52",
+    "beer_id": "183502",
+    "timestamp": "2013-08-02 21:40:20"
+}, {
+    "transaction_id": "594",
+    "user_id": "52",
+    "beer_id": "183502",
+    "timestamp": "2013-08-02 21:57:26"
+}, {
+    "transaction_id": "595",
+    "user_id": "20",
+    "beer_id": "194203",
+    "timestamp": "2013-08-02 22:42:02"
+}, {
+    "transaction_id": "596",
+    "user_id": "20",
+    "beer_id": "209702",
+    "timestamp": "2013-08-02 22:42:40"
+}, {
+    "transaction_id": "597",
+    "user_id": "20",
+    "beer_id": "152503",
+    "timestamp": "2013-08-02 22:43:08"
+}, {
+    "transaction_id": "598",
+    "user_id": "17",
+    "beer_id": "1152803",
+    "timestamp": "2013-08-02 22:43:41"
+}, {
+    "transaction_id": "599",
+    "user_id": "20",
+    "beer_id": "151503",
+    "timestamp": "2013-08-02 23:07:52"
+}, {
+    "transaction_id": "600",
+    "user_id": "20",
+    "beer_id": "151503",
+    "timestamp": "2013-08-02 23:32:07"
+}, {
+    "transaction_id": "601",
+    "user_id": "20",
+    "beer_id": "151503",
+    "timestamp": "2013-08-02 23:35:08"
+}, {
+    "transaction_id": "602",
+    "user_id": "17",
+    "beer_id": "151503",
+    "timestamp": "2013-08-02 23:35:28"
+}, {
+    "transaction_id": "603",
+    "user_id": "25",
+    "beer_id": "150601",
+    "timestamp": "2013-08-22 18:12:13"
+}, {
+    "transaction_id": "604",
+    "user_id": "17",
+    "beer_id": "151503",
+    "timestamp": "2013-08-22 18:12:39"
+}, {
+    "transaction_id": "605",
+    "user_id": "57",
+    "beer_id": "1152803",
+    "timestamp": "2013-08-23 17:19:24"
+}, {
+    "transaction_id": "606",
+    "user_id": "25",
+    "beer_id": "150601",
+    "timestamp": "2013-08-23 17:19:26"
+}, {
+    "transaction_id": "607",
+    "user_id": "20",
+    "beer_id": "232202",
+    "timestamp": "2013-08-23 17:20:09"
+}, {
+    "transaction_id": "608",
+    "user_id": "17",
+    "beer_id": "212002",
+    "timestamp": "2013-08-23 17:22:36"
+}, {
+    "transaction_id": "609",
+    "user_id": "21",
+    "beer_id": "165403",
+    "timestamp": "2013-08-23 17:23:31"
+}, {
+    "transaction_id": "610",
+    "user_id": "30",
+    "beer_id": "165403",
+    "timestamp": "2013-08-23 17:24:08"
+}, {
+    "transaction_id": "657",
+    "user_id": "45",
+    "beer_id": "151503",
+    "timestamp": "2013-09-27 18:06:36"
+}, {
+    "transaction_id": "656",
+    "user_id": "20",
+    "beer_id": "167903",
+    "timestamp": "2013-08-23 23:02:14"
+}, {
+    "transaction_id": "613",
+    "user_id": "58",
+    "beer_id": "151503",
+    "timestamp": "2013-08-23 17:33:52"
+}, {
+    "transaction_id": "614",
+    "user_id": "33",
+    "beer_id": "168701",
+    "timestamp": "2013-08-23 17:43:43"
+}, {
+    "transaction_id": "615",
+    "user_id": "37",
+    "beer_id": "154603",
+    "timestamp": "2013-08-23 17:45:21"
+}, {
+    "transaction_id": "616",
+    "user_id": "58",
+    "beer_id": "150601",
+    "timestamp": "2013-08-23 18:10:58"
+}, {
+    "transaction_id": "617",
+    "user_id": "37",
+    "beer_id": "1137903",
+    "timestamp": "2013-08-23 18:19:37"
+}, {
+    "transaction_id": "618",
+    "user_id": "21",
+    "beer_id": "152503",
+    "timestamp": "2013-08-23 18:20:29"
+}, {
+    "transaction_id": "619",
+    "user_id": "20",
+    "beer_id": "8968701",
+    "timestamp": "2013-08-23 18:35:15"
+}, {
+    "transaction_id": "620",
+    "user_id": "59",
+    "beer_id": "167903",
+    "timestamp": "2013-08-23 18:38:24"
+}, {
+    "transaction_id": "621",
+    "user_id": "25",
+    "beer_id": "693502",
+    "timestamp": "2013-08-23 18:39:30"
+}, {
+    "transaction_id": "622",
+    "user_id": "31",
+    "beer_id": "151503",
+    "timestamp": "2013-08-23 18:39:50"
+}, {
+    "transaction_id": "623",
+    "user_id": "37",
+    "beer_id": "198902",
+    "timestamp": "2013-08-23 18:49:46"
+}, {
+    "transaction_id": "624",
+    "user_id": "58",
+    "beer_id": "159103",
+    "timestamp": "2013-08-23 19:04:51"
+}, {
+    "transaction_id": "625",
+    "user_id": "62",
+    "beer_id": "210602",
+    "timestamp": "2013-08-23 19:07:53"
+}, {
+    "transaction_id": "626",
+    "user_id": "30",
+    "beer_id": "8968701",
+    "timestamp": "2013-08-23 19:09:07"
+}, {
+    "transaction_id": "627",
+    "user_id": "31",
+    "beer_id": "151503",
+    "timestamp": "2013-08-23 19:12:41"
+}, {
+    "transaction_id": "628",
+    "user_id": "31",
+    "beer_id": "151503",
+    "timestamp": "2013-08-23 19:12:59"
+}, {
+    "transaction_id": "629",
+    "user_id": "17",
+    "beer_id": "151503",
+    "timestamp": "2013-08-23 19:13:12"
+}, {
+    "transaction_id": "630",
+    "user_id": "53",
+    "beer_id": "150601",
+    "timestamp": "2013-08-23 19:14:53"
+}, {
+    "transaction_id": "631",
+    "user_id": "63",
+    "beer_id": "181902",
+    "timestamp": "2013-08-23 19:16:25"
+}, {
+    "transaction_id": "632",
+    "user_id": "24",
+    "beer_id": "150601",
+    "timestamp": "2013-08-23 19:17:10"
+}, {
+    "transaction_id": "633",
+    "user_id": "24",
+    "beer_id": "1159903",
+    "timestamp": "2013-08-23 19:17:23"
+}, {
+    "transaction_id": "634",
+    "user_id": "57",
+    "beer_id": "658102",
+    "timestamp": "2013-08-23 19:21:47"
+}, {
+    "transaction_id": "635",
+    "user_id": "55",
+    "beer_id": "669702",
+    "timestamp": "2013-08-23 19:30:35"
+}, {
+    "transaction_id": "636",
+    "user_id": "25",
+    "beer_id": "150601",
+    "timestamp": "2013-08-23 19:34:52"
+}, {
+    "transaction_id": "637",
+    "user_id": "35",
+    "beer_id": "1124601",
+    "timestamp": "2013-08-23 19:35:52"
+}, {
+    "transaction_id": "638",
+    "user_id": "35",
+    "beer_id": "1124601",
+    "timestamp": "2013-08-23 19:35:55"
+}, {
+    "transaction_id": "639",
+    "user_id": "53",
+    "beer_id": "150601",
+    "timestamp": "2013-08-23 19:59:18"
+}, {
+    "transaction_id": "640",
+    "user_id": "63",
+    "beer_id": "181902",
+    "timestamp": "2013-08-23 20:04:08"
+}, {
+    "transaction_id": "641",
+    "user_id": "20",
+    "beer_id": "154603",
+    "timestamp": "2013-08-23 20:11:04"
+}, {
+    "transaction_id": "642",
+    "user_id": "25",
+    "beer_id": "198902",
+    "timestamp": "2013-08-23 20:19:37"
+}, {
+    "transaction_id": "643",
+    "user_id": "31",
+    "beer_id": "151503",
+    "timestamp": "2013-08-23 20:28:23"
+}, {
+    "transaction_id": "644",
+    "user_id": "17",
+    "beer_id": "151503",
+    "timestamp": "2013-08-23 20:38:36"
+}, {
+    "transaction_id": "645",
+    "user_id": "20",
+    "beer_id": "167903",
+    "timestamp": "2013-08-23 20:44:39"
+}, {
+    "transaction_id": "646",
+    "user_id": "58",
+    "beer_id": "167903",
+    "timestamp": "2013-08-23 20:46:45"
+}, {
+    "transaction_id": "647",
+    "user_id": "25",
+    "beer_id": "157503",
+    "timestamp": "2013-08-23 20:50:40"
+}, {
+    "transaction_id": "648",
+    "user_id": "62",
+    "beer_id": "156503",
+    "timestamp": "2013-08-23 21:00:39"
+}, {
+    "transaction_id": "649",
+    "user_id": "53",
+    "beer_id": "1133301",
+    "timestamp": "2013-08-23 21:02:19"
+}, {
+    "transaction_id": "650",
+    "user_id": "24",
+    "beer_id": "154803",
+    "timestamp": "2013-08-23 21:03:01"
+}, {
+    "transaction_id": "651",
+    "user_id": "58",
+    "beer_id": "190002",
+    "timestamp": "2013-08-23 21:03:34"
+}, {
+    "transaction_id": "652",
+    "user_id": "31",
+    "beer_id": "167903",
+    "timestamp": "2013-08-23 21:11:18"
+}, {
+    "transaction_id": "653",
+    "user_id": "57",
+    "beer_id": "151503",
+    "timestamp": "2013-08-23 21:15:11"
+}, {
+    "transaction_id": "654",
+    "user_id": "31",
+    "beer_id": "151503",
+    "timestamp": "2013-08-23 21:49:25"
+}, {
+    "transaction_id": "655",
+    "user_id": "20",
+    "beer_id": "151503",
+    "timestamp": "2013-08-23 21:50:13"
+}, {
+    "transaction_id": "658",
+    "user_id": "17",
+    "beer_id": "151503",
+    "timestamp": "2013-09-27 18:06:47"
+}, {
+    "transaction_id": "659",
+    "user_id": "2",
+    "beer_id": "151503",
+    "timestamp": "2013-10-03 14:17:24"
+}, {
+    "transaction_id": "660",
+    "user_id": "57",
+    "beer_id": "151503",
+    "timestamp": "2013-10-03 14:17:40"
+}, {
+    "transaction_id": "661",
+    "user_id": "17",
+    "beer_id": "151503",
+    "timestamp": "2013-10-03 14:20:18"
+}, {
+    "transaction_id": "662",
+    "user_id": "25",
+    "beer_id": "150601",
+    "timestamp": "2013-10-18 18:12:26"
+}, {
+    "transaction_id": "663",
+    "user_id": "2",
+    "beer_id": "1120801",
+    "timestamp": "2013-10-18 18:13:38"
+}, {
+    "transaction_id": "664",
+    "user_id": "17",
+    "beer_id": "193002",
+    "timestamp": "2013-10-25 19:03:56"
+}, {
+    "transaction_id": "665",
+    "user_id": "17",
+    "beer_id": "157503",
+    "timestamp": "2013-10-25 19:04:12"
+}, {
+    "transaction_id": "666",
+    "user_id": "2",
+    "beer_id": "192201",
+    "timestamp": "2013-10-25 19:04:44"
+}, {
+    "transaction_id": "667",
+    "user_id": "2",
+    "beer_id": "120003",
+    "timestamp": "2013-10-25 20:54:48"
+}, {
+    "transaction_id": "668",
+    "user_id": "17",
+    "beer_id": "167903",
+    "timestamp": "2013-10-25 20:55:11"
+}, {
+    "transaction_id": "669",
+    "user_id": "57",
+    "beer_id": "181902",
+    "timestamp": "2013-11-06 11:47:23"
+}, {
+    "transaction_id": "670",
+    "user_id": "36",
+    "beer_id": "151503",
+    "timestamp": "2013-11-08 15:54:40"
+}, {
+    "transaction_id": "671",
+    "user_id": "36",
+    "beer_id": "151503",
+    "timestamp": "2013-11-08 15:54:45"
+}, {
+    "transaction_id": "672",
+    "user_id": "36",
+    "beer_id": "151503",
+    "timestamp": "2013-11-08 15:54:46"
+}, {
+    "transaction_id": "673",
+    "user_id": "36",
+    "beer_id": "153503",
+    "timestamp": "2013-11-08 15:55:29"
+}, {
+    "transaction_id": "674",
+    "user_id": "36",
+    "beer_id": "1133301",
+    "timestamp": "2013-11-08 15:58:24"
+}, {
+    "transaction_id": "675",
+    "user_id": "36",
+    "beer_id": "193002",
+    "timestamp": "2013-11-08 15:58:43"
+}, {
+    "transaction_id": "676",
+    "user_id": "36",
+    "beer_id": "160601",
+    "timestamp": "2013-11-08 15:58:55"
+}, {
+    "transaction_id": "677",
+    "user_id": "36",
+    "beer_id": "154603",
+    "timestamp": "2013-11-08 16:01:14"
+}, {
+    "transaction_id": "678",
+    "user_id": "36",
+    "beer_id": "181903",
+    "timestamp": "2013-11-08 16:20:00"
+}, {
+    "transaction_id": "679",
+    "user_id": "36",
+    "beer_id": "181903",
+    "timestamp": "2013-11-08 16:20:09"
+}, {
+    "transaction_id": "731",
+    "user_id": "30",
+    "beer_id": "156303",
+    "timestamp": "2013-11-29 17:46:53"
+}, {
+    "transaction_id": "730",
+    "user_id": "52",
+    "beer_id": "152601",
+    "timestamp": "2013-11-29 17:25:18"
+}, {
+    "transaction_id": "729",
+    "user_id": "30",
+    "beer_id": "151503",
+    "timestamp": "2013-11-29 17:24:16"
+}, {
+    "transaction_id": "728",
+    "user_id": "25",
+    "beer_id": "150601",
+    "timestamp": "2013-11-29 17:23:10"
+}, {
+    "transaction_id": "727",
+    "user_id": "2",
+    "beer_id": "151503",
+    "timestamp": "2013-11-22 16:57:05"
+}, {
+    "transaction_id": "726",
+    "user_id": "25",
+    "beer_id": "150601",
+    "timestamp": "2013-11-22 16:56:38"
+}, {
+    "transaction_id": "725",
+    "user_id": "57",
+    "beer_id": "164903",
+    "timestamp": "2013-11-22 16:54:27"
+}, {
+    "transaction_id": "724",
+    "user_id": "53",
+    "beer_id": "194703",
+    "timestamp": "2013-11-16 03:54:38"
+}, {
+    "transaction_id": "688",
+    "user_id": "25",
+    "beer_id": "150601",
+    "timestamp": "2013-11-08 17:27:13"
+}, {
+    "transaction_id": "689",
+    "user_id": "57",
+    "beer_id": "151503",
+    "timestamp": "2013-11-08 17:27:32"
+}, {
+    "transaction_id": "690",
+    "user_id": "20",
+    "beer_id": "164903",
+    "timestamp": "2013-11-08 17:28:40"
+}, {
+    "transaction_id": "691",
+    "user_id": "24",
+    "beer_id": "1140501",
+    "timestamp": "2013-11-08 17:30:10"
+}, {
+    "transaction_id": "692",
+    "user_id": "26",
+    "beer_id": "1140501",
+    "timestamp": "2013-11-08 17:31:32"
+}, {
+    "transaction_id": "693",
+    "user_id": "17",
+    "beer_id": "1140501",
+    "timestamp": "2013-11-08 17:32:31"
+}, {
+    "transaction_id": "694",
+    "user_id": "42",
+    "beer_id": "167101",
+    "timestamp": "2013-11-08 17:42:43"
+}, {
+    "transaction_id": "695",
+    "user_id": "53",
+    "beer_id": "196403",
+    "timestamp": "2013-11-08 17:46:46"
+}, {
+    "transaction_id": "696",
+    "user_id": "62",
+    "beer_id": "151503",
+    "timestamp": "2013-11-08 17:58:39"
+}, {
+    "transaction_id": "697",
+    "user_id": "24",
+    "beer_id": "1125303",
+    "timestamp": "2013-11-08 18:11:14"
+}, {
+    "transaction_id": "698",
+    "user_id": "20",
+    "beer_id": "181803",
+    "timestamp": "2013-11-08 18:11:36"
+}, {
+    "transaction_id": "699",
+    "user_id": "25",
+    "beer_id": "198902",
+    "timestamp": "2013-11-08 18:21:00"
+}, {
+    "transaction_id": "700",
+    "user_id": "53",
+    "beer_id": "194703",
+    "timestamp": "2013-11-08 18:27:32"
+}, {
+    "transaction_id": "701",
+    "user_id": "26",
+    "beer_id": "151503",
+    "timestamp": "2013-11-08 18:29:13"
+}, {
+    "transaction_id": "702",
+    "user_id": "17",
+    "beer_id": "151503",
+    "timestamp": "2013-11-08 18:29:29"
+}, {
+    "transaction_id": "703",
+    "user_id": "24",
+    "beer_id": "164903",
+    "timestamp": "2013-11-08 18:48:21"
+}, {
+    "transaction_id": "704",
+    "user_id": "57",
+    "beer_id": "151503",
+    "timestamp": "2013-11-08 18:57:56"
+}, {
+    "transaction_id": "705",
+    "user_id": "20",
+    "beer_id": "151503",
+    "timestamp": "2013-11-08 18:59:26"
+}, {
+    "transaction_id": "706",
+    "user_id": "26",
+    "beer_id": "151503",
+    "timestamp": "2013-11-08 19:06:08"
+}, {
+    "transaction_id": "707",
+    "user_id": "17",
+    "beer_id": "151503",
+    "timestamp": "2013-11-08 19:06:26"
+}, {
+    "transaction_id": "708",
+    "user_id": "23",
+    "beer_id": "151503",
+    "timestamp": "2013-11-08 19:19:49"
+}, {
+    "transaction_id": "709",
+    "user_id": "21",
+    "beer_id": "150601",
+    "timestamp": "2013-11-08 19:24:30"
+}, {
+    "transaction_id": "710",
+    "user_id": "24",
+    "beer_id": "1140501",
+    "timestamp": "2013-11-08 19:28:16"
+}, {
+    "transaction_id": "711",
+    "user_id": "25",
+    "beer_id": "746902",
+    "timestamp": "2013-11-08 19:36:28"
+}, {
+    "transaction_id": "712",
+    "user_id": "20",
+    "beer_id": "151503",
+    "timestamp": "2013-11-08 19:45:25"
+}, {
+    "transaction_id": "713",
+    "user_id": "17",
+    "beer_id": "151503",
+    "timestamp": "2013-11-08 20:04:27"
+}, {
+    "transaction_id": "714",
+    "user_id": "57",
+    "beer_id": "658102",
+    "timestamp": "2013-11-08 20:09:24"
+}, {
+    "transaction_id": "715",
+    "user_id": "23",
+    "beer_id": "8915103",
+    "timestamp": "2013-11-08 20:10:38"
+}, {
+    "transaction_id": "716",
+    "user_id": "64",
+    "beer_id": "190002",
+    "timestamp": "2013-11-08 21:03:52"
+}, {
+    "transaction_id": "717",
+    "user_id": "17",
+    "beer_id": "151503",
+    "timestamp": "2013-11-08 21:39:19"
+}, {
+    "transaction_id": "718",
+    "user_id": "20",
+    "beer_id": "151503",
+    "timestamp": "2013-11-08 21:54:28"
+}, {
+    "transaction_id": "719",
+    "user_id": "24",
+    "beer_id": "167903",
+    "timestamp": "2013-11-08 21:54:36"
+}, {
+    "transaction_id": "720",
+    "user_id": "57",
+    "beer_id": "181902",
+    "timestamp": "2013-11-08 21:58:20"
+}, {
+    "transaction_id": "721",
+    "user_id": "20",
+    "beer_id": "151503",
+    "timestamp": "2013-11-08 22:22:47"
+}, {
+    "transaction_id": "722",
+    "user_id": "17",
+    "beer_id": "151503",
+    "timestamp": "2013-11-08 22:32:16"
+}, {
+    "transaction_id": "723",
+    "user_id": "25",
+    "beer_id": "150601",
+    "timestamp": "2013-11-12 16:58:33"
+}, {
+    "transaction_id": "732",
+    "user_id": "25",
+    "beer_id": "183203",
+    "timestamp": "2013-11-29 18:00:15"
+}, {
+    "transaction_id": "733",
+    "user_id": "57",
+    "beer_id": "164903",
+    "timestamp": "2013-12-06 16:58:15"
+}, {
+    "transaction_id": "734",
+    "user_id": "52",
+    "beer_id": "167101",
+    "timestamp": "2013-12-06 16:58:22"
+}, {
+    "transaction_id": "735",
+    "user_id": "24",
+    "beer_id": "1140501",
+    "timestamp": "2013-12-06 16:59:12"
+}, {
+    "transaction_id": "736",
+    "user_id": "20",
+    "beer_id": "194703",
+    "timestamp": "2013-12-06 16:59:20"
+}, {
+    "transaction_id": "737",
+    "user_id": "25",
+    "beer_id": "150601",
+    "timestamp": "2013-12-06 17:00:00"
+}, {
+    "transaction_id": "738",
+    "user_id": "65",
+    "beer_id": "167903",
+    "timestamp": "2013-12-06 17:07:42"
+}, {
+    "transaction_id": "739",
+    "user_id": "66",
+    "beer_id": "1125303",
+    "timestamp": "2013-12-06 17:13:45"
+}, {
+    "transaction_id": "740",
+    "user_id": "17",
+    "beer_id": "151503",
+    "timestamp": "2013-12-06 17:14:44"
+}, {
+    "transaction_id": "741",
+    "user_id": "57",
+    "beer_id": "181902",
+    "timestamp": "2013-12-06 17:49:00"
+}, {
+    "transaction_id": "742",
+    "user_id": "66",
+    "beer_id": "1140501",
+    "timestamp": "2013-12-06 17:50:48"
+}, {
+    "transaction_id": "743",
+    "user_id": "25",
+    "beer_id": "150601",
+    "timestamp": "2013-12-06 17:51:31"
+}, {
+    "transaction_id": "744",
+    "user_id": "20",
+    "beer_id": "197702",
+    "timestamp": "2013-12-06 18:32:16"
+}, {
+    "transaction_id": "745",
+    "user_id": "17",
+    "beer_id": "151503",
+    "timestamp": "2013-12-06 18:32:43"
+}, {
+    "transaction_id": "746",
+    "user_id": "57",
+    "beer_id": "151503",
+    "timestamp": "2013-12-06 18:47:58"
+}, {
+    "transaction_id": "747",
+    "user_id": "66",
+    "beer_id": "151503",
+    "timestamp": "2013-12-06 18:49:34"
+}, {
+    "transaction_id": "748",
+    "user_id": "17",
+    "beer_id": "151503",
+    "timestamp": "2013-12-06 19:04:50"
+}, {
+    "transaction_id": "749",
+    "user_id": "66",
+    "beer_id": "1125303",
+    "timestamp": "2013-12-06 19:43:08"
+}, {
+    "transaction_id": "750",
+    "user_id": "57",
+    "beer_id": "207504",
+    "timestamp": "2013-12-06 20:20:25"
+}, {
+    "transaction_id": "751",
+    "user_id": "17",
+    "beer_id": "165403",
+    "timestamp": "2013-12-06 20:21:24"
+}, {
+    "transaction_id": "752",
+    "user_id": "66",
+    "beer_id": "1140501",
+    "timestamp": "2013-12-06 21:44:07"
+}, {
+    "transaction_id": "753",
+    "user_id": "66",
+    "beer_id": "167101",
+    "timestamp": "2013-12-06 23:19:52"
+}, {
+    "transaction_id": "754",
+    "user_id": "66",
+    "beer_id": "166703",
+    "timestamp": "2013-12-06 23:21:26"
+}, {
+    "transaction_id": "755",
+    "user_id": "17",
+    "beer_id": "1140501",
+    "timestamp": "2013-12-06 23:24:03"
+}, {
+    "transaction_id": "756",
+    "user_id": "52",
+    "beer_id": "166703",
+    "timestamp": "2013-12-13 17:33:14"
+}, {
+    "transaction_id": "757",
+    "user_id": "57",
+    "beer_id": "669702",
+    "timestamp": "2013-12-13 17:44:19"
+}, {
+    "transaction_id": "758",
+    "user_id": "53",
+    "beer_id": "150601",
+    "timestamp": "2013-12-13 17:47:22"
+}, {
+    "transaction_id": "759",
+    "user_id": "2",
+    "beer_id": "150601",
+    "timestamp": "2013-12-13 17:52:26"
+}, {
+    "transaction_id": "760",
+    "user_id": "25",
+    "beer_id": "150601",
+    "timestamp": "2013-12-13 18:03:40"
+}, {
+    "transaction_id": "761",
+    "user_id": "21",
+    "beer_id": "150601",
+    "timestamp": "2013-12-13 18:10:01"
+}, {
+    "transaction_id": "762",
+    "user_id": "52",
+    "beer_id": "192003",
+    "timestamp": "2013-12-13 18:12:15"
+}, {
+    "transaction_id": "763",
+    "user_id": "33",
+    "beer_id": "150601",
+    "timestamp": "2013-12-13 18:37:13"
+}, {
+    "transaction_id": "764",
+    "user_id": "33",
+    "beer_id": "168701",
+    "timestamp": "2013-12-13 18:39:28"
+}, {
+    "transaction_id": "765",
+    "user_id": "25",
+    "beer_id": "150601",
+    "timestamp": "2013-12-13 18:41:13"
+}, {
+    "transaction_id": "766",
+    "user_id": "36",
+    "beer_id": "150601",
+    "timestamp": "2013-12-13 18:42:00"
+}, {
+    "transaction_id": "767",
+    "user_id": "62",
+    "beer_id": "693502",
+    "timestamp": "2013-12-13 18:45:54"
+}, {
+    "transaction_id": "768",
+    "user_id": "24",
+    "beer_id": "168701",
+    "timestamp": "2013-12-13 18:46:53"
+}, {
+    "transaction_id": "769",
+    "user_id": "25",
+    "beer_id": "198902",
+    "timestamp": "2013-12-13 19:24:22"
+}, {
+    "transaction_id": "770",
+    "user_id": "33",
+    "beer_id": "153001",
+    "timestamp": "2013-12-13 19:30:02"
+}, {
+    "transaction_id": "771",
+    "user_id": "57",
+    "beer_id": "151503",
+    "timestamp": "2013-12-13 19:45:27"
+}, {
+    "transaction_id": "772",
+    "user_id": "57",
+    "beer_id": "156103",
+    "timestamp": "2013-12-13 19:47:41"
+}, {
+    "transaction_id": "773",
+    "user_id": "53",
+    "beer_id": "152601",
+    "timestamp": "2013-12-13 19:48:00"
+}, {
+    "transaction_id": "774",
+    "user_id": "33",
+    "beer_id": "153001",
+    "timestamp": "2013-12-16 09:25:56"
+}, {
+    "transaction_id": "775",
+    "user_id": "33",
+    "beer_id": "168701",
+    "timestamp": "2013-12-16 09:25:57"
+}, {
+    "transaction_id": "776",
+    "user_id": "52",
+    "beer_id": "156303",
+    "timestamp": "2013-12-16 17:44:41"
+}, {
+    "transaction_id": "777",
+    "user_id": "31",
+    "beer_id": "1140501",
+    "timestamp": "2013-12-16 17:45:12"
+}, {
+    "transaction_id": "778",
+    "user_id": "31",
+    "beer_id": "152601",
+    "timestamp": "2013-12-16 17:45:38"
+}, {
+    "transaction_id": "779",
+    "user_id": "30",
+    "beer_id": "150601",
+    "timestamp": "2013-12-16 17:46:13"
+}, {
+    "transaction_id": "780",
+    "user_id": "30",
+    "beer_id": "150601",
+    "timestamp": "2013-12-16 17:46:25"
+}, {
+    "transaction_id": "781",
+    "user_id": "24",
+    "beer_id": "150601",
+    "timestamp": "2013-12-19 17:53:54"
+}, {
+    "transaction_id": "782",
+    "user_id": "52",
+    "beer_id": "168701",
+    "timestamp": "2013-12-19 17:54:17"
+}, {
+    "transaction_id": "783",
+    "user_id": "57",
+    "beer_id": "207504",
+    "timestamp": "2013-12-19 17:57:56"
+}, {
+    "transaction_id": "784",
+    "user_id": "24",
+    "beer_id": "8915103",
+    "timestamp": "2013-12-19 19:27:39"
+}, {
+    "transaction_id": "785",
+    "user_id": "52",
+    "beer_id": "150601",
+    "timestamp": "2013-12-19 20:00:56"
+}, {
+    "transaction_id": "786",
+    "user_id": "25",
+    "beer_id": "150601",
+    "timestamp": "2013-12-19 20:04:50"
+}, {
+    "transaction_id": "787",
+    "user_id": "25",
+    "beer_id": "604504",
+    "timestamp": "2013-12-19 20:05:55"
+}, {
+    "transaction_id": "788",
+    "user_id": "25",
+    "beer_id": "604504",
+    "timestamp": "2013-12-19 20:06:24"
+}, {
+    "transaction_id": "789",
+    "user_id": "57",
+    "beer_id": "601202",
+    "timestamp": "2014-01-10 17:38:14"
+}, {
+    "transaction_id": "790",
+    "user_id": "25",
+    "beer_id": "601202",
+    "timestamp": "2014-01-10 17:38:38"
+}, {
+    "transaction_id": "791",
+    "user_id": "24",
+    "beer_id": "156103",
+    "timestamp": "2014-01-10 18:46:44"
+}, {
+    "transaction_id": "792",
+    "user_id": "57",
+    "beer_id": "156103",
+    "timestamp": "2014-01-10 18:46:50"
+}, {
+    "transaction_id": "793",
+    "user_id": "66",
+    "beer_id": "156503",
+    "timestamp": "2014-01-10 19:38:05"
+}, {
+    "transaction_id": "794",
+    "user_id": "25",
+    "beer_id": "153001",
+    "timestamp": "2014-01-22 11:00:30"
+}, {
+    "transaction_id": "680",
+    "user_id": "36",
+    "beer_id": "151503",
+    "timestamp": "2013-11-08 16:21:40"
+}, {
+    "transaction_id": "795",
+    "user_id": "2",
+    "beer_id": "151503",
+    "timestamp": "2014-02-07 17:24:47"
+}, {
+    "transaction_id": "796",
+    "user_id": "22",
+    "beer_id": "165103",
+    "timestamp": "2014-02-07 17:25:30"
+}, {
+    "transaction_id": "797",
+    "user_id": "20",
+    "beer_id": "166703",
+    "timestamp": "2014-02-07 17:30:44"
+}, {
+    "transaction_id": "798",
+    "user_id": "30",
+    "beer_id": "153001",
+    "timestamp": "2014-02-07 17:30:51"
+}, {
+    "transaction_id": "799",
+    "user_id": "67",
+    "beer_id": "1140501",
+    "timestamp": "2014-02-07 17:37:14"
+}, {
+    "transaction_id": "800",
+    "user_id": "68",
+    "beer_id": "1140501",
+    "timestamp": "2014-02-07 17:41:19"
+}, {
+    "transaction_id": "801",
+    "user_id": "31",
+    "beer_id": "151503",
+    "timestamp": "2014-02-07 17:42:13"
+}, {
+    "transaction_id": "802",
+    "user_id": "25",
+    "beer_id": "1152803",
+    "timestamp": "2014-02-07 17:44:23"
+}, {
+    "transaction_id": "803",
+    "user_id": "57",
+    "beer_id": "1152803",
+    "timestamp": "2014-02-07 17:45:18"
+}, {
+    "transaction_id": "804",
+    "user_id": "24",
+    "beer_id": "164903",
+    "timestamp": "2014-02-07 17:57:47"
+}, {
+    "transaction_id": "805",
+    "user_id": "30",
+    "beer_id": "165403",
+    "timestamp": "2014-02-07 18:01:31"
+}, {
+    "transaction_id": "806",
+    "user_id": "69",
+    "beer_id": "167903",
+    "timestamp": "2014-02-07 18:02:58"
+}, {
+    "transaction_id": "807",
+    "user_id": "22",
+    "beer_id": "164903",
+    "timestamp": "2014-02-07 18:05:17"
+}, {
+    "transaction_id": "808",
+    "user_id": "31",
+    "beer_id": "151503",
+    "timestamp": "2014-02-07 18:14:58"
+}, {
+    "transaction_id": "809",
+    "user_id": "2",
+    "beer_id": "151503",
+    "timestamp": "2014-02-07 18:20:56"
+}, {
+    "transaction_id": "810",
+    "user_id": "2",
+    "beer_id": "151503",
+    "timestamp": "2014-02-07 18:24:22"
+}, {
+    "transaction_id": "811",
+    "user_id": "25",
+    "beer_id": "278002",
+    "timestamp": "2014-02-07 18:24:44"
+}, {
+    "transaction_id": "812",
+    "user_id": "52",
+    "beer_id": "160601",
+    "timestamp": "2014-02-07 18:36:46"
+}, {
+    "transaction_id": "813",
+    "user_id": "2",
+    "beer_id": "151503",
+    "timestamp": "2014-02-07 19:06:21"
+}, {
+    "transaction_id": "814",
+    "user_id": "24",
+    "beer_id": "658102",
+    "timestamp": "2014-02-07 19:14:05"
+}, {
+    "transaction_id": "815",
+    "user_id": "24",
+    "beer_id": "153803",
+    "timestamp": "2014-02-07 19:14:16"
+}, {
+    "transaction_id": "816",
+    "user_id": "52",
+    "beer_id": "192003",
+    "timestamp": "2014-02-07 19:21:11"
+}, {
+    "transaction_id": "817",
+    "user_id": "25",
+    "beer_id": "198902",
+    "timestamp": "2014-02-07 19:23:39"
+}, {
+    "transaction_id": "818",
+    "user_id": "20",
+    "beer_id": "181803",
+    "timestamp": "2014-02-07 19:41:52"
+}, {
+    "transaction_id": "819",
+    "user_id": "25",
+    "beer_id": "183203",
+    "timestamp": "2014-02-07 19:48:07"
+}, {
+    "transaction_id": "820",
+    "user_id": "21",
+    "beer_id": "172303",
+    "timestamp": "2014-02-07 20:00:25"
+}, {
+    "transaction_id": "821",
+    "user_id": "52",
+    "beer_id": "192003",
+    "timestamp": "2014-02-07 20:06:47"
+}, {
+    "transaction_id": "822",
+    "user_id": "57",
+    "beer_id": "153803",
+    "timestamp": "2014-02-07 20:07:23"
+}, {
+    "transaction_id": "823",
+    "user_id": "57",
+    "beer_id": "167903",
+    "timestamp": "2014-02-07 20:07:46"
+}, {
+    "transaction_id": "824",
+    "user_id": "20",
+    "beer_id": "151503",
+    "timestamp": "2014-02-07 20:17:37"
+}, {
+    "transaction_id": "825",
+    "user_id": "52",
+    "beer_id": "183203",
+    "timestamp": "2014-02-07 20:19:18"
+}, {
+    "transaction_id": "826",
+    "user_id": "21",
+    "beer_id": "155701",
+    "timestamp": "2014-02-07 20:19:43"
+}, {
+    "transaction_id": "827",
+    "user_id": "25",
+    "beer_id": "194703",
+    "timestamp": "2014-02-07 20:38:34"
+}, {
+    "transaction_id": "828",
+    "user_id": "20",
+    "beer_id": "8915103",
+    "timestamp": "2014-02-07 21:04:43"
+}, {
+    "transaction_id": "829",
+    "user_id": "25",
+    "beer_id": "669702",
+    "timestamp": "2014-02-07 21:19:54"
+}, {
+    "transaction_id": "830",
+    "user_id": "52",
+    "beer_id": "167903",
+    "timestamp": "2014-02-07 21:41:27"
+}, {
+    "transaction_id": "831",
+    "user_id": "25",
+    "beer_id": "196303",
+    "timestamp": "2014-02-07 22:29:49"
+}, {
+    "transaction_id": "832",
+    "user_id": "20",
+    "beer_id": "165403",
+    "timestamp": "2014-02-07 22:30:43"
+}, {
+    "transaction_id": "833",
+    "user_id": "57",
+    "beer_id": "151503",
+    "timestamp": "2014-04-02 18:55:28"
+}, {
+    "transaction_id": "834",
+    "user_id": "25",
+    "beer_id": "164903",
+    "timestamp": "2014-04-02 18:55:41"
+}, {
+    "transaction_id": "835",
+    "user_id": "36",
+    "beer_id": "197702",
+    "timestamp": "2014-05-14 14:07:07"
+}, {
+    "transaction_id": "836",
+    "user_id": "36",
+    "beer_id": "1140501",
+    "timestamp": "2014-05-14 14:07:56"
+}, {
+    "transaction_id": "837",
+    "user_id": "36",
+    "beer_id": "1140501",
+    "timestamp": "2014-05-14 14:07:58"
+}, {
+    "transaction_id": "838",
+    "user_id": "36",
+    "beer_id": "1140501",
+    "timestamp": "2014-05-14 14:07:59"
+}, {
+    "transaction_id": "839",
+    "user_id": "36",
+    "beer_id": "1210502",
+    "timestamp": "2014-05-14 14:08:08"
+}, {
+    "transaction_id": "840",
+    "user_id": "36",
+    "beer_id": "150601",
+    "timestamp": "2014-05-14 14:08:31"
+}, {
+    "transaction_id": "841",
+    "user_id": "36",
+    "beer_id": "183203",
+    "timestamp": "2014-05-14 14:08:57"
+}, {
+    "transaction_id": "842",
+    "user_id": "36",
+    "beer_id": "135601",
+    "timestamp": "2014-05-14 14:09:41"
+}, {
+    "transaction_id": "843",
+    "user_id": "30",
+    "beer_id": "166403",
+    "timestamp": "2014-05-16 17:51:29"
+}, {
+    "transaction_id": "844",
+    "user_id": "25",
+    "beer_id": "649801",
+    "timestamp": "2014-05-16 17:52:29"
+}, {
+    "transaction_id": "845",
+    "user_id": "31",
+    "beer_id": "151503",
+    "timestamp": "2014-05-16 17:52:49"
+}, {
+    "transaction_id": "846",
+    "user_id": "20",
+    "beer_id": "196303",
+    "timestamp": "2014-05-16 17:54:02"
+}, {
+    "transaction_id": "847",
+    "user_id": "37",
+    "beer_id": "162601",
+    "timestamp": "2014-05-16 17:54:08"
+}, {
+    "transaction_id": "848",
+    "user_id": "47",
+    "beer_id": "194703",
+    "timestamp": "2014-05-16 17:54:39"
+}, {
+    "transaction_id": "849",
+    "user_id": "70",
+    "beer_id": "169301",
+    "timestamp": "2014-05-16 17:57:20"
+}, {
+    "transaction_id": "850",
+    "user_id": "37",
+    "beer_id": "1162503",
+    "timestamp": "2014-05-16 17:57:31"
+}, {
+    "transaction_id": "851",
+    "user_id": "24",
+    "beer_id": "167903",
+    "timestamp": "2014-05-16 17:58:17"
+}, {
+    "transaction_id": "852",
+    "user_id": "21",
+    "beer_id": "167101",
+    "timestamp": "2014-05-16 18:05:26"
+}, {
+    "transaction_id": "853",
+    "user_id": "21",
+    "beer_id": "151503",
+    "timestamp": "2014-05-16 18:05:42"
+}, {
+    "transaction_id": "854",
+    "user_id": "21",
+    "beer_id": "151503",
+    "timestamp": "2014-05-16 18:06:07"
+}, {
+    "transaction_id": "855",
+    "user_id": "21",
+    "beer_id": "154603",
+    "timestamp": "2014-05-16 18:06:28"
+}, {
+    "transaction_id": "856",
+    "user_id": "21",
+    "beer_id": "151503",
+    "timestamp": "2014-05-16 18:07:08"
+}, {
+    "transaction_id": "857",
+    "user_id": "71",
+    "beer_id": "162601",
+    "timestamp": "2014-05-16 18:07:59"
+}, {
+    "transaction_id": "858",
+    "user_id": "37",
+    "beer_id": "1140501",
+    "timestamp": "2014-05-16 18:08:02"
+}, {
+    "transaction_id": "859",
+    "user_id": "19",
+    "beer_id": "155103",
+    "timestamp": "2014-05-16 18:08:31"
+}, {
+    "transaction_id": "860",
+    "user_id": "21",
+    "beer_id": "153803",
+    "timestamp": "2014-05-16 18:08:39"
+}, {
+    "transaction_id": "861",
+    "user_id": "21",
+    "beer_id": "151503",
+    "timestamp": "2014-05-16 18:09:58"
+}, {
+    "transaction_id": "862",
+    "user_id": "21",
+    "beer_id": "164903",
+    "timestamp": "2014-05-16 18:11:01"
+}, {
+    "transaction_id": "863",
+    "user_id": "17",
+    "beer_id": "1127103",
+    "timestamp": "2014-05-16 18:11:24"
+}, {
+    "transaction_id": "864",
+    "user_id": "17",
+    "beer_id": "8916315",
+    "timestamp": "2014-05-16 18:12:53"
+}, {
+    "transaction_id": "865",
+    "user_id": "17",
+    "beer_id": "166703",
+    "timestamp": "2014-05-16 18:13:21"
+}, {
+    "transaction_id": "866",
+    "user_id": "21",
+    "beer_id": "162003",
+    "timestamp": "2014-05-16 18:13:57"
+}, {
+    "transaction_id": "867",
+    "user_id": "21",
+    "beer_id": "1140501",
+    "timestamp": "2014-05-16 18:14:35"
+}, {
+    "transaction_id": "868",
+    "user_id": "26",
+    "beer_id": "150103",
+    "timestamp": "2014-05-16 18:15:01"
+}, {
+    "transaction_id": "869",
+    "user_id": "21",
+    "beer_id": "166403",
+    "timestamp": "2014-05-16 18:15:31"
+}, {
+    "transaction_id": "870",
+    "user_id": "21",
+    "beer_id": "153915",
+    "timestamp": "2014-05-16 18:16:33"
+}, {
+    "transaction_id": "871",
+    "user_id": "72",
+    "beer_id": "145414",
+    "timestamp": "2014-05-16 18:17:20"
+}, {
+    "transaction_id": "872",
+    "user_id": "31",
+    "beer_id": "151503",
+    "timestamp": "2014-05-16 18:17:34"
+}, {
+    "transaction_id": "873",
+    "user_id": "21",
+    "beer_id": "145414",
+    "timestamp": "2014-05-16 18:17:45"
+}, {
+    "transaction_id": "874",
+    "user_id": "45",
+    "beer_id": "153915",
+    "timestamp": "2014-05-16 18:17:57"
+}, {
+    "transaction_id": "875",
+    "user_id": "45",
+    "beer_id": "151503",
+    "timestamp": "2014-05-16 18:18:13"
+}, {
+    "transaction_id": "876",
+    "user_id": "21",
+    "beer_id": "167903",
+    "timestamp": "2014-05-16 18:19:19"
+}, {
+    "transaction_id": "877",
+    "user_id": "42",
+    "beer_id": "165903",
+    "timestamp": "2014-05-16 18:19:20"
+}, {
+    "transaction_id": "878",
+    "user_id": "42",
+    "beer_id": "165903",
+    "timestamp": "2014-05-16 18:19:41"
+}, {
+    "transaction_id": "879",
+    "user_id": "21",
+    "beer_id": "145414",
+    "timestamp": "2014-05-16 18:20:26"
+}, {
+    "transaction_id": "880",
+    "user_id": "66",
+    "beer_id": "197302",
+    "timestamp": "2014-05-16 18:20:56"
+}, {
+    "transaction_id": "881",
+    "user_id": "66",
+    "beer_id": "194703",
+    "timestamp": "2014-05-16 18:21:05"
+}, {
+    "transaction_id": "882",
+    "user_id": "21",
+    "beer_id": "151503",
+    "timestamp": "2014-05-16 18:22:26"
+}, {
+    "transaction_id": "883",
+    "user_id": "2",
+    "beer_id": "151503",
+    "timestamp": "2014-05-16 18:24:19"
+}, {
+    "transaction_id": "884",
+    "user_id": "2",
+    "beer_id": "151503",
+    "timestamp": "2014-05-16 18:24:34"
+}, {
+    "transaction_id": "885",
+    "user_id": "21",
+    "beer_id": "153503",
+    "timestamp": "2014-05-16 18:27:04"
+}, {
+    "transaction_id": "886",
+    "user_id": "21",
+    "beer_id": "277301",
+    "timestamp": "2014-05-16 18:28:10"
+}, {
+    "transaction_id": "887",
+    "user_id": "52",
+    "beer_id": "160601",
+    "timestamp": "2014-05-16 18:30:55"
+}, {
+    "transaction_id": "888",
+    "user_id": "73",
+    "beer_id": "192003",
+    "timestamp": "2014-05-16 18:32:01"
+}, {
+    "transaction_id": "889",
+    "user_id": "21",
+    "beer_id": "151503",
+    "timestamp": "2014-05-16 18:33:17"
+}, {
+    "transaction_id": "890",
+    "user_id": "21",
+    "beer_id": "133603",
+    "timestamp": "2014-05-16 18:34:01"
+}, {
+    "transaction_id": "891",
+    "user_id": "21",
+    "beer_id": "133603",
+    "timestamp": "2014-05-16 18:34:26"
+}, {
+    "transaction_id": "892",
+    "user_id": "24",
+    "beer_id": "2280301",
+    "timestamp": "2014-05-16 18:34:46"
+}, {
+    "transaction_id": "893",
+    "user_id": "21",
+    "beer_id": "8916315",
+    "timestamp": "2014-05-16 18:34:54"
+}, {
+    "transaction_id": "894",
+    "user_id": "21",
+    "beer_id": "8916315",
+    "timestamp": "2014-05-16 18:35:20"
+}, {
+    "transaction_id": "895",
+    "user_id": "21",
+    "beer_id": "153001",
+    "timestamp": "2014-05-16 18:36:37"
+}, {
+    "transaction_id": "896",
+    "user_id": "21",
+    "beer_id": "183502",
+    "timestamp": "2014-05-16 18:47:05"
+}, {
+    "transaction_id": "897",
+    "user_id": "21",
+    "beer_id": "183502",
+    "timestamp": "2014-05-16 18:47:41"
+}, {
+    "transaction_id": "980",
+    "user_id": "36",
+    "beer_id": "1191303",
+    "timestamp": "2014-06-10 13:14:08"
+}, {
+    "transaction_id": "899",
+    "user_id": "29",
+    "beer_id": "151503",
+    "timestamp": "2014-05-16 18:52:16"
+}, {
+    "transaction_id": "900",
+    "user_id": "21",
+    "beer_id": "167903",
+    "timestamp": "2014-05-16 18:58:30"
+}, {
+    "transaction_id": "901",
+    "user_id": "21",
+    "beer_id": "1140501",
+    "timestamp": "2014-05-16 18:59:42"
+}, {
+    "transaction_id": "902",
+    "user_id": "70",
+    "beer_id": "145414",
+    "timestamp": "2014-05-16 18:59:43"
+}, {
+    "transaction_id": "903",
+    "user_id": "42",
+    "beer_id": "278002",
+    "timestamp": "2014-05-16 19:00:06"
+}, {
+    "transaction_id": "904",
+    "user_id": "17",
+    "beer_id": "1191303",
+    "timestamp": "2014-05-16 19:02:12"
+}, {
+    "transaction_id": "905",
+    "user_id": "19",
+    "beer_id": "151503",
+    "timestamp": "2014-05-16 19:02:30"
+}, {
+    "transaction_id": "906",
+    "user_id": "20",
+    "beer_id": "198902",
+    "timestamp": "2014-05-16 19:05:14"
+}, {
+    "transaction_id": "907",
+    "user_id": "2",
+    "beer_id": "151503",
+    "timestamp": "2014-05-16 19:06:25"
+}, {
+    "transaction_id": "908",
+    "user_id": "2",
+    "beer_id": "151503",
+    "timestamp": "2014-05-16 19:06:38"
+}, {
+    "transaction_id": "909",
+    "user_id": "21",
+    "beer_id": "214401",
+    "timestamp": "2014-05-16 19:08:37"
+}, {
+    "transaction_id": "910",
+    "user_id": "30",
+    "beer_id": "150103",
+    "timestamp": "2014-05-16 19:08:42"
+}, {
+    "transaction_id": "911",
+    "user_id": "21",
+    "beer_id": "154603",
+    "timestamp": "2014-05-16 19:09:03"
+}, {
+    "transaction_id": "912",
+    "user_id": "21",
+    "beer_id": "183502",
+    "timestamp": "2014-05-16 19:10:11"
+}, {
+    "transaction_id": "913",
+    "user_id": "21",
+    "beer_id": "1191303",
+    "timestamp": "2014-05-16 19:10:31"
+}, {
+    "transaction_id": "914",
+    "user_id": "52",
+    "beer_id": "183502",
+    "timestamp": "2014-05-16 19:10:42"
+}, {
+    "transaction_id": "915",
+    "user_id": "31",
+    "beer_id": "1191303",
+    "timestamp": "2014-05-16 19:21:27"
+}, {
+    "transaction_id": "916",
+    "user_id": "21",
+    "beer_id": "1191303",
+    "timestamp": "2014-05-16 19:23:17"
+}, {
+    "transaction_id": "917",
+    "user_id": "21",
+    "beer_id": "1191303",
+    "timestamp": "2014-05-16 19:23:21"
+}, {
+    "transaction_id": "918",
+    "user_id": "21",
+    "beer_id": "1134803",
+    "timestamp": "2014-05-16 19:28:05"
+}, {
+    "transaction_id": "919",
+    "user_id": "29",
+    "beer_id": "154603",
+    "timestamp": "2014-05-16 19:29:23"
+}, {
+    "transaction_id": "920",
+    "user_id": "21",
+    "beer_id": "167101",
+    "timestamp": "2014-05-16 19:29:48"
+}, {
+    "transaction_id": "921",
+    "user_id": "21",
+    "beer_id": "167903",
+    "timestamp": "2014-05-16 19:30:43"
+}, {
+    "transaction_id": "922",
+    "user_id": "21",
+    "beer_id": "167903",
+    "timestamp": "2014-05-16 19:31:07"
+}, {
+    "transaction_id": "923",
+    "user_id": "66",
+    "beer_id": "1191303",
+    "timestamp": "2014-05-16 19:31:24"
+}, {
+    "transaction_id": "924",
+    "user_id": "17",
+    "beer_id": "153915",
+    "timestamp": "2014-05-16 19:31:53"
+}, {
+    "transaction_id": "925",
+    "user_id": "52",
+    "beer_id": "1191303",
+    "timestamp": "2014-05-16 19:32:17"
+}, {
+    "transaction_id": "926",
+    "user_id": "21",
+    "beer_id": "1162503",
+    "timestamp": "2014-05-16 19:35:07"
+}, {
+    "transaction_id": "927",
+    "user_id": "70",
+    "beer_id": "1144703",
+    "timestamp": "2014-05-16 19:35:43"
+}, {
+    "transaction_id": "928",
+    "user_id": "21",
+    "beer_id": "1134803",
+    "timestamp": "2014-05-16 19:40:49"
+}, {
+    "transaction_id": "929",
+    "user_id": "21",
+    "beer_id": "1140501",
+    "timestamp": "2014-05-16 19:44:14"
+}, {
+    "transaction_id": "930",
+    "user_id": "31",
+    "beer_id": "161503",
+    "timestamp": "2014-05-16 19:46:26"
+}, {
+    "transaction_id": "931",
+    "user_id": "21",
+    "beer_id": "1191303",
+    "timestamp": "2014-05-16 19:57:21"
+}, {
+    "transaction_id": "932",
+    "user_id": "21",
+    "beer_id": "167903",
+    "timestamp": "2014-05-16 19:58:09"
+}, {
+    "transaction_id": "933",
+    "user_id": "21",
+    "beer_id": "167903",
+    "timestamp": "2014-05-16 19:58:31"
+}, {
+    "transaction_id": "934",
+    "user_id": "21",
+    "beer_id": "153915",
+    "timestamp": "2014-05-16 19:59:07"
+}, {
+    "transaction_id": "935",
+    "user_id": "21",
+    "beer_id": "181803",
+    "timestamp": "2014-05-16 20:02:00"
+}, {
+    "transaction_id": "936",
+    "user_id": "21",
+    "beer_id": "181803",
+    "timestamp": "2014-05-16 20:02:07"
+}, {
+    "transaction_id": "937",
+    "user_id": "62",
+    "beer_id": "1191303",
+    "timestamp": "2014-05-16 20:06:52"
+}, {
+    "transaction_id": "938",
+    "user_id": "70",
+    "beer_id": "8953903",
+    "timestamp": "2014-05-16 20:08:42"
+}, {
+    "transaction_id": "939",
+    "user_id": "19",
+    "beer_id": "150103",
+    "timestamp": "2014-05-16 20:10:33"
+}, {
+    "transaction_id": "940",
+    "user_id": "72",
+    "beer_id": "1125303",
+    "timestamp": "2014-05-16 20:10:51"
+}, {
+    "transaction_id": "941",
+    "user_id": "2",
+    "beer_id": "150103",
+    "timestamp": "2014-05-16 20:12:02"
+}, {
+    "transaction_id": "942",
+    "user_id": "20",
+    "beer_id": "198902",
+    "timestamp": "2014-05-16 20:12:11"
+}, {
+    "transaction_id": "943",
+    "user_id": "21",
+    "beer_id": "1162503",
+    "timestamp": "2014-05-16 20:13:04"
+}, {
+    "transaction_id": "944",
+    "user_id": "2",
+    "beer_id": "209702",
+    "timestamp": "2014-05-16 20:15:55"
+}, {
+    "transaction_id": "945",
+    "user_id": "33",
+    "beer_id": "167903",
+    "timestamp": "2014-05-16 20:23:19"
+}, {
+    "transaction_id": "946",
+    "user_id": "33",
+    "beer_id": "167903",
+    "timestamp": "2014-05-16 20:23:29"
+}, {
+    "transaction_id": "947",
+    "user_id": "33",
+    "beer_id": "161503",
+    "timestamp": "2014-05-16 20:27:47"
+}, {
+    "transaction_id": "948",
+    "user_id": "31",
+    "beer_id": "153001",
+    "timestamp": "2014-05-16 20:29:13"
+}, {
+    "transaction_id": "949",
+    "user_id": "24",
+    "beer_id": "1159803",
+    "timestamp": "2014-05-16 20:31:43"
+}, {
+    "transaction_id": "950",
+    "user_id": "21",
+    "beer_id": "155103",
+    "timestamp": "2014-05-16 20:34:05"
+}, {
+    "transaction_id": "951",
+    "user_id": "21",
+    "beer_id": "150103",
+    "timestamp": "2014-05-16 20:34:19"
+}, {
+    "transaction_id": "952",
+    "user_id": "21",
+    "beer_id": "150103",
+    "timestamp": "2014-05-16 20:34:45"
+}, {
+    "transaction_id": "953",
+    "user_id": "29",
+    "beer_id": "1191303",
+    "timestamp": "2014-05-16 20:36:30"
+}, {
+    "transaction_id": "954",
+    "user_id": "21",
+    "beer_id": "153503",
+    "timestamp": "2014-05-16 20:36:36"
+}, {
+    "transaction_id": "955",
+    "user_id": "21",
+    "beer_id": "153803",
+    "timestamp": "2014-05-16 20:41:33"
+}, {
+    "transaction_id": "956",
+    "user_id": "21",
+    "beer_id": "218002",
+    "timestamp": "2014-05-16 20:48:25"
+}, {
+    "transaction_id": "957",
+    "user_id": "21",
+    "beer_id": "155103",
+    "timestamp": "2014-05-16 20:49:11"
+}, {
+    "transaction_id": "958",
+    "user_id": "24",
+    "beer_id": "154603",
+    "timestamp": "2014-05-16 20:54:37"
+}, {
+    "transaction_id": "959",
+    "user_id": "53",
+    "beer_id": "198902",
+    "timestamp": "2014-05-16 20:59:08"
+}, {
+    "transaction_id": "960",
+    "user_id": "2",
+    "beer_id": "155701",
+    "timestamp": "2014-05-16 20:59:59"
+}, {
+    "transaction_id": "961",
+    "user_id": "21",
+    "beer_id": "122203",
+    "timestamp": "2014-05-16 21:07:36"
+}, {
+    "transaction_id": "962",
+    "user_id": "21",
+    "beer_id": "1159803",
+    "timestamp": "2014-05-16 21:08:14"
+}, {
+    "transaction_id": "963",
+    "user_id": "21",
+    "beer_id": "157903",
+    "timestamp": "2014-05-16 21:16:09"
+}, {
+    "transaction_id": "964",
+    "user_id": "17",
+    "beer_id": "157903",
+    "timestamp": "2014-05-16 21:17:54"
+}, {
+    "transaction_id": "965",
+    "user_id": "17",
+    "beer_id": "157903",
+    "timestamp": "2014-05-16 21:18:23"
+}, {
+    "transaction_id": "966",
+    "user_id": "17",
+    "beer_id": "122203",
+    "timestamp": "2014-05-16 21:18:44"
+}, {
+    "transaction_id": "967",
+    "user_id": "19",
+    "beer_id": "218002",
+    "timestamp": "2014-05-16 21:19:31"
+}, {
+    "transaction_id": "968",
+    "user_id": "21",
+    "beer_id": "181803",
+    "timestamp": "2014-05-16 21:25:20"
+}, {
+    "transaction_id": "969",
+    "user_id": "33",
+    "beer_id": "277301",
+    "timestamp": "2014-05-16 21:30:07"
+}, {
+    "transaction_id": "970",
+    "user_id": "33",
+    "beer_id": "198902",
+    "timestamp": "2014-05-16 21:30:28"
+}, {
+    "transaction_id": "971",
+    "user_id": "66",
+    "beer_id": "197702",
+    "timestamp": "2014-05-16 21:32:09"
+}, {
+    "transaction_id": "972",
+    "user_id": "24",
+    "beer_id": "1144703",
+    "timestamp": "2014-05-16 21:32:22"
+}, {
+    "transaction_id": "973",
+    "user_id": "45",
+    "beer_id": "8916315",
+    "timestamp": "2014-05-16 21:40:25"
+}, {
+    "transaction_id": "974",
+    "user_id": "21",
+    "beer_id": "122203",
+    "timestamp": "2014-05-16 21:40:47"
+}, {
+    "transaction_id": "975",
+    "user_id": "45",
+    "beer_id": "1191303",
+    "timestamp": "2014-05-16 21:41:02"
+}, {
+    "transaction_id": "976",
+    "user_id": "21",
+    "beer_id": "122203",
+    "timestamp": "2014-05-16 21:41:31"
+}, {
+    "transaction_id": "977",
+    "user_id": "45",
+    "beer_id": "232202",
+    "timestamp": "2014-05-16 21:41:53"
+}, {
+    "transaction_id": "978",
+    "user_id": "17",
+    "beer_id": "721801",
+    "timestamp": "2014-05-16 22:29:01"
+}, {
+    "transaction_id": "979",
+    "user_id": "17",
+    "beer_id": "721801",
+    "timestamp": "2014-05-16 22:29:19"
+}, {
+    "transaction_id": "981",
+    "user_id": "36",
+    "beer_id": "151503",
+    "timestamp": "2014-06-10 13:14:25"
+}, {
+    "transaction_id": "982",
+    "user_id": "36",
+    "beer_id": "155103",
+    "timestamp": "2014-06-10 13:31:25"
+}, {
+    "transaction_id": "983",
+    "user_id": "36",
+    "beer_id": "153001",
+    "timestamp": "2014-06-10 13:31:56"
+}, {
+    "transaction_id": "984",
+    "user_id": "36",
+    "beer_id": "192804",
+    "timestamp": "2014-06-10 13:32:28"
+}, {
+    "transaction_id": "985",
+    "user_id": "36",
+    "beer_id": "218002",
+    "timestamp": "2014-06-10 13:32:45"
+}, {
+    "transaction_id": "986",
+    "user_id": "17",
+    "beer_id": "277301",
+    "timestamp": "2014-06-11 16:25:39"
+}, {
+    "transaction_id": "987",
+    "user_id": "17",
+    "beer_id": "277301",
+    "timestamp": "2014-06-11 16:26:07"
+}, {
+    "transaction_id": "988",
+    "user_id": "17",
+    "beer_id": "277301",
+    "timestamp": "2014-06-11 16:26:29"
+}, {
+    "transaction_id": "989",
+    "user_id": "17",
+    "beer_id": "277301",
+    "timestamp": "2014-06-11 16:26:49"
+}, {
+    "transaction_id": "990",
+    "user_id": "17",
+    "beer_id": "277301",
+    "timestamp": "2014-06-11 16:27:10"
+}, {
+    "transaction_id": "991",
+    "user_id": "30",
+    "beer_id": "8817303",
+    "timestamp": "2014-06-13 17:24:52"
+}, {
+    "transaction_id": "992",
+    "user_id": "20",
+    "beer_id": "152503",
+    "timestamp": "2014-06-13 17:33:15"
+}, {
+    "transaction_id": "993",
+    "user_id": "25",
+    "beer_id": "156603",
+    "timestamp": "2014-06-13 17:34:45"
+}, {
+    "transaction_id": "994",
+    "user_id": "30",
+    "beer_id": "123103",
+    "timestamp": "2014-06-13 17:50:42"
+}, {
+    "transaction_id": "995",
+    "user_id": "21",
+    "beer_id": "182402",
+    "timestamp": "2014-06-13 17:56:13"
+}, {
+    "transaction_id": "996",
+    "user_id": "21",
+    "beer_id": "182402",
+    "timestamp": "2014-06-13 17:56:47"
+}, {
+    "transaction_id": "997",
+    "user_id": "25",
+    "beer_id": "591401",
+    "timestamp": "2014-06-13 17:59:30"
+}, {
+    "transaction_id": "998",
+    "user_id": "20",
+    "beer_id": "181803",
+    "timestamp": "2014-06-13 18:05:10"
+}, {
+    "transaction_id": "999",
+    "user_id": "57",
+    "beer_id": "1159803",
+    "timestamp": "2014-06-13 18:22:48"
+}, {
+    "transaction_id": "1000",
+    "user_id": "30",
+    "beer_id": "154803",
+    "timestamp": "2014-06-13 18:50:17"
+}, {
+    "transaction_id": "1001",
+    "user_id": "20",
+    "beer_id": "151503",
+    "timestamp": "2014-06-13 18:58:23"
+}, {
+    "transaction_id": "1002",
+    "user_id": "24",
+    "beer_id": "1144703",
+    "timestamp": "2014-06-13 19:29:05"
+}, {
+    "transaction_id": "1003",
+    "user_id": "24",
+    "beer_id": "156603",
+    "timestamp": "2014-06-13 19:29:16"
+}, {
+    "transaction_id": "1004",
+    "user_id": "20",
+    "beer_id": "1140501",
+    "timestamp": "2014-06-13 20:14:43"
+}, {
+    "transaction_id": "1005",
+    "user_id": "24",
+    "beer_id": "167101",
+    "timestamp": "2014-06-13 20:20:08"
+}, {
+    "transaction_id": "1006",
+    "user_id": "20",
+    "beer_id": "1134803",
+    "timestamp": "2014-06-13 21:30:09"
+}, {
+    "transaction_id": "1007",
+    "user_id": "20",
+    "beer_id": "151503",
+    "timestamp": "2014-06-13 22:40:38"
+}, {
+    "transaction_id": "1008",
+    "user_id": "20",
+    "beer_id": "151503",
+    "timestamp": "2014-06-13 22:40:56"
+}, {
+    "transaction_id": "1009",
+    "user_id": "20",
+    "beer_id": "151503",
+    "timestamp": "2014-06-13 22:41:13"
+}, {
+    "transaction_id": "1010",
+    "user_id": "17",
+    "beer_id": "649801",
+    "timestamp": "2014-07-02 19:02:18"
+}, {
+    "transaction_id": "1011",
+    "user_id": "17",
+    "beer_id": "155103",
+    "timestamp": "2014-07-14 19:12:16"
+}, {
+    "transaction_id": "1012",
+    "user_id": "17",
+    "beer_id": "123103",
+    "timestamp": "2014-07-14 19:12:44"
+}, {
+    "transaction_id": "1013",
+    "user_id": "17",
+    "beer_id": "155103",
+    "timestamp": "2014-07-15 17:24:18"
+}, {
+    "transaction_id": "1014",
+    "user_id": "17",
+    "beer_id": "155103",
+    "timestamp": "2014-07-15 17:25:31"
+}, {
+    "transaction_id": "1015",
+    "user_id": "17",
+    "beer_id": "151503",
+    "timestamp": "2014-07-15 17:25:58"
+}, {
+    "transaction_id": "1016",
+    "user_id": "17",
+    "beer_id": "151503",
+    "timestamp": "2014-07-15 17:26:20"
+}, {
+    "transaction_id": "1017",
+    "user_id": "17",
+    "beer_id": "591401",
+    "timestamp": "2014-07-15 17:26:46"
+}, {
+    "transaction_id": "1018",
+    "user_id": "17",
+    "beer_id": "151503",
+    "timestamp": "2014-07-24 17:44:08"
+}, {
+    "transaction_id": "1019",
+    "user_id": "17",
+    "beer_id": "151503",
+    "timestamp": "2014-07-24 17:44:44"
+}, {
+    "transaction_id": "1020",
+    "user_id": "17",
+    "beer_id": "152503",
+    "timestamp": "2014-07-24 17:45:55"
+}, {
+    "transaction_id": "1021",
+    "user_id": "17",
+    "beer_id": "152503",
+    "timestamp": "2014-07-24 17:46:58"
+}, {
+    "transaction_id": "1022",
+    "user_id": "17",
+    "beer_id": "8817303",
+    "timestamp": "2014-07-24 17:47:39"
+}, {
+    "transaction_id": "1023",
+    "user_id": "17",
+    "beer_id": "8817303",
+    "timestamp": "2014-07-24 17:47:55"
+}, {
+    "transaction_id": "1024",
+    "user_id": "17",
+    "beer_id": "165903",
+    "timestamp": "2014-07-24 17:48:22"
+}, {
+    "transaction_id": "1025",
+    "user_id": "17",
+    "beer_id": "165403",
+    "timestamp": "2014-07-24 17:48:33"
+}, {
+    "transaction_id": "1026",
+    "user_id": "17",
+    "beer_id": "277301",
+    "timestamp": "2014-08-13 18:33:32"
+}, {
+    "transaction_id": "1027",
+    "user_id": "17",
+    "beer_id": "591401",
+    "timestamp": "2014-08-13 18:36:07"
+}, {
+    "transaction_id": "1028",
+    "user_id": "20",
+    "beer_id": "151503",
+    "timestamp": "2014-08-29 17:38:18"
+}, {
+    "transaction_id": "1029",
+    "user_id": "20",
+    "beer_id": "151503",
+    "timestamp": "2014-08-29 17:38:28"
+}, {
+    "transaction_id": "1030",
+    "user_id": "20",
+    "beer_id": "1140501",
+    "timestamp": "2014-08-29 17:38:43"
+}, {
+    "transaction_id": "1031",
+    "user_id": "52",
+    "beer_id": "167903",
+    "timestamp": "2014-09-08 18:01:52"
+}, {
+    "transaction_id": "1032",
+    "user_id": "25",
+    "beer_id": "198902",
+    "timestamp": "2014-09-08 20:29:30"
+}, {
+    "transaction_id": "1033",
+    "user_id": "22",
+    "beer_id": "8817303",
+    "timestamp": "2014-09-09 09:35:44"
+}, {
+    "transaction_id": "1034",
+    "user_id": "20",
+    "beer_id": "198902",
+    "timestamp": "2014-09-12 17:37:56"
+}, {
+    "transaction_id": "1035",
+    "user_id": "25",
+    "beer_id": "198902",
+    "timestamp": "2014-09-12 17:38:30"
+}, {
+    "transaction_id": "1036",
+    "user_id": "26",
+    "beer_id": "152503",
+    "timestamp": "2014-09-12 17:39:00"
+}, {
+    "transaction_id": "1037",
+    "user_id": "50",
+    "beer_id": "135603",
+    "timestamp": "2014-09-12 18:08:32"
+}, {
+    "transaction_id": "1038",
+    "user_id": "20",
+    "beer_id": "198902",
+    "timestamp": "2014-09-12 18:10:30"
+}, {
+    "transaction_id": "1039",
+    "user_id": "26",
+    "beer_id": "8817303",
+    "timestamp": "2014-09-12 18:21:29"
+}, {
+    "transaction_id": "1040",
+    "user_id": "50",
+    "beer_id": "165903",
+    "timestamp": "2014-09-12 18:22:02"
+}, {
+    "transaction_id": "1041",
+    "user_id": "52",
+    "beer_id": "183502",
+    "timestamp": "2014-09-12 18:32:52"
+}, {
+    "transaction_id": "1048",
+    "user_id": "24",
+    "beer_id": "154803",
+    "timestamp": "2014-09-23 19:26:57"
+}, {
+    "transaction_id": "1043",
+    "user_id": "50",
+    "beer_id": "8967303",
+    "timestamp": "2014-09-12 19:20:54"
+}, {
+    "transaction_id": "1044",
+    "user_id": "20",
+    "beer_id": "1199403",
+    "timestamp": "2014-09-12 19:21:09"
+}, {
+    "transaction_id": "1045",
+    "user_id": "25",
+    "beer_id": "1199403",
+    "timestamp": "2014-09-12 19:21:19"
+}, {
+    "transaction_id": "1046",
+    "user_id": "52",
+    "beer_id": "1140501",
+    "timestamp": "2014-09-12 19:25:14"
+}, {
+    "transaction_id": "1047",
+    "user_id": "57",
+    "beer_id": "154803",
+    "timestamp": "2014-09-16 14:14:33"
+}, {
+    "transaction_id": "1049",
+    "user_id": "66",
+    "beer_id": "151503",
+    "timestamp": "2014-09-23 19:27:03"
+}, {
+    "transaction_id": "1050",
+    "user_id": "25",
+    "beer_id": "591401",
+    "timestamp": "2014-09-23 19:28:26"
+}, {
+    "transaction_id": "1051",
+    "user_id": "2",
+    "beer_id": "151503",
+    "timestamp": "2014-09-26 17:22:17"
+}, {
+    "transaction_id": "1052",
+    "user_id": "66",
+    "beer_id": "154803",
+    "timestamp": "2014-09-26 17:22:33"
+}, {
+    "transaction_id": "1053",
+    "user_id": "25",
+    "beer_id": "156603",
+    "timestamp": "2014-09-26 17:23:09"
+}, {
+    "transaction_id": "1054",
+    "user_id": "25",
+    "beer_id": "198902",
+    "timestamp": "2014-09-26 17:23:28"
+}, {
+    "transaction_id": "1055",
+    "user_id": "26",
+    "beer_id": "154803",
+    "timestamp": "2014-09-26 17:23:39"
+}, {
+    "transaction_id": "1056",
+    "user_id": "49",
+    "beer_id": "167903",
+    "timestamp": "2014-09-26 17:27:18"
+}, {
+    "transaction_id": "1057",
+    "user_id": "20",
+    "beer_id": "197302",
+    "timestamp": "2014-09-26 17:27:35"
+}, {
+    "transaction_id": "1058",
+    "user_id": "76",
+    "beer_id": "1159803",
+    "timestamp": "2014-09-26 17:32:09"
+}, {
+    "transaction_id": "1059",
+    "user_id": "17",
+    "beer_id": "649801",
+    "timestamp": "2014-09-26 17:35:32"
+}, {
+    "transaction_id": "1060",
+    "user_id": "21",
+    "beer_id": "181803",
+    "timestamp": "2014-09-26 17:36:11"
+}, {
+    "transaction_id": "1061",
+    "user_id": "21",
+    "beer_id": "166703",
+    "timestamp": "2014-09-26 17:36:42"
+}, {
+    "transaction_id": "1062",
+    "user_id": "24",
+    "beer_id": "133603",
+    "timestamp": "2014-09-26 17:36:54"
+}, {
+    "transaction_id": "1063",
+    "user_id": "77",
+    "beer_id": "166703",
+    "timestamp": "2014-09-26 17:40:55"
+}, {
+    "transaction_id": "1064",
+    "user_id": "30",
+    "beer_id": "1140501",
+    "timestamp": "2014-09-26 17:43:54"
+}, {
+    "transaction_id": "1065",
+    "user_id": "50",
+    "beer_id": "166703",
+    "timestamp": "2014-09-26 17:45:30"
+}, {
+    "transaction_id": "1066",
+    "user_id": "66",
+    "beer_id": "151503",
+    "timestamp": "2014-09-26 17:46:41"
+}, {
+    "transaction_id": "1067",
+    "user_id": "2",
+    "beer_id": "151503",
+    "timestamp": "2014-09-26 17:47:15"
+}, {
+    "transaction_id": "1068",
+    "user_id": "49",
+    "beer_id": "167903",
+    "timestamp": "2014-09-26 18:02:47"
+}, {
+    "transaction_id": "1069",
+    "user_id": "24",
+    "beer_id": "156603",
+    "timestamp": "2014-09-26 18:11:16"
+}, {
+    "transaction_id": "1070",
+    "user_id": "50",
+    "beer_id": "194203",
+    "timestamp": "2014-09-26 18:11:29"
+}, {
+    "transaction_id": "1071",
+    "user_id": "20",
+    "beer_id": "196403",
+    "timestamp": "2014-09-26 18:11:39"
+}, {
+    "transaction_id": "1072",
+    "user_id": "73",
+    "beer_id": "194703",
+    "timestamp": "2014-09-26 18:13:25"
+}, {
+    "transaction_id": "1073",
+    "user_id": "2",
+    "beer_id": "151503",
+    "timestamp": "2014-09-26 18:15:49"
+}, {
+    "transaction_id": "1074",
+    "user_id": "75",
+    "beer_id": "167903",
+    "timestamp": "2014-09-26 18:34:48"
+}, {
+    "transaction_id": "1075",
+    "user_id": "30",
+    "beer_id": "154803",
+    "timestamp": "2014-09-26 18:37:03"
+}, {
+    "transaction_id": "1076",
+    "user_id": "24",
+    "beer_id": "1144703",
+    "timestamp": "2014-09-26 18:48:30"
+}, {
+    "transaction_id": "1077",
+    "user_id": "75",
+    "beer_id": "165403",
+    "timestamp": "2014-09-26 18:49:51"
+}, {
+    "transaction_id": "1078",
+    "user_id": "66",
+    "beer_id": "1140501",
+    "timestamp": "2014-09-26 18:50:26"
+}, {
+    "transaction_id": "1079",
+    "user_id": "21",
+    "beer_id": "167903",
+    "timestamp": "2014-09-26 18:52:20"
+}, {
+    "transaction_id": "1080",
+    "user_id": "21",
+    "beer_id": "135603",
+    "timestamp": "2014-09-26 18:52:40"
+}, {
+    "transaction_id": "1081",
+    "user_id": "2",
+    "beer_id": "151503",
+    "timestamp": "2014-09-26 18:57:36"
+}, {
+    "transaction_id": "1082",
+    "user_id": "78",
+    "beer_id": "167903",
+    "timestamp": "2014-09-26 19:22:05"
+}, {
+    "transaction_id": "1083",
+    "user_id": "52",
+    "beer_id": "180202",
+    "timestamp": "2014-09-26 19:27:21"
+}, {
+    "transaction_id": "1084",
+    "user_id": "30",
+    "beer_id": "151503",
+    "timestamp": "2014-09-26 19:27:54"
+}, {
+    "transaction_id": "1085",
+    "user_id": "21",
+    "beer_id": "151503",
+    "timestamp": "2014-09-26 19:32:40"
+}, {
+    "transaction_id": "1086",
+    "user_id": "21",
+    "beer_id": "151503",
+    "timestamp": "2014-09-26 19:32:50"
+}, {
+    "transaction_id": "1087",
+    "user_id": "21",
+    "beer_id": "151503",
+    "timestamp": "2014-09-26 19:32:55"
+}, {
+    "transaction_id": "1088",
+    "user_id": "21",
+    "beer_id": "151503",
+    "timestamp": "2014-09-26 19:33:00"
+}, {
+    "transaction_id": "1089",
+    "user_id": "25",
+    "beer_id": "156603",
+    "timestamp": "2014-09-26 19:34:35"
+}, {
+    "transaction_id": "1090",
+    "user_id": "66",
+    "beer_id": "157803",
+    "timestamp": "2014-09-26 19:51:19"
+}, {
+    "transaction_id": "1091",
+    "user_id": "52",
+    "beer_id": "180202",
+    "timestamp": "2014-09-26 19:59:30"
+}, {
+    "transaction_id": "1092",
+    "user_id": "78",
+    "beer_id": "167903",
+    "timestamp": "2014-09-26 20:13:55"
+}, {
+    "transaction_id": "1093",
+    "user_id": "66",
+    "beer_id": "151503",
+    "timestamp": "2014-09-26 20:35:18"
+}, {
+    "transaction_id": "1094",
+    "user_id": "25",
+    "beer_id": "156603",
+    "timestamp": "2014-09-26 20:35:31"
+}, {
+    "transaction_id": "1095",
+    "user_id": "21",
+    "beer_id": "151503",
+    "timestamp": "2014-09-26 20:37:47"
+}, {
+    "transaction_id": "1096",
+    "user_id": "21",
+    "beer_id": "167101",
+    "timestamp": "2014-09-26 21:11:34"
+}, {
+    "transaction_id": "1097",
+    "user_id": "25",
+    "beer_id": "181803",
+    "timestamp": "2014-09-26 21:11:59"
+}, {
+    "transaction_id": "1098",
+    "user_id": "66",
+    "beer_id": "157803",
+    "timestamp": "2014-09-26 21:13:13"
+}, {
+    "transaction_id": "1099",
+    "user_id": "52",
+    "beer_id": "183502",
+    "timestamp": "2014-09-26 21:13:20"
+}, {
+    "transaction_id": "1100",
+    "user_id": "78",
+    "beer_id": "1134803",
+    "timestamp": "2014-09-26 21:13:29"
+}, {
+    "transaction_id": "1101",
+    "user_id": "21",
+    "beer_id": "167903",
+    "timestamp": "2014-09-26 21:13:38"
+}, {
+    "transaction_id": "1102",
+    "user_id": "66",
+    "beer_id": "156603",
+    "timestamp": "2014-09-26 21:53:42"
+}, {
+    "transaction_id": "1103",
+    "user_id": "52",
+    "beer_id": "156603",
+    "timestamp": "2014-09-26 22:21:42"
+}, {
+    "transaction_id": "1104",
+    "user_id": "25",
+    "beer_id": "156603",
+    "timestamp": "2014-09-26 22:21:58"
+}, {
+    "transaction_id": "1105",
+    "user_id": "77",
+    "beer_id": "166703",
+    "timestamp": "2014-09-30 08:19:12"
+}, {
+    "transaction_id": "1106",
+    "user_id": "36",
+    "beer_id": "151503",
+    "timestamp": "2014-10-02 15:44:39"
+}, {
+    "transaction_id": "1107",
+    "user_id": "36",
+    "beer_id": "156603",
+    "timestamp": "2014-10-02 15:44:47"
+}, {
+    "transaction_id": "1108",
+    "user_id": "20",
+    "beer_id": "169301",
+    "timestamp": "2014-10-03 17:33:02"
+}, {
+    "transaction_id": "1109",
+    "user_id": "22",
+    "beer_id": "8962903",
+    "timestamp": "2014-10-03 17:33:31"
+}, {
+    "transaction_id": "1110",
+    "user_id": "25",
+    "beer_id": "150603",
+    "timestamp": "2014-10-03 17:34:47"
+}, {
+    "transaction_id": "1111",
+    "user_id": "78",
+    "beer_id": "156103",
+    "timestamp": "2014-10-03 17:34:51"
+}, {
+    "transaction_id": "1112",
+    "user_id": "57",
+    "beer_id": "614601",
+    "timestamp": "2014-10-03 17:37:55"
+}, {
+    "transaction_id": "1113",
+    "user_id": "66",
+    "beer_id": "154803",
+    "timestamp": "2014-10-03 17:41:02"
+}, {
+    "transaction_id": "1114",
+    "user_id": "80",
+    "beer_id": "183203",
+    "timestamp": "2014-10-03 17:45:45"
+}, {
+    "transaction_id": "1115",
+    "user_id": "59",
+    "beer_id": "195202",
+    "timestamp": "2014-10-03 17:46:13"
+}, {
+    "transaction_id": "1116",
+    "user_id": "24",
+    "beer_id": "1129801",
+    "timestamp": "2014-10-03 17:55:24"
+}, {
+    "transaction_id": "1117",
+    "user_id": "25",
+    "beer_id": "191402",
+    "timestamp": "2014-10-03 18:03:24"
+}, {
+    "transaction_id": "1118",
+    "user_id": "22",
+    "beer_id": "149803",
+    "timestamp": "2014-10-03 18:08:48"
+}, {
+    "transaction_id": "1119",
+    "user_id": "75",
+    "beer_id": "1152803",
+    "timestamp": "2014-10-03 18:13:30"
+}, {
+    "transaction_id": "1120",
+    "user_id": "66",
+    "beer_id": "157503",
+    "timestamp": "2014-10-03 18:18:58"
+}, {
+    "transaction_id": "1121",
+    "user_id": "78",
+    "beer_id": "153803",
+    "timestamp": "2014-10-03 18:23:28"
+}, {
+    "transaction_id": "1122",
+    "user_id": "77",
+    "beer_id": "149803",
+    "timestamp": "2014-10-03 18:26:14"
+}, {
+    "transaction_id": "1123",
+    "user_id": "77",
+    "beer_id": "165903",
+    "timestamp": "2014-10-03 18:26:27"
+}, {
+    "transaction_id": "1124",
+    "user_id": "24",
+    "beer_id": "133603",
+    "timestamp": "2014-10-03 18:29:09"
+}, {
+    "transaction_id": "1125",
+    "user_id": "81",
+    "beer_id": "150603",
+    "timestamp": "2014-10-03 18:32:16"
+}, {
+    "transaction_id": "1126",
+    "user_id": "25",
+    "beer_id": "1199403",
+    "timestamp": "2014-10-03 18:32:26"
+}, {
+    "transaction_id": "1127",
+    "user_id": "81",
+    "beer_id": "150603",
+    "timestamp": "2014-10-03 18:33:09"
+}, {
+    "transaction_id": "1128",
+    "user_id": "81",
+    "beer_id": "142003",
+    "timestamp": "2014-10-03 18:33:34"
+}, {
+    "transaction_id": "1129",
+    "user_id": "50",
+    "beer_id": "181803",
+    "timestamp": "2014-10-03 18:44:46"
+}, {
+    "transaction_id": "1130",
+    "user_id": "21",
+    "beer_id": "266201",
+    "timestamp": "2014-10-03 18:56:32"
+}, {
+    "transaction_id": "1131",
+    "user_id": "20",
+    "beer_id": "186602",
+    "timestamp": "2014-10-03 19:08:30"
+}, {
+    "transaction_id": "1132",
+    "user_id": "24",
+    "beer_id": "1128101",
+    "timestamp": "2014-10-03 19:08:55"
+}, {
+    "transaction_id": "1133",
+    "user_id": "66",
+    "beer_id": "151503",
+    "timestamp": "2014-10-03 19:08:57"
+}, {
+    "transaction_id": "1134",
+    "user_id": "20",
+    "beer_id": "156103",
+    "timestamp": "2014-10-03 19:08:58"
+}, {
+    "transaction_id": "1135",
+    "user_id": "21",
+    "beer_id": "645901",
+    "timestamp": "2014-10-03 19:10:33"
+}, {
+    "transaction_id": "1136",
+    "user_id": "21",
+    "beer_id": "168103",
+    "timestamp": "2014-10-03 19:10:49"
+}, {
+    "transaction_id": "1137",
+    "user_id": "75",
+    "beer_id": "142003",
+    "timestamp": "2014-10-03 19:13:28"
+}, {
+    "transaction_id": "1138",
+    "user_id": "21",
+    "beer_id": "168103",
+    "timestamp": "2014-10-03 19:31:34"
+}, {
+    "transaction_id": "1139",
+    "user_id": "25",
+    "beer_id": "187702",
+    "timestamp": "2014-10-03 19:31:56"
+}, {
+    "transaction_id": "1140",
+    "user_id": "78",
+    "beer_id": "149003",
+    "timestamp": "2014-10-03 19:37:50"
+}, {
+    "transaction_id": "1141",
+    "user_id": "20",
+    "beer_id": "151503",
+    "timestamp": "2014-10-03 19:38:08"
+}, {
+    "transaction_id": "1142",
+    "user_id": "66",
+    "beer_id": "154803",
+    "timestamp": "2014-10-03 19:40:27"
+}, {
+    "transaction_id": "1143",
+    "user_id": "24",
+    "beer_id": "1128101",
+    "timestamp": "2014-10-03 20:15:57"
+}, {
+    "transaction_id": "1144",
+    "user_id": "21",
+    "beer_id": "186602",
+    "timestamp": "2014-10-03 20:16:57"
+}, {
+    "transaction_id": "1145",
+    "user_id": "20",
+    "beer_id": "151503",
+    "timestamp": "2014-10-03 20:22:01"
+}, {
+    "transaction_id": "1146",
+    "user_id": "66",
+    "beer_id": "153803",
+    "timestamp": "2014-10-03 20:34:12"
+}, {
+    "transaction_id": "1147",
+    "user_id": "81",
+    "beer_id": "1120801",
+    "timestamp": "2014-10-03 20:39:33"
+}, {
+    "transaction_id": "1148",
+    "user_id": "81",
+    "beer_id": "1129801",
+    "timestamp": "2014-10-03 20:40:02"
+}, {
+    "transaction_id": "1149",
+    "user_id": "81",
+    "beer_id": "155701",
+    "timestamp": "2014-10-03 20:41:06"
+}, {
+    "transaction_id": "1150",
+    "user_id": "81",
+    "beer_id": "151503",
+    "timestamp": "2014-10-03 20:41:32"
+}, {
+    "transaction_id": "1151",
+    "user_id": "81",
+    "beer_id": "168701",
+    "timestamp": "2014-10-03 20:41:50"
+}, {
+    "transaction_id": "1152",
+    "user_id": "81",
+    "beer_id": "223301",
+    "timestamp": "2014-10-03 20:53:56"
+}, {
+    "transaction_id": "1153",
+    "user_id": "21",
+    "beer_id": "186602",
+    "timestamp": "2014-10-03 21:01:15"
+}, {
+    "transaction_id": "1154",
+    "user_id": "21",
+    "beer_id": "151503",
+    "timestamp": "2014-10-03 21:01:57"
+}, {
+    "transaction_id": "1155",
+    "user_id": "25",
+    "beer_id": "150601",
+    "timestamp": "2014-10-03 21:02:18"
+}, {
+    "transaction_id": "1156",
+    "user_id": "24",
+    "beer_id": "1144703",
+    "timestamp": "2014-10-03 21:07:21"
+}, {
+    "transaction_id": "1157",
+    "user_id": "20",
+    "beer_id": "151503",
+    "timestamp": "2014-10-03 21:13:43"
+}, {
+    "transaction_id": "1158",
+    "user_id": "78",
+    "beer_id": "167903",
+    "timestamp": "2014-10-03 21:37:05"
+}, {
+    "transaction_id": "1159",
+    "user_id": "20",
+    "beer_id": "151503",
+    "timestamp": "2014-10-03 21:47:34"
+}, {
+    "transaction_id": "1160",
+    "user_id": "25",
+    "beer_id": "198902",
+    "timestamp": "2014-10-03 21:48:05"
+}, {
+    "transaction_id": "1161",
+    "user_id": "24",
+    "beer_id": "1125001",
+    "timestamp": "2014-10-03 21:49:37"
+}, {
+    "transaction_id": "1162",
+    "user_id": "82",
+    "beer_id": "157503",
+    "timestamp": "2014-10-03 21:58:54"
+}, {
+    "transaction_id": "1163",
+    "user_id": "25",
+    "beer_id": "197302",
+    "timestamp": "2014-10-03 22:41:33"
+}, {
+    "transaction_id": "1164",
+    "user_id": "82",
+    "beer_id": "187702",
+    "timestamp": "2014-10-03 22:44:26"
+}, {
+    "transaction_id": "1165",
+    "user_id": "20",
+    "beer_id": "157701",
+    "timestamp": "2014-10-03 22:45:43"
+}, {
+    "transaction_id": "1166",
+    "user_id": "81",
+    "beer_id": "151503",
+    "timestamp": "2014-10-03 22:50:31"
+}, {
+    "transaction_id": "1167",
+    "user_id": "25",
+    "beer_id": "183203",
+    "timestamp": "2014-10-10 15:25:10"
+}, {
+    "transaction_id": "1168",
+    "user_id": "57",
+    "beer_id": "151503",
+    "timestamp": "2014-10-10 15:25:28"
+}, {
+    "transaction_id": "1169",
+    "user_id": "2",
+    "beer_id": "157503",
+    "timestamp": "2014-10-10 17:33:51"
+}, {
+    "transaction_id": "1170",
+    "user_id": "20",
+    "beer_id": "198902",
+    "timestamp": "2014-10-10 17:35:08"
+}, {
+    "transaction_id": "1171",
+    "user_id": "25",
+    "beer_id": "187702",
+    "timestamp": "2014-10-10 17:35:31"
+}, {
+    "transaction_id": "1172",
+    "user_id": "71",
+    "beer_id": "154803",
+    "timestamp": "2014-10-10 17:40:40"
+}, {
+    "transaction_id": "1173",
+    "user_id": "78",
+    "beer_id": "196303",
+    "timestamp": "2014-10-10 17:44:29"
+}, {
+    "transaction_id": "1174",
+    "user_id": "78",
+    "beer_id": "154803",
+    "timestamp": "2014-10-10 17:46:36"
+}, {
+    "transaction_id": "1175",
+    "user_id": "21",
+    "beer_id": "1125001",
+    "timestamp": "2014-10-10 17:57:35"
+}, {
+    "transaction_id": "1176",
+    "user_id": "21",
+    "beer_id": "582201",
+    "timestamp": "2014-10-10 17:59:43"
+}, {
+    "transaction_id": "1177",
+    "user_id": "81",
+    "beer_id": "183203",
+    "timestamp": "2014-10-10 18:00:26"
+}, {
+    "transaction_id": "1178",
+    "user_id": "71",
+    "beer_id": "149003",
+    "timestamp": "2014-10-10 18:03:05"
+}, {
+    "transaction_id": "1179",
+    "user_id": "82",
+    "beer_id": "151503",
+    "timestamp": "2014-10-10 18:09:21"
+}, {
+    "transaction_id": "1180",
+    "user_id": "78",
+    "beer_id": "151503",
+    "timestamp": "2014-10-10 18:25:53"
+}, {
+    "transaction_id": "1181",
+    "user_id": "78",
+    "beer_id": "151503",
+    "timestamp": "2014-10-10 18:26:45"
+}, {
+    "transaction_id": "1182",
+    "user_id": "2",
+    "beer_id": "151503",
+    "timestamp": "2014-10-10 18:27:22"
+}, {
+    "transaction_id": "1183",
+    "user_id": "78",
+    "beer_id": "148001",
+    "timestamp": "2014-10-10 18:27:26"
+}, {
+    "transaction_id": "1184",
+    "user_id": "25",
+    "beer_id": "150603",
+    "timestamp": "2014-10-10 18:32:21"
+}, {
+    "transaction_id": "1185",
+    "user_id": "83",
+    "beer_id": "137901",
+    "timestamp": "2014-10-10 18:33:52"
+}, {
+    "transaction_id": "1186",
+    "user_id": "2",
+    "beer_id": "8967303",
+    "timestamp": "2014-10-10 19:04:13"
+}, {
+    "transaction_id": "1187",
+    "user_id": "25",
+    "beer_id": "198902",
+    "timestamp": "2014-10-10 19:36:43"
+}, {
+    "transaction_id": "1188",
+    "user_id": "2",
+    "beer_id": "151503",
+    "timestamp": "2014-10-10 19:46:18"
+}, {
+    "transaction_id": "1189",
+    "user_id": "25",
+    "beer_id": "150603",
+    "timestamp": "2014-10-10 20:06:52"
+}, {
+    "transaction_id": "1190",
+    "user_id": "83",
+    "beer_id": "1152803",
+    "timestamp": "2014-10-10 20:18:32"
+}, {
+    "transaction_id": "1191",
+    "user_id": "2",
+    "beer_id": "151503",
+    "timestamp": "2014-10-10 20:33:43"
+}, {
+    "transaction_id": "1192",
+    "user_id": "25",
+    "beer_id": "196303",
+    "timestamp": "2014-10-10 20:34:45"
+}, {
+    "transaction_id": "1193",
+    "user_id": "21",
+    "beer_id": "8953903",
+    "timestamp": "2014-10-10 21:07:57"
+}, {
+    "transaction_id": "1194",
+    "user_id": "21",
+    "beer_id": "167903",
+    "timestamp": "2014-10-10 21:08:08"
+}, {
+    "transaction_id": "1195",
+    "user_id": "21",
+    "beer_id": "194703",
+    "timestamp": "2014-10-10 21:09:04"
+}, {
+    "transaction_id": "1196",
+    "user_id": "21",
+    "beer_id": "1152803",
+    "timestamp": "2014-10-10 21:09:16"
+}, {
+    "transaction_id": "1197",
+    "user_id": "77",
+    "beer_id": "165903",
+    "timestamp": "2014-10-12 00:05:15"
+}, {
+    "transaction_id": "1198",
+    "user_id": "77",
+    "beer_id": "8953903",
+    "timestamp": "2014-10-12 00:05:28"
+}, {
+    "transaction_id": "1199",
+    "user_id": "77",
+    "beer_id": "1152803",
+    "timestamp": "2014-10-12 00:05:37"
+}, {
+    "transaction_id": "1200",
+    "user_id": "24",
+    "beer_id": "165903",
+    "timestamp": "2014-10-15 22:53:09"
+}, {
+    "transaction_id": "1201",
+    "user_id": "24",
+    "beer_id": "152601",
+    "timestamp": "2014-10-15 22:53:28"
+}, {
+    "transaction_id": "1202",
+    "user_id": "24",
+    "beer_id": "651201",
+    "timestamp": "2014-10-15 22:54:22"
+}, {
+    "transaction_id": "1203",
+    "user_id": "25",
+    "beer_id": "1199403",
+    "timestamp": "2014-10-15 22:56:38"
+}, {
+    "transaction_id": "1204",
+    "user_id": "66",
+    "beer_id": "1159803",
+    "timestamp": "2014-10-15 22:57:11"
+}, {
+    "transaction_id": "1205",
+    "user_id": "66",
+    "beer_id": "151503",
+    "timestamp": "2014-10-15 22:57:30"
+}, {
+    "transaction_id": "1206",
+    "user_id": "66",
+    "beer_id": "151503",
+    "timestamp": "2014-10-15 22:57:38"
+}]
