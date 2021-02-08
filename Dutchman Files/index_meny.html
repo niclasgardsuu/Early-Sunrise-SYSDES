@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>The Flying Dutchman</title>
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="./css/menu.css">
+    <script type="text/javascript" src="Beverages.js"></script>
+    <script type="text/javascript" src="DBLoaded.js"></script>
+    <script type="text/javascript" src="loader.js"></script>
+    <script>
+        function sortMainCategory(types) {
+            var mainCategory = [];
+            for (var i = 0; i < types.length; i++) {
+                
+            }
+            return mainCategory;
+        }
+
+        function getSubcategories(category) {
+            var allCategories = beverageTypes();
+            var subCategories = [];
+            for(var i = 0; i < allCategories.length; i++) {
+                var cat = allCategories[i].split(",");
+                if(allCategories[i].includes(category)) {
+                    var subCat = cat[cat.length-1].trim();
+                    subCategories.push(subCat);
+                }
+            }
+            return subCategories;
+        }
+
+        function createSubCategory(category) {
+            var allSubCats = getSubcategories(category);
+            var id = document.getElementById("sub-category");
+            id.textContent = "";
+            for(var i = 0; i < allSubCats.length; i++) {
+                var a = document.createElement("a");
+                a.classList.add("sub-category-box");
+                a.appendChild(document.createTextNode(allSubCats[i]));
+                id.append(a);
+            }
+        }
+
+        function getAllBeveragesWithCategory() {
+            var allTypes = beverageTypes();
+            console.log(allTypes);
+            var categoryTypes = [];
+            for (var i = 0; i < allTypes.length; i++) {
+                if(allTypes[i].includes(",")) {
+                    categoryTypes.push(allTypes[i]);
+                }
+            }
+            return categoryTypes;
+        }
+
+        function getMainCategory() {
+            var categoryTypes = getAllBeveragesWithCategory();
+            console.log(categoryTypes);
+            var mainCats = [];
+            for (var i = 0; i < categoryTypes.length; i++) {
+                var cat = categoryTypes[i].split(",");
+                var mainCat = cat[0].trim();
+                if(!mainCats.includes(mainCat)) {
+                    mainCats.push(mainCat)
+                }
+            }
+            return mainCats;
+        }
+
+        function createMainCategory() {
+            var mainCat = getMainCategory();
+            var id = document.getElementById("main-category");
+            for (var i = 0; i < mainCat.length; i++) {
+                //Namn på kategorin
+                var name = document.createElement("span");
+                name.appendChild(document.createTextNode(mainCat[i]));
+                //Bild på kategorin
+                var pic = document.createElement("div");
+                pic.classList.add("main-category-img");
+                //länk för kategorin
+                var a = document.createElement("a");
+                a.classList.add("main-category-box");
+                a.appendChild(pic);
+                a.appendChild(name);
+                //måste använda bind för att få med argumentet i funktionen
+                a.addEventListener("click", createSubCategory.bind(null, mainCat[i]));
+                id.appendChild(a);
+            }
+        }
+
+        function dynamicCategory() {
+            var types = beverageTypes();
+            var mainCategory = sortMainCategory(types);
+            var id = document.getElementById("menu-container");
+
+            
+        }
+
+        $(document).ready(function(){
+            createMainCategory();
+        });
+
+    </script>
+</head>
+
+<body>
+
+<div id="menu-container">
+    <div id="main-category">
+
+    </div>
+    <div id="sub-category">
+
+    </div>
+</div>
+
+
+
+<!---
+
+The html-file is just for loading the javascript files. If you go to the console under the "Inspect" of the popup menu,
+then you can enter javascript calls, to test the functions.
+
+-->
+
+</body>
+
+</html>
+
