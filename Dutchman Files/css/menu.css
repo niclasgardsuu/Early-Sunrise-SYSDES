@@ -1,77 +1,97 @@
-#main-category {
+#main-category, #sub-category  {
     display: flex;  
     flex-wrap: wrap;
     justify-content: center;
+    text-align: center;
 }
 
-.main-category-box {
+.main-category-box, .sub-category-box {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    width: 100px;
-    height: 100px;
     border-radius: 50%;
     border: 1px solid grey;
-
 }
 
 .main-category-box, .sub-category-box:hover {
     cursor: pointer;
 }
 
+.main-category-box {
+    width: 125px;
+    height: 125px;
+}
+
+.main-category-img {
+    width: 60%;
+    height: 60%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
 
 .sub-category-box {
-    display: flex;
     width: 80px;
     height: 80px;
-    border-radius: 50%;
-    border: 1px solid grey;
 }
 
-.beverageType {
-    text-align: center;
+
+#product-window {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-#sub-category {
-
+.product-container {
+    margin: 5%;
+    height: 300px;
+    width: 200px;
+    border-radius: 5%;
+    box-shadow: 0px 3px 5px #cccccc;
 }
 
-#sub-category {
-
+.product-container-top {
+    height: 75%;
 }
 
-#sub-category {
-
+.product-container-bottom {
+    display: flex;
+    height: 25%;
 }
 
-#sub-category {
-
+.product-container-bottom-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 40%;
 }
 
-#sub-category {
-
+.product-container-bottom-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 60%;
 }
 
-#sub-category {
-
+.product-name {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 125%;
+    padding-left: 5px;
+    padding-top: 5px;
 }
 
-#sub-category {
-
+.product-price {
+    font-weight: bold;
 }
 
-#sub-category {
-
+.product-buy {
+    width: 80%;
+    height: 70%;
+    border-radius: 5%;
+    border: none;
+    font-size: 125%;
+    color: white;
+    background-color: black;
 }
 
-#sub-category {
-
-}
-
-#sub-category {
-
-}
-
-#sub-category {
-
-}

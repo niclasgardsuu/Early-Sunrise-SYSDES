@@ -11,13 +11,6 @@
     <script type="text/javascript" src="DBLoaded.js"></script>
     <script type="text/javascript" src="loader.js"></script>
     <script>
-        function sortMainCategory(types) {
-            var mainCategory = [];
-            for (var i = 0; i < types.length; i++) {
-                
-            }
-            return mainCategory;
-        }
 
         function getSubcategories(category) {
             var allCategories = beverageTypes();
@@ -46,7 +39,6 @@
 
         function getAllBeveragesWithCategory() {
             var allTypes = beverageTypes();
-            console.log(allTypes);
             var categoryTypes = [];
             for (var i = 0; i < allTypes.length; i++) {
                 if(allTypes[i].includes(",")) {
@@ -58,7 +50,6 @@
 
         function getMainCategory() {
             var categoryTypes = getAllBeveragesWithCategory();
-            console.log(categoryTypes);
             var mainCats = [];
             for (var i = 0; i < categoryTypes.length; i++) {
                 var cat = categoryTypes[i].split(",");
@@ -78,12 +69,14 @@
                 var name = document.createElement("span");
                 name.appendChild(document.createTextNode(mainCat[i]));
                 //Bild på kategorin
-                var pic = document.createElement("div");
-                pic.classList.add("main-category-img");
+                var img = document.createElement("img");
+                img.src = "./img/beer.svg";
+                img.className = "main-category-img";
+
                 //länk för kategorin
                 var a = document.createElement("a");
-                a.classList.add("main-category-box");
-                a.appendChild(pic);
+                a.className = "main-category-box";
+                a.appendChild(img);
                 a.appendChild(name);
                 //måste använda bind för att få med argumentet i funktionen
                 a.addEventListener("click", createSubCategory.bind(null, mainCat[i]));
@@ -91,16 +84,16 @@
             }
         }
 
-        function dynamicCategory() {
-            var types = beverageTypes();
-            var mainCategory = sortMainCategory(types);
-            var id = document.getElementById("menu-container");
+        function update_view_menu() {
+            createMainCategory();
+        }
 
-            
+        function createProducts() {
+
         }
 
         $(document).ready(function(){
-            createMainCategory();
+            update_view_menu();
         });
 
     </script>
@@ -110,11 +103,30 @@
 
 <div id="menu-container">
     <div id="main-category">
-
     </div>
     <div id="sub-category">
 
     </div>
+</div>
+
+
+<div id="product-window">
+
+    <div class="product-container">
+        <div class="product-container-top">
+            <span class="product-name">Norrlands Guld</span>
+        </div>
+        <div class="product-container-bottom">
+            <div class="product-container-bottom-left">
+                <span class="product-price">
+                    7:90
+                </span>
+            </div>
+            <div class="product-container-bottom-right">
+                <button class="product-buy">Köp</button>
+            </div>
+        </div>
+
 </div>
 
 
