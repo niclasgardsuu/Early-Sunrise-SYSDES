@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Table</title>
+    <script type="text/javascript" src="../jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="Table_dictionary.js"></script>
+    <script type="text/javascript" src="../Beverages.js"></script>
+    <script type="text/javascript" src="../DBLoaded.js"></script>
+    <script type="text/javascript" src="../loader.js"></script>
+    <script type="text/javascript" src="Table_loader.js"></script>
+    <script type="text/javascript" src="Table_control.js"></script>
+    <script type="text/javascript" src="Table_model.js"></script>
+</head>
+    <title>Table</title>
+<body>
+
+    <div id="table">                                        <!-- Table main container -->
+
+        
+        <div id="account">                                  <!-- Log In -->
+            <span id="userN"></span>
+            <input id="username" type = "text" placeholder = "Enter Username" name = "username" required>
+            <span id="passW"></span>
+            <input id="password" type = "text" placeholder = "Enter password" name = "password" required>
+            <button id="logIn" onclick="doInit('logIn')"></button>
+        </div>
+        
+        <div id="vip">                                      <!-- For VIP customer -->
+            <button id="balance" onclick="doInit('balance')"></button>
+            <button id="sdrink" onclick="doInit('sdrink')"></button>
+            <button id="logO" onclick="doInit('logOut')"></button>
+
+        </div>
+
+        <span id="display"></span>                          <!-- For all customer -->
+
+        <h1>Available items for Customer Lorem Ipsum</h1>   
+        
+        <p>1 .Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+        <p>1 .Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+        <p>1 .Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+        <p>1 .Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+        <p>1 .Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+        
+        <button id="order" onclick="doInit('order')"></button>
+        <button id="pay" onclick="doInit('pay')"></button>
+
+    </div>
+</body>
+</html>
