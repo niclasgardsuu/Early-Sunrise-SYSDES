@@ -1,3 +1,24 @@
+:root {
+    --menu-window-background: white;
+    --main-window-background:#F0F2F5;
+    --filter-window-background: none;
+    --filter-label-background:  #97704F;
+    --product-window-background: none;
+    --product-buy-button-color: white;
+    --product-buy-button-background: black;
+    --product-container-background: white;
+    --footnote-window-background: white;
+}
+
+body {
+    margin: 0;
+}
+
+#menu-window {
+    user-select: none;
+    padding: 20px;
+}
+
 #main-category, #sub-category  {
     display: flex;  
     flex-wrap: wrap;
@@ -27,6 +48,8 @@
     height: 60%;
     padding-top: 10%;
     padding-bottom: 10%;
+    -webkit-user-drag: none;
+    -moz-user-drag: none;
 }
 
 .sub-category-box {
@@ -35,10 +58,59 @@
 }
 
 
-#product-window {
+.main-window {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    width: 100%;
+    background-color: var(--main-window-background);
+}
+
+#filter-window {
+    width: 20%;
+    background-color: var(--filter-window-background);
+}
+
+.filter-container {
+    margin-top: 10px;
+    margin-left: 10px;
+    max-width: 300px;
+    min-width: 100px;
+}
+
+.filter-checkbox {
+    margin: 0;
+    margin-right: 5px;
+}
+
+.filter-checkbox:hover {
+
+}
+
+.filter-label {
+    display: flex;
+    padding: 8px;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+    height: 30px;
+    border-radius: 15px;
+    background-color: var(--filter-label-background);
+}
+
+
+.filter-checkbox-container {
+}
+
+.filter-name-container {
+    display: flex
+}
+
+#product-window {
+    background-color: var(--product-window-background);
+    width: 74%;
+    padding-left:6%;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .product-container {
@@ -46,6 +118,7 @@
     height: 300px;
     width: 200px;
     border-radius: 5%;
+    background-color: var(--product-container-background);
     box-shadow: 0px 3px 5px #cccccc;
 }
 
@@ -91,7 +164,13 @@
     border-radius: 5%;
     border: none;
     font-size: 125%;
-    color: white;
-    background-color: black;
+    color: var(--product-buy-button-color);
+    background-color: var(--product-buy-button-background);
 }
 
+.footnote-window {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: var(--footnote-window-background);
+}
