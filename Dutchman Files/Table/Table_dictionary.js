@@ -16,7 +16,11 @@ const dict = {
     'order'                : "Order",
     'sdrink'               : "Special Drink",
     'pay'                  : "Pay",
-    'logO'                 : "Log Out"
+    'logO'                 : "Log Out",
+    'logO2'                : "Log Out",
+    'addToAcc'             : "Add to Account",
+    'newAmount'            : "New Amount"
+    
 }
 
 // only examples

@@ -9,10 +9,15 @@ function doInit(func) {
 
     if (func == 'logIn') {
 
-        username = document.getElementById('username');
-        password = document.getElementById('password');
-        if (logIn(username.value, password.value)) {
-            logInSuccess();
+        username    = document.getElementById('username');
+        password    = document.getElementById('password');
+        console.log(username);
+        credentials = logIn(username.value, password.value);
+            
+        if (credentials == 3) {
+            logInVip();
+        } else if (credentials == 0) {
+            logInStaff();
         } else {
             logInUnsuccess();
         }
@@ -28,17 +33,29 @@ function doInit(func) {
         $("#display").text(balance + " SEK").fadeIn();
         setTimeout(function() { $("#display").fadeOut(); }, 3000);
     };
+
+    if (func == 'addToAcc') {
+        userName    = document.getElementById('adToUsername');
+        newAmount   = document.getElementById('newAmount').value;
+        var changedAmount = changeBalance(userName, newAmount);
+        console.log("Input username: " + userName + "Input amount: " + newAmount + "return value : " + changedAmount);        
+    };
 }
 
-function logInSuccess() {
+function logInVip() {
 
     $("#display").text(dict['log_in_success_msg']).fadeIn();
     setTimeout(function() { $("#display").fadeOut(); }, 3000);
 
-    //viptable();
-
     $("#account").hide(); 
     $("#vip").show(); 
+}
+
+function logInStaff() {
+
+    $("#account").hide(); 
+    $("#staff").show(); 
+    
 }
 
 function logInUnsuccess() {
@@ -70,6 +87,12 @@ $(document).ready(function() {
     $("#sdrink").text(dict['sdrink']);
     $("#pay").text(dict['pay']);
     $("#logO").text(dict['logO']);
+    $("#logO2").text(dict['logO2']);
+
+    $("#addToAcc").text(dict['addToAcc']);
+    $("#addToAcc").text(dict['addToAcc']);
+    $("#staff").hide(); 
+    
 
 })
 

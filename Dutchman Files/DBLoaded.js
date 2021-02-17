@@ -1,6 +1,26 @@
 var DB = {
     "users": [
         {
+            "user_id": "100",
+            "credentials": "3",
+            "password": "admin",
+            "username": "vipadmin",
+            "first_name": "Admin",
+            "last_name": "Vipsson",
+            "email": "admin.vip@it.uu.se",
+            "phone": "0701111111"
+        },
+        {
+            "user_id": "200",
+            "credentials": "0",
+            "password": "admin",
+            "username": "staffadmin",
+            "first_name": "Admin",
+            "last_name": "Staffsson",
+            "email": "admin.staff@it.uu.se",
+            "phone": "0702222222"
+        },
+        {
             "user_id": "2",
             "credentials": "0",
             "password": "b690bc2447d40ea8a6f78345eb979a28",
@@ -878,6 +898,10 @@ var DB = {
         "timestamp": "2014-10-15 22:57:38"
     }],
     "account": [
+        {
+            "user_id": "100",
+            "creditSEK" : "999"
+        },
         {
             "user_id": "2",
             "creditSEK" : "300"

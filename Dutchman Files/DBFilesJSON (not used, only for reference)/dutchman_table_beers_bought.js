@@ -1,5 +1,5 @@
 
-Bevs ={} // dutchman.beers_bought
+Bevs ={} 
 [ {
     "transaction_id": "328",
     "admin_id": "25",
