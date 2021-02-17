@@ -26,7 +26,7 @@
         function createFilter(category) {
 
             var menu = document.getElementById("product-window");
-            menu.appendChild(createBeverageContainer("LMAO",4.20,"./img/beer.svg"));
+            menu.appendChild(createBeverageContainer("LMAO","4.20","./img/beer.svg"));
 
             var filter = getFilter(category);
             var id = document.getElementById("filter-window");
@@ -101,7 +101,7 @@
             productBuy.appendChild(document.createTextNode("Köp"));
 
             var productPrice = document.createElement("span");
-            productPrice.appendChild(document.createTextNode(price));
+            productPrice.appendChild(document.createTextNode(price+" kr"));
             
             var productContainerBottomLeft = document.createElement("div");
             var productContainerBottomRight = document.createElement("div");
