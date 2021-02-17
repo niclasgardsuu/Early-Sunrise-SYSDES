@@ -24,6 +24,10 @@
         }
 
         function createFilter(category) {
+
+            var menu = document.getElementById("product-window");
+            menu.appendChild(createBeverageContainer("LMAO",4.20,"./img/beer.svg"));
+
             var filter = getFilter(category);
             var id = document.getElementById("filter-window");
             id.textContent = "";
@@ -48,35 +52,100 @@
             }
         }
 
-/*
- <div class="filter-container">
-                <label for="kryddor" class="filter-label">
-                    <span>
-                        <input type="checkbox" class="filter-checkbox" id="kryddor">
-                    </span>
-                    <span>Kryddor och örter</span>
-                </label>
+        function createBeverageContainer(name, price, imgSrc) {
+            /*
+            <div class="product-container-top">
+                <div class="product-container-top-top">
+                    <span class="product-name">Norrlands Guld</span>
+                </div>
+                <div class="product-container-top-bottom">
+                    <img src="./img/beer.svg" alt="">
+                </div>
             </div>
-*/
+            */
+
+            var productName = document.createElement("span");
+            var productContainerTopTop = document.createElement("div");
+            productName.className = "product-name";
+            productContainerTopTop.className = "product-container-top-top";
+            productName.appendChild(document.createTextNode(name));
+            productContainerTopTop.appendChild(productName);
+
+            var img = document.createElement("img");
+            img.setAttribute("src",imgSrc);
+            var productContainerTopBottom = document.createElement("div");
+            productContainerTopBottom.className = "product-container-top-bottom";
+            productContainerTopBottom.appendChild(img);
+
+            var productContainerTop = document.createElement("div");
+            productContainerTop.className = "product-container-top";
+            productContainerTop.appendChild(productContainerTopTop);
+            productContainerTop.appendChild(productContainerTopBottom);
+
+
+            /*
+            <div class="product-container-bottom">
+                <div class="product-container-bottom-left">
+                    <span class="product-price">
+                        7:90
+                    </span>
+                </div>
+                <div class="product-container-bottom-right">
+                    <button class="product-buy">Köp</button>
+                </div>
+            </div>
+            */
+
+            var productBuy = document.createElement("button");
+            productBuy.className = "product-buy";
+            productBuy.appendChild(document.createTextNode("Köp"));
+
+            var productPrice = document.createElement("span");
+            productPrice.appendChild(document.createTextNode(price));
+            
+            var productContainerBottomLeft = document.createElement("div");
+            var productContainerBottomRight = document.createElement("div");
+            productContainerBottomLeft.className = "product-container-bottom-left";
+            productContainerBottomLeft.appendChild(productPrice);
+            productContainerBottomRight.className = "product-container-bottom-right";
+            productContainerBottomRight.appendChild(productBuy);
+
+            var productContainerBottom = document.createElement("div");
+            productContainerBottom.className = "product-container-bottom";
+            productContainerBottom.appendChild(productContainerBottomLeft);
+            productContainerBottom.appendChild(productContainerBottomRight);
+
+            var productContainer = document.createElement("div");
+            productContainer.className = "product-container";
+            productContainer.appendChild(productContainerTop);
+            productContainer.appendChild(productContainerBottom);
+
+            return productContainer;
+        } 
+
+        function createBeverages() {
+
+        }
 
         function createMainCategory() {
             dict = {
-                "mainCategory": ["beer","spirits","wine","alcoholefree"],
+                "mainCategory": ["beer","spirits","wine","non-alcoholic"],
 
                 "sv": {
                     "beer":"öl",
                     "spirits":"sprit",
                     "wine":"vin",
-                    "alcoholefree":"alkoholfritt"
+                    "non-alcoholic":"alkoholfritt"
                 },
                 "en": {
                     "beer": "beer",
                     "spirits": "spirits",
                     "wine": "wine",
-                    "alcoholefree":"alcoholefree"
+                    "non-alcoholic":"non-alcoholic"
                 }
             };
 
+            
             var id = document.getElementById("main-category");
             for (var i = 0; i < dict.mainCategory.length; i++) {
                 //Namn på kategorin
@@ -96,11 +165,6 @@
                 a.addEventListener("click", createFilter.bind(null, dict.mainCategory[i]));
                 id.appendChild(a);
             }
-        }
-
-        function createBeverages() {
-
-
         }
 
         function update_view_menu() {
@@ -142,148 +206,6 @@
 
         <!--The product view-->
         <div id="product-window">
-
-            <div class="product-container">
-                <div class="product-container-top">
-                    <div class="product-container-top-top">
-                        <span class="product-name">Norrlands Guldddddddddddddddddddddddddddd</span>
-                    </div>
-                    <div class="product-container-top-bottom">
-                        <img src="./img/beer.svg" alt="">
-                    </div>
-                </div>
-                <div class="product-container-bottom">
-                    <div class="product-container-bottom-left">
-                        <span class="product-price">
-                            7:90
-                        </span>
-                    </div>
-                    <div class="product-container-bottom-right">
-                        <button class="product-buy">Köp</button>
-                    </div>
-                </div>
-            </div>
-            <div class="product-container">
-                <div class="product-container-top">
-                    <span class="product-name">Norrlands Guld</span>
-                </div>
-                <div class="product-container-bottom">
-                    <div class="product-container-bottom-left">
-                        <span class="product-price">
-                            7:90
-                        </span>
-                    </div>
-                    <div class="product-container-bottom-right">
-                        <button class="product-buy">Köp</button>
-                    </div>
-                </div>
-            </div>
-            <div class="product-container">
-                <div class="product-container-top">
-                    <span class="product-name">Norrlands Guld</span>
-                </div>
-                <div class="product-container-bottom">
-                    <div class="product-container-bottom-left">
-                        <span class="product-price">
-                            7:90
-                        </span>
-                    </div>
-                    <div class="product-container-bottom-right">
-                        <button class="product-buy">Köp</button>
-                    </div>
-                </div>
-            </div>
-            <div class="product-container">
-                <div class="product-container-top">
-                    <span class="product-name">Norrlands Guld</span>
-                </div>
-                <div class="product-container-bottom">
-                    <div class="product-container-bottom-left">
-                        <span class="product-price">
-                            7:90
-                        </span>
-                    </div>
-                    <div class="product-container-bottom-right">
-                        <button class="product-buy">Köp</button>
-                    </div>
-                </div>
-            </div>
-            <div class="product-container">
-                <div class="product-container-top">
-                    <span class="product-name">Norrlands Guld</span>
-                </div>
-                <div class="product-container-bottom">
-                    <div class="product-container-bottom-left">
-                        <span class="product-price">
-                            7:90
-                        </span>
-                    </div>
-                    <div class="product-container-bottom-right">
-                        <button class="product-buy">Köp</button>
-                    </div>
-                </div>
-            </div>
-            <div class="product-container">
-                <div class="product-container-top">
-                    <span class="product-name">Norrlands Guld</span>
-                </div>
-                <div class="product-container-bottom">
-                    <div class="product-container-bottom-left">
-                        <span class="product-price">
-                            7:90
-                        </span>
-                    </div>
-                    <div class="product-container-bottom-right">
-                        <button class="product-buy">Köp</button>
-                    </div>
-                </div>
-            </div>
-            <div class="product-container">
-                <div class="product-container-top">
-                    <span class="product-name">Norrlands Guld</span>
-                </div>
-                <div class="product-container-bottom">
-                    <div class="product-container-bottom-left">
-                        <span class="product-price">
-                            7:90
-                        </span>
-                    </div>
-                    <div class="product-container-bottom-right">
-                        <button class="product-buy">Köp</button>
-                    </div>
-                </div>
-            </div>
-            <div class="product-container">
-                <div class="product-container-top">
-                    <span class="product-name">Norrlands Guld</span>
-                </div>
-                <div class="product-container-bottom">
-                    <div class="product-container-bottom-left">
-                        <span class="product-price">
-                            7:90
-                        </span>
-                    </div>
-                    <div class="product-container-bottom-right">
-                        <button class="product-buy">Köp</button>
-                    </div>
-                </div>
-            </div>
-            <div class="product-container">
-                <div class="product-container-top">
-                    <span class="product-name">Norrlands Guld</span>
-                </div>
-                <div class="product-container-bottom">
-                    <div class="product-container-bottom-left">
-                        <span class="product-price">
-                            7:90
-                        </span>
-                    </div>
-                    <div class="product-container-bottom-right">
-                        <button class="product-buy">Köp</button>
-                    </div>
-                </div>
-            </div>
-
         </div>
 
         <div id="shopping-cart-window">
