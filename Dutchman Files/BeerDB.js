@@ -2,29 +2,30 @@ var drunk = {
     "beer":[
         {
             "nr": "141201",
-            "articleid": "939",
-            "articletype": "1412",
-            "name": "Norrlands Guld",
-            "name2": "Export",
-            "priceinclvat": "12.90",
-            "volumeml": null,
-            "priceperlitre": null,
-            "introduced": "1955-10-01",
-            "finaldelivery": " ",
-            "catgegory": "\u00c3\u2013l, Ljus lager",
-            "packaging": "Flaska",
-            "captype": "",
-            "countryoforigin": "Dalarnas l\u00c3\u00a4n, Ludvika kommun",
-            "countryoforiginlandname": "Sverige",
-            "producer": "Spendrups",
-            "provider": "Spendrups Bryggeri AB",
-            "productionyear": "",
-            "testedproductionyear": "",
-            "alcoholstrength": "5.3%",
-            "module": "",
-            "assortment": "FS",
-            "organic": "0",
-            "kosher": "0"
+            "artikelid": "939",
+            "varunummer": "1412",
+            "namn": "Norrlands Guld",
+            "namn2": "Export",
+            "prisinklmoms": "12.90",
+            "volymiml": null,
+            "prisperliter": null,
+            "saljstart": "1955-10-01",
+            "slutlev": " ",
+            "varugrupp": "Ljus lager",
+            "forpackning": "Flaska",
+            "forslutning": "",
+            "ursprung": "Dalarnas l\u00c3\u00a4n, Ludvika kommun",
+            "ursprunglandnamn": "Sverige",
+            "producent": "Spendrups",
+            "leverantor": "Spendrups Bryggeri AB",
+            "argang": "",
+            "provadargang": "",
+            "alkoholhalt": "5.3%",
+            "modul": "",
+            "sortiment": "FS",
+            "ekologisk": "0",
+            "koscher": "0",
+            "img": ""
         }, {
             "nr": "167903",
             "artikelid": "1206",
@@ -36,7 +37,7 @@ var drunk = {
             "prisperliter": null,
             "saljstart": "1994-02-14",
             "slutlev": " ",
-            "varugrupp": "\u00D6l, Ljus lager",
+            "varugrupp": "Ljus lager",
             "forpackning": "Flaska",
             "forslutning": "",
             "ursprung": "",
@@ -49,7 +50,8 @@ var drunk = {
             "modul": "",
             "sortiment": "FS",
             "ekologisk": "0",
-            "koscher": "0"
+            "koscher": "0",
+            "img": ""
         }, {
             "nr": "167912",
             "artikelid": "507861",
@@ -61,7 +63,7 @@ var drunk = {
             "prisperliter": null,
             "saljstart": "2011-11-18",
             "slutlev": " ",
-            "varugrupp": "\u00D6l, Ljus lager",
+            "varugrupp": "Ljus lager",
             "forpackning": "Burk",
             "forslutning": "",
             "ursprung": "",
@@ -74,7 +76,8 @@ var drunk = {
             "modul": "",
             "sortiment": "FS",
             "ekologisk": "0",
-            "koscher": "0"
+            "koscher": "0",
+            "img": ""
         }, {
             "nr": "7101312",
             "artikelid": "522586",
@@ -86,7 +89,7 @@ var drunk = {
             "prisperliter": null,
             "saljstart": "2011-03-01",
             "slutlev": " ",
-            "varugrupp": "\u00D6l, Porter och Stout",
+            "varugrupp": "Porter och Stout",
             "forpackning": "Burk",
             "forslutning": "",
             "ursprung": "",
@@ -99,7 +102,8 @@ var drunk = {
             "modul": "",
             "sortiment": "BS",
             "ekologisk": "0",
-            "koscher": "0"
+            "koscher": "0",
+            "img": ""
         }, {
             "nr": "169912",
             "artikelid": "508200",
@@ -111,7 +115,7 @@ var drunk = {
             "prisperliter": null,
             "saljstart": "2011-10-20",
             "slutlev": " ",
-            "varugrupp": "\u00D6l, Ljus lager",
+            "varugrupp": "Ljus lager",
             "forpackning": "Burk",
             "forslutning": "",
             "ursprung": "Kalmar l\u00E4n, Vimmerby kommun",
@@ -124,7 +128,8 @@ var drunk = {
             "modul": "",
             "sortiment": "FS",
             "ekologisk": "0",
-            "koscher": "0"
+            "koscher": "0",
+            "img": ""
         }, {
             "nr": "1104515",
             "artikelid": "721717",
@@ -136,7 +141,7 @@ var drunk = {
             "prisperliter": null,
             "saljstart": "2013-03-01",
             "slutlev": " ",
-            "varugrupp": "\u00D6l, Porter och Stout",
+            "varugrupp": "Porter och Stout",
             "forpackning": "Burk",
             "forslutning": "",
             "ursprung": "",
@@ -149,7 +154,8 @@ var drunk = {
             "modul": "",
             "sortiment": "TSE",
             "ekologisk": "0",
-            "koscher": "0"
+            "koscher": "0",
+            "img": ""
         }, {
             "nr": "153603",
             "artikelid": "1132",
@@ -161,7 +167,7 @@ var drunk = {
             "prisperliter": null,
             "saljstart": "1992-04-21",
             "slutlev": " ",
-            "varugrupp": "\u00D6l, Ljus lager",
+            "varugrupp": "Ljus lager",
             "forpackning": "Flaska",
             "forslutning": "",
             "ursprung": "",
@@ -174,13 +180,37 @@ var drunk = {
             "modul": "",
             "sortiment": "FS",
             "ekologisk": "0",
-            "koscher": "0"
+            "koscher": "0",
+            "img": ""
         }, {
-            "nr":"1"
-            "artikelid":"1337"
+            "nr": "102312",
+            "artikelid": "1337",
+            "varnummer": "",
+            "namn": "Olvi",
+            "namn2": "Tuplapukki",
+            "prisinklmoms": "8.90",
+            "volymiml": null,
+            "prisperliter": null,
+            "saljstart": "1990-04-21",
+            "slutlev": " ",
+            "varugrupp": "Djup lager",
+            "forpackning": "Burk",
+            "forslutning": "",
+            "ursprung": "",
+            "ursprunglandnamn": "Finland",
+            "producent": "Olvi plc",
+            "leverantor": "Olvi plc",
+            "argang": "",
+            "provadargang": "",
+            "alkoholhalt": "8.5%",
+            "modul": "",
+            "sortiment": "FS",
+            "ekologisk": "0",
+            "koscher": "0",
+            "img": ""
         }
     ],
-    "sprit" : {
+    "spirits" : {
         "whiskey": [
             {
             "nr": "1024601",
@@ -193,7 +223,7 @@ var drunk = {
             "prisperliter": null,
             "saljstart": "2011-03-15",
             "slutlev": " ",
-            "varugrupp": "Whisky, Malt",
+            "varugrupp": "Malt",
             "forpackning": "Flaska",
             "forslutning": "",
             "ursprung": "Skottland, Islay",
@@ -206,7 +236,8 @@ var drunk = {
             "modul": "T7",
             "sortiment": "TSE",
             "ekologisk": "0",
-            "koscher": "0"
+            "koscher": "0",
+            "img": ""
             },
             {
             "nr": "8551301",
@@ -219,7 +250,7 @@ var drunk = {
             "prisperliter": null,
             "saljstart": "2014-05-02",
             "slutlev": " ",
-            "varugrupp": "Whisky, Malt",
+            "varugrupp": "Malt",
             "forpackning": "Flaska",
             "forslutning": "",
             "ursprung": "",
@@ -232,7 +263,8 @@ var drunk = {
             "modul": "",
             "sortiment": "BS",
             "ekologisk": "0",
-            "koscher": "0"
+            "koscher": "0",
+            "img": ""
             }
         ],
         "cognac" : [
@@ -260,7 +292,8 @@ var drunk = {
             "modul": "",
             "sortiment": "BS",
             "ekologisk": "0",
-            "koscher": "0"
+            "koscher": "0",
+            "img": ""
             },
             {
             "nr": "8664601",
@@ -286,7 +319,8 @@ var drunk = {
             "modul": "",
             "sortiment": "BS",
             "ekologisk": "0",
-            "koscher": "0"
+            "koscher": "0",
+            "img": ""
             },
             {
             "nr": "17102",
@@ -312,10 +346,11 @@ var drunk = {
             "modul": "",
             "sortiment": "FS",
             "ekologisk": "0",
-            "koscher": "0"
+            "koscher": "0",
+            "img": ""
         }
         ],
-        "rom" : [
+        "rum" : [
             {
             "nr": "59101",
             "artikelid": "47035",
@@ -327,7 +362,7 @@ var drunk = {
             "prisperliter": null,
             "saljstart": "2004-03-01",
             "slutlev": " ",
-            "varugrupp": "Rom, M\u00F6rk",
+            "varugrupp": "M\u00F6rk",
             "forpackning": "Flaska",
             "forslutning": "",
             "ursprung": "",
@@ -340,7 +375,8 @@ var drunk = {
             "modul": "",
             "sortiment": "FS",
             "ekologisk": "0",
-            "koscher": "0"
+            "koscher": "0",
+            "img": ""
             },
             {
             "nr": "7017701",
@@ -353,7 +389,7 @@ var drunk = {
             "prisperliter": null,
             "saljstart": "2001-12-01",
             "slutlev": " ",
-            "varugrupp": "Rom, Ljus",
+            "varugrupp": "Ljus",
             "forpackning": "Flaska",
             "forslutning": "Skruvkapsyl",
             "ursprung": "",
@@ -366,7 +402,8 @@ var drunk = {
             "modul": "",
             "sortiment": "FS",
             "ekologisk": "0",
-            "koscher": "0"
+            "koscher": "0",
+            "img": ""
             }, 
             {
             "nr": "8628801",
@@ -379,7 +416,7 @@ var drunk = {
             "prisperliter": null,
             "saljstart": "2012-10-01",
             "slutlev": " ",
-            "varugrupp": "Rom, Ljus",
+            "varugrupp": "Ljus",
             "forpackning": "Flaska",
             "forslutning": "",
             "ursprung": "",
@@ -392,12 +429,13 @@ var drunk = {
             "modul": "",
             "sortiment": "BS",
             "ekologisk": "0",
-            "koscher": "0"
+            "koscher": "0",
+            "img": ""
             }
 
         ]
     },
-    "vin" : [
+    "wine" : [
         {
             "nr": "9605501",
             "artikelid": "668007",
@@ -422,7 +460,8 @@ var drunk = {
             "modul": "T5",
             "sortiment": "TSE",
             "ekologisk": "0",
-            "koscher": "0"
+            "koscher": "0",
+            "img": ""
         }, {
             "nr": "9635001",
             "artikelid": "686251",
@@ -447,7 +486,199 @@ var drunk = {
             "modul": "T6",
             "sortiment": "TSE",
             "ekologisk": "0",
-            "koscher": "0"
+            "koscher": "0",
+            "img": ""
+        }
+    ],
+    "alcoholfree": [
+            {
+            "nr": "190002",
+            "artikelid": "417665",
+            "varnummer": "1900",
+            "namn": "St\u00F6rtebeker 1402",
+            "namn2": "",
+            "prisinklmoms": "11.90",
+            "volymiml": null,
+            "prisperliter": null,
+            "saljstart": "2009-12-01",
+            "slutlev": " ",
+            "varugrupp": "\u00D6l",
+            "forpackning": "Flaska",
+            "forslutning": "",
+            "ursprung": "",
+            "ursprunglandnamn": "Tyskland",
+            "producent": "Stralsunder Brauerei",
+            "leverantor": "Heba Food & Beverages AB",
+            "argang": "",
+            "provadargang": "",
+            "alkoholhalt": "0.2%",
+            "modul": "",
+            "sortiment": "FS\u00D6",
+            "ekologisk": "1",
+            "koscher": "0",
+            "img": ""
+            },
+            {
+            "nr": "198001",
+            "artikelid": "603008",
+            "varnummer": "1980",
+            "namn": "Jus de Raisin",
+            "namn2": "Rouge",
+            "prisinklmoms": "49.00",
+            "volymiml": null,
+            "prisperliter": null,
+            "saljstart": "2012-03-01",
+            "slutlev": " ",
+            "varugrupp": "Must",
+            "forpackning": "Flaska",
+            "forslutning": "Skruvkapsyl",
+            "ursprung": "",
+            "ursprunglandnamn": "Frankrike",
+            "producent": "Les Vignobles Laurie & Guillau",
+            "leverantor": "TM Kvalitetsviner AB",
+            "argang": "2011",
+            "provadargang": "",
+            "alkoholhalt": "0%",
+            "modul": "",
+            "sortiment": "TSV",
+            "ekologisk": "1",
+            "koscher": "0",
+            "img": ""
+            },
+            {
+            "nr": "199601",
+            "artikelid": "539772",
+            "varnummer": "1996",
+            "namn": "Toselli",
+            "namn2": "Spumante",
+            "prisinklmoms": "34.00",
+            "volymiml": null,
+            "prisperliter": null,
+            "saljstart": "2011-04-01",
+            "slutlev": " ",
+            "varugrupp": "Mousserande",
+            "forpackning": "Flaska",
+            "forslutning": "Skruvkapsyl",
+            "ursprung": "",
+            "ursprunglandnamn": "Italien",
+            "producent": "Bosca Spa",
+            "leverantor": "Spendrups Bryggeri AB",
+            "argang": "",
+            "provadargang": "",
+            "alkoholhalt": "0.3%",
+            "modul": "",
+            "sortiment": "FS\u00D6",
+            "ekologisk": "0",
+            "koscher": "0",
+            "img": ""
+            },
+            {
+            "nr": "9040301",
+            "artikelid": "579221",
+            "varnummer": "90403",
+            "namn": "Maglehem n:o 4",
+            "namn2": "",
+            "prisinklmoms": "48.00",
+            "volymiml": null,
+            "prisperliter": null,
+            "saljstart": "2011-09-01",
+            "slutlev": " ",
+            "varugrupp": "Must",
+            "forpackning": "Flaska",
+            "forslutning": "",
+            "ursprung": "Sk\u00E95ne l\u00E4n, Kristianstads kommun",
+            "ursprunglandnamn": "Sverige",
+            "producent": "Maglehems musteri",
+            "leverantor": "Maglehems Musteri AB",
+            "argang": "",
+            "provadargang": "",
+            "alkoholhalt": "0%",
+            "modul": "",
+            "sortiment": "TSV",
+            "ekologisk": "1",
+            "koscher": "0",
+            "img": ""
+        },
+        {
+            "nr": "195802",
+            "artikelid": "788406",
+            "varnummer": "1958",
+            "namn": "Mikkeller",
+            "namn2": "Drink'in The Snow",
+            "prisinklmoms": "16.90",
+            "volymiml": null,
+            "prisperliter": null,
+            "saljstart": "2013-11-15",
+            "slutlev": " ",
+            "varugrupp": "\u00D6l",
+            "forpackning": "Flaska",
+            "forslutning": "",
+            "ursprung": "",
+            "ursprunglandnamn": "Belgien",
+            "producent": "De Proef Brouwerij",
+            "leverantor": "Brill & Co AB",
+            "argang": "",
+            "provadargang": "",
+            "alkoholhalt": "0.3%",
+            "modul": "",
+            "sortiment": "TSS",
+            "ekologisk": "0",
+            "koscher": "0",
+            "img": ""
+        },
+        {
+            "nr": "197901",
+            "artikelid": "790110",
+            "varnummer": "1979",
+            "namn": "Richard Juhlin",
+            "namn2": "Blanc de Blancs Non-Alcoholic Sparkling Wine",
+            "prisinklmoms": "89.00",
+            "volymiml": null,
+            "prisperliter": null,
+            "saljstart": "2013-12-02",
+            "slutlev": " ",
+            "varugrupp": "Mousserande",
+            "forpackning": "Flaska",
+            "forslutning": "Plastkork\/syntetkork",
+            "ursprung": "",
+            "ursprunglandnamn": "Frankrike",
+            "producent": "MRG Wines",
+            "leverantor": "Pernod Ricard Sweden AB",
+            "argang": "",
+            "provadargang": "",
+            "alkoholhalt": "0%",
+            "modul": "",
+            "sortiment": "FS\u00D6",
+            "ekologisk": "0",
+            "koscher": "0",
+            "img": ""
+        },
+        {
+            "nr": "191402",
+            "artikelid": "864046",
+            "varnummer": "1914",
+            "namn": "Einbecker Brauherren Alkoholfrei",
+            "namn2": "",
+            "prisinklmoms": "9.90",
+            "volymiml": null,
+            "prisperliter": null,
+            "saljstart": "2014-09-01",
+            "slutlev": " ",
+            "varugrupp": "\u00D6l",
+            "forpackning": "Flaska",
+            "forslutning": "",
+            "ursprung": "",
+            "ursprunglandnamn": "Tyskland",
+            "producent": "Einbecker Brauhaus",
+            "leverantor": "AB Wicked Wine Sweden",
+            "argang": "",
+            "provadargang": "",
+            "alkoholhalt": "0.5%",
+            "modul": "",
+            "sortiment": "FS\u00D6",
+            "ekologisk": "0",
+            "koscher": "0",
+            "img": ""
         }
     ]
 }

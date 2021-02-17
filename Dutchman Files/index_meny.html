@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-
+ <!DOCTYPE html> 
 <html lang="en">
 
 <head>
@@ -8,66 +7,81 @@
     <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
     <link rel="stylesheet" href="./css/menu.css">
     <script type="text/javascript" src="Beverages.js"></script>
+    <script type="text/javascript" src="BeerDB.js"></script>
     <script type="text/javascript" src="DBLoaded.js"></script>
     <script type="text/javascript" src="loader.js"></script>
     <script>
 
-        function getSubcategories(category) {
-            var allCategories = beverageTypes();
-            var subCategories = [];
-            for(var i = 0; i < allCategories.length; i++) {
-                var cat = allCategories[i].split(",");
-                if(allCategories[i].includes(category)) {
-                    var subCat = cat[cat.length-1].trim();
-                    subCategories.push(subCat);
+        function getFilter(category) {
+            var filter = [];
+            console.log(drunk.beer);
+            for (var i = 0; i < drunk.beer.length; i++) {
+                if (!filter.includes(drunk.beer[i].varugrupp)) {
+                    filter.push(drunk.beer[i].varugrupp);
                 }
             }
-            return subCategories;
+            return filter;
         }
 
-        function createSubCategory(category) {
-            var allSubCats = getSubcategories(category);
-            var id = document.getElementById("sub-category");
+        function createFilter(category) {
+            var filter = getFilter(category);
+            var id = document.getElementById("filter-window");
             id.textContent = "";
-            for(var i = 0; i < allSubCats.length; i++) {
-                var a = document.createElement("a");
-                a.classList.add("sub-category-box");
-                a.appendChild(document.createTextNode(allSubCats[i]));
-                id.append(a);
+            for(var i = 0; i < filter.length; i++) {
+                var span1 = document.createElement("span");
+                var input = document.createElement("input");
+                input.setAttribute("type","checkbox");
+                input.className = "filter-checkbox";
+                input.id = filter[i];
+                span1.appendChild(input)
+                var span2 = document.createElement("span");
+                span2.appendChild(document.createTextNode(filter[i]));
+                var label = document.createElement("label");
+                label.setAttribute("for",filter[i]);
+                label.className = "filter-label";
+                label.appendChild(span1);
+                label.appendChild(span2);
+                var container = document.createElement("div");
+                container.className = "filter-container";
+                container.appendChild(label);
+                id.appendChild(container);
             }
         }
 
-        function getAllBeveragesWithCategory() {
-            var allTypes = beverageTypes();
-            var categoryTypes = [];
-            for (var i = 0; i < allTypes.length; i++) {
-                if(allTypes[i].includes(",")) {
-                    categoryTypes.push(allTypes[i]);
-                }
-            }
-            return categoryTypes;
-        }
-
-        function getMainCategory() {
-            var categoryTypes = getAllBeveragesWithCategory();
-            var mainCats = [];
-            for (var i = 0; i < categoryTypes.length; i++) {
-                var cat = categoryTypes[i].split(",");
-                var mainCat = cat[0].trim();
-                if(!mainCats.includes(mainCat)) {
-                    mainCats.push(mainCat)
-                }
-            }
-            return mainCats;
-        }
+/*
+ <div class="filter-container">
+                <label for="kryddor" class="filter-label">
+                    <span>
+                        <input type="checkbox" class="filter-checkbox" id="kryddor">
+                    </span>
+                    <span>Kryddor och örter</span>
+                </label>
+            </div>
+*/
 
         function createMainCategory() {
-            var mainCat = getMainCategory();
+            dict = {
+                "mainCategory": ["beer","spirits","wine","alcoholefree"],
+
+                "sv": {
+                    "beer":"öl",
+                    "spirits":"sprit",
+                    "wine":"vin",
+                    "alcoholefree":"alkoholfritt"
+                },
+                "en": {
+                    "beer": "beer",
+                    "spirits": "spirits",
+                    "wine": "wine",
+                    "alcoholefree":"alcoholefree"
+                }
+            };
+
             var id = document.getElementById("main-category");
-            for (var i = 0; i < mainCat.length; i++) {
+            for (var i = 0; i < dict.mainCategory.length; i++) {
                 //Namn på kategorin
                 var name = document.createElement("span");
-                name.appendChild(document.createTextNode(mainCat[i]));
+                name.appendChild(document.createTextNode(dict.mainCategory[i]));
                 //Bild på kategorin
                 var img = document.createElement("img");
                 img.src = "./img/beer.svg";
@@ -79,9 +93,14 @@
                 a.appendChild(img);
                 a.appendChild(name);
                 //måste använda bind för att få med argumentet i funktionen
-                a.addEventListener("click", createSubCategory.bind(null, mainCat[i]));
+                a.addEventListener("click", createFilter.bind(null, dict.mainCategory[i]));
                 id.appendChild(a);
             }
+        }
+
+        function createBeverages() {
+
+
         }
 
         function update_view_menu() {
@@ -94,6 +113,7 @@
 
         $(document).ready(function(){
             update_view_menu();
+            console.log(drunk.beer.length);
         });
 
     </script>
@@ -117,30 +137,6 @@
     <div class="main-window">
         <!--The filter view-->
         <div id="filter-window">
-            <div class="filter-container">
-                <label for="kryddor" class="filter-label">
-                    <span>
-                        <input type="checkbox" class="filter-checkbox" id="kryddor">
-                    </span>
-                    <span>Kryddor och örter</span>
-                </label>
-            </div>
-            <div class="filter-container">
-                <label for="k" class="filter-label">
-                    <span>
-                        <input type="checkbox" class="filter-checkbox" id="k">
-                    </span>
-                    <span>Kryddor och örter</span>
-                </label>
-            </div>
-            <div class="filter-container">
-                <label for="kryddor" class="filter-label">
-                    <span>
-                        <input type="checkbox" class="filter-checkbox" id="kryddor">
-                    </span>
-                    <span>Kryddor och örter</span>
-                </label>
-            </div>
         </div>
 
 
@@ -149,7 +145,12 @@
 
             <div class="product-container">
                 <div class="product-container-top">
-                    <span class="product-name">Norrlands Guld</span>
+                    <div class="product-container-top-top">
+                        <span class="product-name">Norrlands Guldddddddddddddddddddddddddddd</span>
+                    </div>
+                    <div class="product-container-top-bottom">
+                        <img src="./img/beer.svg" alt="">
+                    </div>
                 </div>
                 <div class="product-container-bottom">
                     <div class="product-container-bottom-left">
@@ -285,7 +286,10 @@
 
         </div>
 
+        <div id="shopping-cart-window">
+        </div>
     </div>
+
 
     <!--The footnote of the webiste-->
     <div class="footnote-window">
