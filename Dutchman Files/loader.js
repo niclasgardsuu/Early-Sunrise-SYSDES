@@ -85,7 +85,6 @@ function changeBalance(userName, newAmount) {
     for (i = 0; i < DB.account.length; i++) {
         if (DB.account[i].user_id == userID) {
             DB.account[i].creditSEK = newAmount;   // This changes the value in the JSON object.
-            console.log("ID" + userID + "newAmount" + newAmount + "Return" + DB.account[i].creditSEK);
             return DB.account[i].creditSEK;
         };
     };

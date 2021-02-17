@@ -4,22 +4,23 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Table</title>
+    <title>User</title>
     <script type="text/javascript" src="../jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="Table_dictionary.js"></script>
+    <script type="text/javascript" src="User_dictionary.js"></script>
     <script type="text/javascript" src="../Beverages.js"></script>
     <script type="text/javascript" src="../DBLoaded.js"></script>
     <script type="text/javascript" src="../loader.js"></script>
-    <script type="text/javascript" src="Table_loader.js"></script>
-    <script type="text/javascript" src="Table_control.js"></script>
-    <script type="text/javascript" src="Table_model.js"></script>
+    <script type="text/javascript" src="User_loader.js"></script>
+    <script type="text/javascript" src="User_control.js"></script>
+    <script type="text/javascript" src="User_model.js"></script>
 </head>
-    <title>Table</title>
+    <title>User</title>
 <body>
 
-    <div id="table">                                        <!-- Table main container -->
+    <div id="user">                                        <!-- User main container -->
 
-        
+
+
         <div id="account">                                  <!-- Log In -->
             <span id="userN"></span>
             <input id="username" type = "text" placeholder = "Enter Username" name = "username" required>
@@ -27,13 +28,30 @@
             <input id="password" type = "text" placeholder = "Enter password" name = "password" required>
             <button id="logIn" onclick="doInit('logIn')"></button>
         </div>
+
+
         
         <div id="vip">                                      <!-- For VIP customer -->
             <button id="balance" onclick="doInit('balance')"></button>
             <button id="sdrink" onclick="doInit('sdrink')"></button>
             <button id="logO" onclick="doInit('logOut')"></button>
-
         </div>
+
+
+
+        <div id="staff">                                    <!-- For Staff -->
+                <span id="adToAccUserN"></span>
+                <input id="adToAccUsername" type = "text">
+
+                <span id="newA"></span>
+                <input id="newAmount" type = "text">
+
+                <button id="addToAcc" onclick="doInit('addToAcc')"></button>
+                <button id="staffLogO" onclick="doInit('staffLogO')"></button>
+        </div>
+
+
+
 
         <span id="display"></span>                          <!-- For all customer -->
 
@@ -44,22 +62,9 @@
         <p>1 .Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
         <p>1 .Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
         <p>1 .Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-        
+
         <button id="order" onclick="doInit('order')"></button>
         <button id="pay" onclick="doInit('pay')"></button>
-
-        <div id="staff">
-            <div id="adTo">
-                <span id="userN"></span>
-                <input id="adToUsername" type = "text">
-
-                <span id="newA"></span>
-                <input id="newAmount" type = "text">
-                <button id="addToAcc" onclick="doInit('addToAcc')"></button>
-                <button id="logO2" onclick="doInit('logOut')"></button>
-
-            </div>
-        </div>
 
     </div>
 </body>

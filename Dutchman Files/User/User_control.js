@@ -1,5 +1,5 @@
 // =====================================================================================================
-// Table Control
+// Control
 // =====================================================================================================
 // Call the appropriate functions.
 // And updates the model with the result, and then updates the view from the model.
@@ -8,10 +8,9 @@
 function doInit(func) {
 
     if (func == 'logIn') {
-
+        
         username    = document.getElementById('username');
         password    = document.getElementById('password');
-        console.log(username);
         credentials = logIn(username.value, password.value);
             
         if (credentials == 3) {
@@ -23,22 +22,24 @@ function doInit(func) {
         }
     };
 
-    if (func == 'logOut') {
+    // TODO: reset all or not ?
+    if (func == 'logOut' || func == 'staffLogO') {
         logOut();
         reset();
     };
 
     if (func == 'balance') {
         balance = getAccountBalance();
-        $("#display").text(balance + " SEK").fadeIn();
+        $("#display").text(balance + " SEK").fadeIn();          // TODO: use dictionary for SEK
         setTimeout(function() { $("#display").fadeOut(); }, 3000);
     };
 
     if (func == 'addToAcc') {
-        userName    = document.getElementById('adToUsername');
-        newAmount   = document.getElementById('newAmount').value;
-        var changedAmount = changeBalance(userName, newAmount);
-        console.log("Input username: " + userName + "Input amount: " + newAmount + "return value : " + changedAmount);        
+        userName    = document.getElementById('adToAccUsername');
+        newAmount   = document.getElementById('newAmount');
+        var changed = changeBalance(userName.value, newAmount.value);
+        $("#display").text(changed + " SEK").fadeIn();          // TODO: use dictionary for SEK
+        setTimeout(function() { $("#display").fadeOut(); }, 3000);
     };
 }
 
@@ -53,9 +54,11 @@ function logInVip() {
 
 function logInStaff() {
 
+    $("#display").text(dict['log_in_success_msg']).fadeIn();
+    setTimeout(function() { $("#display").fadeOut(); }, 3000);
+
     $("#account").hide(); 
     $("#staff").show(); 
-    
 }
 
 function logInUnsuccess() {
@@ -75,25 +78,29 @@ function reset() {
 // ===========================================================================
 
 $(document).ready(function() {
-
-    $("#vip").hide(); 
     
+    // Log In
     $("#userN").text(dict['userN']);
     $("#passW").text(dict['passW']);
     $("#logIn").text(dict['log']);
 
+    // VIP
+    $("#vip").hide(); 
     $("#balance").text(dict['balance']);
-    $("#order").text(dict['order']);
     $("#sdrink").text(dict['sdrink']);
-    $("#pay").text(dict['pay']);
     $("#logO").text(dict['logO']);
-    $("#logO2").text(dict['logO2']);
 
-    $("#addToAcc").text(dict['addToAcc']);
-    $("#addToAcc").text(dict['addToAcc']);
+    // Staff
     $("#staff").hide(); 
-    
+    $("#adToAccUserN").text(dict['adToAccUserN']);
+    $("#newA").text(dict['newA']);
+    $("#addToAcc").text(dict['addToAcc']);
+    $("#staffLogO").text(dict['staffLogO']);
 
+    // All Customer
+    $("#pay").text(dict['pay']);
+    $("#order").text(dict['order']);
+    
 })
 
 // ===========================================================================

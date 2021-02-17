@@ -6,22 +6,34 @@
 // ===========================================================================
 
 const dict = {
+
+    'start_username'       : "None",
+    'log_in_success_msg'   : "Successful login",
+    'log_in_unsuccess_msg' : "Unsuccessful login",
+
+    // Log In
     'userN'                : "Username:",
     'passW'                : "Password:",
     'log'                  : "Log In",
-    'start_username'       : "None_username",
-    'log_in_success_msg'   : "Successful login",
-    'log_in_unsuccess_msg' : "Unsuccessful login",
+
+    // VIP
     'balance'              : "Account Balance",
-    'order'                : "Order",
     'sdrink'               : "Special Drink",
-    'pay'                  : "Pay",
     'logO'                 : "Log Out",
-    'logO2'                : "Log Out",
-    'addToAcc'             : "Add to Account",
-    'newAmount'            : "New Amount"
+
+    // Staff
+    'adToAccUserN'         : "Username",
+    'newA'                 : "New Amount",
+    'addToAcc'             : "Add to account",
+    'staffLogO'            : "Log Out",
+
+    // All Customer
+    'order'                : "Order",
+    'pay'                  : "Pay"
+    
     
 }
+
 
 // only examples
 const cnst = {
