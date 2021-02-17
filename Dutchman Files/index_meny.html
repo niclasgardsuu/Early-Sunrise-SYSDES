@@ -1,4 +1,4 @@
- <!DOCTYPE html> 
+<!DOCTYPE html> 
 <html lang="en">
 
 <head>
@@ -14,10 +14,10 @@
 
         function getFilter(category) {
             var filter = [];
-            console.log(drunk.beer);
-            for (var i = 0; i < drunk.beer.length; i++) {
-                if (!filter.includes(drunk.beer[i].varugrupp)) {
-                    filter.push(drunk.beer[i].varugrupp);
+            console.log(drunk[category]);
+            for (var i = 0; i < drunk[category].length; i++) {
+                if (!filter.includes(drunk[category][i].varugrupp)) {
+                    filter.push(drunk[category][i].varugrupp);
                 }
             }
             return filter;
