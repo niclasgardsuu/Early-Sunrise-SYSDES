@@ -19,6 +19,9 @@
             createAllProducts();
         });
 
+
+
+
     </script>
 </head>
 
@@ -35,23 +38,25 @@
         </button>
         <div class="product-info-container">
             <div class="product-info-container-left">
-                <img src="./img/olvi.jpeg" class="product-img" alt="">
+                <img id="product-info-img" src="" class="product-img" alt="">
             </div>
             <div class="product-info-container-right">
-                <h1 class="product-info-name">Olvi</h1>
-                <h2 class="product-info-name2">Tuplapukki</h2>
-                <h1 class="product-info-price">8:90</h1>
+                <h1 id="product-info-name" class="product-info-name product-name-font"></h1>
+                <h2 id="product-info-name2" class="product-info-name2 product-name-font"></h2>
+                <span id="product-info-desc" class="product-info-desc"></span>
+                <h1 id="product-info-price" class="product-info-price product-price-font"></h1>
+                <button class="product-buy">Lägg i Kundvagnen</button>
                 <div class="product-info-container-spec">
                     <h3>Specifikationer</h3>
                     <dl class="product-info-spec">
                         <dt>Alkoholhalt</dt>
-                        <dd>8.5%</dd>
+                        <dd id="product-info-alcohol"></dd>
                         <dt>Typ</dt>
-                        <dd>Djup lager</dd>
+                        <dd id="product-info-type"></dd>
                         <dt>Producent</dt>
-                        <dd>Olvi plc</dd>
+                        <dd id="product-info-producent"></dd>
                         <dt>Allergener</dt>
-                        <dd>inga</dd>
+                        <dd id="product-info-allergens"></dd>
                     </dl>
                 </div>
             </div>

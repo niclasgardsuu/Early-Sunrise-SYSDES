@@ -15,6 +15,36 @@ dict = {
         }
     };
 
+function findProductByID(id) {
+    for (var i = 0; i < dict.mainCategory.length; i++) {
+        for (var j = 0; j < drunk[dict.mainCategory[i]].length; j++) {
+            if (drunk[dict.mainCategory[i]][j].articleid == id) {
+                return drunk[dict.mainCategory[i]][j];
+            }
+        }
+    }
+    return null;
+}
+
+function showProductInfo(id) {
+    console.log("hejjj");
+    var product = findProductByID(id);
+    document.getElementById("product-window-hide").checked = true;
+    document.getElementById("product-info-img").setAttribute("src", product.img);
+    document.getElementById("product-info-name").innerHTML = product.name;
+    document.getElementById("product-info-name2").innerHTML = product.name2;
+    document.getElementById("product-info-desc").innerHTML = product.severs;
+    document.getElementById("product-info-price").innerHTML = product.pricewithvat;
+    document.getElementById("product-info-alcohol").innerHTML = product.alcoholcontent;
+    document.getElementById("product-info-type").innerHTML = product.productgroup;
+    document.getElementById("product-info-producent").innerHTML = product.producent;
+    document.getElementById("product-info-allergens").innerHTML = product.origincountry;
+}
+
+function updateProductInfoView() {
+
+}
+
 //Create all products in the database and print them out
 function createAllProducts() {
     for (var i = 0; i < dict.mainCategory.length; i++) {
@@ -27,7 +57,7 @@ function createProductsByCategory(category) {
     var bevType = drunk[category];
     var productWindow = document.getElementById("product-window");
     for (var i = 0; i < bevType.length; i++) {
-        productWindow.appendChild(createProductContainer(bevType[i].name, bevType[i].pricewithvat, bevType[i].img));
+        productWindow.appendChild(createProductContainer(bevType[i].name, bevType[i].pricewithvat, bevType[i].img, bevType[i].articleid));
     }
 }
 
@@ -45,7 +75,7 @@ function createProductsByFilter(filterId, category) {
             for (var j = 0; j < bevType.length; j++) {
                 //Print only out the products that has the same productgroup
                 if (bevType[j].productgroup == productgroup) {
-                    productWindow.appendChild(createProductContainer(bevType[j].name, bevType[j].pricewithvat, bevType[j].img));
+                    productWindow.appendChild(createProductContainer(bevType[j].name, bevType[j].pricewithvat, bevType[j].img, bevType[j].articleid));
                 }
             }
         }
@@ -65,7 +95,7 @@ function updateViewMain(category) {
 }
 
 
-function createProductContainer(name, price, imgSrc) {
+function createProductContainer(name, price, imgSrc, id) {
     /*
     <div class="product-container-top">
         <div class="product-container-top-top">
@@ -79,7 +109,7 @@ function createProductContainer(name, price, imgSrc) {
 
     var productName = document.createElement("span");
     var productContainerTopTop = document.createElement("div");
-    productName.className = "product-name";
+    productName.className = "product-name product-name-font";
     productContainerTopTop.className = "product-container-top-top";
     productName.appendChild(document.createTextNode(name));
     productContainerTopTop.appendChild(productName);
@@ -93,6 +123,7 @@ function createProductContainer(name, price, imgSrc) {
 
     var productContainerTop = document.createElement("div");
     productContainerTop.className = "product-container-top";
+    productContainerTop.addEventListener("click", showProductInfo.bind(null, id));
     productContainerTop.appendChild(productContainerTopTop);
     productContainerTop.appendChild(productContainerTopBottom);
 
@@ -112,9 +143,10 @@ function createProductContainer(name, price, imgSrc) {
 
     var productBuy = document.createElement("button");
     productBuy.className = "product-buy";
-    productBuy.appendChild(document.createTextNode("Köp"));
+    productBuy.appendChild(document.createTextNode("Lägg i kundvagnen"));
 
     var productPrice = document.createElement("span");
+    productPrice.className = "product-price-font";
     productPrice.appendChild(document.createTextNode(price+" kr"));
     
     var productContainerBottomLeft = document.createElement("div");

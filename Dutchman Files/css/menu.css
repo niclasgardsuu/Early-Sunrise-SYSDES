@@ -1,6 +1,7 @@
 :root {
     --product-window-cover-background: rgb(0,0,0,0.5);
     --product-info-container-background: white;
+    --product-info-name2-color: grey;
     --menu-window-background: white;
     --main-window-background:#F0F2F5;
     --main-category-background: grey;
@@ -116,8 +117,11 @@ body {
     flex-wrap: wrap;
 }
 
-.product-name {
+.product-name-font {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.product-name {
     font-size: 125%;
     display:block;
     overflow:hidden;
@@ -141,6 +145,7 @@ body {
 
 .product-container-top {
     height: 75%;
+    cursor: pointer;
 }
 
 .product-container-top-top {
@@ -169,7 +174,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100%;
-    width: 40%;
+    width: 35%;
 }
 
 .product-container-bottom-right {
@@ -177,17 +182,12 @@ body {
     justify-content: center;
     align-items: center;
     height: 100%;
-    width: 60%;
-}
-
-.product-price {
-    font-weight: bold;
+    width: 65%;
 }
 
 .product-buy {
-    width: 80%;
-    height: 70%;
-    border-radius: 5%;
+    padding: 7px;
+    border-radius: 20px;
     border: none;
     font-size: 125%;
     color: var(--product-buy-button-color);
@@ -199,14 +199,14 @@ body {
 }
 
 #product-window-hide:checked + #product-window-info {
-    display: none;
+    display: flex;
 }
 
 #product-window-info {
     position: fixed;
     width:100%;
     height: 100%;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
 }
@@ -231,6 +231,7 @@ body {
     border-radius: 20px;
     background-color: var(--product-info-container-background);
     display: flex;
+    overflow-y: auto;
 }
 
 .product-info-container-left {
@@ -244,6 +245,22 @@ body {
 
 .product-info-container-right {
     width: 60%;
+}
+
+.product-info-name {
+    margin-bottom: 0;
+}
+
+.product-info-name2 {
+    margin-top: 0;
+    color: var(--product-info-name2-color);
+}
+
+.product-price-font {
+    font-family: 'Open Sans',sans-serif;
+}
+
+.product-info-price {
 }
 
 .product-info-container-spec {
@@ -263,7 +280,6 @@ body {
     font-weight: bold;
     width: 25%;
 }
-
 
 .product-info-spec dd {
     width: 74%;
