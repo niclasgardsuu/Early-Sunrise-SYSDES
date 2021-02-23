@@ -1,4 +1,6 @@
 :root {
+    --product-window-cover-background: rgb(0,0,0,0.5);
+    --product-info-container-background: white;
     --menu-window-background: white;
     --main-window-background:#F0F2F5;
     --main-category-background: grey;
@@ -190,6 +192,81 @@ body {
     font-size: 125%;
     color: var(--product-buy-button-color);
     background-color: var(--product-buy-button-background);
+}
+
+#product-window-hide {
+    display: none;
+}
+
+#product-window-hide:checked + #product-window-info {
+    display: none;
+}
+
+#product-window-info {
+    position: fixed;
+    width:100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-window-cover {
+    position: absolute;
+    z-index: 100;
+    width:100%;
+    height: 100%;
+    background-color: var(--product-window-cover-background);
+}
+
+
+.product-info-prev, .product-info-next {
+    z-index: 101;
+}
+
+.product-info-container {
+    z-index: 101;
+    width: 80%;
+    height: 80%;
+    border-radius: 20px;
+    background-color: var(--product-info-container-background);
+    display: flex;
+}
+
+.product-info-container-left {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    min-width: 320px;
+    height: 50%;
+}
+
+.product-info-container-right {
+    width: 60%;
+}
+
+.product-info-container-spec {
+    max-width: 530px;
+}
+
+.product-info-spec dd, dt, dl {
+    margin: 0;
+}
+
+.product-info-spec dd, dt {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.product-info-spec dt {
+    font-weight: bold;
+    width: 25%;
+}
+
+
+.product-info-spec dd {
+    width: 74%;
 }
 
 #shopping-cart-window {
