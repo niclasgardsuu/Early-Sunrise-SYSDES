@@ -41,6 +41,30 @@ function getAccountBalance() {
     };
 }
 
+function addBalance(userName, newAmount) {
+
+    // We use this variable to store the userID, since that is the link between the two data bases.
+    var userID;
+
+    // First we find the userID in the user data base.
+    //
+    for (i = 0; i < DB.users.length; i++) {
+        if (DB.users[i].username == userName) {
+            userID = DB.users[i].user_id;
+        };
+    };
+
+    // Then we match the userID with the account list.
+    // and change the account balance.
+    //
+    for (i = 0; i < DB.account.length; i++) {   
+        if (DB.account[i].user_id == userID) {
+            DB.account[i].creditSEK = parseInt(DB.account[i].creditSEK) + parseInt(newAmount);   // This changes the value in the JSON object.
+            return DB.account[i].creditSEK;
+        };
+    };
+}
+
 function getComLock() { 
     return Math.floor(Math.random() * 1000);
 }

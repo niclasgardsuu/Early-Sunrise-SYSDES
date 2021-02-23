@@ -23,7 +23,7 @@ const dict = {
 
     // Staff
     'adToAccUserN'         : "Username",
-    'newA'                 : "New Amount",
+    'addA'                 : "Add Amount",
     'addToAcc'             : "Add to account",
     'staffLogO'            : "Log Out",
 

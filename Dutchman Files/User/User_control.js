@@ -22,23 +22,22 @@ function doInit(func) {
         }
     };
 
-    // TODO: reset all or not ?
-    if (func == 'logOut' || func == 'staffLogO') {
+    if (func == 'logOut' || func == 'staffLogO') {                  // TODO: reset all or not ?
         logOut();
         reset();
     };
 
     if (func == 'balance') {
         balance = getAccountBalance();
-        $("#display").text(balance + " SEK").fadeIn();          // TODO: use dictionary for SEK
+        $("#display").text(balance + " SEK").fadeIn();              // TODO: use dictionary for SEK
         setTimeout(function() { $("#display").fadeOut(); }, 3000);
     };
 
     if (func == 'addToAcc') {
-        userName    = document.getElementById('adToAccUsername');
-        newAmount   = document.getElementById('newAmount');
-        var changed = changeBalance(userName.value, newAmount.value);
-        $("#display").text(changed + " SEK").fadeIn();          // TODO: use dictionary for SEK
+        userName    = document.getElementById('adToAccUsername');   
+        newAmount   = document.getElementById('addAmount');
+        var changed = addBalance(userName.value, newAmount.value);  // TODO: Error checka så att vi inte kan lägga in en sträng som new amount.
+        $("#display").text(changed + " SEK").fadeIn();              // TODO: use dictionary for SEK
         setTimeout(function() { $("#display").fadeOut(); }, 3000);
     };
 }
