@@ -26,20 +26,42 @@ function findProductByID(id) {
     return null;
 }
 
-function showProductInfo(id) {
-    console.log("hejjj");
-    var product = findProductByID(id);
-    document.getElementById("product-window-hide").checked = true;
-    document.getElementById("product-info-img").setAttribute("src", product.img);
-    document.getElementById("product-info-name").innerHTML = product.name;
-    document.getElementById("product-info-name2").innerHTML = product.name2;
-    document.getElementById("product-info-desc").innerHTML = product.severs;
-    document.getElementById("product-info-price").innerHTML = product.pricewithvat;
-    document.getElementById("product-info-alcohol").innerHTML = product.alcoholcontent;
-    document.getElementById("product-info-type").innerHTML = product.productgroup;
-    document.getElementById("product-info-producent").innerHTML = product.producent;
-    document.getElementById("product-info-allergens").innerHTML = product.origincountry;
+function getAllergens(id) {
+    for (var i = 0; i < allergensDB.products.length; i++) {
+        if (allergensDB.products[i].articleid == id) {
+            return allergensDB.products[i].allergens;
+        }
+    }
+    return null;
 }
+
+function showProductInfo(id) {
+    var product = findProductByID(id);
+    document.getElementById("product-info-hide").checked = true;
+    document.getElementById("product-info-img").setAttribute("src", product.img);
+    document.getElementById("product-info-name").innerText = product.name;
+    document.getElementById("product-info-name2").innerText = product.name2;
+    document.getElementById("product-info-desc").innerText = product.serves + " " + product.volume + " ml";
+    document.getElementById("product-info-price").innerText = product.pricewithvat + " kr";
+    document.getElementById("product-info-alcohol").innerText = product.alcoholcontent;
+    document.getElementById("product-info-type").innerText = product.productgroup;
+    document.getElementById("product-info-producent").innerText = product.producent;
+
+    var origin = document.getElementById("product-info-origin");
+    origin.innerText = product.origincountry;
+    //add extra origin information if it exist
+    if (product.origin !== "") origin.innerText += ", " + product.origin;
+
+    var allergens = getAllergens(id);
+    //check if there are no allergens for the product
+    if (allergens == null) {
+        document.getElementById("product-info-allergens").innerText = "inga";
+    } else {
+        document.getElementById("product-info-allergens").innerText = allergens;
+    }
+    
+}
+
 
 function updateProductInfoView() {
 
@@ -126,7 +148,6 @@ function createProductContainer(name, price, imgSrc, id) {
     productContainerTop.addEventListener("click", showProductInfo.bind(null, id));
     productContainerTop.appendChild(productContainerTopTop);
     productContainerTop.appendChild(productContainerTopBottom);
-
 
     /*
     <div class="product-container-bottom">

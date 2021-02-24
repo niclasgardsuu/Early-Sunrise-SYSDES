@@ -1,5 +1,5 @@
 :root {
-    --product-window-cover-background: rgb(0,0,0,0.5);
+    --product-info-cover-background: rgb(0,0,0,0.5);
     --product-info-container-background: white;
     --product-info-name2-color: grey;
     --menu-window-background: white;
@@ -194,11 +194,11 @@ body {
     background-color: var(--product-buy-button-background);
 }
 
-#product-window-hide {
+#product-info-hide {
     display: none;
 }
 
-#product-window-hide:checked + #product-window-info {
+#product-info-hide:checked + #product-window-info {
     display: flex;
 }
 
@@ -211,14 +211,51 @@ body {
     justify-content: center;
 }
 
-.product-window-cover {
+.product-info-cover {
     position: absolute;
     z-index: 100;
-    width:100%;
+    width: 100%;
     height: 100%;
-    background-color: var(--product-window-cover-background);
+    background-color: var(--product-info-cover-background);
 }
 
+.product-info-close {
+    position: fixed;
+    top: 6%;
+    right: 6%;
+}
+
+.product-info-close-1, .product-info-close-2 {
+    width: 28px;
+    position: absolute;
+    border: 2px solid red;
+}
+
+.product-info-close-1 {
+    animation: product-info-close-ani-1 0.6s forwards;
+}
+
+.product-info-close-2 {
+    animation: product-info-close-ani-2 0.6s forwards;
+}
+
+@keyframes product-info-close-ani-1 {
+    100% {
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+}
+
+@keyframes product-info-close-ani-2 {
+    100% {
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+}
 
 .product-info-prev, .product-info-next {
     z-index: 101;
