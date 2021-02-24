@@ -20,7 +20,11 @@ const dict = {
     'balance'              : "Account Balance",
     'sdrink'               : "Special Drink",
     'logO'                 : "Log Out",
-
+    'drinkAmount'          : "Drink Amount",
+    'vipOrder'             : "Vip Order",
+    'drinkId'              : "Drink ID",
+    
+    
     // Staff
     'adToAccUserN'         : "Username",
     'addA'                 : "Add Amount",
@@ -29,8 +33,24 @@ const dict = {
 
     // All Customer
     'order'                : "Order",
-    'pay'                  : "Pay"
+    'pay'                  : "Pay",
     
+    // Find products
+
+    "mainCategory": ["beer","spirits","wine","non-alcoholic"],
+
+    "sv": {
+        "beer":"öl",
+        "spirits":"sprit",
+        "wine":"vin",
+        "non-alcoholic":"alkoholfritt"
+    },
+    "en": {
+        "beer": "beer",
+        "spirits": "spirits",
+        "wine": "wine",
+        "non-alcoholic":"non-alcoholic"
+    }
     
 }
 

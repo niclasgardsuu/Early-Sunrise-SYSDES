@@ -8,3 +8,5 @@
 
 var modelData = {}
 modelData['username'] = dict['start_username'];
+modelData['orderCounter'] = 0;
+modelData['tableNumber'] = 0; // 0 is the bar, the rest is different tables

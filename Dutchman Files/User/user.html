@@ -13,6 +13,7 @@
     <script type="text/javascript" src="User_loader.js"></script>
     <script type="text/javascript" src="User_control.js"></script>
     <script type="text/javascript" src="User_model.js"></script>
+    <script type="text/javascript" src="UserDB.js"></script>
 </head>
     <title>User</title>
 <body>
@@ -35,6 +36,14 @@
             <button id="balance" onclick="doInit('balance')"></button>
             <button id="sdrink" onclick="doInit('sdrink')"></button>
             <button id="logO" onclick="doInit('logOut')"></button>
+
+            <input id="drinkId" type = "text" placeholder = "DrinkID" name = "drinkId" required></input>
+            <input id="drinkAmount" type = "text" placeholder = "Amount" name = "drinkAmount" required></input>
+           
+            <button id="vipOrder" onclick="doInit('vipOrder')"></button>
+
+            <div id="cart"></div>
+
         </div>
 
 

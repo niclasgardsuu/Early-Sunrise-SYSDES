@@ -40,6 +40,13 @@ function doInit(func) {
         $("#display").text(changed + " SEK").fadeIn();              // TODO: use dictionary for SEK
         setTimeout(function() { $("#display").fadeOut(); }, 3000);
     };
+
+    if (func == 'vipOrder') {
+
+        drinkId     = document.getElementById('drinkId').value;   
+        drinkAmount = document.getElementById('drinkAmount').value;
+        vipOrder(drinkId, drinkAmount);
+    };
 }
 
 function logInVip() {
@@ -84,10 +91,14 @@ $(document).ready(function() {
     $("#logIn").text(dict['log']);
 
     // VIP
-    $("#vip").hide(); 
+    //$("#vip").hide(); 
     $("#balance").text(dict['balance']);
     $("#sdrink").text(dict['sdrink']);
     $("#logO").text(dict['logO']);
+    $("#drinkId").text(dict['drinkId']);
+    $("#vipOrder").text(dict['vipOrder']);
+    $("#drinkAmount").text(dict['drinkAmount']);
+    
 
     // Staff
     $("#staff").hide(); 
