@@ -122,7 +122,7 @@ var drunk = {
         }
     ],
     "spirits" : [
-            {
+        {
             "articleid": "560847",
             "name": "The Whisky Agency",
             "name2": "Laphroaig",
@@ -135,8 +135,7 @@ var drunk = {
             "producent": "The Whisky Agency",
             "alcoholcontent": "52.5%",
             "img": ""
-            },
-            {
+        }, {
             "articleid": "850724",
             "name": "Paul John",
             "name2": "Classic Select Cask",
@@ -149,8 +148,7 @@ var drunk = {
             "producent": "John Distilleries",
             "alcoholcontent": "55.2%",
             "img": ""
-            },
-            {
+        },{
             "articleid": "37672",
             "name": "L'H\u00E9raud",
             "name2": "VSOP",
@@ -163,8 +161,7 @@ var drunk = {
             "producent": "Cognac L'H\u00E9raud",
             "alcoholcontent": "40%",
             "img": ""
-            },
-            {
+        },{
             "articleid": "320747",
             "name": "Delamain",
             "name2": "Vesper",
@@ -177,8 +174,7 @@ var drunk = {
             "producent": "Delamain",
             "alcoholcontent": "40%",
             "img": ""
-            },
-            {
+        },{
             "articleid": "225",
             "name": "Martell VS***",
             "name2": "",
@@ -191,8 +187,7 @@ var drunk = {
             "producent": "Martell",
             "alcoholcontent": "40%",
             "img": ""
-            },
-            {
+        },{
             "articleid": "47035",
             "name": "Captain Morgan",
             "name2": "Jamaica Rum",
@@ -205,8 +200,7 @@ var drunk = {
             "producent": "Captain Morgan",
             "alcoholcontent": "40%",
             "img": ""
-            },
-            {
+        },{
             "articleid": "32224",
             "name": "Cacha\u00E97a 51",
             "name2": "",
@@ -219,8 +213,7 @@ var drunk = {
             "producent": "M\u00FCller de Bebidas",
             "alcoholcontent": "40%",
             "img": ""
-            }, 
-            {
+        }, {
             "articleid": "701664",
             "name": "Flying Dutchman Rum",
             "name2": "",
@@ -267,7 +260,7 @@ var drunk = {
         }
     ],
     "non-alcoholic": [
-            {
+        {
             "articleid": "417665",
             "name": "St\u00F6rtebeker 1402",
             "name2": "",
@@ -280,8 +273,7 @@ var drunk = {
             "producent": "Stralsunder Brauerei",
             "alcoholcontent": "0.2%",
             "img": ""
-            },
-            {
+        },{
             "articleid": "603008",
             "name": "Jus de Raisin",
             "name2": "Rouge",
@@ -294,8 +286,7 @@ var drunk = {
             "producent": "Les Vignobles Laurie & Guillau",
             "alcoholcontent": "0%",
             "img": ""
-            },
-            {
+        },{
             "articleid": "539772",
             "name": "Toselli",
             "name2": "Spumante",
@@ -308,8 +299,7 @@ var drunk = {
             "producent": "Bosca Spa",
             "alcoholcontent": "0.3%",
             "img": ""
-            },
-            {
+        },{
             "articleid": "579221",
             "name": "Maglehem n:o 4",
             "name2": "",
@@ -322,8 +312,7 @@ var drunk = {
             "producent": "Maglehems musteri",
             "alcoholcontent": "0%",
             "img": ""
-        },
-        {
+        },{
             "articleid": "788406",
             "name": "Mikkeller",
             "name2": "Drink'in The Snow",
@@ -336,8 +325,7 @@ var drunk = {
             "producent": "De Proef Brouwerij",
             "alcoholcontent": "0.3%",
             "img": ""
-        },
-        {
+        },{
             "articleid": "790110",
             "name": "Richard Juhlin ",
             "name2": "Blanc de Blancs Non-Alcoholic Sparkling Wine",
@@ -350,8 +338,7 @@ var drunk = {
             "producent": "MRG Wines",
             "alcoholcontent": "0%",
             "img": ""
-        },
-        {
+        },{
             "articleid": "864046",
             "name": "Einbecker Brauherren Alkoholfrei",
             "name2": "",
