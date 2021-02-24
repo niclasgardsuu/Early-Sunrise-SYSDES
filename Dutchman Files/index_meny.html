@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-
+<!DOCTYPE html> 
 <html lang="en">
 
 <head>
@@ -7,263 +6,116 @@
     <title>The Flying Dutchman</title>
     <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
     <link rel="stylesheet" href="./css/menu.css">
-    <script type="text/javascript" src="Beverages.js"></script>
     <script type="text/javascript" src="DBLoaded.js"></script>
-    <script type="text/javascript" src="loader.js"></script>
+    <script type="text/javascript" src="./js/products.js"></script>
+    <script type="text/javascript" src="./js/productAllergens.js"></script>
+    <script type="text/javascript" src="./js/menu.js"></script>
+    <script type="text/javascript" src="./js/dragAndDrop.js"></script>
     <script>
 
-        function getSubcategories(category) {
-            var allCategories = beverageTypes();
-            var subCategories = [];
-            for(var i = 0; i < allCategories.length; i++) {
-                var cat = allCategories[i].split(",");
-                if(allCategories[i].includes(category)) {
-                    var subCat = cat[cat.length-1].trim();
-                    subCategories.push(subCat);
-                }
-            }
-            return subCategories;
-        }
-
-        function createSubCategory(category) {
-            var allSubCats = getSubcategories(category);
-            var id = document.getElementById("sub-category");
-            id.textContent = "";
-            for(var i = 0; i < allSubCats.length; i++) {
-                var a = document.createElement("a");
-                a.classList.add("sub-category-box");
-                a.appendChild(document.createTextNode(allSubCats[i]));
-                id.append(a);
-            }
-        }
-
-        function getAllBeveragesWithCategory() {
-            var allTypes = beverageTypes();
-            var categoryTypes = [];
-            for (var i = 0; i < allTypes.length; i++) {
-                if(allTypes[i].includes(",")) {
-                    categoryTypes.push(allTypes[i]);
-                }
-            }
-            return categoryTypes;
-        }
-
-        function getMainCategory() {
-            var categoryTypes = getAllBeveragesWithCategory();
-            var mainCats = [];
-            for (var i = 0; i < categoryTypes.length; i++) {
-                var cat = categoryTypes[i].split(",");
-                var mainCat = cat[0].trim();
-                if(!mainCats.includes(mainCat)) {
-                    mainCats.push(mainCat)
-                }
-            }
-            return mainCats;
-        }
-
-        function createMainCategory() {
-            var mainCat = getMainCategory();
-            var id = document.getElementById("main-category");
-            for (var i = 0; i < mainCat.length; i++) {
-                //Namn på kategorin
-                var name = document.createElement("span");
-                name.appendChild(document.createTextNode(mainCat[i]));
-                //Bild på kategorin
-                var img = document.createElement("img");
-                img.src = "./img/beer.svg";
-                img.className = "main-category-img";
-
-                //länk för kategorin
-                var a = document.createElement("a");
-                a.className = "main-category-box";
-                a.appendChild(img);
-                a.appendChild(name);
-                //måste använda bind för att få med argumentet i funktionen
-                a.addEventListener("click", createSubCategory.bind(null, mainCat[i]));
-                id.appendChild(a);
-            }
-        }
-
-        function update_view_menu() {
-            createMainCategory();
-        }
-
-        function createProducts() {
-
-        }
-
         $(document).ready(function(){
-            update_view_menu();
+            createMainCategory();
+            createAllProducts();
         });
+
+
+
 
     </script>
 </head>
 
 <body>
 
-<div id="menu-container">
-    <div id="main-category">
-    </div>
-    <div id="sub-category">
+    <input type="checkbox" name="" id="product-info-hide">
 
-    </div>
-</div>
+    <div id="product-window-info">
+        <label for="product-info-hide" class="product-info-cover">
+            <div class="product-info-close">
+                <div class="product-info-close-1"></div>
+                <div class="product-info-close-2"></div>
+            </div>
+        </label>
 
+        <button class="product-info-prev">
+            prev
+        </button>
+        <div class="product-info-container">
+            <div class="product-info-container-left">
+                <img id="product-info-img" src="" class="product-img" alt="">
+            </div>
+            <div class="product-info-container-right">
+                <h1 id="product-info-name" class="product-info-name product-name-font"></h1>
+                <h2 id="product-info-name2" class="product-info-name2 product-name-font"></h2>
+                <span id="product-info-desc" class="product-info-desc"></span>
+                <h1 id="product-info-price" class="product-info-price product-price-font"></h1>
+                <button class="product-buy">Lägg i Kundvagnen</button>
+                <div class="product-info-container-spec">
+                    <h3>Specifikationer</h3>
+                    <dl class="product-info-spec">
+                        <dt>Alkoholhalt</dt>
+                        <dd id="product-info-alcohol"></dd>
+                        <dt>Typ</dt>
+                        <dd id="product-info-type"></dd>
+                        <dt>Producent</dt>
+                        <dd id="product-info-producent"></dd>
+                        <dt>Ursprung</dt>
+                        <dd id="product-info-origin"></dd>
+                        <dt>Allergener</dt>
+                        <dd id="product-info-allergens"></dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <button class="product-info-next">
+            next
+        </button>
+    </div>
 
-<div id="product-window">
+    <!--The top menu of the website-->
+    <div id="menu-top-window">
+        <select name="" id="">
+            <option value="">Svenska</option>
+            <option value="">English</option>asdasd
+            <option value="">Pólśkí</option>asdasd skadkdjk kdj
+        </select>
+        <img src="./img/sweden.svg"  height="40px" width="40px" alt="sverige flagga">
+        <div id="login">
+            login
+        </div>
+    </div>
 
-    <div class="product-container">
-        <div class="product-container-top">
-            <span class="product-name">Norrlands Guld</span>
+    <!--The menu of the website-->
+    <div id="menu-window">
+        <div id="main-category">
         </div>
-        <div class="product-container-bottom">
-            <div class="product-container-bottom-left">
-                <span class="product-price">
-                    7:90
-                </span>
-            </div>
-            <div class="product-container-bottom-right">
-                <button class="product-buy">Köp</button>
-            </div>
-        </div>
-    </div>
-    <div class="product-container">
-        <div class="product-container-top">
-            <span class="product-name">Norrlands Guld</span>
-        </div>
-        <div class="product-container-bottom">
-            <div class="product-container-bottom-left">
-                <span class="product-price">
-                    7:90
-                </span>
-            </div>
-            <div class="product-container-bottom-right">
-                <button class="product-buy">Köp</button>
-            </div>
-        </div>
-    </div>
-    <div class="product-container">
-        <div class="product-container-top">
-            <span class="product-name">Norrlands Guld</span>
-        </div>
-        <div class="product-container-bottom">
-            <div class="product-container-bottom-left">
-                <span class="product-price">
-                    7:90
-                </span>
-            </div>
-            <div class="product-container-bottom-right">
-                <button class="product-buy">Köp</button>
-            </div>
-        </div>
-    </div>
-    <div class="product-container">
-        <div class="product-container-top">
-            <span class="product-name">Norrlands Guld</span>
-        </div>
-        <div class="product-container-bottom">
-            <div class="product-container-bottom-left">
-                <span class="product-price">
-                    7:90
-                </span>
-            </div>
-            <div class="product-container-bottom-right">
-                <button class="product-buy">Köp</button>
-            </div>
-        </div>
-    </div>
-    <div class="product-container">
-        <div class="product-container-top">
-            <span class="product-name">Norrlands Guld</span>
-        </div>
-        <div class="product-container-bottom">
-            <div class="product-container-bottom-left">
-                <span class="product-price">
-                    7:90
-                </span>
-            </div>
-            <div class="product-container-bottom-right">
-                <button class="product-buy">Köp</button>
-            </div>
-        </div>
-    </div>
-    <div class="product-container">
-        <div class="product-container-top">
-            <span class="product-name">Norrlands Guld</span>
-        </div>
-        <div class="product-container-bottom">
-            <div class="product-container-bottom-left">
-                <span class="product-price">
-                    7:90
-                </span>
-            </div>
-            <div class="product-container-bottom-right">
-                <button class="product-buy">Köp</button>
-            </div>
-        </div>
-    </div>
-    <div class="product-container">
-        <div class="product-container-top">
-            <span class="product-name">Norrlands Guld</span>
-        </div>
-        <div class="product-container-bottom">
-            <div class="product-container-bottom-left">
-                <span class="product-price">
-                    7:90
-                </span>
-            </div>
-            <div class="product-container-bottom-right">
-                <button class="product-buy">Köp</button>
-            </div>
-        </div>
-    </div>
-    <div class="product-container">
-        <div class="product-container-top">
-            <span class="product-name">Norrlands Guld</span>
-        </div>
-        <div class="product-container-bottom">
-            <div class="product-container-bottom-left">
-                <span class="product-price">
-                    7:90
-                </span>
-            </div>
-            <div class="product-container-bottom-right">
-                <button class="product-buy">Köp</button>
-            </div>
-        </div>
-    </div>
-    <div class="product-container">
-        <div class="product-container-top">
-            <span class="product-name">Norrlands Guld</span>
-        </div>
-        <div class="product-container-bottom">
-            <div class="product-container-bottom-left">
-                <span class="product-price">
-                    7:90
-                </span>
-            </div>
-            <div class="product-container-bottom-right">
-                <button class="product-buy">Köp</button>
-            </div>
+        <div id="sub-category">
+
         </div>
     </div>
 
 
 
+    <!--The main content of the website-->
+    <div class="main-window">
+        <!--The filter view-->
+        <div id="filter-window">
+        </div>
 
 
+        <!--The product view-->
+        <div id="product-window">
+        </div>
+
+        <div id="shopping-cart-window" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)">
+        </div>
+
+    </div>
 
 
-</div>
-
-
-
-<!---
-
-The html-file is just for loading the javascript files. If you go to the console under the "Inspect" of the popup menu,
-then you can enter javascript calls, to test the functions.
-
--->
+    <!--The footnote of the webiste-->
+    <div class="footnote-window">
+        <h4>The Flying Dutchman by © 2021 The Early Sunrise</h4>
+    </div>
 
 </body>
 
