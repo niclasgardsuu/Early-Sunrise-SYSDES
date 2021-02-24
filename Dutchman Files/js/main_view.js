@@ -10,7 +10,8 @@ function update_view() {
     keys = dict["keys"];
     for (idx in keys) {
         key = keys[idx];
-        document.getElementById(key).innerText(get_string(key));
+        console.log(getString(key));
+        document.getElementById(key).innerText(getString(key));
     };
     pics = dict["pics"];
     for (idx in pics) {

@@ -11,7 +11,9 @@ var language = "en"
 // track of the different keys that are available  for IDs.
 //
 dict = {
-    "keys" : ["hello","bye"],       // keys for strings
+    "mainCategory": ["beer","spirits","wine","non-alcoholic"],
+    "keys" : ["beer","spirits","wine","non-alcoholic"
+                ],       // keys for strings
     "pics" : ["flagPic"],              // keys for pictures
                                     // pictures have to be
                                     // handled in a special way.
@@ -22,14 +24,22 @@ dict = {
     // request.
     //
     "en": {
+        "beer": "beer",
+        "spirits": "spirits",
+        "wine": "wine",
+        "non-alcoholic":"non-alcoholic",
         "hello": "Welcome to this small demonstration",
         "bye": "Nice meeting you! Welcome back!",
-        "flagPic" : "eng.jpg"
+        "flagPic" : "./img/australia.jpg"
     },
     "sv" : {
+        "beer":"öl",
+        "spirits":"sprit",
+        "wine":"vin",
+        "non-alcoholic":"alkoholfritt",
         "hello" : "Välkommen till denna lilla demonstration",
         "bye" : "Tack för besöket! Välkommen åter",
-        "flagPic" : "sv.jpg"
+        "flagPic" : "./img/sweden.jpg"
     },
     "pl": {
         "flagPic" : "sv.jpg"

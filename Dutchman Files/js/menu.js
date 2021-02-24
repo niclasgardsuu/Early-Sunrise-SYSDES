@@ -1,20 +1,3 @@
-dict = {
-        "mainCategory": ["beer","spirits","wine","non-alcoholic"],
-
-        "sv": {
-            "beer":"öl",
-            "spirits":"sprit",
-            "wine":"vin",
-            "non-alcoholic":"alkoholfritt"
-        },
-        "en": {
-            "beer": "beer",
-            "spirits": "spirits",
-            "wine": "wine",
-            "non-alcoholic":"non-alcoholic"
-        }
-    };
-
 function findProductByID(id) {
     for (var i = 0; i < dict.mainCategory.length; i++) {
         for (var j = 0; j < drunk[dict.mainCategory[i]].length; j++) {
@@ -62,10 +45,6 @@ function showProductInfo(id) {
     
 }
 
-
-function updateProductInfoView() {
-
-}
 
 //Create all products in the database and print them out
 function createAllProducts() {
@@ -254,13 +233,5 @@ function createMainCategory() {
         a.addEventListener("click", updateViewMain.bind(null, dict.mainCategory[i]));
         id.appendChild(a);
     }
-}
-
-//Måste ha med någon view control fattar inte hur vi ska göra
-//det dock
-function update_view(id, result) {
-    document.getElementById(id).innerHTML(result);
-    view.innerHTML = "";
-    view.innerHTML = result;
 }
 
