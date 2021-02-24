@@ -2,6 +2,7 @@
     --product-info-cover-background: rgb(0,0,0,0.5);
     --product-info-container-background: white;
     --product-info-name2-color: grey;
+    --menu-top-window: yellow;
     --menu-window-background: white;
     --main-window-background:#F0F2F5;
     --main-category-background: grey;
@@ -16,6 +17,14 @@
 
 body {
     margin: 0;
+}
+
+#menu-top-window {
+    height: 50px;
+    background-color: var(--menu-top-window);
+    display: flex;
+    align-items: center;
+    justify-content: left;
 }
 
 #menu-window {
