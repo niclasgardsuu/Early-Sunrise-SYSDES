@@ -18,7 +18,7 @@
         $(document).ready(function(){
             createMainCategory();
             createAllProducts();
-            update_view();
+            updateView();
             var sel = document.getElementById("select-language");
             sel.addEventListener("change",changeLang.bind(null,sel));
         });
@@ -50,7 +50,7 @@
                 <h2 id="product-info-name2" class="product-info-name2 product-name-font"></h2>
                 <span id="product-info-desc" class="product-info-desc"></span>
                 <h1 id="product-info-price" class="product-info-price product-price-font"></h1>
-                <button id="add-to-cart" class="product-buy"></button>
+                <button class="product-buy"></button>
                 <div class="product-info-container-spec">
                     <h3 id="product-spec">Specifikationer</h3>
                     <dl class="product-info-spec">

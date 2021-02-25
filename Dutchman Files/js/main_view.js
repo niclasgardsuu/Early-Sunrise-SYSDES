@@ -5,14 +5,8 @@
 //
 // Note especially that strings and pictures are treated in
 // different ways, due to the way they are handled in the container.
-//
-function update_view() {
-    keys = dict["keys"];
-    for (idx in keys) {
-        key = keys[idx];
-        document.getElementById(key).innerText = getString(key);
-    };
 
+function updateViewPics() {
     pics = dict["pics"];
     for (idx in pics) {
         pic = pics[idx][0];
@@ -20,6 +14,29 @@ function update_view() {
         id = document.getElementById(pic);
         id.src = getString(pic);
         id.alt = getString(alt);
-    };
+    }; }
 
+function updateViewIds() {
+    ids = dict["ids"];
+    for (idx in ids) {
+        id = ids[idx];
+        document.getElementById(id).innerText = getString(id);
+    };
 }
+
+function updateViewClasses() {
+    var name = dict["classes"];
+    for (i in name) {
+        var temp = document.getElementsByClassName(name[i]);
+        for (j in temp) {
+            temp[j].innerText = getString(name[i]);
+        }
+    }
+}
+
+function updateView() {
+    updateViewIds();
+    updateViewPics()
+    updateViewClasses();
+}
+

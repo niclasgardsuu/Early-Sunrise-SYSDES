@@ -12,10 +12,11 @@ var language = "sv"
 //
 dict = {
     "mainCategory": ["beer","spirits","wine","non-alcoholic"],
-    "keys" : ["beer","spirits","wine","non-alcoholic", "add-to-cart",
+    "ids" : ["beer","spirits","wine","non-alcoholic",
              "product-spec","product-spec-alcohol","product-spec-type",
              "product-spec-producent","product-spec-origin","product-spec-allergens"],       // keys for strings
     "pics" : [["flag-pic","flag-alt"]],              // keys for pictures
+    "classes": ["product-buy"],
                                     // pictures have to be
                                     // handled in a special way.
 
@@ -29,7 +30,7 @@ dict = {
         "spirits":"Sprit",
         "wine":"Vin",
         "non-alcoholic":"Alkoholfritt",
-        "add-to-cart": "Lägg i kundvagnen",
+        "product-buy": "Lägg i kundvagnen",
         "product-spec": "Specifikationer",
         "product-spec-alcohol": "Alkoholhalt",
         "product-spec-type": "Typ",
@@ -46,7 +47,7 @@ dict = {
         "spirits": "Spirits",
         "wine": "Wine",
         "non-alcoholic": "Non-alcoholic",
-        "add-to-cart": "add to cart",
+        "product-buy": "Add to cart",
         "product-spec": "Specifications",
         "product-spec-alcohol": "Alcohol content",
         "product-spec-type": "Type",
@@ -80,8 +81,7 @@ function getString(key) {
 //
 function changeLang(sel) {
     language = sel.options[sel.selectedIndex].value;
-    console.log(language);
-    update_view();
+    updateView();
 }
 
 // ==========================================================================

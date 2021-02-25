@@ -5,8 +5,7 @@ function findProductByID(id) {
                 return drunk[dict.mainCategory[i]][j];
             }
         }
-    }
-    return null;
+    } return null;
 }
 
 function getAllergens(id) {
@@ -85,6 +84,7 @@ function createProductsByFilter(filterId, category) {
     if (noFilter) {
         createProductsByCategory(category);
     }
+    updateViewClasses();
 }
 
 function updateViewMain(category) {
@@ -92,6 +92,7 @@ function updateViewMain(category) {
     createFilter(category);
     document.getElementById("product-window").textContent = "";
     createProductsByCategory(category);
+    updateViewClasses();
 }
 
 
@@ -142,7 +143,6 @@ function createProductContainer(name, price, imgSrc, id) {
 
     var productBuy = document.createElement("button");
     productBuy.className = "product-buy";
-    productBuy.appendChild(document.createTextNode("Lägg i kundvagnen"));
 
     var productPrice = document.createElement("span");
     productPrice.className = "product-price-font";
