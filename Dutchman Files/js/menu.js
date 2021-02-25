@@ -42,7 +42,6 @@ function showProductInfo(id) {
     } else {
         document.getElementById("product-info-allergens").innerText = allergens;
     }
-    
 }
 
 
@@ -219,6 +218,7 @@ function createMainCategory() {
         //Namn på kategorin
         var name = document.createElement("span");
         name.appendChild(document.createTextNode(dict.mainCategory[i]));
+        name.id = dict.mainCategory[i];
         //Bild på kategorin
         var img = document.createElement("img");
         img.src = "./img/" + dict.mainCategory[i] + ".svg";

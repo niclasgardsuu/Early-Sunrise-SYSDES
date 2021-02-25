@@ -4,7 +4,7 @@
 // How to do this with more than two languages, is left as an
 // exercise.
 //
-var language = "en"
+var language = "sv"
 
 // ==========================================================================
 // The dictionary consists of a simple JSON structure. It also keeps
@@ -12,9 +12,10 @@ var language = "en"
 //
 dict = {
     "mainCategory": ["beer","spirits","wine","non-alcoholic"],
-    "keys" : ["beer","spirits","wine","non-alcoholic"
-                ],       // keys for strings
-    "pics" : ["flagPic"],              // keys for pictures
+    "keys" : ["beer","spirits","wine","non-alcoholic", "add-to-cart",
+             "product-spec","product-spec-alcohol","product-spec-type",
+             "product-spec-producent","product-spec-origin","product-spec-allergens"],       // keys for strings
+    "pics" : [["flag-pic","flag-alt"]],              // keys for pictures
                                     // pictures have to be
                                     // handled in a special way.
 
@@ -23,26 +24,43 @@ dict = {
     // need to store a JSON file for each language to be loaded on
     // request.
     //
-    "en": {
-        "beer": "beer",
-        "spirits": "spirits",
-        "wine": "wine",
-        "non-alcoholic":"non-alcoholic",
-        "hello": "Welcome to this small demonstration",
-        "bye": "Nice meeting you! Welcome back!",
-        "flagPic" : "./img/australia.jpg"
-    },
     "sv" : {
-        "beer":"öl",
-        "spirits":"sprit",
-        "wine":"vin",
-        "non-alcoholic":"alkoholfritt",
+        "beer":"Öl",
+        "spirits":"Sprit",
+        "wine":"Vin",
+        "non-alcoholic":"Alkoholfritt",
+        "add-to-cart": "Lägg i kundvagnen",
+        "product-spec": "Specifikationer",
+        "product-spec-alcohol": "Alkoholhalt",
+        "product-spec-type": "Typ",
+        "product-spec-producent": "Producent",
+        "product-spec-origin": "Ursprung",
+        "product-spec-allergens": "Allergener",
         "hello" : "Välkommen till denna lilla demonstration",
         "bye" : "Tack för besöket! Välkommen åter",
-        "flagPic" : "./img/sweden.jpg"
+        "flag-pic" : "./img/sweden.svg",
+        "flag-alt" : "Sverige flagga"
+    },
+    "en": {
+        "beer": "Beer",
+        "spirits": "Spirits",
+        "wine": "Wine",
+        "non-alcoholic": "Non-alcoholic",
+        "add-to-cart": "add to cart",
+        "product-spec": "Specifications",
+        "product-spec-alcohol": "Alcohol content",
+        "product-spec-type": "Type",
+        "product-spec-producent": "Producent",
+        "product-spec-origin": "Origin",
+        "product-spec-allergens": "Allergens",
+        "hello": "Welcome to this small demonstration",
+        "bye": "Nice meeting you! Welcome back!",
+        "flag-pic" : "./img/australia.svg",
+        "flag-alt" : "Australien flag"
     },
     "pl": {
-        "flagPic" : "sv.jpg"
+        "flag-pic" : "sv.jpg",
+        "flag-alt" : "Sverige flagga"
     }
 }
 
@@ -60,10 +78,9 @@ function getString(key) {
 // After each language change, we will need to update the view, to propagate
 // the change to the whole view.
 //
-function changeLang() {
-    if (language =="en") {
-        language = "sv";
-    } else {language = "en"};
+function changeLang(sel) {
+    language = sel.options[sel.selectedIndex].value;
+    console.log(language);
     update_view();
 }
 

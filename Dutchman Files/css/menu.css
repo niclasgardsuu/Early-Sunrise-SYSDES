@@ -53,13 +53,14 @@ body {
 }
 
 .main-category-box {
-    width: 125px;
-    height: 125px;
+    margin-left: 10px;
+    width: 115px;
+    height: 115px;
 }
 
 .main-category-img {
-    width: 60%;
-    height: 60%;
+    width: 50%;
+    height: 50%;
     padding-top: 10%;
     padding-bottom: 4%;
     -webkit-user-drag: none;
