@@ -19,6 +19,8 @@
             updateView();
             var sel = document.getElementById("select-language");
             sel.addEventListener("change",changeLang.bind(null,sel));
+            document.getElementById("product-manager-add-product").addEventListener("click", addProductToMeny);
+            document.getElementById("product-manager-remove-product").addEventListener("click", removeProductFromMeny);
         });
 
     </script>
@@ -51,6 +53,8 @@
                     <dl class="product-info-spec">
                         <dt id="product-spec-alcohol"></dt>
                         <dd id="product-info-alcohol"></dd>
+                        <dt id="product-spec-category"></dt>
+                        <dd id="product-info-category"></dd>
                         <dt id="product-spec-type"></dt>
                         <dd id="product-info-type"></dd>
                         <dt id="product-spec-producent"></dt>
@@ -59,6 +63,8 @@
                         <dd id="product-info-origin"></dd>
                         <dt id="product-spec-allergens"></dt>
                         <dd id="product-info-allergens"></dd>
+                        <dt id="product-spec-articleid"></dt>
+                        <dd id="product-info-articleid"></dd>
                     </dl>
                 </div>
                 <div id="product-manager-view" class="product-info-container-spec">
@@ -70,7 +76,7 @@
                         </dd>
                     </dl>
                     <button id="product-manager-refill" class="product-manager-button"></button>
-                    <button id="product-manager-remove-item" class="product-manager-button"></button>
+                    <button id="product-manager-remove-product" class="product-manager-button"></button>
                     <h3 id="product-manager-add"></h3>
                     <dl class="product-info-spec">
                         <dt id="product-manager-articleid"></dt>
@@ -149,7 +155,7 @@
 
     <!--The footnote of the webiste-->
     <div class="footnote-window">
-        <h4>The Flying Dutchman by © 2021 The Early Sunrise</h4>
+        <h4 id="footnote-copyright-message"></h4>
     </div>
 
 </body>

@@ -1,3 +1,22 @@
+
+function removeProductFromMeny() {
+    var id = document.getElementById("product-info-articleid").textContent;
+    var category = document.getElementById("product-info-category").textContent;
+    for (var i = 0; i < drunk[category].length; i++) {
+        if (drunk[category][i].articleid == id) {
+            drunk[category].splice(i,1);
+            document.getElementById("product-info-hide").checked = false;
+            updateViewMain(category);
+            return;
+        }
+    } 
+    return null;
+}
+
+function addProductToMeny() {
+
+}
+
 function findProductByID(id) {
     for (var i = 0; i < dict.mainCategory.length; i++) {
         for (var j = 0; j < drunk[dict.mainCategory[i]].length; j++) {
@@ -5,7 +24,8 @@ function findProductByID(id) {
                 return drunk[dict.mainCategory[i]][j];
             }
         }
-    } return null;
+    } 
+    return null;
 }
 
 function getAllergens(id) {
@@ -17,7 +37,7 @@ function getAllergens(id) {
     return null;
 }
 
-function showProductInfo(id) {
+function showProductInfo(id, category) {
     var product = findProductByID(id);
     document.getElementById("product-info-hide").checked = true;
     document.getElementById("product-info-img").setAttribute("src", product.img);
@@ -26,8 +46,10 @@ function showProductInfo(id) {
     document.getElementById("product-info-desc").innerText = product.serves + " " + product.volume + " ml";
     document.getElementById("product-info-price").innerText = product.pricewithvat + " kr";
     document.getElementById("product-info-alcohol").innerText = product.alcoholcontent;
+    document.getElementById("product-info-category").innerText = category;
     document.getElementById("product-info-type").innerText = product.productgroup;
     document.getElementById("product-info-producent").innerText = product.producent;
+    document.getElementById("product-info-articleid").innerText = product.articleid;
 
     var origin = document.getElementById("product-info-origin");
     origin.innerText = product.origincountry;
@@ -56,7 +78,7 @@ function createProductsByCategory(category) {
     var bevType = drunk[category];
     var productWindow = document.getElementById("product-window");
     for (var i = 0; i < bevType.length; i++) {
-        productWindow.appendChild(createProductContainer(bevType[i].name, bevType[i].pricewithvat, bevType[i].img, bevType[i].articleid));
+        productWindow.appendChild(createProductContainer(bevType[i].name, bevType[i].pricewithvat, bevType[i].img, bevType[i].articleid, category));
     }
 }
 
@@ -74,7 +96,7 @@ function createProductsByFilter(filterId, category) {
             for (var j = 0; j < bevType.length; j++) {
                 //Print only out the products that has the same productgroup
                 if (bevType[j].productgroup == productgroup) {
-                    productWindow.appendChild(createProductContainer(bevType[j].name, bevType[j].pricewithvat, bevType[j].img, bevType[j].articleid));
+                    productWindow.appendChild(createProductContainer(bevType[j].name, bevType[j].pricewithvat, bevType[j].img, bevType[j].articleid, category));
                 }
             }
         }
@@ -96,7 +118,7 @@ function updateViewMain(category) {
 }
 
 
-function createProductContainer(name, price, imgSrc, id) {
+function createProductContainer(name, price, imgSrc, id, category) {
     /*
     <div class="product-container-top">
         <div class="product-container-top-top">
@@ -124,7 +146,7 @@ function createProductContainer(name, price, imgSrc, id) {
 
     var productContainerTop = document.createElement("div");
     productContainerTop.className = "product-container-top";
-    productContainerTop.addEventListener("click", showProductInfo.bind(null, id));
+    productContainerTop.addEventListener("click", showProductInfo.bind(null, id, category));
     productContainerTop.appendChild(productContainerTopTop);
     productContainerTop.appendChild(productContainerTopBottom);
 

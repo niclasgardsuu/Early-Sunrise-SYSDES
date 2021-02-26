@@ -357,7 +357,7 @@ body {
     background-color: var(--product-buy-button-background);
 }
 
-#product-manager-remove-item {
+#product-manager-remove-product {
     margin-top: 10px;
     color:red !important;
 }

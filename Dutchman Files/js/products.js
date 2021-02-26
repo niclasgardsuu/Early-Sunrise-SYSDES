@@ -94,7 +94,7 @@ var drunk = {
             "alcoholcontent": "10%",
             "img": ""
         }, {
-            "artelid": "1132",
+            "articleid": "1132",
             "name": "Heineken",
             "name2": "",
             "pricewithvat": "13.90",
