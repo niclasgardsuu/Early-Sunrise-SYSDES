@@ -49,32 +49,37 @@
 
 
         <div id="staff">                                    <!-- For Staff -->
-                <span id="adToAccUserN"></span>
-                <input id="adToAccUsername" type = "text">
+            <span id="adToAccUserN"></span>
+            <input id="adToAccUsername" type = "text">
 
-                <span id="addA"></span>
-                <input id="addAmount" type = "text">
+            <span id="addA"></span>
+            <input id="addAmount" type = "text">
 
-                <button id="addToAcc" onclick="doInit('addToAcc')"></button>
-                <button id="staffLogO" onclick="doInit('staffLogO')"></button>
+            <button id="addToAcc" onclick="doInit('addToAcc')"></button>
+            <button id="staffLogO" onclick="doInit('staffLogO')"></button>
+
+            <input id="completeOrderId" type = "text" placeholder = "OrderId" name = "OrderId" required></input>
+            <button id="completeOrder" onclick="doInit('completeOrder')"></button>
         </div>
-
-
 
 
         <span id="display"></span>                          <!-- For all customer -->
 
-        <h1>Available items for Customer Lorem Ipsum</h1>   
-        
-        <p>1 .Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-        <p>1 .Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-        <p>1 .Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-        <p>1 .Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-        <p>1 .Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-
-        <button id="order" onclick="doInit('order')"></button>
-        <button id="pay" onclick="doInit('pay')"></button>
+        <input id="stdDrinkId" type = "text" placeholder = "DrinkID" name = "stdDrinkId" required></input>
+        <input id="stdDrinkAmount" type = "text" placeholder = "Amount" name = "stdDrinkAmount" required></input>
+        <button id="addToCart" onclick="doInit('addToCart')"></button>
+        <button id="stdOrder" onclick="doInit('stdOrder')"></button>
 
     </div>
 </body>
 </html>
+
+
+<!--<h1>Available items for Customer Lorem Ipsum</h1>   
+
+<p>1 .Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+<p>1 .Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+<p>1 .Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+<p>1 .Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+<p>1 .Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+-->

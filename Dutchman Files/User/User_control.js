@@ -45,8 +45,35 @@ function doInit(func) {
 
         drinkId     = document.getElementById('drinkId').value;   
         drinkAmount = document.getElementById('drinkAmount').value;
-        vipOrder(drinkId, drinkAmount);
+        if (vipOrder(drinkId, drinkAmount)) {
+            var combination = getComLock();
+            $("#display").text("Your code for the fridge: " + combination).fadeIn();
+        }
     };
+
+    if (func == 'addToCart') {
+    
+        drinkId     = document.getElementById('stdDrinkId').value;   
+        drinkAmount = document.getElementById('stdDrinkAmount').value;
+        if (addToCart(drinkId, drinkAmount)) {
+            var showCart = getCart();
+            $("#display").text(showCart);
+        }
+    };
+
+    if (func == 'stdOrder') {
+        stdOrder();
+        var showCart = getCart();
+        $("#display").text(showCart);
+    };
+
+    if (func == 'completeOrder') {
+        OrderId = parseInt(document.getElementById('completeOrderId').value); 
+        if (completeOrder(OrderId)) {
+            var showOrder = getOrders();
+            $("#display").text(showOrder);
+        }
+    }
 }
 
 function logInVip() {
@@ -60,9 +87,10 @@ function logInVip() {
 
 function logInStaff() {
 
-    $("#display").text(dict['log_in_success_msg']).fadeIn();
-    setTimeout(function() { $("#display").fadeOut(); }, 3000);
-
+    //$("#display").texD(dict['log_in_success_msg']).fadeIn();
+    //setTimeout(function() { $("#display").fadeOut(); }, 3000);
+    var showOrder = getOrders();
+    $("#display").text(showOrder);
     $("#account").hide(); 
     $("#staff").show(); 
 }
@@ -91,7 +119,7 @@ $(document).ready(function() {
     $("#logIn").text(dict['log']);
 
     // VIP
-    //$("#vip").hide(); 
+    $("#vip").hide(); 
     $("#balance").text(dict['balance']);
     $("#sdrink").text(dict['sdrink']);
     $("#logO").text(dict['logO']);
@@ -106,11 +134,15 @@ $(document).ready(function() {
     $("#newA").text(dict['newA']);
     $("#addToAcc").text(dict['addToAcc']);
     $("#staffLogO").text(dict['staffLogO']);
+    $("#completeOrderId").text(dict['completeOrderId']);
+    $("#completeOrder").text(dict['completeOrder']);
+
 
     // All Customer
-    $("#pay").text(dict['pay']);
-    $("#order").text(dict['order']);
-    
+    $("#stdDrinkId").text(dict['stdDrinkId']);
+    $("#stdDrinkAmount").text(dict['stdDrinkAmount']);
+    $("#stdOrder").text(dict['stdOrder']);
+    $("#addToCart").text(dict['addToCart']);   
 })
 
 // ===========================================================================

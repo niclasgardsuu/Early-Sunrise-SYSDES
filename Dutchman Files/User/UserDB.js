@@ -1,4 +1,12 @@
 var OrderDB = {
+    "cart": {
+        "drinkId": [],
+        "drinkAmount": [],
+        "price": [],
+        "totalPrice": 0,
+        "table": "",
+        "maxAmount": 10
+        },
     "vip": [ //alla username med tomma order id
         {
             "username": "vipadmin",
@@ -36,27 +44,13 @@ var OrderDB = {
     ],
     "all_orders": [
         {
-            "order_id": "vipadmin001", // move to another list when paid
-            "beer_id": [],
-            "amount": [],
-            "price": [],
-            "table": "T1"
-            //"status": "paid"
-            //"timestamp": "2014-10-02 16:05:21"
-        },
-        {
-            "order_id": "888",
-            "beer_id": "1152803",
-            "amount": "4",
-            "table": "T2",
-            "status": "paid"
-        },
-        {
-            "order_id": "",
-            "beer_id": [],
-            "amount": [],
-            "table": "",
-            "status": ""
+            "order_id": 0,
+            "drinkId": [123],
+            "drinkAmount": [1,2,3],
+            "price": [1,2,3,4],
+            "totalPrice" : 1000,
+            "table": "T1",
+            "status": "pending" 
         }
     ],
     "bought":

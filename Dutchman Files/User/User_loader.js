@@ -68,11 +68,99 @@ function addBalance(userName, newAmount) {
 function incrementOrder() {
     
     modelData['orderCounter'] += 1;
+    return modelData['orderCounter'];
 }
 
 function setTable(tableId) {
     
     modelData['tableNumber'] = tableId; // TODO: input
+}
+
+function addToCart(drinkId, drinkAmount) {
+    
+    var totalAmount = 0;
+    var successfull = false;
+    var table = modelData['tableNumber'];
+    
+    if ((isNaN(drinkId) || isNaN(drinkAmount) || (parseInt(drinkAmount) <= 0))) { // Error check on input
+        return successfull;
+    }
+
+    var currentMaxAmount = OrderDB.cart.maxAmount - parseInt(drinkAmount);
+    if(currentMaxAmount >= 0) {
+        
+        OrderDB.cart.drinkId.push(drinkId);
+        OrderDB.cart.drinkAmount.push(drinkAmount);
+        OrderDB.cart.price.push(findProductByID(drinkId).pricewithvat);
+        OrderDB.cart.totalPrice += calculateCost(drinkId, drinkAmount);
+        OrderDB.cart.maxAmount = currentMaxAmount;
+        successfull = true; 
+    } 
+    return successfull;
+}
+
+function stdOrder() {
+    
+    var order_id = incrementOrder();
+    var table = modelData['tableNumber'];
+            var obj = { "order_id": order_id,
+                        "drinkId": OrderDB.cart.drinkId,
+                        "drinkAmount": OrderDB.cart.drinkAmount,
+                        "price": OrderDB.cart.price,
+                        "totalPrice" : OrderDB.cart.totalPrice,
+                        "table": OrderDB.cart.table,
+                        "status": "pending" 
+                    };     
+            OrderDB.all_orders.push(obj);
+            resetCart();
+}
+
+function resetCart() {
+
+    OrderDB.cart = { "drinkId": [],
+                     "drinkAmount": [],
+                     "price": [],
+                     "totalPrice": 0,
+                     "table": "",
+                     "maxAmount": 10 };
+}
+
+function getCart() {
+
+    var cart = "";
+    cart += ("Drink ID: " + OrderDB.cart.drinkId + 
+                " Amount: " + OrderDB.cart.drinkAmount + 
+                " Cost: " + OrderDB.cart.price + 
+                " Total Cost: " + OrderDB.cart.totalPrice);
+    return cart;
+}
+
+
+
+
+function getOrders() {
+
+    var orders = "";
+
+    for (i = 0; i < OrderDB.all_orders.length; i++) {
+        if(OrderDB.all_orders[i].status == "pending") {
+            orders += ("Order ID: " + OrderDB.all_orders[i].order_id + 
+                    " Total Cost: " + OrderDB.all_orders[i].totalPrice + 
+                    " Table: " + OrderDB.all_orders[i].table + " ");
+        }
+    }  
+    return orders;
+}
+
+function completeOrder(orderId) {
+
+    for (i = 0; i < OrderDB.all_orders.length; i++) {
+        if(OrderDB.all_orders[i].order_id == orderId) {
+            OrderDB.all_orders[i].status = "complete";
+            return true; 
+        }
+    }
+    return false;  
 }
 
 function vipOrder(beerId, amount, position) {
@@ -81,6 +169,7 @@ function vipOrder(beerId, amount, position) {
 
     var totalAmount = 0;
     var vipOrderId;
+    var successfull = false;
 
     for (i = 0; i < OrderDB.vip.length; i++) {   
         if (OrderDB.vip[i].username == username) {
@@ -89,8 +178,7 @@ function vipOrder(beerId, amount, position) {
 
             if (vipOrderId == "") { // Create new order
 
-                OrderDB.vip[i].order_id = parseInt(modelData['orderCounter']);
-                incrementOrder();
+                OrderDB.vip[i].order_id = incrementOrder();
                
                 for (j = 0; j < OrderDB.all_orders.length; j++) {   
 
@@ -103,10 +191,11 @@ function vipOrder(beerId, amount, position) {
                     }
                 }
                 totalAmount = calculateCost(beerId, amount);
-                vipPay(totalAmount);
+                successfull = vipPay(totalAmount);
             }
         }
     }
+    return successfull;
 }
 
 function findProductByID(id) {
@@ -125,7 +214,7 @@ function calculateCost(drinkId, amount) {
     var totalAmount = 0;
     var getPrice    = findProductByID(drinkId).pricewithvat;
     totalAmount     = getPrice * amount;
-    return totalAmount;
+    return parseInt(totalAmount);
 }
 
 function findUserId(userName) {
@@ -137,7 +226,7 @@ function findUserId(userName) {
     }
 }
 
-// Handle payment for VIP customers fdsgd
+// Handle payment for VIP customers 
 function vipPay(totalAmount) {
     
     userName = modelData['username'];
@@ -154,7 +243,6 @@ function vipPay(totalAmount) {
     }
     return false;
 }
-
 
 function getComLock() { 
     return Math.floor(Math.random() * 1000);

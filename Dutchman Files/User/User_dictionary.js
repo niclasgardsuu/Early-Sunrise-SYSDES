@@ -24,16 +24,19 @@ const dict = {
     'vipOrder'             : "Vip Order",
     'drinkId'              : "Drink ID",
     
-    
     // Staff
     'adToAccUserN'         : "Username",
     'addA'                 : "Add Amount",
     'addToAcc'             : "Add to account",
     'staffLogO'            : "Log Out",
-
+    'completeOrderId'      : "Order Id",
+    'completeOrder'        : "Complete Order",
+   
     // All Customer
-    'order'                : "Order",
-    'pay'                  : "Pay",
+    'stdOrder'             : "Order",
+    'stdDrinkId'           : "Drink ID",
+    'stdDrinkAmount'       : "Amount",
+    'addToCart'            : "Add to cart",
     
     // Find products
 
