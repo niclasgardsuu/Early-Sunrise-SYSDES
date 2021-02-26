@@ -20,6 +20,7 @@ function updateViewIds() {
     ids = dict["ids"];
     for (idx in ids) {
         id = ids[idx];
+        console.log(id);
         document.getElementById(id).innerText = getString(id);
     };
 }

@@ -7,9 +7,7 @@
     <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
     <link rel="stylesheet" href="./css/menu.css">
     <script type="text/javascript" src="DBLoaded.js"></script>
-    <script type="text/javascript" src="./js/products.js"></script>
-    <script type="text/javascript" src="./js/productAllergens.js"></script>
-    <script type="text/javascript" src="./js/dictionary.js"></script>
+    <script type="text/javascript" src="./js/products.js"></script> <script type="text/javascript" src="./js/productAllergens.js"></script> <script type="text/javascript" src="./js/dictionary.js"></script>
     <script type="text/javascript" src="./js/main_view.js"></script>
     <script type="text/javascript" src="./js/menu.js"></script>
     <script type="text/javascript" src="./js/dragAndDrop.js"></script>
@@ -38,9 +36,6 @@
             </div>
         </label>
 
-        <button class="product-info-prev">
-            prev
-        </button>
         <div class="product-info-container">
             <div class="product-info-container-left">
                 <img id="product-info-img" src="" class="product-img" alt="">
@@ -66,11 +61,50 @@
                         <dd id="product-info-allergens"></dd>
                     </dl>
                 </div>
+                <div id="product-manager-view" class="product-info-container-spec">
+                    <h2 id="product-manager"></h2>
+                    <dl class="product-info-spec">
+                        <dt id="product-stock-view"></dt>
+                        <dd>
+                            <input id="product-manager-stock" type="number" max="10000" min="0">
+                        </dd>
+                    </dl>
+                    <button id="product-manager-refill" class="product-manager-button"></button>
+                    <button id="product-manager-remove-item" class="product-manager-button"></button>
+                    <h3 id="product-manager-add"></h3>
+                    <dl class="product-info-spec">
+                        <dt id="product-manager-articleid"></dt>
+                        <dd><input id="product-manager-articleid-input" type="number" max="100000" min="0"></dd>
+                        <dt id="product-manager-name"></dt>
+                        <dd><input id="product-manager-name-input" type="text"></dd>
+                        <dt id="product-manager-name2"></dt>
+                        <dd><input id="product-manager-name2-input" type="text"></dd>
+                        <dt id="product-manager-pricewithvat"></dt>
+                        <dd><input id="product-manager-pricewithvat-input" type="number" max="100000" min="0"></dd>
+                        <dt id="product-manager-volume"></dt>
+                        <dd><input id="product-manager-volume-input" type="number" max="10000" min="0"></dd>
+                        <dt id="product-manager-productgroup"></dt>
+                        <dd><input id="product-manager-productgroup-input" type="text"></dd>
+                        <dt id="product-manager-serves"></dt>
+                        <dd><input id="product-manager-serves-input" type="text"></dd>
+                        <dt id="product-manager-origin"></dt>
+                        <dd><input id="product-manager-origin" type="text"></dd>
+                        <dt id="product-manager-origincountry"></dt>
+                        <dd><input id="product-manager-origincountry-input" type="text"></dd>
+                        <dt id="product-manager-producent"></dt>
+                        <dd><input id="product-manager-producent-input" type="text"></dd>
+                        <dt id="product-manager-alcohol"></dt>
+                        <dd><input id="product-manager-alcohol-input" type="text"></dd>
+                        <dt id="product-manager-img"></dt>
+                        <dd><input id="product-manager-img-input" type="text"></dd>
+                        <dt id="product-manager-main-category"></dt>
+                        <dd><input id="product-manager-main-category-input" type="text"></dd>
+                    </dl>
+                    <button id="product-manager-add-product" class="product-manager-button"></button>
+                </div>
+
             </div>
         </div>
-        <button class="product-info-next">
-            next
-        </button>
     </div>
 
     <!--The top menu of the website-->
@@ -78,7 +112,6 @@
         <select name="" id="select-language">
             <option value="sv">Svenska</option>
             <option value="en">English</option>
-            <option value="pl">Pólśkí</option>
         </select>
         <img id="flag-pic" height="40px" width="40px">
         <div id="login">

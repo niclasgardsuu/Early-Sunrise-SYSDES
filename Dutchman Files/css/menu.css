@@ -1,5 +1,5 @@
 :root {
-    --product-info-cover-background: rgb(0,0,0,0.5);
+    --product-info-cover-background: rgba(0,0,0,0.5);
     --product-info-container-background: white;
     --product-info-name2-color: grey;
     --menu-top-window: yellow;
@@ -332,10 +332,34 @@ body {
     width: 74%;
 }
 
+.product-info-spec input {
+    padding: 3px;
+    border-style:solid;
+    border-radius: 10px;
+    border-color: lightgray;
+}
+
 #shopping-cart-window {
     width: 25%;
     display: flex;
     background-color: red;
+}
+
+#product-manager-refill {
+    display: block;
+}
+
+.product-manager-button {
+    padding: 7px;
+    border-radius: 20px;
+    border: none;
+    color: var(--product-buy-button-color);
+    background-color: var(--product-buy-button-background);
+}
+
+#product-manager-remove-item {
+    margin-top: 10px;
+    color:red !important;
 }
 
 .footnote-window {
