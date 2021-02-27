@@ -13,11 +13,19 @@ function removeProductFromMeny() {
     return null;
 }
 
-function checkAddProductToMeny(articleid, category) {
-    var msg = "";
+function checkAddProductToMeny(articleid, category, cannotBeEmpty) {
+    var msg;
     var passed = true;
     console.log(articleid);
-    if (findProductByID(articleid) != null || articleid == ""){
+
+    for (var i = 0; i < cannotBeEmpty.length; i++ ) {
+        if (cannotBeEmpty[i] == "") {
+            passed = false;
+            msg =  "Some inputs cant be empty, ";
+        }
+    }
+
+    if (findProductByID(articleid) != null){
         msg += "Id already exist,";
         passed = false;
     }
@@ -49,7 +57,8 @@ function addProductToMeny() {
     var img = "./img/" + document.getElementById("product-manager-img-i").value;
     var category = document.getElementById("product-manager-main-category-i").value;
 
-    var passed = checkAddProductToMeny(articleid, category);
+    var cannotBeEmpty = [articleid, name, pricewithvat, volume, productgroup, serves, origincountry, producent, alcoholcontent];
+    var passed = checkAddProductToMeny(articleid, category, cannotBeEmpty);
     if (!passed) return;
 
     product = {
