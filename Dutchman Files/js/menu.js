@@ -13,8 +13,62 @@ function removeProductFromMeny() {
     return null;
 }
 
-function addProductToMeny() {
+function checkAddProductToMeny(articleid, category) {
+    var msg = "";
+    var passed = true;
+    console.log(articleid);
+    if (findProductByID(articleid) != null || articleid == ""){
+        msg += "Id already exist,";
+        passed = false;
+    }
 
+    if (category != dict.mainCategory[0] && category != dict.mainCategory[1] 
+        &&  category != dict.mainCategory[2] && category != dict.mainCategory[3]) {
+        msg += "Main category does not exist,"
+        passed = false;
+    }
+
+    if (!passed) alert(msg);
+
+    return passed;
+}
+
+function addProductToMeny() {
+    
+    var articleid = document.getElementById("product-manager-articleid-i").value;
+    var name = document.getElementById("product-manager-name-i").value;
+    var name2 = document.getElementById("product-manager-name2-i").value;
+    var pricewithvat = document.getElementById("product-manager-pricewithvat-i").value;
+    var volume = document.getElementById("product-manager-volume-i").value;
+    var productgroup = document.getElementById("product-manager-productgroup-i").value;
+    var serves = document.getElementById("product-manager-serves-i").value;
+    var origin = document.getElementById("product-manager-origin-i").value;
+    var origincountry = document.getElementById("product-manager-origincountry-i").value;
+    var producent = document.getElementById("product-manager-producent-i").value;
+    var alcoholcontent = document.getElementById("product-manager-alcohol-i").value;
+    var img = "./img/" + document.getElementById("product-manager-img-i").value;
+    var category = document.getElementById("product-manager-main-category-i").value;
+
+    var passed = checkAddProductToMeny(articleid, category);
+    if (!passed) return;
+
+    product = {
+        "articleid": articleid,
+        "name": name,
+        "name2": name2,
+        "pricewithvat": pricewithvat,
+        "volume": volume,
+        "productgroup": productgroup,
+        "serves": serves,
+        "origin": origin,
+        "origincountry": origincountry,
+        "producent": producent,
+        "alcoholcontent": alcoholcontent,
+        "img": img,
+    }
+    drunk[category].push(product);
+    document.getElementById("product-info-hide").checked = false;
+    updateViewMain(category);
 }
 
 function findProductByID(id) {
@@ -43,7 +97,7 @@ function showProductInfo(id, category) {
     document.getElementById("product-info-img").setAttribute("src", product.img);
     document.getElementById("product-info-name").innerText = product.name;
     document.getElementById("product-info-name2").innerText = product.name2;
-    document.getElementById("product-info-desc").innerText = product.serves + " " + product.volume + " ml";
+    document.getElementById("product-info-desc").innerText = product.serves + " " + product.volume;
     document.getElementById("product-info-price").innerText = product.pricewithvat + " kr";
     document.getElementById("product-info-alcohol").innerText = product.alcoholcontent;
     document.getElementById("product-info-category").innerText = category;
