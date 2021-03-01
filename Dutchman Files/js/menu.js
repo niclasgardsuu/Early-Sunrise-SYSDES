@@ -1,19 +1,113 @@
-dict = {
-        "mainCategory": ["beer","spirits","wine","non-alcoholic"],
+function createLogin() {
+    var main = document.getElementById("main-window");
+    main.innerHTML = "";
 
-        "sv": {
-            "beer":"öl",
-            "spirits":"sprit",
-            "wine":"vin",
-            "non-alcoholic":"alkoholfritt"
-        },
-        "en": {
-            "beer": "beer",
-            "spirits": "spirits",
-            "wine": "wine",
-            "non-alcoholic":"non-alcoholic"
+    main.insertAdjacentHTML('beforeend', 
+        '<form>'+
+            '<label for="username" id="username-l"></label>'+
+            '<input id="username" type = "text" placeholder = "Enter Username" name = "username" required>'+
+            '<label for="password" id="password-l"></label>'+
+            '<input id="password" type = "text" placeholder = "Enter password" name = "password" required>'+
+            '<button id="logIn" onclick="doInit("logIn")"></button>'+
+        '</form>'
+        );
+    updateViewLogin();
+}
+
+function updateViewMain() {
+    var main = document.getElementById("main-window");
+    main.innerHTML = "";
+
+    main.insertAdjacentHTML('beforeend',
+        '<div id="filter-window"></div>'+
+
+        '<div id="product-window"></div>'+
+
+        '<div id="shopping-cart-window" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)"></div>'
+    );
+    
+}
+
+function removeProductFromMeny() {
+    var id = document.getElementById("product-info-articleid").textContent;
+    var category = document.getElementById("product-info-category").textContent;
+    for (var i = 0; i < drunk[category].length; i++) {
+        if (drunk[category][i].articleid == id) {
+            drunk[category].splice(i,1);
+            document.getElementById("product-info-hide").checked = false;
+            updateViewProducts(category);
+            return;
         }
-    };
+    } 
+    return null;
+}
+
+function checkAddProductToMeny(articleid, category, cannotBeEmpty) {
+    var msg;
+    var passed = true;
+    console.log(articleid);
+
+    for (var i = 0; i < cannotBeEmpty.length; i++ ) {
+        if (cannotBeEmpty[i] == "") {
+            passed = false;
+            msg =  "Some inputs cant be empty, ";
+        }
+    }
+
+    if (findProductByID(articleid) != null){
+        msg += "Id already exist,";
+        passed = false;
+    }
+
+    if (category != dict.mainCategory[0] && category != dict.mainCategory[1] 
+        &&  category != dict.mainCategory[2] && category != dict.mainCategory[3]) {
+        msg += "Main category does not exist,"
+        passed = false;
+    }
+
+    if (!passed) alert(msg);
+
+    return passed;
+}
+
+function addProductToMeny() {
+    
+    var articleid = document.getElementById("product-manager-articleid-i").value;
+    var name = document.getElementById("product-manager-name-i").value;
+    var name2 = document.getElementById("product-manager-name2-i").value;
+    var pricewithvat = document.getElementById("product-manager-pricewithvat-i").value;
+    var volume = document.getElementById("product-manager-volume-i").value;
+    var productgroup = document.getElementById("product-manager-productgroup-i").value;
+    var serves = document.getElementById("product-manager-serves-i").value;
+    var origin = document.getElementById("product-manager-origin-i").value;
+    var origincountry = document.getElementById("product-manager-origincountry-i").value;
+    var producent = document.getElementById("product-manager-producent-i").value;
+    var alcoholcontent = document.getElementById("product-manager-alcohol-i").value;
+    var img = "./img/" + document.getElementById("product-manager-img-i").value;
+    var category = document.getElementById("product-manager-main-category-i").value;
+
+    var cannotBeEmpty = [articleid, name, pricewithvat, volume, productgroup, serves, origincountry, producent, alcoholcontent];
+    var passed = checkAddProductToMeny(articleid, category, cannotBeEmpty);
+    if (!passed) return;
+
+    product = {
+        "articleid": articleid,
+        "name": name,
+        "name2": name2,
+        "pricewithvat": pricewithvat,
+        "volume": volume,
+        "productgroup": productgroup,
+        "serves": serves,
+        "origin": origin,
+        "origincountry": origincountry,
+        "producent": producent,
+        "alcoholcontent": alcoholcontent,
+        "img": img,
+    }
+    drunk[category].push(product);
+    document.getElementById("product-info-hide").checked = false;
+    updateViewProducts(category);
+}
 
 function findProductByID(id) {
     for (var i = 0; i < dict.mainCategory.length; i++) {
@@ -22,7 +116,7 @@ function findProductByID(id) {
                 return drunk[dict.mainCategory[i]][j];
             }
         }
-    }
+    } 
     return null;
 }
 
@@ -35,17 +129,19 @@ function getAllergens(id) {
     return null;
 }
 
-function showProductInfo(id) {
+function showProductInfo(id, category) {
     var product = findProductByID(id);
     document.getElementById("product-info-hide").checked = true;
     document.getElementById("product-info-img").setAttribute("src", product.img);
     document.getElementById("product-info-name").innerText = product.name;
     document.getElementById("product-info-name2").innerText = product.name2;
-    document.getElementById("product-info-desc").innerText = product.serves + " " + product.volume + " ml";
+    document.getElementById("product-info-desc").innerText = product.serves + " " + product.volume;
     document.getElementById("product-info-price").innerText = product.pricewithvat + " kr";
     document.getElementById("product-info-alcohol").innerText = product.alcoholcontent;
+    document.getElementById("product-info-category").innerText = category;
     document.getElementById("product-info-type").innerText = product.productgroup;
     document.getElementById("product-info-producent").innerText = product.producent;
+    document.getElementById("product-info-articleid").innerText = product.articleid;
 
     var origin = document.getElementById("product-info-origin");
     origin.innerText = product.origincountry;
@@ -59,13 +155,8 @@ function showProductInfo(id) {
     } else {
         document.getElementById("product-info-allergens").innerText = allergens;
     }
-    
 }
 
-
-function updateProductInfoView() {
-
-}
 
 //Create all products in the database and print them out
 function createAllProducts() {
@@ -79,7 +170,7 @@ function createProductsByCategory(category) {
     var bevType = drunk[category];
     var productWindow = document.getElementById("product-window");
     for (var i = 0; i < bevType.length; i++) {
-        productWindow.appendChild(createProductContainer(bevType[i].name, bevType[i].pricewithvat, bevType[i].img, bevType[i].articleid));
+        productWindow.appendChild(createProductContainer(bevType[i].name, bevType[i].pricewithvat, bevType[i].img, bevType[i].articleid, category));
     }
 }
 
@@ -97,7 +188,7 @@ function createProductsByFilter(filterId, category) {
             for (var j = 0; j < bevType.length; j++) {
                 //Print only out the products that has the same productgroup
                 if (bevType[j].productgroup == productgroup) {
-                    productWindow.appendChild(createProductContainer(bevType[j].name, bevType[j].pricewithvat, bevType[j].img, bevType[j].articleid));
+                    productWindow.appendChild(createProductContainer(bevType[j].name, bevType[j].pricewithvat, bevType[j].img, bevType[j].articleid, category));
                 }
             }
         }
@@ -107,17 +198,20 @@ function createProductsByFilter(filterId, category) {
     if (noFilter) {
         createProductsByCategory(category);
     }
+    updateViewClasses();
 }
 
-function updateViewMain(category) {
+function updateViewProducts(category) {
+    updateViewMain();
     document.getElementById("filter-window").textContent = "";
     createFilter(category);
     document.getElementById("product-window").textContent = "";
     createProductsByCategory(category);
+    updateViewClasses();
 }
 
 
-function createProductContainer(name, price, imgSrc, id) {
+function createProductContainer(name, price, imgSrc, id, category) {
     /*
     <div class="product-container-top">
         <div class="product-container-top-top">
@@ -145,7 +239,7 @@ function createProductContainer(name, price, imgSrc, id) {
 
     var productContainerTop = document.createElement("div");
     productContainerTop.className = "product-container-top";
-    productContainerTop.addEventListener("click", showProductInfo.bind(null, id));
+    productContainerTop.addEventListener("click", showProductInfo.bind(null, id, category));
     productContainerTop.appendChild(productContainerTopTop);
     productContainerTop.appendChild(productContainerTopBottom);
 
@@ -164,7 +258,6 @@ function createProductContainer(name, price, imgSrc, id) {
 
     var productBuy = document.createElement("button");
     productBuy.className = "product-buy";
-    productBuy.appendChild(document.createTextNode("Lägg i kundvagnen"));
 
     var productPrice = document.createElement("span");
     productPrice.className = "product-price-font";
@@ -240,6 +333,7 @@ function createMainCategory() {
         //Namn på kategorin
         var name = document.createElement("span");
         name.appendChild(document.createTextNode(dict.mainCategory[i]));
+        name.id = dict.mainCategory[i];
         //Bild på kategorin
         var img = document.createElement("img");
         img.src = "./img/" + dict.mainCategory[i] + ".svg";
@@ -251,16 +345,8 @@ function createMainCategory() {
         a.appendChild(img);
         a.appendChild(name);
         //måste använda bind för att få med argumentet i funktionen
-        a.addEventListener("click", updateViewMain.bind(null, dict.mainCategory[i]));
+        a.addEventListener("click", updateViewProducts.bind(null, dict.mainCategory[i]));
         id.appendChild(a);
     }
-}
-
-//Måste ha med någon view control fattar inte hur vi ska göra
-//det dock
-function update_view(id, result) {
-    document.getElementById(id).innerHTML(result);
-    view.innerHTML = "";
-    view.innerHTML = result;
 }
 
