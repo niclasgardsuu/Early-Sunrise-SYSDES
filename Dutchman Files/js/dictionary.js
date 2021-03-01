@@ -137,7 +137,7 @@ dict = {
         "product-manager": "Product manager",
         "product-stock-view": "Stock",
         "product-manager-refill": "Refill product",
-        "product-manager-remove-product": "Ta bort produkt",
+        "product-manager-remove-product": "Remove product",
         "product-manager-add": "Add product",
         "product-manager-articleid":"Article id",
         "product-manager-name":"Name",
