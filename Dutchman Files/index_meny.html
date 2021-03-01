@@ -14,14 +14,14 @@
     <script>
 
         $(document).ready(function(){
-            updateViewMain()
+            createProductView()
             createMainCategory();
             createAllProducts();
-            updateView();
+            updateViewMain();
             var sel = document.getElementById("select-language");
             sel.addEventListener("change",changeLang.bind(null,sel));
-            document.getElementById("login").addEventListener("click", createLogin);
-            document.getElementById("product-manager-add-product").addEventListener("click", addProductToMeny);
+            document.getElementById("login").addEventListener("click", createLoginView);
+            document.getElementById("manager").addEventListener("click", createManagerView);
             document.getElementById("product-manager-remove-product").addEventListener("click", removeProductFromMeny);
         });
 
@@ -79,38 +79,7 @@
                     </dl>
                     <button id="product-manager-refill" class="product-manager-button"></button>
                     <button id="product-manager-remove-product" class="product-manager-button"></button>
-                    <h3 id="product-manager-add"></h3>
-                    <dl class="product-info-spec">
-                        <dt id="product-manager-articleid"></dt>
-                        <dd><input id="product-manager-articleid-i" placeholder="1337" type="number" max="100000" min="0"></dd>
-                        <dt id="product-manager-name"></dt>
-                        <dd><input id="product-manager-name-i" placeholder="Olvi" type="text"></dd>
-                        <dt id="product-manager-name2"></dt>
-                        <dd><input id="product-manager-name2-i" placeholder="Tupplapukki" type="text"></dd>
-                        <dt id="product-manager-pricewithvat"></dt>
-                        <dd><input id="product-manager-pricewithvat-i" placeholder="5:90" type="number" max="100000" min="0"></dd>
-                        <dt id="product-manager-volume"></dt>
-                        <dd><input id="product-manager-volume-i" placeholder="330 ml" type="number" max="10000" min="0"></dd>
-                        <dt id="product-manager-productgroup"></dt>
-                        <dd><input id="product-manager-productgroup-i" placeholder="Djup lager" type="text"></dd>
-                        <dt id="product-manager-serves"></dt>
-                        <dd><input id="product-manager-serves-i" placeholder="Burk" type="text"></dd>
-                        <dt id="product-manager-origin"></dt>
-                        <dd><input id="product-manager-origin-i" placeholder="Helsinki" type="text"></dd>
-                        <dt id="product-manager-origincountry"></dt>
-                        <dd><input id="product-manager-origincountry-i" placeholder="Finland" type="text"></dd>
-                        <dt id="product-manager-producent"></dt>
-                        <dd><input id="product-manager-producent-i" placeholder="Olvi plc" type="text"></dd>
-                        <dt id="product-manager-alcohol"></dt>
-                        <dd><input id="product-manager-alcohol-i" placeholder="8.5%" type="text"></dd>
-                        <dt id="product-manager-img"></dt>
-                        <dd><input id="product-manager-img-i" placeholder="olvi.jpeg" type="text"></dd>
-                        <dt id="product-manager-main-category"></dt>
-                        <dd><input id="product-manager-main-category-i" placeholder="beer" type="text"></dd>
-                    </dl>
-                    <button id="product-manager-add-product" class="product-manager-button"></button>
                 </div>
-
             </div>
         </div>
     </div>
@@ -122,7 +91,8 @@
             <option value="en">English</option>
         </select>
         <img id="flag-pic" height="40px" width="40px">
-        <span id="login"></span>
+        <span class="cursor" id="login"></span>
+        <span class="cursor" id="manager"></span>
     </div>
 
     <!--The menu of the website-->

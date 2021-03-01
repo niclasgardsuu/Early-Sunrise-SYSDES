@@ -23,9 +23,27 @@ dict = {
         "username", 
         "password",
     ],
-    "ids" : 
+    "manager-ids": [
+        "product-manager-add",
+        "product-manager-articleid",
+        "product-manager-name",
+        "product-manager-name2",
+        "product-manager-pricewithvat",
+        "product-manager-volume",
+        "product-manager-productgroup",
+        "product-manager-serves",
+        "product-manager-origin",
+        "product-manager-origincountry",
+        "product-manager-producent",
+        "product-manager-alcohol",
+        "product-manager-img",
+        "product-manager-main-category",
+        "product-manager-add-product",
+    ],
+    "main-ids" : 
     [
         "login",
+        "manager",
         "beer",
         "spirits",
         "wine",
@@ -42,21 +60,6 @@ dict = {
         "product-manager-refill",
         "product-manager",
         "product-manager-remove-product",
-        "product-manager-add",
-        "product-manager-articleid",
-        "product-manager-name",
-        "product-manager-name2",
-        "product-manager-pricewithvat",
-        "product-manager-volume",
-        "product-manager-productgroup",
-        "product-manager-serves",
-        "product-manager-origin",
-        "product-manager-origincountry",
-        "product-manager-producent",
-        "product-manager-alcohol",
-        "product-manager-img",
-        "product-manager-main-category",
-        "product-manager-add-product",
         "footnote-copyright-message"
     ],       
     "pics" : [["flag-pic","flag-alt"]],              // keys for pictures
@@ -71,6 +74,7 @@ dict = {
     //
     "sv" : {
         "login": "Logga in",
+        "manager": "Chef",
         "username-l": "Användarnamn",
         "password-l": "Lösenord",
         "username": "Ange användarnamn",
@@ -116,6 +120,7 @@ dict = {
     },
     "en": {
         "login": "Login",
+        "manager": "Manager",
         "username-l": "Username",
         "password-l": "Password",
         "username": "Enter username",
@@ -178,7 +183,6 @@ function getString(key) {
 function changeLang(sel) {
     language = sel.options[sel.selectedIndex].value;
     updateView();
-    updateViewLogin();
 }
 
 // ==========================================================================
