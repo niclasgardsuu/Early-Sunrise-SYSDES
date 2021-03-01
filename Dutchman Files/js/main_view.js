@@ -16,8 +16,8 @@ function updateViewPics() {
         id.alt = getString(alt);
     }; }
 
-function updateViewIds() {
-    ids = dict["ids"];
+function updateViewIds(id) {
+    ids = dict[id];
     for (idx in ids) {
         id = ids[idx];
         document.getElementById(id).innerText = getString(id);
@@ -34,9 +34,21 @@ function updateViewClasses() {
     }
 }
 
+function updateViewAttribute(attribute, ids) {
+    var ids = dict[ids];
+    for (i in ids) {
+        var id = ids[i];
+        document.getElementById(id).setAttribute(attribute, getString(id));
+    }
+}
+
 function updateView() {
-    updateViewIds();
+    updateViewIds("ids");
     updateViewPics()
     updateViewClasses();
 }
 
+function updateViewLogin() {
+    updateViewIds("login-ids");
+    updateViewAttribute("placeholder", "login-placeholder");
+}

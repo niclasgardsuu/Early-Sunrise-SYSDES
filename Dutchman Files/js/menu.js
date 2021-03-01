@@ -1,3 +1,32 @@
+function createLogin() {
+    var main = document.getElementById("main-window");
+    main.innerHTML = "";
+
+    main.insertAdjacentHTML('beforeend', 
+        '<form>'+
+            '<label for="username" id="username-l"></label>'+
+            '<input id="username" type = "text" placeholder = "Enter Username" name = "username" required>'+
+            '<label for="password" id="password-l"></label>'+
+            '<input id="password" type = "text" placeholder = "Enter password" name = "password" required>'+
+            '<button id="logIn" onclick="doInit("logIn")"></button>'+
+        '</form>'
+        );
+    updateViewLogin();
+}
+
+function updateViewMain() {
+    var main = document.getElementById("main-window");
+    main.innerHTML = "";
+
+    main.insertAdjacentHTML('beforeend',
+        '<div id="filter-window"></div>'+
+
+        '<div id="product-window"></div>'+
+
+        '<div id="shopping-cart-window" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)"></div>'
+    );
+    
+}
 
 function removeProductFromMeny() {
     var id = document.getElementById("product-info-articleid").textContent;
@@ -6,7 +35,7 @@ function removeProductFromMeny() {
         if (drunk[category][i].articleid == id) {
             drunk[category].splice(i,1);
             document.getElementById("product-info-hide").checked = false;
-            updateViewMain(category);
+            updateViewProducts(category);
             return;
         }
     } 
@@ -77,7 +106,7 @@ function addProductToMeny() {
     }
     drunk[category].push(product);
     document.getElementById("product-info-hide").checked = false;
-    updateViewMain(category);
+    updateViewProducts(category);
 }
 
 function findProductByID(id) {
@@ -172,7 +201,8 @@ function createProductsByFilter(filterId, category) {
     updateViewClasses();
 }
 
-function updateViewMain(category) {
+function updateViewProducts(category) {
+    updateViewMain();
     document.getElementById("filter-window").textContent = "";
     createFilter(category);
     document.getElementById("product-window").textContent = "";
@@ -315,7 +345,7 @@ function createMainCategory() {
         a.appendChild(img);
         a.appendChild(name);
         //måste använda bind för att få med argumentet i funktionen
-        a.addEventListener("click", updateViewMain.bind(null, dict.mainCategory[i]));
+        a.addEventListener("click", updateViewProducts.bind(null, dict.mainCategory[i]));
         id.appendChild(a);
     }
 }

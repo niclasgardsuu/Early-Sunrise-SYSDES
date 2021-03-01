@@ -19,12 +19,16 @@ body {
     margin: 0;
 }
 
+#login {
+    cursor: pointer;
+}
+
 #menu-top-window {
     height: 50px;
     background-color: var(--menu-top-window);
     display: flex;
     align-items: center;
-    justify-content: left;
+    justify-content: left; 
 }
 
 #menu-window {
@@ -72,11 +76,11 @@ body {
 }
 
 
-.main-window {
+#main-window {
     display: flex;
-    flex-wrap: wrap;
     width: 100%;
     background-color: var(--main-window-background);
+    min-height: 650px;
 }
 
 #filter-window {

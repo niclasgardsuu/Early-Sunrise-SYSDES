@@ -14,11 +14,13 @@
     <script>
 
         $(document).ready(function(){
+            updateViewMain()
             createMainCategory();
             createAllProducts();
             updateView();
             var sel = document.getElementById("select-language");
             sel.addEventListener("change",changeLang.bind(null,sel));
+            document.getElementById("login").addEventListener("click", createLogin);
             document.getElementById("product-manager-add-product").addEventListener("click", addProductToMeny);
             document.getElementById("product-manager-remove-product").addEventListener("click", removeProductFromMeny);
         });
@@ -120,9 +122,7 @@
             <option value="en">English</option>
         </select>
         <img id="flag-pic" height="40px" width="40px">
-        <div id="login">
-            login
-        </div>
+        <span id="login"></span>
     </div>
 
     <!--The menu of the website-->
@@ -137,19 +137,7 @@
 
 
     <!--The main content of the website-->
-    <div class="main-window">
-        <!--The filter view-->
-        <div id="filter-window">
-        </div>
-
-
-        <!--The product view-->
-        <div id="product-window">
-        </div>
-
-        <div id="shopping-cart-window" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)">
-        </div>
-
+    <div id="main-window">
     </div>
 
 

@@ -12,39 +12,53 @@ var language = "sv"
 //
 dict = {
     "mainCategory": ["beer","spirits","wine","non-alcoholic"],
-    "ids" : ["beer",
-            "spirits",
-            "wine",
-            "non-alcoholic",
-            "product-spec",
-            "product-spec-alcohol",
-            "product-spec-category",
-            "product-spec-type",
-            "product-spec-producent",
-            "product-spec-origin",
-            "product-spec-allergens",
-            "product-spec-articleid",
-            "product-stock-view", 
-            "product-manager-refill",
-            "product-manager",
-            "product-manager-remove-product",
-            "product-manager-add",
-            "product-manager-articleid",
-            "product-manager-name",
-            "product-manager-name2",
-            "product-manager-pricewithvat",
-            "product-manager-volume",
-            "product-manager-productgroup",
-            "product-manager-serves",
-            "product-manager-origin",
-            "product-manager-origincountry",
-            "product-manager-producent",
-            "product-manager-alcohol",
-            "product-manager-img",
-            "product-manager-main-category",
-            "product-manager-add-product",
-            "footnote-copyright-message"
-            ],       // keys for strings
+    "login-ids": 
+    [
+        "username-l", 
+        "password-l",
+        "logIn"
+    ],
+    "login-placeholder": 
+    [
+        "username", 
+        "password",
+    ],
+    "ids" : 
+    [
+        "login",
+        "beer",
+        "spirits",
+        "wine",
+        "non-alcoholic",
+        "product-spec",
+        "product-spec-alcohol",
+        "product-spec-category",
+        "product-spec-type",
+        "product-spec-producent",
+        "product-spec-origin",
+        "product-spec-allergens",
+        "product-spec-articleid",
+        "product-stock-view", 
+        "product-manager-refill",
+        "product-manager",
+        "product-manager-remove-product",
+        "product-manager-add",
+        "product-manager-articleid",
+        "product-manager-name",
+        "product-manager-name2",
+        "product-manager-pricewithvat",
+        "product-manager-volume",
+        "product-manager-productgroup",
+        "product-manager-serves",
+        "product-manager-origin",
+        "product-manager-origincountry",
+        "product-manager-producent",
+        "product-manager-alcohol",
+        "product-manager-img",
+        "product-manager-main-category",
+        "product-manager-add-product",
+        "footnote-copyright-message"
+    ],       
     "pics" : [["flag-pic","flag-alt"]],              // keys for pictures
     "classes": ["product-buy"],
                                     // pictures have to be
@@ -56,6 +70,12 @@ dict = {
     // request.
     //
     "sv" : {
+        "login": "Logga in",
+        "username-l": "Användarnamn",
+        "password-l": "Lösenord",
+        "username": "Ange användarnamn",
+        "password": "Ange lösenord",
+        "logIn": "Logga in",
         "beer":"Öl",
         "spirits":"Sprit",
         "wine":"Vin",
@@ -95,6 +115,12 @@ dict = {
         "flag-alt" : "Sverige flagga"
     },
     "en": {
+        "login": "Login",
+        "username-l": "Username",
+        "password-l": "Password",
+        "username": "Enter username",
+        "password": "Enter password",
+        "logIn": "Login",
         "beer": "Beer",
         "spirits": "Spirits",
         "wine": "Wine",
@@ -152,6 +178,7 @@ function getString(key) {
 function changeLang(sel) {
     language = sel.options[sel.selectedIndex].value;
     updateView();
+    updateViewLogin();
 }
 
 // ==========================================================================
