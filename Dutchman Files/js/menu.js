@@ -34,8 +34,8 @@ function createManagerView() {
                     '<dd><input id="product-manager-main-category-i" placeholder="beer" type="text"></dd>'+
                 '</dl>'+
             '<button id="product-manager-add-product" class="product-manager-button"></button>'+
+            '<span id="product-manager-success-msg"></span>'+
         '</div>';
-
 
     main.insertAdjacentHTML('beforeend', addProduct);
 
@@ -88,24 +88,24 @@ function removeProductFromMeny() {
 }
 
 function checkAddProductToMeny(articleid, category, cannotBeEmpty) {
-    var msg;
+    var msg = "";
     var passed = true;
 
     for (var i = 0; i < cannotBeEmpty.length; i++ ) {
         if (cannotBeEmpty[i] == "") {
             passed = false;
-            msg =  "Some inputs cant be empty, ";
+            msg = dict[language]["product-manager-check-input"];
         }
     }
 
     if (findProductByID(articleid) != null){
-        msg += "Id already exist,";
+        msg += dict[language]["product-manager-check-id"];
         passed = false;
     }
 
     if (category != dict.mainCategory[0] && category != dict.mainCategory[1] 
         &&  category != dict.mainCategory[2] && category != dict.mainCategory[3]) {
-        msg += "Main category does not exist,"
+        msg += dict[language]["product-manager-check-category"];
         passed = false;
     }
 
@@ -149,6 +149,8 @@ function addProductToMeny() {
         "img": img,
     }
     drunk[category].push(product);
+    $("#product-manager-success-msg").text(name + dict[language]["product-manager-success-msg"]).fadeIn();     
+    setTimeout(function() { $("#product-manager-success-msg").fadeOut(); }, 3000);
 }
 
 function findProductByID(id) {

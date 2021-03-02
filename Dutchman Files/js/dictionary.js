@@ -116,7 +116,12 @@ dict = {
         "hello" : "Välkommen till denna lilla demonstration",
         "bye" : "Tack för besöket! Välkommen åter",
         "flag-pic" : "./img/sweden.svg",
-        "flag-alt" : "Sverige flagga"
+        "flag-alt" : "Sverige flagga",
+        "product-manager-success-msg": " blev tillagd",
+        "product-manager-check-input": "Några inputs kan inte vara tomma, ",
+        "product-manager-check-id": "Id finns redan, ",
+        "product-manager-check-category": "Huvudkategori finns inte, "
+
     },
     "en": {
         "login": "Login",
@@ -162,7 +167,11 @@ dict = {
         "hello": "Welcome to this small demonstration",
         "bye": "Nice meeting you! Welcome back!",
         "flag-pic" : "./img/australia.svg",
-        "flag-alt" : "Australien flag"
+        "flag-alt" : "Australien flag",
+        "product-manager-success-msg": " got added",
+        "product-manager-check-input": "Some inputs cant be empty, ",
+        "product-manager-check-id": "Id already exist, ",
+        "product-manager-check-category": "Main category does not exist, "
     },
 }
 

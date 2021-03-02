@@ -375,6 +375,12 @@ body {
     width: 50%;
 }
 
+#product-manager-success-msg {
+    margin-left: 3px;
+    padding: 3px;
+    font-size: 125%;
+}
+
 .footnote-window {
     display: flex;
     flex-wrap: wrap;
