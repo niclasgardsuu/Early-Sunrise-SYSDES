@@ -23,9 +23,27 @@ dict = {
         "username", 
         "password",
     ],
-    "ids" : 
+    "manager-ids": [
+        "product-manager-add",
+        "product-manager-articleid",
+        "product-manager-name",
+        "product-manager-name2",
+        "product-manager-pricewithvat",
+        "product-manager-volume",
+        "product-manager-productgroup",
+        "product-manager-serves",
+        "product-manager-origin",
+        "product-manager-origincountry",
+        "product-manager-producent",
+        "product-manager-alcohol",
+        "product-manager-img",
+        "product-manager-main-category",
+        "product-manager-add-product",
+    ],
+    "main-ids" : 
     [
         "login",
+        "manager",
         "beer",
         "spirits",
         "wine",
@@ -42,21 +60,6 @@ dict = {
         "product-manager-refill",
         "product-manager",
         "product-manager-remove-product",
-        "product-manager-add",
-        "product-manager-articleid",
-        "product-manager-name",
-        "product-manager-name2",
-        "product-manager-pricewithvat",
-        "product-manager-volume",
-        "product-manager-productgroup",
-        "product-manager-serves",
-        "product-manager-origin",
-        "product-manager-origincountry",
-        "product-manager-producent",
-        "product-manager-alcohol",
-        "product-manager-img",
-        "product-manager-main-category",
-        "product-manager-add-product",
         "footnote-copyright-message"
     ],       
     "pics" : [["flag-pic","flag-alt"]],              // keys for pictures
@@ -71,6 +74,7 @@ dict = {
     //
     "sv" : {
         "login": "Logga in",
+        "manager": "Chef",
         "username-l": "Användarnamn",
         "password-l": "Lösenord",
         "username": "Ange användarnamn",
@@ -112,10 +116,16 @@ dict = {
         "hello" : "Välkommen till denna lilla demonstration",
         "bye" : "Tack för besöket! Välkommen åter",
         "flag-pic" : "./img/sweden.svg",
-        "flag-alt" : "Sverige flagga"
+        "flag-alt" : "Sverige flagga",
+        "product-manager-success-msg": " blev tillagd",
+        "product-manager-check-input": "Några inputs kan inte vara tomma, ",
+        "product-manager-check-id": "Id finns redan, ",
+        "product-manager-check-category": "Huvudkategori finns inte, "
+
     },
     "en": {
         "login": "Login",
+        "manager": "Manager",
         "username-l": "Username",
         "password-l": "Password",
         "username": "Enter username",
@@ -157,7 +167,11 @@ dict = {
         "hello": "Welcome to this small demonstration",
         "bye": "Nice meeting you! Welcome back!",
         "flag-pic" : "./img/australia.svg",
-        "flag-alt" : "Australien flag"
+        "flag-alt" : "Australien flag",
+        "product-manager-success-msg": " got added",
+        "product-manager-check-input": "Some inputs cant be empty, ",
+        "product-manager-check-id": "Id already exist, ",
+        "product-manager-check-category": "Main category does not exist, "
     },
 }
 
@@ -178,7 +192,6 @@ function getString(key) {
 function changeLang(sel) {
     language = sel.options[sel.selectedIndex].value;
     updateView();
-    updateViewLogin();
 }
 
 // ==========================================================================

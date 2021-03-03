@@ -12,15 +12,18 @@ function updateViewPics() {
         pic = pics[idx][0];
         alt = pics[idx][1];
         id = document.getElementById(pic);
-        id.src = getString(pic);
-        id.alt = getString(alt);
+        if(id != null) {
+            id.src = getString(pic);
+            id.alt = getString(alt);
+        }
     }; }
 
 function updateViewIds(id) {
     ids = dict[id];
     for (idx in ids) {
-        id = ids[idx];
-        document.getElementById(id).innerText = getString(id);
+        key = ids[idx];
+        id = document.getElementById(key);
+        if(id != null) id.innerText = getString(key);
     };
 }
 
@@ -28,8 +31,10 @@ function updateViewClasses() {
     var name = dict["classes"];
     for (i in name) {
         var temp = document.getElementsByClassName(name[i]);
-        for (j in temp) {
-            temp[j].innerText = getString(name[i]);
+        if (temp != null) {
+            for (j in temp) {
+                temp[j].innerText = getString(name[i]);
+            }
         }
     }
 }
@@ -37,13 +42,14 @@ function updateViewClasses() {
 function updateViewAttribute(attribute, ids) {
     var ids = dict[ids];
     for (i in ids) {
-        var id = ids[i];
-        document.getElementById(id).setAttribute(attribute, getString(id));
+        var key = ids[i];
+        var id = document.getElementById(key);
+        if (id != null) id.setAttribute(attribute, getString(key));
     }
 }
 
-function updateView() {
-    updateViewIds("ids");
+function updateViewMain() {
+    updateViewIds("main-ids");
     updateViewPics()
     updateViewClasses();
 }
@@ -51,4 +57,14 @@ function updateView() {
 function updateViewLogin() {
     updateViewIds("login-ids");
     updateViewAttribute("placeholder", "login-placeholder");
+}
+
+function updateViewManager() {
+    updateViewIds("manager-ids");
+}
+
+function updateView() {
+    updateViewMain();
+    updateViewLogin();
+    updateViewManager();
 }

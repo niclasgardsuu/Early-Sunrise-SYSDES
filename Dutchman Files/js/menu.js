@@ -1,4 +1,49 @@
-function createLogin() {
+function createManagerView() {
+    var main = document.getElementById("main-window");
+    main.innerHTML = "";
+
+    const addProduct = 
+        '<div class="manager-left-container">'+
+            '<h3 id="product-manager-add"></h3>'+
+                '<dl class="product-info-spec">'+
+                    '<dt id="product-manager-articleid"></dt>'+
+                    '<dd><input id="product-manager-articleid-i" placeholder="1337" type="number" max="100000" min="0"></dd>'+
+                    '<dt id="product-manager-name"></dt>'+
+                    '<dd><input id="product-manager-name-i" placeholder="Olvi" type="text"></dd>'+
+                    '<dt id="product-manager-name2"></dt>'+
+                    '<dd><input id="product-manager-name2-i" placeholder="Tupplapukki" type="text"></dd>'+
+                    '<dt id="product-manager-pricewithvat"></dt>'+
+                    '<dd><input id="product-manager-pricewithvat-i" placeholder="5:90" type="number" max="100000" min="0"></dd>'+
+                    '<dt id="product-manager-volume"></dt>'+
+                    '<dd><input id="product-manager-volume-i" placeholder="330 ml" type="number" max="10000" min="0"></dd>'+
+                    '<dt id="product-manager-productgroup"></dt>'+
+                    '<dd><input id="product-manager-productgroup-i" placeholder="Djup lager" type="text"></dd>'+
+                    '<dt id="product-manager-serves"></dt>'+
+                    '<dd><input id="product-manager-serves-i" placeholder="Burk" type="text"></dd>'+
+                    '<dt id="product-manager-origin"></dt>'+
+                    '<dd><input id="product-manager-origin-i" placeholder="Helsinki" type="text"></dd>'+
+                    '<dt id="product-manager-origincountry"></dt>'+
+                    '<dd><input id="product-manager-origincountry-i" placeholder="Finland" type="text"></dd>'+
+                    '<dt id="product-manager-producent"></dt>'+
+                    '<dd><input id="product-manager-producent-i" placeholder="Olvi plc" type="text"></dd>'+
+                    '<dt id="product-manager-alcohol"></dt>'+
+                    '<dd><input id="product-manager-alcohol-i" placeholder="8.5%" type="text"></dd>'+
+                    '<dt id="product-manager-img"></dt>'+
+                    '<dd><input id="product-manager-img-i" placeholder="olvi.jpeg" type="text"></dd>'+
+                    '<dt id="product-manager-main-category"></dt>'+
+                    '<dd><input id="product-manager-main-category-i" placeholder="beer" type="text"></dd>'+
+                '</dl>'+
+            '<button id="product-manager-add-product" class="product-manager-button"></button>'+
+            '<span id="product-manager-success-msg"></span>'+
+        '</div>';
+
+    main.insertAdjacentHTML('beforeend', addProduct);
+
+    document.getElementById("product-manager-add-product").addEventListener("click", addProductToMeny);
+    updateViewManager();
+}
+
+function createLoginView() {
     var main = document.getElementById("main-window");
     main.innerHTML = "";
 
@@ -14,16 +59,16 @@ function createLogin() {
     updateViewLogin();
 }
 
-function updateViewMain() {
+function createProductView() {
     var main = document.getElementById("main-window");
     main.innerHTML = "";
 
     main.insertAdjacentHTML('beforeend',
-        '<div id="filter-window"></div>'+
-
-        '<div id="product-window"></div>'+
-
-        '<div id="shopping-cart-window" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)"></div>'
+        '<div class="product-flex">'+
+            '<div id="filter-window"></div>'+
+            '<div id="product-window"></div>'+
+            '<div id="shopping-cart-window" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)"></div>'+
+        '</div>'
     );
     
 }
@@ -43,25 +88,24 @@ function removeProductFromMeny() {
 }
 
 function checkAddProductToMeny(articleid, category, cannotBeEmpty) {
-    var msg;
+    var msg = "";
     var passed = true;
-    console.log(articleid);
 
     for (var i = 0; i < cannotBeEmpty.length; i++ ) {
         if (cannotBeEmpty[i] == "") {
             passed = false;
-            msg =  "Some inputs cant be empty, ";
+            msg = dict[language]["product-manager-check-input"];
         }
     }
 
     if (findProductByID(articleid) != null){
-        msg += "Id already exist,";
+        msg += dict[language]["product-manager-check-id"];
         passed = false;
     }
 
     if (category != dict.mainCategory[0] && category != dict.mainCategory[1] 
         &&  category != dict.mainCategory[2] && category != dict.mainCategory[3]) {
-        msg += "Main category does not exist,"
+        msg += dict[language]["product-manager-check-category"];
         passed = false;
     }
 
@@ -105,8 +149,8 @@ function addProductToMeny() {
         "img": img,
     }
     drunk[category].push(product);
-    document.getElementById("product-info-hide").checked = false;
-    updateViewProducts(category);
+    $("#product-manager-success-msg").text(name + dict[language]["product-manager-success-msg"]).fadeIn();     
+    setTimeout(function() { $("#product-manager-success-msg").fadeOut(); }, 3000);
 }
 
 function findProductByID(id) {
@@ -202,7 +246,7 @@ function createProductsByFilter(filterId, category) {
 }
 
 function updateViewProducts(category) {
-    updateViewMain();
+    createProductView();
     document.getElementById("filter-window").textContent = "";
     createFilter(category);
     document.getElementById("product-window").textContent = "";

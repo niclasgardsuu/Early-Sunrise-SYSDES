@@ -19,8 +19,9 @@ body {
     margin: 0;
 }
 
-#login {
+.cursor {
     cursor: pointer;
+    user-select: none;
 }
 
 #menu-top-window {
@@ -77,7 +78,6 @@ body {
 
 
 #main-window {
-    display: flex;
     width: 100%;
     background-color: var(--main-window-background);
     min-height: 650px;
@@ -86,6 +86,11 @@ body {
 #filter-window {
     width: 20%;
     background-color: var(--filter-window-background);
+}
+
+.product-flex {
+    display: flex;
+    min-height: 650px;
 }
 
 .filter-container {
@@ -364,6 +369,16 @@ body {
 #product-manager-remove-product {
     margin-top: 10px;
     color:red !important;
+}
+
+.manager-left-container {
+    width: 50%;
+}
+
+#product-manager-success-msg {
+    margin-left: 3px;
+    padding: 3px;
+    font-size: 125%;
 }
 
 .footnote-window {
