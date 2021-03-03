@@ -15,7 +15,6 @@
     <script>
 
         $(document).ready(function(){
-            console.log(dict[language]["added-product"]);
             createProductView()
             createMainCategory();
             createAllProducts();
@@ -24,7 +23,7 @@
             sel.addEventListener("change",changeLang.bind(null,sel));
             document.getElementById("login").addEventListener("click", createLoginView);
             document.getElementById("manager").addEventListener("click", createManagerView);
-            document.getElementById("product-manager-remove-product").addEventListener("click", removeProductFromMeny);
+            document.getElementById("bartender").addEventListener("click", createBartenderView);
         });
 
     </script>
@@ -42,48 +41,7 @@
             </div>
         </label>
 
-        <div class="product-info-container">
-            <div class="product-info-container-left">
-                <img id="product-info-img" src="" class="product-img" alt="">
-            </div>
-            <div class="product-info-container-right">
-                <h1 id="product-info-name" class="product-info-name product-name-font"></h1>
-                <h2 id="product-info-name2" class="product-info-name2 product-name-font"></h2>
-                <span id="product-info-desc" class="product-info-desc"></span>
-                <h1 id="product-info-price" class="product-info-price product-price-font"></h1>
-                <button class="product-buy"></button>
-                <div class="product-info-container-spec">
-                    <h3 id="product-spec">Specifikationer</h3>
-                    <dl class="product-info-spec">
-                        <dt id="product-spec-alcohol"></dt>
-                        <dd id="product-info-alcohol"></dd>
-                        <dt id="product-spec-category"></dt>
-                        <dd id="product-info-category"></dd>
-                        <dt id="product-spec-type"></dt>
-                        <dd id="product-info-type"></dd>
-                        <dt id="product-spec-producent"></dt>
-                        <dd id="product-info-producent"></dd>
-                        <dt id="product-spec-origin"></dt>
-                        <dd id="product-info-origin"></dd>
-                        <dt id="product-spec-allergens"></dt>
-                        <dd id="product-info-allergens"></dd>
-                        <dt id="product-spec-articleid"></dt>
-                        <dd id="product-info-articleid"></dd>
-                    </dl>
-                </div>
-                <div id="product-manager-view" class="product-info-container-spec">
-                    <h2 id="product-manager"></h2>
-                    <dl class="product-info-spec">
-                        <dt id="product-stock-view"></dt>
-                        <dd>
-                            <input id="product-manager-stock" type="number" max="10000" min="0">
-                        </dd>
-                    </dl>
-                    <button id="product-manager-refill" class="product-manager-button"></button>
-                    <button id="product-manager-remove-product" class="product-manager-button"></button>
-                </div>
-            </div>
-        </div>
+        <div id="product-info-container-id" class="product-info-container"></div>
     </div>
 
     <!--The top menu of the website-->
@@ -95,6 +53,7 @@
         <img id="flag-pic" height="40px" width="40px">
         <span class="cursor" id="login"></span>
         <span class="cursor" id="manager"></span>
+        <span class="cursor" id="bartender"></span>
     </div>
 
     <!--The menu of the website-->

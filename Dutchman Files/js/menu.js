@@ -1,3 +1,13 @@
+function createBartenderView() {
+    var main = document.getElementById("main-window");
+    main.innerHTML = "";
+
+    const collapsible = 
+        `
+
+        `
+}
+
 function createManagerView() {
     var main = document.getElementById("main-window");
     main.innerHTML = "";
@@ -33,7 +43,7 @@ function createManagerView() {
                     '<dt id="product-manager-main-category"></dt>'+
                     '<dd><input id="product-manager-main-category-i" placeholder="beer" type="text"></dd>'+
                 '</dl>'+
-            '<button id="product-manager-add-product" class="product-manager-button"></button>'+
+            '<button id="product-manager-add-product"></button>'+
             '<span id="product-manager-success-msg"></span>'+
         '</div>';
 
@@ -156,22 +166,23 @@ function addProductToMeny() {
 function updateShoppingCartView() {
     //genererar htmlkod för shoppingcart, och rensar det som stod innan
     var shoppingCartWindow = document.getElementById("shopping-cart-window");
+    shoppingCartWindow.textContent = "";
+    //var price = totalOrderPrice();
     shoppingCartWindow.insertAdjacentHTML('afterbegin',
     `
-    <div id="shopping-cart-options>
-        <button id="checkout-order">
+    <div id="shopping-cart-options">
+        <button id=\"checkout-order\">
             KÖP
-        </div>
-        <button id="cancel-order">
+        </button>
+        <button id=\"cancel-order\">
             KÖP INTE
-        </div>
-        <span id="total-price">
+        </button>
+        <span id=\"total-price\">
             1337:-
         </span>
     </div>
     `)
-    shoppingCartWindow.textContent = "";
-    for(var i = 1; i < cart.length; i++) {
+    for(var i = 0; i < cart.length; i++) {
         var productDiv = createShoppingCartDiv(cart[i].id,cart[i].count);
         shoppingCartWindow.appendChild(productDiv);
         var removeButton = document.getElementById(cart[i].id+"-cart-button");  
@@ -201,6 +212,7 @@ function createShoppingCartDiv(id,count) {
 }
 
 function addToShoppingCart(product_id) {
+    console.log(product_id);
     for(product in cart) {
         if(cart[product].id == product_id) {
             cart[product].count = cart[product].count + 1;
@@ -265,29 +277,65 @@ function getAllergens(id) {
 function showProductInfo(id, category) {
     var product = findProductByID(id);
     document.getElementById("product-info-hide").checked = true;
-    document.getElementById("product-info-img").setAttribute("src", product.img);
-    document.getElementById("product-info-name").innerText = product.name;
-    document.getElementById("product-info-name2").innerText = product.name2;
-    document.getElementById("product-info-desc").innerText = product.serves + " " + product.volume;
-    document.getElementById("product-info-price").innerText = product.pricewithvat + " kr";
-    document.getElementById("product-info-alcohol").innerText = product.alcoholcontent;
-    document.getElementById("product-info-category").innerText = category;
-    document.getElementById("product-info-type").innerText = product.productgroup;
-    document.getElementById("product-info-producent").innerText = product.producent;
-    document.getElementById("product-info-articleid").innerText = product.articleid;
 
-    var origin = document.getElementById("product-info-origin");
-    origin.innerText = product.origincountry;
-    //add extra origin information if it exist
-    if (product.origin !== "") origin.innerText += ", " + product.origin;
+    var productContainer = document.getElementById("product-info-container-id");
+
+    if (product.origin != "") { 
+        product.origincountry += ", " + product.origin;
+    }
 
     var allergens = getAllergens(id);
     //check if there are no allergens for the product
     if (allergens == null) {
-        document.getElementById("product-info-allergens").innerText = "inga";
-    } else {
-        document.getElementById("product-info-allergens").innerText = allergens;
-    }
+        allergens = "inga";
+    } 
+
+    productContainer.innerHTML = "";    
+    productContainer.insertAdjacentHTML("beforeend", 
+    `<div class="product-info-container-left">
+                <img id="product-info-img" src="${product.img}" class="product-img" alt="">
+            </div>
+            <div class="product-info-container-right">
+                <h1 id="product-info-name" class="product-info-name product-name-font">${product.name}</h1>
+                <h2 id="product-info-name2" class="product-info-name2 product-name-font">${product.name2}</h2>
+                <span id="product-info-desc" class="product-info-desc">${product.serves + " " + product.volume}</span>
+                <h1 id="product-info-price" class="product-info-price product-price-font">${product.pricewithvat}</h1>
+                <button id="product-buy-id" class="product-buy"></button>
+                <div class="product-info-container-spec">
+                    <h3 id="product-spec">Specifikationer</h3>
+                    <dl class="product-info-spec">
+                        <dt id="product-spec-alcohol"></dt>
+                        <dd id="product-info-alcohol">${product.alcoholcontent}</dd>
+                        <dt id="product-spec-category"></dt>
+                        <dd id="product-info-category">${category}</dd>
+                        <dt id="product-spec-type"></dt>
+                        <dd id="product-info-type">${product.productgroup}</dd>
+                        <dt id="product-spec-producent"></dt>
+                        <dd id="product-info-producent">${product.producent}</dd>
+                        <dt id="product-spec-origin"></dt>
+                        <dd id="product-info-origin">${product.origincountry}</dd>
+                        <dt id="product-spec-allergens"></dt>
+                        <dd id="product-info-allergens">${allergens}</dd>
+                        <dt id="product-spec-articleid"></dt>
+                        <dd id="product-info-articleid">${product.articleid}</dd>
+                    </dl>
+                </div>
+                <div id="product-manager-view" class="product-info-container-spec">
+                    <h2 id="product-manager"></h2>
+                    <dl class="product-info-spec">
+                        <dt id="product-stock-view"></dt>
+                        <dd>
+                            <input id="product-manager-stock" type="number" max="10000" min="0">
+                        </dd>
+                    </dl>
+                    <button id="product-manager-refill"></button>
+                    <button id="product-manager-remove-product"></button>
+                </div>
+            </div>
+        `);
+    document.getElementById("product-buy-id").addEventListener("click",addToShoppingCart.bind(null,id));
+    document.getElementById("product-manager-remove-product").addEventListener("click", removeProductFromMeny);
+    updateView();
 }
 
 
@@ -391,6 +439,7 @@ function createProductContainer(name, price, imgSrc, id, category) {
 
     var productBuy = document.createElement("button");
     productBuy.className = "product-buy";
+    productBuy.addEventListener("click", addToShoppingCart.bind(null,id));
 
     var productPrice = document.createElement("span");
     productPrice.className = "product-price-font";

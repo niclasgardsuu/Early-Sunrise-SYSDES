@@ -29,7 +29,7 @@ var drunk = {
             "alcoholcontent": "5.3%",
             "img": ""
         }, {
-            "articleid": "1206",
+            "articleid": "1206",    
             "name": "Staropramen",
             "name2": "",
             "pricewithvat": "16.40",

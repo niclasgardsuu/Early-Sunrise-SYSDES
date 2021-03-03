@@ -63,8 +63,14 @@ function updateViewManager() {
     updateViewIds("manager-ids");
 }
 
+function updateViewBartender() {
+    updateViewIds("bartender-ids");
+}
+
 function updateView() {
+    console.log("Hej");
     updateViewMain();
     updateViewLogin();
     updateViewManager();
+    updateViewBartender();
 }
