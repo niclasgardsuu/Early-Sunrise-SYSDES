@@ -64,7 +64,8 @@ dict = {
         "product-manager",
         "product-manager-remove-product",
         "footnote-copyright-message",
-        "checkout-order"
+        "checkout-order",
+        "cancel-order"
     ],       
     "pics" : [["flag-pic","flag-alt"]],              // keys for pictures
     "classes": ["product-buy"],
@@ -126,7 +127,8 @@ dict = {
         "product-manager-check-id": "Id finns redan, ",
         "product-manager-check-category": "Huvudkategori finns inte, ",
         "bartender": "bartender",
-        "checkout-order": "Köp"
+        "checkout-order": "KÖP",
+        "cancel-order": "KÖP INTE"
     },
     "en": {
         "login": "Login",
@@ -178,7 +180,8 @@ dict = {
         "product-manager-check-id": "Id already exist, ",
         "product-manager-check-category": "Main category does not exist, ",
         "bartender": "bartender",
-        "checkout-order": "Buy"
+        "checkout-order": "BUY",
+        "cancel-order": "DONT BUY"
     },
 }
 

@@ -68,7 +68,6 @@ function updateViewBartender() {
 }
 
 function updateView() {
-    console.log("Hej");
     updateViewMain();
     updateViewLogin();
     updateViewManager();

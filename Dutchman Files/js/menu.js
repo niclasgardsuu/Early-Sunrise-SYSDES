@@ -13,39 +13,39 @@ function createManagerView() {
     main.innerHTML = "";
 
     const addProduct = 
-        '<div class="manager-left-container">'+
-            '<h3 id="product-manager-add"></h3>'+
-                '<dl class="product-info-spec">'+
-                    '<dt id="product-manager-articleid"></dt>'+
-                    '<dd><input id="product-manager-articleid-i" placeholder="1337" type="number" max="100000" min="0"></dd>'+
-                    '<dt id="product-manager-name"></dt>'+
-                    '<dd><input id="product-manager-name-i" placeholder="Olvi" type="text"></dd>'+
-                    '<dt id="product-manager-name2"></dt>'+
-                    '<dd><input id="product-manager-name2-i" placeholder="Tupplapukki" type="text"></dd>'+
-                    '<dt id="product-manager-pricewithvat"></dt>'+
-                    '<dd><input id="product-manager-pricewithvat-i" placeholder="5:90" type="number" max="100000" min="0"></dd>'+
-                    '<dt id="product-manager-volume"></dt>'+
-                    '<dd><input id="product-manager-volume-i" placeholder="330 ml" type="number" max="10000" min="0"></dd>'+
-                    '<dt id="product-manager-productgroup"></dt>'+
-                    '<dd><input id="product-manager-productgroup-i" placeholder="Djup lager" type="text"></dd>'+
-                    '<dt id="product-manager-serves"></dt>'+
-                    '<dd><input id="product-manager-serves-i" placeholder="Burk" type="text"></dd>'+
-                    '<dt id="product-manager-origin"></dt>'+
-                    '<dd><input id="product-manager-origin-i" placeholder="Helsinki" type="text"></dd>'+
-                    '<dt id="product-manager-origincountry"></dt>'+
-                    '<dd><input id="product-manager-origincountry-i" placeholder="Finland" type="text"></dd>'+
-                    '<dt id="product-manager-producent"></dt>'+
-                    '<dd><input id="product-manager-producent-i" placeholder="Olvi plc" type="text"></dd>'+
-                    '<dt id="product-manager-alcohol"></dt>'+
-                    '<dd><input id="product-manager-alcohol-i" placeholder="8.5%" type="text"></dd>'+
-                    '<dt id="product-manager-img"></dt>'+
-                    '<dd><input id="product-manager-img-i" placeholder="olvi.jpeg" type="text"></dd>'+
-                    '<dt id="product-manager-main-category"></dt>'+
-                    '<dd><input id="product-manager-main-category-i" placeholder="beer" type="text"></dd>'+
-                '</dl>'+
-            '<button id="product-manager-add-product"></button>'+
-            '<span id="product-manager-success-msg"></span>'+
-        '</div>';
+        `<div class="manager-left-container">
+            <h3 id="product-manager-add"></h3>
+                <dl class="product-info-spec">
+                    <dt id="product-manager-articleid"></dt>
+                    <dd><input id="product-manager-articleid-i" placeholder="1337" type="number" max="100000" min="0"></dd>
+                    <dt id="product-manager-name"></dt>
+                    <dd><input id="product-manager-name-i" placeholder="Olvi" type="text"></dd>
+                    <dt id="product-manager-name2"></dt>
+                    <dd><input id="product-manager-name2-i" placeholder="Tupplapukki" type="text"></dd>
+                    <dt id="product-manager-pricewithvat"></dt>
+                    <dd><input id="product-manager-pricewithvat-i" placeholder="5:90" type="number" max="100000" min="0"></dd>
+                    <dt id="product-manager-volume"></dt>
+                    <dd><input id="product-manager-volume-i" placeholder="330 ml" type="number" max="10000" min="0"></dd>
+                    <dt id="product-manager-productgroup"></dt>
+                    <dd><input id="product-manager-productgroup-i" placeholder="Djup lager" type="text"></dd>
+                    <dt id="product-manager-serves"></dt>
+                    <dd><input id="product-manager-serves-i" placeholder="Burk" type="text"></dd>
+                    <dt id="product-manager-origin"></dt>
+                    <dd><input id="product-manager-origin-i" pceholder="Helsinki" type="text"></dd>
+                    <dt id="product-manager-origincountry"></dt>
+                    <dd><input id="product-manager-origincountry-i" placeholder="Finland" type="text"></dd>
+                    <dt id="product-manager-producent"></dt>
+                    <dd><input id="product-manager-producent-i" placeholder="Olvi plc" type="text"></dd>
+                    <dt id="product-manager-alcohol"></dt>
+                    <dd><input id="product-manager-alcohol-i" placeholder="8.5%" type="text"></dd>
+                    <dt id="product-manager-img"></dt>
+                    <dd><input id="product-manager-img-i" placeholder="olvi.jpeg" type="text"></dd>
+                    <dt id="product-manager-main-category"></dt>
+                    <dd><input id="product-manager-main-category-i" placeholder="beer" type="text"></dd>
+                </dl>
+            <button id="product-manager-add-product"></button>
+            <span id="product-manager-success-msg"></span>
+        </div>`;
 
     main.insertAdjacentHTML('beforeend', addProduct);
 
@@ -58,13 +58,13 @@ function createLoginView() {
     main.innerHTML = "";
 
     main.insertAdjacentHTML('beforeend', 
-        '<form>'+
-            '<label for="username" id="username-l"></label>'+
-            '<input id="username" type = "text" placeholder = "Enter Username" name = "username" required>'+
-            '<label for="password" id="password-l"></label>'+
-            '<input id="password" type = "text" placeholder = "Enter password" name = "password" required>'+
-            '<button id="logIn" onclick="doInit("logIn")"></button>'+
-        '</form>'
+        `<form>
+            <label for="username" id="username-l"></label>
+            <input id="username" type = "text" placeholder = "Enter Username" name = "username" required>
+            <label for="password" id="password-l"></label>
+            <input id="password" type = "text" placeholder = "Enter password" name = "password" required>
+            <button id="logIn" onclick="doInit("logIn")"></button>
+        </form>`
         );
     updateViewLogin();
 }
@@ -74,11 +74,11 @@ function createProductView() {
     main.innerHTML = "";
 
     main.insertAdjacentHTML('beforeend',
-        '<div class="product-flex">'+
-            '<div id="filter-window"></div>'+
-            '<div id="product-window"></div>'+
-            '<div id="shopping-cart-window" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)"></div>'+
-        '</div>'
+        `<div class="product-flex">
+            <div id="filter-window"></div>
+            <div id="product-window"></div>
+            <div id="shopping-cart-window" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)"></div>
+        </div>`
     );
     
 }
@@ -104,18 +104,18 @@ function checkAddProductToMeny(articleid, category, cannotBeEmpty) {
     for (var i = 0; i < cannotBeEmpty.length; i++ ) {
         if (cannotBeEmpty[i] == "") {
             passed = false;
-            msg = dict[language]["product-manager-check-input"];
+            msg = getString("product-manager-check-input");
         }
     }
 
     if (findProductByID(articleid) != null){
-        msg += dict[language]["product-manager-check-id"];
+        msg += getString("product-manager-check-id");
         passed = false;
     }
 
     if (category != dict.mainCategory[0] && category != dict.mainCategory[1] 
         &&  category != dict.mainCategory[2] && category != dict.mainCategory[3]) {
-        msg += dict[language]["product-manager-check-category"];
+        msg += getString("product-manager-check-category");
         passed = false;
     }
 
@@ -159,7 +159,7 @@ function addProductToMeny() {
         "img": img,
     }
     drunk[category].push(product);
-    $("#product-manager-success-msg").text(name + dict[language]["product-manager-success-msg"]).fadeIn();     
+    $("#product-manager-success-msg").text(name + getString("product-manager-success-msg")).fadeIn();     
     setTimeout(function() { $("#product-manager-success-msg").fadeOut(); }, 3000);
 }
 
@@ -171,13 +171,13 @@ function updateShoppingCartView() {
     shoppingCartWindow.insertAdjacentHTML('afterbegin',
     `
     <div id="shopping-cart-options">
-        <button id=\"checkout-order\">
-            KÖP
+        <button id="checkout-order">
+            ${getString("checkout-order")}
         </button>
-        <button id=\"cancel-order\">
-            KÖP INTE
+        <button id="cancel-order">
+            ${getString("cancel-order")}
         </button>
-        <span id=\"total-price\">
+        <span id="total-price">
             1337:-
         </span>
     </div>
@@ -212,7 +212,6 @@ function createShoppingCartDiv(id,count) {
 }
 
 function addToShoppingCart(product_id) {
-    console.log(product_id);
     for(product in cart) {
         if(cart[product].id == product_id) {
             cart[product].count = cart[product].count + 1;
@@ -238,7 +237,6 @@ function removeFromShoppingCart(product_id) {
         }
     }
     const index = indexOfCartProduct(cart,product_id);
-    console.log(index);
     if (index > -1) {
       cart.splice(index, 1);
     }
@@ -248,7 +246,6 @@ function removeFromShoppingCart(product_id) {
 
 function indexOfCartProduct(cart,id) {
     for(var i = 0; i < cart.length; i++) {
-        console.log("Cart ID: "+cart[i].id + " Product ID: "+id);
         if(cart[i].id == id) return i;
     }
     return -1;
@@ -299,7 +296,7 @@ function showProductInfo(id, category) {
                 <h1 id="product-info-name" class="product-info-name product-name-font">${product.name}</h1>
                 <h2 id="product-info-name2" class="product-info-name2 product-name-font">${product.name2}</h2>
                 <span id="product-info-desc" class="product-info-desc">${product.serves + " " + product.volume}</span>
-                <h1 id="product-info-price" class="product-info-price product-price-font">${product.pricewithvat}</h1>
+                <h1 id="product-info-price" class="product-info-price product-price-font">${product.pricewithvat + " kr"}</h1>
                 <button id="product-buy-id" class="product-buy"></button>
                 <div class="product-info-container-spec">
                     <h3 id="product-spec">Specifikationer</h3>
@@ -372,6 +369,7 @@ function createProductsByFilter(filterId, category) {
                     productWindow.appendChild(createProductContainer(bevType[j].name, bevType[j].pricewithvat, bevType[j].img, bevType[j].articleid, category));
                 }
             }
+
         }
     }
 
@@ -382,6 +380,7 @@ function createProductsByFilter(filterId, category) {
     updateViewClasses();
 }
 
+
 function updateViewProducts(category) {
     createProductView();
     document.getElementById("filter-window").textContent = "";
@@ -389,6 +388,7 @@ function updateViewProducts(category) {
     document.getElementById("product-window").textContent = "";
     createProductsByCategory(category);
     updateViewClasses();
+    updateShoppingCartView();
 }
 
 
@@ -404,19 +404,21 @@ function createProductContainer(name, price, imgSrc, id, category) {
     </div>
     */
 
-    var productName = document.createElement("span");
-    var productContainerTopTop = document.createElement("div");
-    productName.className = "product-name product-name-font";
-    productContainerTopTop.className = "product-container-top-top";
-    productName.appendChild(document.createTextNode(name));
-    productContainerTopTop.appendChild(productName);
-
     var img = document.createElement("img");
     img.setAttribute("src",imgSrc);
     img.className = "product-img";
+
+    var productContainerTopTop = document.createElement("div");
+    productContainerTopTop.className = "product-container-top-top";
+    productContainerTopTop.appendChild(img);
+
+    var productName = document.createElement("span");
+    productName.className = "product-name product-name-font";
+    productName.appendChild(document.createTextNode(name));
+
     var productContainerTopBottom = document.createElement("div");
     productContainerTopBottom.className = "product-container-top-bottom";
-    productContainerTopBottom.appendChild(img);
+    productContainerTopBottom.appendChild(productName);
 
     var productContainerTop = document.createElement("div");
     productContainerTop.className = "product-container-top";
@@ -442,20 +444,20 @@ function createProductContainer(name, price, imgSrc, id, category) {
     productBuy.addEventListener("click", addToShoppingCart.bind(null,id));
 
     var productPrice = document.createElement("span");
-    productPrice.className = "product-price-font";
+    productPrice.className = "product-price-font product-price";
     productPrice.appendChild(document.createTextNode(price+" kr"));
     
-    var productContainerBottomLeft = document.createElement("div");
-    var productContainerBottomRight = document.createElement("div");
-    productContainerBottomLeft.className = "product-container-bottom-left";
-    productContainerBottomLeft.appendChild(productPrice);
-    productContainerBottomRight.className = "product-container-bottom-right";
-    productContainerBottomRight.appendChild(productBuy);
+    var productContainerBottomTop= document.createElement("div");
+    var productContainerBottomBottom= document.createElement("div");
+    productContainerBottomTop.className = "product-container-bottom-top";
+    productContainerBottomTop.appendChild(productPrice);
+    productContainerBottomBottom.className = "product-container-bottom-bottom";
+    productContainerBottomBottom.appendChild(productBuy);
 
     var productContainerBottom = document.createElement("div");
     productContainerBottom.className = "product-container-bottom";
-    productContainerBottom.appendChild(productContainerBottomLeft);
-    productContainerBottom.appendChild(productContainerBottomRight);
+    productContainerBottom.appendChild(productContainerBottomTop);
+    productContainerBottom.appendChild(productContainerBottomBottom);
 
     var productContainer = document.createElement("div");
     productContainer.className = "product-container";
