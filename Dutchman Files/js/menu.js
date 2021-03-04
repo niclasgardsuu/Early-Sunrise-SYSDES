@@ -277,8 +277,9 @@ function showProductInfo(id, category) {
 
     var productContainer = document.getElementById("product-info-container-id");
 
+    var origin = product.origincountry;
     if (product.origin != "") { 
-        product.origincountry += ", " + product.origin;
+        origin += ", " + product.origin;
     }
 
     var allergens = getAllergens(id);
@@ -310,7 +311,7 @@ function showProductInfo(id, category) {
                         <dt id="product-spec-producent"></dt>
                         <dd id="product-info-producent">${product.producent}</dd>
                         <dt id="product-spec-origin"></dt>
-                        <dd id="product-info-origin">${product.origincountry}</dd>
+                        <dd id="product-info-origin">${origin}</dd>
                         <dt id="product-spec-allergens"></dt>
                         <dd id="product-info-allergens">${allergens}</dd>
                         <dt id="product-spec-articleid"></dt>
