@@ -14,8 +14,8 @@ dict = {
     "mainCategory": ["beer","spirits","wine","non-alcoholic"],
     "login-ids": 
     [
-        "username-l", 
-        "password-l",
+        "userN", 
+        "passW",
         "logIn"
     ],
     "login-placeholder": 
@@ -75,8 +75,8 @@ dict = {
     "sv" : {
         "login": "Logga in",
         "manager": "Chef",
-        "username-l": "Användarnamn",
-        "password-l": "Lösenord",
+        "userN": "Användarnamn",
+        "passW": "Lösenord",
         "username": "Ange användarnamn",
         "password": "Ange lösenord",
         "logIn": "Logga in",
@@ -126,8 +126,8 @@ dict = {
     "en": {
         "login": "Login",
         "manager": "Manager",
-        "username-l": "Username",
-        "password-l": "Password",
+        "userN": "Username",
+        "passW": "Password",
         "username": "Enter username",
         "password": "Enter password",
         "logIn": "Login",

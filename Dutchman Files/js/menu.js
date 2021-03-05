@@ -48,13 +48,13 @@ function createLoginView() {
     main.innerHTML = "";
 
     main.insertAdjacentHTML('beforeend', 
-        '<form>'+
-            '<label for="username" id="username-l"></label>'+
-            '<input id="username" type = "text" placeholder = "Enter Username" name = "username" required>'+
-            '<label for="password" id="password-l"></label>'+
-            '<input id="password" type = "text" placeholder = "Enter password" name = "password" required>'+
-            '<button id="logIn" onclick="doInit("logIn")"></button>'+
-        '</form>'
+            `<span id="logInForm">
+                <label id="userN" for="userN"><b></b></label>
+                <input id="username" type="text" placeholder="Enter Username" name="uname" required>
+                <label id="passW" for="psw"><b></b></label>
+                <input id="password" type="password" placeholder="Enter Password" name="psw" required>
+                <button id="logIn" onclick="doInit('logIn')"></button>
+            </span>`
         );
     updateViewLogin();
 }

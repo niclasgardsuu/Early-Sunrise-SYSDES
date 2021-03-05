@@ -11,6 +11,14 @@
     <script type="text/javascript" src="./js/main_view.js"></script>
     <script type="text/javascript" src="./js/menu.js"></script>
     <script type="text/javascript" src="./js/dragAndDrop.js"></script>
+
+    <script type="text/javascript" src="./js/User/UserDB.js"></script>
+    <script type="text/javascript" src="./js/User/User_control.js"></script>
+    <script type="text/javascript" src="./js/User/User_creation.js"></script>
+    <script type="text/javascript" src="./js/User/User_dictionary.js"></script>
+    <script type="text/javascript" src="./js/User/User_loader.js"></script>
+    <script type="text/javascript" src="./js/User/User_model.js"></script>
+
     <script>
 
         $(document).ready(function(){
@@ -24,6 +32,8 @@
             document.getElementById("login").addEventListener("click", createLoginView);
             document.getElementById("manager").addEventListener("click", createManagerView);
             document.getElementById("product-manager-remove-product").addEventListener("click", removeProductFromMeny);
+            update_view();
+            $("#manager").hide(); // TODO: move this line to a better place ?
         });
 
     </script>
@@ -85,6 +95,11 @@
         </div>
     </div>
 
+
+
+
+
+
     <!--The top menu of the website-->
     <div id="menu-top-window">
         <select name="" id="select-language">
@@ -92,16 +107,22 @@
             <option value="en">English</option>
         </select>
         <img id="flag-pic" height="40px" width="40px">
+
         <span class="cursor" id="login"></span>
         <span class="cursor" id="manager"></span>
+        <span id="display"></span>
     </div>
 
+
+
+
+
+    
     <!--The menu of the website-->
     <div id="menu-window">
         <div id="main-category">
         </div>
         <div id="sub-category">
-
         </div>
     </div>
 
