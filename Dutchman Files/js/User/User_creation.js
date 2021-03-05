@@ -21,13 +21,13 @@ function createStaffLogIn() {
 function createVipLogIn() {
 
     return createDiv("vip","", 
-                createButton("balance", "balance") + 
                 createButton("sdrink", "sdrink") +
                 createButton("logOut", "logOut") +
                 createInput ("drinkId") +
                 createInput ("drinkAmount") +
                 createButton("vipOrder", "vipOrder") + 
                 createSpan  ("innerDisplay","","") +
+                createSpan  ("balanceDisplay","","") + 
                 createDiv   ("cart","","")
             );
 }

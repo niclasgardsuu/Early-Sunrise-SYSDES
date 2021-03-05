@@ -164,9 +164,8 @@ function completeOrder(orderId) {
     return false;  
 }
 
-function vipOrder(beerId, amount) {
+function vipOrder(drinkId, drinkAmount) {
 
-    
     username = modelData['username'];
 
     var totalAmount = 0;
@@ -187,12 +186,12 @@ function vipOrder(beerId, amount) {
                     if (OrderDB.all_orders[j].order_id == "") {
 
                         orderId = vipOrderId;
-                        OrderDB.all_orders[j].beer_id.push(beerId);
-                        OrderDB.all_orders[j].amount.push(amount);
-                        OrderDB.all_orders[j].position = modelData['tableNumber']; //TODO: Funktion för att ändra bord
+                        OrderDB.all_orders[j].drinkId.push(drinkId);
+                        OrderDB.all_orders[j].drinkAmount.push(drinkAmount);
+                        OrderDB.all_orders[j].table = modelData['tableNumber']; //TODO: Funktion för att ändra bord
                     }
                 }
-                totalAmount = calculateCost(beerId, amount);
+                totalAmount = calculateCost(drinkId, drinkAmount);
                 successfull = vipPay(totalAmount);
             }
         }

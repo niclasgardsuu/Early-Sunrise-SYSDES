@@ -14,9 +14,41 @@ dict = {
     "mainCategory": ["beer","spirits","wine","non-alcoholic"],
     "login-ids": 
     [
+        // Log In
+        'start_username',
+        'log_in_success_msg',
+        'log_in_unsuccess_msg',
         "userN", 
         "passW",
-        "logIn"
+        "logIn",
+        "log"
+    ],
+    "login-vip":
+    [
+        'balance',
+        'sdrink',
+        'logOut',
+        'drinkAmount',
+        'vipOrder',
+        'drinkId'
+    ],
+    "login-staff":
+    [     
+        // Staff
+        'adToAccUserN',
+        'addA',
+        'addToAcc',
+        'staffLogO',
+        'completeOrderId',
+        'completeOrder',
+    ],
+    "allOrders":
+    [
+        // All Customer
+        'stdOrder',
+        'stdDrinkId',
+        'stdDrinkAmount',
+        'addToCart'
     ],
     "login-placeholder": 
     [
@@ -124,13 +156,7 @@ dict = {
 
     },
     "en": {
-        "login": "Login",
-        "manager": "Manager",
-        "userN": "Username",
-        "passW": "Password",
-        "username": "Enter username",
-        "password": "Enter password",
-        "logIn": "Login",
+
         "beer": "Beer",
         "spirits": "Spirits",
         "wine": "Wine",
@@ -171,7 +197,52 @@ dict = {
         "product-manager-success-msg": " got added",
         "product-manager-check-input": "Some inputs cant be empty, ",
         "product-manager-check-id": "Id already exist, ",
-        "product-manager-check-category": "Main category does not exist, "
+        "product-manager-check-category": "Main category does not exist, ",
+        
+
+        "manager": "Manager",
+
+        // Log In
+        "login"                : "Login",
+        "username"             : "Enter username",
+        "password"             : "Enter password",
+
+        'logIn'                : "Log In",
+        'start_username'       : "None",
+        'log_in_success_msg'   : "Successful login",
+        'log_in_unsuccess_msg' : "Unsuccessful login",
+    
+        'userN'                : "Username:",
+        'passW'                : "Password:",
+        'log'                  : "Log In",
+    
+        // VIP
+        'balance'              : "Account Balance",
+        'sdrink'               : "Special Drink",
+        'logOut'               : "Log Out",
+        'drinkAmount'          : "Drink Amount",
+        'vipOrder'             : "Vip Order",
+        'drinkId'              : "Drink ID",
+        
+        // Staff
+        'adToAccUserN'         : "Username",
+        'addA'                 : "Add Amount",
+        'addToAcc'             : "Add to account",
+        'staffLogO'            : "Log Out",
+        'completeOrderId'      : "Order Id",
+        'completeOrder'        : "Complete Order",
+       
+        // All Customer
+        'stdOrder'             : "Order",
+        'stdDrinkId'           : "Drink ID",
+        'stdDrinkAmount'       : "Amount",
+        'addToCart'            : "Add to cart",
+
+        // Find products
+        "beer"                 : "beer",
+        "spirits"              : "spirits",
+        "wine"                 : "wine",
+        "non-alcoholic"        :"non-alcoholic"
     },
 }
 

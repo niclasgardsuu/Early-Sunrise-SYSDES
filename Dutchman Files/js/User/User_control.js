@@ -8,16 +8,16 @@
 function doInit(func) {
 
     if (func == 'logIn') {
-        
-        $("#login").hide();
-
+  
         username    = document.getElementById('username');
         password    = document.getElementById('password');
         credentials = logIn(username.value, password.value);
             
         if (credentials == 3) {
+            $("#login").hide();
             logInVip();
         } else if (credentials == 0) {
+            $("#login").hide();
             logInStaff();
         } else {
             logInUnsuccess();
@@ -30,13 +30,6 @@ function doInit(func) {
         reset();    // restore the view
     };
 
-    if (func == 'balance') {
-
-        balance = getAccountBalance();
-        $("#innerDisplay").text(balance + " SEK").fadeIn();                 // TODO: use dictionary for SEK
-        setTimeout(function() { $("#innerDisplay").fadeOut(); }, 3000);
-    };
-
     if (func == 'addToAcc') {
 
         userName    = document.getElementById('adToAccUsername');   
@@ -47,12 +40,16 @@ function doInit(func) {
     };
 
     if (func == 'vipOrder') {
-
+        alert("vip");
         drinkId     = document.getElementById('drinkId').value;   
         drinkAmount = document.getElementById('drinkAmount').value;
         if (vipOrder(drinkId, drinkAmount)) {
             var combination = getComLock();
             $("#innerDisplay").text("Your code for the fridge: " + combination).fadeIn();
+            balance = getAccountBalance();
+            //$("#innerDisplay").html(createSpan("balance","","") + createSpan("balanceNumber", "", " : " + balance));
+            $("#balanceNumber").text(" : " + balance); 
+            updateViewIds("login-vip");
         }
     };
 
@@ -87,7 +84,11 @@ function logInVip() {
 
     $("#logInForm").hide(); 
     $("#display").html(createVipLogIn());
-    update_view();
+    balance = getAccountBalance();
+    $("#balanceDisplay").html(createSpan("balance","","") + createSpan("balanceNumber", "", " : " + balance));
+
+    updateViewIds("login-vip");
+
 }
 
 function logInStaff() {
@@ -98,16 +99,18 @@ function logInStaff() {
 
     var showOrder = getOrders();
     $("#innerDisplay").text(showOrder); 
+    updateViewIds("login-staff");
 
-    update_view();
+    //update_view();
 }
 
 function logInUnsuccess() {
 
-    $("#display").html(createSpan("log_in_unsuccess_msg","",""));
-    $("#display").fadeIn();
-    update_view();
-    setTimeout(function() { $("#display").fadeOut(); }, 3000);
+    $("#message").html(createSpan("log_in_unsuccess_msg","",""));
+    $("#message").fadeIn();
+    updateViewIds("login-ids");
+    //update_view();
+    setTimeout(function() { $("#message").fadeOut(); }, 3000);
 }
 
 function reset() {
@@ -118,9 +121,10 @@ function reset() {
     $("#display").html("");
     $("#logInForm").fadeIn(); 
     $("#login").fadeIn();
-    update_view();
+    //update_view();
 }
 
+/*
 function update_view() {
 
     keys = Userdict['keys'];
@@ -135,7 +139,7 @@ function update_view() {
 //
 $(document).ready(function() {
     update_view();
-})  
+})  */
 // ===========================================================================
 // END OF FILE
 // ===========================================================================

@@ -54,6 +54,7 @@ function createLoginView() {
                 <label id="passW" for="psw"><b></b></label>
                 <input id="password" type="password" placeholder="Enter Password" name="psw" required>
                 <button id="logIn" onclick="doInit('logIn')"></button>
+                <span id="message"></span>
             </span>`
         );
     updateViewLogin();
