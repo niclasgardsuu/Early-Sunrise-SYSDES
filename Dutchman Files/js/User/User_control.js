@@ -9,8 +9,6 @@ function doInit(func) {
 
     if (func == 'logIn') {
         
-        $("#login").hide();
-
         username    = document.getElementById('username');
         password    = document.getElementById('password');
         credentials = logIn(username.value, password.value);
@@ -84,17 +82,17 @@ function doInit(func) {
 }
 
 function logInVip() {
-
-    $("#logInForm").hide(); 
-    $("#display").html(createVipLogIn());
+    document.getElementById("product-info-hide").checked = false;
+    $("#loginDisplay").html("");
+    $("#loginDisplay").html(createVipLogIn());
     update_view();
 }
 
 function logInStaff() {
 
-    $("#logInForm").hide(); 
-    $("#manager").show();
-    $("#display").html(createStaffLogIn()).show();
+    document.getElementById("product-info-hide").checked = false;
+    $("#loginDisplay").html("");
+    $("#loginDisplay").html(createStaffLogIn()).show();
 
     var showOrder = getOrders();
     $("#innerDisplay").text(showOrder); 
@@ -104,10 +102,8 @@ function logInStaff() {
 
 function logInUnsuccess() {
 
-    $("#display").html(createSpan("log_in_unsuccess_msg","",""));
-    $("#display").fadeIn();
+    alert("Login Failed");
     update_view();
-    setTimeout(function() { $("#display").fadeOut(); }, 3000);
 }
 
 function reset() {
@@ -117,7 +113,6 @@ function reset() {
     $("#staff").hide();
     $("#display").html("");
     $("#logInForm").fadeIn(); 
-    $("#login").fadeIn();
     update_view();
 }
 

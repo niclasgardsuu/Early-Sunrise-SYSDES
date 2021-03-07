@@ -20,7 +20,10 @@ function logIn(userName, passWord) {
 }
 
 function logOut() {
+    $("#loginDisplay").html("");
+    $("#loginDisplay").html(createSpanEvent("login", "cursor", "", "createLoginView()"));
     modelData['username'] = Userdict['start_username'];
+    updateViewMain();
 }
 
 function getAccountBalance() {

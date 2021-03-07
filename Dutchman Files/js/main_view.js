@@ -63,6 +63,7 @@ function updateViewManager() {
     updateViewIds("manager-ids");
 }
 
+
 function updateView() {
     updateViewMain();
     updateViewLogin();

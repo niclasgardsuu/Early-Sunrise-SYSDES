@@ -1,41 +1,42 @@
+
 function createManagerView() {
     var main = document.getElementById("main-window");
     main.innerHTML = "";
 
     const addProduct = 
-        '<div class="manager-left-container">'+
-            '<h3 id="product-manager-add"></h3>'+
-                '<dl class="product-info-spec">'+
-                    '<dt id="product-manager-articleid"></dt>'+
-                    '<dd><input id="product-manager-articleid-i" placeholder="1337" type="number" max="100000" min="0"></dd>'+
-                    '<dt id="product-manager-name"></dt>'+
-                    '<dd><input id="product-manager-name-i" placeholder="Olvi" type="text"></dd>'+
-                    '<dt id="product-manager-name2"></dt>'+
-                    '<dd><input id="product-manager-name2-i" placeholder="Tupplapukki" type="text"></dd>'+
-                    '<dt id="product-manager-pricewithvat"></dt>'+
-                    '<dd><input id="product-manager-pricewithvat-i" placeholder="5:90" type="number" max="100000" min="0"></dd>'+
-                    '<dt id="product-manager-volume"></dt>'+
-                    '<dd><input id="product-manager-volume-i" placeholder="330 ml" type="number" max="10000" min="0"></dd>'+
-                    '<dt id="product-manager-productgroup"></dt>'+
-                    '<dd><input id="product-manager-productgroup-i" placeholder="Djup lager" type="text"></dd>'+
-                    '<dt id="product-manager-serves"></dt>'+
-                    '<dd><input id="product-manager-serves-i" placeholder="Burk" type="text"></dd>'+
-                    '<dt id="product-manager-origin"></dt>'+
-                    '<dd><input id="product-manager-origin-i" placeholder="Helsinki" type="text"></dd>'+
-                    '<dt id="product-manager-origincountry"></dt>'+
-                    '<dd><input id="product-manager-origincountry-i" placeholder="Finland" type="text"></dd>'+
-                    '<dt id="product-manager-producent"></dt>'+
-                    '<dd><input id="product-manager-producent-i" placeholder="Olvi plc" type="text"></dd>'+
-                    '<dt id="product-manager-alcohol"></dt>'+
-                    '<dd><input id="product-manager-alcohol-i" placeholder="8.5%" type="text"></dd>'+
-                    '<dt id="product-manager-img"></dt>'+
-                    '<dd><input id="product-manager-img-i" placeholder="olvi.jpeg" type="text"></dd>'+
-                    '<dt id="product-manager-main-category"></dt>'+
-                    '<dd><input id="product-manager-main-category-i" placeholder="beer" type="text"></dd>'+
-                '</dl>'+
-            '<button id="product-manager-add-product" class="product-manager-button"></button>'+
-            '<span id="product-manager-success-msg"></span>'+
-        '</div>';
+        `<div class="manager-left-container">
+            <h3 id="product-manager-add"></h3>
+                <dl class="product-info-spec">
+                    <dt id="product-manager-articleid"></dt>
+                    <dd><input id="product-manager-articleid-i" placeholder="1337" type="number" max="100000" min="0"></dd>
+                    <dt id="product-manager-name"></dt>
+                    <dd><input id="product-manager-name-i" placeholder="Olvi" type="text"></dd>
+                    <dt id="product-manager-name2"></dt>
+                    <dd><input id="product-manager-name2-i" placeholder="Tupplapukki" type="text"></dd>
+                    <dt id="product-manager-pricewithvat"></dt>
+                    <dd><input id="product-manager-pricewithvat-i" placeholder="5:90" type="number" max="100000" min="0"></dd>
+                    <dt id="product-manager-volume"></dt>
+                    <dd><input id="product-manager-volume-i" placeholder="330 ml" type="number" max="10000" min="0"></dd>
+                    <dt id="product-manager-productgroup"></dt>
+                    <dd><input id="product-manager-productgroup-i" placeholder="Djup lager" type="text"></dd>
+                    <dt id="product-manager-serves"></dt>
+                    <dd><input id="product-manager-serves-i" placeholder="Burk" type="text"></dd>
+                    <dt id="product-manager-origin"></dt>
+                    <dd><input id="product-manager-origin-i" pceholder="Helsinki" type="text"></dd>
+                    <dt id="product-manager-origincountry"></dt>
+                    <dd><input id="product-manager-origincountry-i" placeholder="Finland" type="text"></dd>
+                    <dt id="product-manager-producent"></dt>
+                    <dd><input id="product-manager-producent-i" placeholder="Olvi plc" type="text"></dd>
+                    <dt id="product-manager-alcohol"></dt>
+                    <dd><input id="product-manager-alcohol-i" placeholder="8.5%" type="text"></dd>
+                    <dt id="product-manager-img"></dt>
+                    <dd><input id="product-manager-img-i" placeholder="olvi.jpeg" type="text"></dd>
+                    <dt id="product-manager-main-category"></dt>
+                    <dd><input id="product-manager-main-category-i" placeholder="beer" type="text"></dd>
+                </dl>
+            <button id="product-manager-add-product"></button>
+            <span id="product-manager-success-msg"></span>
+        </div>`;
 
     main.insertAdjacentHTML('beforeend', addProduct);
 
@@ -44,18 +45,34 @@ function createManagerView() {
 }
 
 function createLoginView() {
-    var main = document.getElementById("main-window");
-    main.innerHTML = "";
 
-    main.insertAdjacentHTML('beforeend', 
-            `<span id="logInForm">
-                <label id="userN" for="userN"><b></b></label>
-                <input id="username" type="text" placeholder="Enter Username" name="uname" required>
-                <label id="passW" for="psw"><b></b></label>
-                <input id="password" type="password" placeholder="Enter Password" name="psw" required>
-                <button id="logIn" onclick="doInit('logIn')"></button>
-            </span>`
-        );
+    var loginContainer = document.getElementById("product-info-container-id");
+
+    loginContainer.innerHTML = "";
+
+    const loginForm = 
+            `
+            <div class="login-container">
+                <div id="logInForm">
+                    <div class ="login-input-container">
+                        <div>
+                            <label id="userN" for="userN"><b></b></label>
+                        </div>
+                        <input id="username" class="login-input" type="text" placeholder="Enter Username" name="uname" required>
+                    </div>
+                    <div class ="login-input-container">
+                        <div>
+                            <label id="passW" for="psw"><b></b></label>
+                        </div>
+                        <input id="password" class="login-input" type="password" placeholder="Enter Password" name="psw" required>
+                    </div>
+                    <button class="login-button" id="logIn" onclick="doInit('logIn')"></button>
+                </div>
+            </div>`;
+
+
+    document.getElementById("product-info-hide").checked = true;
+    loginContainer.insertAdjacentHTML('beforeend', loginForm);
     updateViewLogin();
 }
 
@@ -64,11 +81,11 @@ function createProductView() {
     main.innerHTML = "";
 
     main.insertAdjacentHTML('beforeend',
-        '<div class="product-flex">'+
-            '<div id="filter-window"></div>'+
-            '<div id="product-window"></div>'+
-            '<div id="shopping-cart-window" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)"></div>'+
-        '</div>'
+        `<div class="product-flex">
+            <div id="filter-window"></div>
+            <div id="product-window"></div>
+            <div id="shopping-cart-window" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)"></div>
+        </div>`
     );
     
 }
@@ -94,18 +111,18 @@ function checkAddProductToMeny(articleid, category, cannotBeEmpty) {
     for (var i = 0; i < cannotBeEmpty.length; i++ ) {
         if (cannotBeEmpty[i] == "") {
             passed = false;
-            msg = dict[language]["product-manager-check-input"];
+            msg = getString("product-manager-check-input");
         }
     }
 
     if (findProductByID(articleid) != null){
-        msg += dict[language]["product-manager-check-id"];
+        msg += getString("product-manager-check-id");
         passed = false;
     }
 
     if (category != dict.mainCategory[0] && category != dict.mainCategory[1] 
         &&  category != dict.mainCategory[2] && category != dict.mainCategory[3]) {
-        msg += dict[language]["product-manager-check-category"];
+        msg += getString("product-manager-check-category");
         passed = false;
     }
 
@@ -149,8 +166,96 @@ function addProductToMeny() {
         "img": img,
     }
     drunk[category].push(product);
-    $("#product-manager-success-msg").text(name + dict[language]["product-manager-success-msg"]).fadeIn();     
+    $("#product-manager-success-msg").text(name + getString("product-manager-success-msg")).fadeIn();     
     setTimeout(function() { $("#product-manager-success-msg").fadeOut(); }, 3000);
+}
+
+function updateShoppingCartView() {
+    //genererar htmlkod för shoppingcart, och rensar det som stod innan
+    var shoppingCartWindow = document.getElementById("shopping-cart-window");
+    shoppingCartWindow.textContent = "";
+    //var price = totalOrderPrice();
+    shoppingCartWindow.insertAdjacentHTML('afterbegin',
+    `
+    <div id="shopping-cart-options">
+        <button id="checkout-order">
+            ${getString("checkout-order")}
+        </button>
+        <button id="cancel-order">
+            ${getString("cancel-order")}
+        </button>
+        <span id="total-price">
+            1337:-
+        </span>
+    </div>
+    `)
+    for(var i = 0; i < cart.length; i++) {
+        var productDiv = createShoppingCartDiv(cart[i].id,cart[i].count);
+        shoppingCartWindow.appendChild(productDiv);
+        var removeButton = document.getElementById(cart[i].id+"-cart-button");  
+        removeButton.addEventListener("click", removeFromShoppingCart.bind(null,cart[i].id));  
+    }
+}
+
+function createShoppingCartDiv(id,count) {
+    var div = document.createElement("div");
+    div.className = "shopping-cart-div";
+    div.id = id+"-cart";
+    var name = findProductByID(id).name;
+    div.insertAdjacentHTML('beforeend',
+    `
+    <div class="shopping-cart-div-left">
+        `+name+`
+    </div>
+    <div class="shopping-cart-div-center">
+        `+count+`
+    </div>
+    <div class="shopping-cart-div-right" id="`+id+`-cart-button">
+
+    </div>
+    `
+    );
+    return div;
+}
+
+function addToShoppingCart(product_id) {
+    for(product in cart) {
+        if(cart[product].id == product_id) {
+            cart[product].count = cart[product].count + 1;
+            updateShoppingCartView();
+            return;
+        }
+    }
+    var product = {
+        "id":product_id,
+        "count": 1
+    };
+    cart.push(product);
+    
+    updateShoppingCartView();
+}
+
+function removeFromShoppingCart(product_id) {
+    for(product in cart) {
+        if(cart[product].id == product_id && cart[product].count > 1) {
+            cart[product].count = cart[product].count - 1;
+            updateShoppingCartView();
+            return;
+        }
+    }
+    const index = indexOfCartProduct(cart,product_id);
+    if (index > -1) {
+      cart.splice(index, 1);
+    }
+    updateShoppingCartView();
+    
+} 
+
+function indexOfCartProduct(cart,id) {
+    for(var i = 0; i < cart.length; i++) {
+        if(cart[i].id == id) return i;
+    }
+    return -1;
 }
 
 function findProductByID(id) {
@@ -176,29 +281,66 @@ function getAllergens(id) {
 function showProductInfo(id, category) {
     var product = findProductByID(id);
     document.getElementById("product-info-hide").checked = true;
-    document.getElementById("product-info-img").setAttribute("src", product.img);
-    document.getElementById("product-info-name").innerText = product.name;
-    document.getElementById("product-info-name2").innerText = product.name2;
-    document.getElementById("product-info-desc").innerText = product.serves + " " + product.volume;
-    document.getElementById("product-info-price").innerText = product.pricewithvat + " kr";
-    document.getElementById("product-info-alcohol").innerText = product.alcoholcontent;
-    document.getElementById("product-info-category").innerText = category;
-    document.getElementById("product-info-type").innerText = product.productgroup;
-    document.getElementById("product-info-producent").innerText = product.producent;
-    document.getElementById("product-info-articleid").innerText = product.articleid;
 
-    var origin = document.getElementById("product-info-origin");
-    origin.innerText = product.origincountry;
-    //add extra origin information if it exist
-    if (product.origin !== "") origin.innerText += ", " + product.origin;
+    var productContainer = document.getElementById("product-info-container-id");
+
+    var origin = product.origincountry;
+    if (product.origin != "") { 
+        origin += ", " + product.origin;
+    }
 
     var allergens = getAllergens(id);
     //check if there are no allergens for the product
     if (allergens == null) {
-        document.getElementById("product-info-allergens").innerText = "inga";
-    } else {
-        document.getElementById("product-info-allergens").innerText = allergens;
-    }
+        allergens = "inga";
+    } 
+
+    productContainer.innerHTML = "";    
+    productContainer.insertAdjacentHTML("beforeend", 
+    `<div class="product-info-container-left">
+                <img id="product-info-img" src="${product.img}" class="product-img" alt="">
+            </div>
+            <div class="product-info-container-right">
+                <h1 id="product-info-name" class="product-info-name product-name-font">${product.name}</h1>
+                <h2 id="product-info-name2" class="product-info-name2 product-name-font">${product.name2}</h2>
+                <span id="product-info-desc" class="product-info-desc">${product.serves + " " + product.volume}</span>
+                <h1 id="product-info-price" class="product-info-price product-price-font">${product.pricewithvat + " kr"}</h1>
+                <button id="product-buy-id" class="product-buy"></button>
+                <div class="product-info-container-spec">
+                    <h3 id="product-spec">Specifikationer</h3>
+                    <dl class="product-info-spec">
+                        <dt id="product-spec-alcohol"></dt>
+                        <dd id="product-info-alcohol">${product.alcoholcontent}</dd>
+                        <dt id="product-spec-category"></dt>
+                        <dd id="product-info-category">${category}</dd>
+                        <dt id="product-spec-type"></dt>
+                        <dd id="product-info-type">${product.productgroup}</dd>
+                        <dt id="product-spec-producent"></dt>
+                        <dd id="product-info-producent">${product.producent}</dd>
+                        <dt id="product-spec-origin"></dt>
+                        <dd id="product-info-origin">${origin}</dd>
+                        <dt id="product-spec-allergens"></dt>
+                        <dd id="product-info-allergens">${allergens}</dd>
+                        <dt id="product-spec-articleid"></dt>
+                        <dd id="product-info-articleid">${product.articleid}</dd>
+                    </dl>
+                </div>
+                <div id="product-manager-view" class="product-info-container-spec">
+                    <h2 id="product-manager"></h2>
+                    <dl class="product-info-spec">
+                        <dt id="product-stock-view"></dt>
+                        <dd>
+                            <input id="product-manager-stock" type="number" max="10000" min="0">
+                        </dd>
+                    </dl>
+                    <button id="product-manager-refill"></button>
+                    <button id="product-manager-remove-product"></button>
+                </div>
+            </div>
+        `);
+    document.getElementById("product-buy-id").addEventListener("click",addToShoppingCart.bind(null,id));
+    document.getElementById("product-manager-remove-product").addEventListener("click", removeProductFromMeny);
+    updateView();
 }
 
 
@@ -235,6 +377,7 @@ function createProductsByFilter(filterId, category) {
                     productWindow.appendChild(createProductContainer(bevType[j].name, bevType[j].pricewithvat, bevType[j].img, bevType[j].articleid, category));
                 }
             }
+
         }
     }
 
@@ -245,6 +388,7 @@ function createProductsByFilter(filterId, category) {
     updateViewClasses();
 }
 
+
 function updateViewProducts(category) {
     createProductView();
     document.getElementById("filter-window").textContent = "";
@@ -252,6 +396,7 @@ function updateViewProducts(category) {
     document.getElementById("product-window").textContent = "";
     createProductsByCategory(category);
     updateViewClasses();
+    updateShoppingCartView();
 }
 
 
@@ -267,19 +412,21 @@ function createProductContainer(name, price, imgSrc, id, category) {
     </div>
     */
 
-    var productName = document.createElement("span");
-    var productContainerTopTop = document.createElement("div");
-    productName.className = "product-name product-name-font";
-    productContainerTopTop.className = "product-container-top-top";
-    productName.appendChild(document.createTextNode(name));
-    productContainerTopTop.appendChild(productName);
-
     var img = document.createElement("img");
     img.setAttribute("src",imgSrc);
     img.className = "product-img";
+
+    var productContainerTopTop = document.createElement("div");
+    productContainerTopTop.className = "product-container-top-top";
+    productContainerTopTop.appendChild(img);
+
+    var productName = document.createElement("span");
+    productName.className = "product-name product-name-font";
+    productName.appendChild(document.createTextNode(name));
+
     var productContainerTopBottom = document.createElement("div");
     productContainerTopBottom.className = "product-container-top-bottom";
-    productContainerTopBottom.appendChild(img);
+    productContainerTopBottom.appendChild(productName);
 
     var productContainerTop = document.createElement("div");
     productContainerTop.className = "product-container-top";
@@ -302,22 +449,23 @@ function createProductContainer(name, price, imgSrc, id, category) {
 
     var productBuy = document.createElement("button");
     productBuy.className = "product-buy";
+    productBuy.addEventListener("click", addToShoppingCart.bind(null,id));
 
     var productPrice = document.createElement("span");
-    productPrice.className = "product-price-font";
+    productPrice.className = "product-price-font product-price";
     productPrice.appendChild(document.createTextNode(price+" kr"));
     
-    var productContainerBottomLeft = document.createElement("div");
-    var productContainerBottomRight = document.createElement("div");
-    productContainerBottomLeft.className = "product-container-bottom-left";
-    productContainerBottomLeft.appendChild(productPrice);
-    productContainerBottomRight.className = "product-container-bottom-right";
-    productContainerBottomRight.appendChild(productBuy);
+    var productContainerBottomTop= document.createElement("div");
+    var productContainerBottomBottom= document.createElement("div");
+    productContainerBottomTop.className = "product-container-bottom-top";
+    productContainerBottomTop.appendChild(productPrice);
+    productContainerBottomBottom.className = "product-container-bottom-bottom";
+    productContainerBottomBottom.appendChild(productBuy);
 
     var productContainerBottom = document.createElement("div");
     productContainerBottom.className = "product-container-bottom";
-    productContainerBottom.appendChild(productContainerBottomLeft);
-    productContainerBottom.appendChild(productContainerBottomRight);
+    productContainerBottom.appendChild(productContainerBottomTop);
+    productContainerBottom.appendChild(productContainerBottomBottom);
 
     var productContainer = document.createElement("div");
     productContainer.className = "product-container";
@@ -325,7 +473,7 @@ function createProductContainer(name, price, imgSrc, id, category) {
     productContainer.appendChild(productContainerBottom);
     productContainer.draggable = "true";
     productContainer.addEventListener("dragstart", dragstartHandler);
-    productContainer.id = name;
+    productContainer.id = id;
 
     return productContainer;
 } 

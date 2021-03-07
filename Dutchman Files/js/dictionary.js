@@ -60,7 +60,9 @@ dict = {
         "product-manager-refill",
         "product-manager",
         "product-manager-remove-product",
-        "footnote-copyright-message"
+        "footnote-copyright-message",
+        "checkout-order",
+        "cancel-order"
     ],       
     "pics" : [["flag-pic","flag-alt"]],              // keys for pictures
     "classes": ["product-buy"],
@@ -120,8 +122,9 @@ dict = {
         "product-manager-success-msg": " blev tillagd",
         "product-manager-check-input": "Några inputs kan inte vara tomma, ",
         "product-manager-check-id": "Id finns redan, ",
-        "product-manager-check-category": "Huvudkategori finns inte, "
-
+        "product-manager-check-category": "Huvudkategori finns inte, ",
+        "checkout-order": "KÖP",
+        "cancel-order": "KÖP INTE"
     },
     "en": {
         "login": "Login",
@@ -171,7 +174,9 @@ dict = {
         "product-manager-success-msg": " got added",
         "product-manager-check-input": "Some inputs cant be empty, ",
         "product-manager-check-id": "Id already exist, ",
-        "product-manager-check-category": "Main category does not exist, "
+        "product-manager-check-category": "Main category does not exist, ",
+        "checkout-order": "BUY",
+        "cancel-order": "DONT BUY"
     },
 }
 
