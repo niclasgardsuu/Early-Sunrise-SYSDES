@@ -7,7 +7,7 @@
 
 
 var modelData = {}
-    modelData['username']     = Userdict['start_username'];
+    modelData['username']     = dict['start_username'];
     modelData['orderCounter'] = 0;
     modelData['tableNumber']  = "T1"; // TODO: Placeholder for now
 

@@ -38,7 +38,9 @@ function createManagerView() {
             <span id="product-manager-success-msg"></span>
         </div>`;
 
-    main.insertAdjacentHTML('beforeend', addProduct);
+    const staff = createStaffLogIn();
+
+    main.insertAdjacentHTML('beforeend', addProduct + staff);
 
     document.getElementById("product-manager-add-product").addEventListener("click", addProductToMeny);
     updateViewManager();

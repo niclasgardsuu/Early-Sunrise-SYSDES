@@ -5,9 +5,7 @@
 
 function createStaffLogIn() {
 
-    return createDiv("staff","",       
-                createSpanEvent  ("staffLogO","cursor","","staffLogO()")+
-                createSpanEvent  ("manager","cursor","","createManagerView()")+
+    return createDiv("","manager-right-container",       
                 createSpan  ("adToAccUserN","","") +
                 createInput ("adToAccUsername") +
                 createSpan  ("addA","","") +

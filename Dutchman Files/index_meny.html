@@ -10,14 +10,13 @@
     <script type="text/javascript" src="DBLoaded.js"></script>
     <script type="text/javascript" src="./js/shopping_cart.js"></script>
     <script type="text/javascript" src="./js/products.js"></script> <script type="text/javascript" src="./js/productAllergens.js"></script> <script type="text/javascript" src="./js/dictionary.js"></script>
-    <script type="text/javascript" src="./js/main_view.js"></script>
+    <script type="text/javascript" src="./js/view.js"></script>
     <script type="text/javascript" src="./js/menu.js"></script>
     <script type="text/javascript" src="./js/dragAndDrop.js"></script>
 
     <script type="text/javascript" src="./js/User/UserDB.js"></script>
     <script type="text/javascript" src="./js/User/User_control.js"></script>
     <script type="text/javascript" src="./js/User/User_creation.js"></script>
-    <script type="text/javascript" src="./js/User/User_dictionary.js"></script>
     <script type="text/javascript" src="./js/User/User_loader.js"></script>
     <script type="text/javascript" src="./js/User/User_model.js"></script>
 
@@ -31,7 +30,6 @@
             var sel = document.getElementById("select-language");
             sel.addEventListener("change",changeLang.bind(null,sel));
             document.getElementById("login").addEventListener("click", createLoginView);
-            update_view();
         });
 
     </script>
@@ -60,8 +58,8 @@
     <!--The top menu of the website-->
     <div id="menu-top-window">
         <select name="" id="select-language">
-            <option value="en">English</option>
             <option value="sv">Svenska</option>
+            <option value="en">English</option>
         </select>
         <img id="flag-pic" height="40px" width="40px">
 

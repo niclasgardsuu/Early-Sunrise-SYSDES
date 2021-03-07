@@ -63,9 +63,13 @@ function updateViewManager() {
     updateViewIds("manager-ids");
 }
 
+function updateViewUser() {
+    updateViewIds("userIds");
+}
 
 function updateView() {
     updateViewMain();
     updateViewLogin();
     updateViewManager();
+    updateViewUser();
 }

@@ -10,20 +10,23 @@ var language = "sv"
 // The dictionary consists of a simple JSON structure. It also keeps
 // track of the different keys that are available  for IDs.
 //
+
 dict = {
     "mainCategory": ["beer","spirits","wine","non-alcoholic"],
     "login-ids": 
     [
         "userN", 
         "passW",
-        "logIn"
+        "logIn",
+        "log_in_unsuccess_msg"
     ],
     "login-placeholder": 
     [
         "username", 
         "password",
     ],
-    "manager-ids": [
+    "manager-ids": 
+    [
         "product-manager-add",
         "product-manager-articleid",
         "product-manager-name",
@@ -39,11 +42,44 @@ dict = {
         "product-manager-img",
         "product-manager-main-category",
         "product-manager-add-product",
+        // Staff
+        "adToAccUserN",
+        "addA",
+        "addToAcc",
+        "staffLogO",
+        "completeOrderId",
+        "completeOrder"
     ],
+    "userIds" : 
+    [ 
+        "manager",
+        "start_username",
+        "log_in_success_msg",
+        "log_in_unsuccess_msg",
+
+        // Log In
+        "logIn",
+        "userN",
+        "passW",
+        "log",
+
+        // VIP
+        "balance",
+        "sdrink",
+        "logOut",
+        "drinkAmount",
+        "vipOrder",
+        "drinkId",
+            
+        // All Customer
+        "stdOrder",
+        "stdDrinkId",
+        "stdDrinkAmount",
+        "addToCart"
+    ], 
     "main-ids" : 
     [
         "login",
-        "manager",
         "beer",
         "spirits",
         "wine",
@@ -76,12 +112,6 @@ dict = {
     //
     "sv" : {
         "login": "Logga in",
-        "manager": "Chef",
-        "userN": "Användarnamn",
-        "passW": "Lösenord",
-        "username": "Ange användarnamn",
-        "password": "Ange lösenord",
-        "logIn": "Logga in",
         "beer":"Öl",
         "spirits":"Sprit",
         "wine":"Vin",
@@ -124,11 +154,46 @@ dict = {
         "product-manager-check-id": "Id finns redan, ",
         "product-manager-check-category": "Huvudkategori finns inte, ",
         "checkout-order": "KÖP",
-        "cancel-order": "KÖP INTE"
+        "cancel-order": "KÖP INTE",
+
+        "manager": "Chef",
+        "logIn"                : "Logga in",
+        "start_username"       : "Inget",
+        "log_in_unsuccess_msg" : "Inloggingen misslyckades!",
+    
+        // Log In
+        "userN"                : "Användarnamn",
+        "passW"                : "Lösenord",
+        "log"                  : "Log In",
+        "username"             : "Ange användarnamn", 
+        "password"             : "Ange lösenord",
+    
+        // VIP
+        "balance"              : "Account Balance",
+        "sdrink"               : "Special Drink",
+        "logOut"               : "Log Out",
+        "drinkAmount"          : "Drink Amount",
+        "vipOrder"             : "Vip Order",
+        "drinkId"              : "Drink ID",
+        
+        // Staff
+        "adToAccUserN"         : "Username",
+        "addA"                 : "Add Amount",
+        "addToAcc"             : "Add to account",
+        "staffLogO"            : "Log Out",
+        "completeOrderId"      : "Order Id",
+        "completeOrder"        : "Complete Order",
+       
+        // All Customer
+        "stdOrder"             : "Order",
+        "stdDrinkId"           : "Drink ID",
+        "stdDrinkAmount"       : "Amount",
+        "addToCart"            : "Add to cart",
+
+
     },
     "en": {
         "login": "Login",
-        "manager": "Manager",
         "userN": "Username",
         "passW": "Password",
         "username": "Enter username",
@@ -176,7 +241,41 @@ dict = {
         "product-manager-check-id": "Id already exist, ",
         "product-manager-check-category": "Main category does not exist, ",
         "checkout-order": "BUY",
-        "cancel-order": "DONT BUY"
+        "cancel-order": "DONT BUY",
+
+        "manager": "Manager",
+        "logIn"                : "Log In",
+        "start_username"       : "None",
+        "log_in_unsuccess_msg" : "Unsuccessful login",
+    
+        // Log In
+        "userN"                : "Username",
+        "passW"                : "Password",
+        "log"                  : "Log In",
+        "username"             : "Enter username", 
+        "password"             : "Enter password",
+    
+        // VIP
+        "balance"              : "Account Balance",
+        "sdrink"               : "Special Drink",
+        "logOut"               : "Log Out",
+        "drinkAmount"          : "Drink Amount",
+        "vipOrder"             : "Vip Order",
+        "drinkId"              : "Drink ID",
+        
+        // Staff
+        "adToAccUserN"         : "Username",
+        "addA"                 : "Add Amount",
+        "addToAcc"             : "Add to account",
+        "staffLogO"            : "Log Out",
+        "completeOrderId"      : "Order Id",
+        "completeOrder"        : "Complete Order",
+       
+        // All Customer
+        "stdOrder"             : "Order",
+        "stdDrinkId"           : "Drink ID",
+        "stdDrinkAmount"       : "Amount",
+        "addToCart"            : "Add to cart",
     },
 }
 

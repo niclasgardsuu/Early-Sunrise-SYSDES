@@ -406,6 +406,9 @@ body {
     width: 50%;
 }
 
+.manager-right-container {
+    width: 50%;
+}
 #product-manager-success-msg {
     margin-left: 3px;
     padding: 3px;

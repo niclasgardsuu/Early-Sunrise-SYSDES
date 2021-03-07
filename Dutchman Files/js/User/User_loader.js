@@ -22,7 +22,7 @@ function logIn(userName, passWord) {
 function logOut() {
     $("#loginDisplay").html("");
     $("#loginDisplay").html(createSpanEvent("login", "cursor", "", "createLoginView()"));
-    modelData['username'] = Userdict['start_username'];
+    modelData['username'] = dict['start_username'];
     updateViewMain();
 }
 
@@ -201,17 +201,6 @@ function vipOrder(beerId, amount) {
         }
     }
     return successfull;
-}
-
-function findProductByID(id) {
-    for (var i = 0; i < Userdict.mainCategory.length; i++) {
-        for (var j = 0; j < drunk[Userdict.mainCategory[i]].length; j++) {
-            if (drunk[Userdict.mainCategory[i]][j].articleid == id) {
-                return drunk[Userdict.mainCategory[i]][j];
-            }
-        }
-    }
-    return null;
 }
 
 // Calculates total cost of 1 or more of an item

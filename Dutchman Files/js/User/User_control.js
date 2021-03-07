@@ -22,10 +22,9 @@ function doInit(func) {
         }
     };
 
-    if (func == 'logOut' || func == 'staffLogO') {
+    if (func == 'logOut') {
 
         logOut();   // restore data in modeldata
-        reset();    // restore the view
     };
 
     if (func == 'balance') {
@@ -85,52 +84,28 @@ function logInVip() {
     document.getElementById("product-info-hide").checked = false;
     $("#loginDisplay").html("");
     $("#loginDisplay").html(createVipLogIn());
-    update_view();
+    updateViewUser();
 }
 
 function logInStaff() {
 
     document.getElementById("product-info-hide").checked = false;
     $("#loginDisplay").html("");
-    $("#loginDisplay").html(createStaffLogIn()).show();
+    $("#loginDisplay").html(createSpanEvent("logOut","cursor","","logOut()") +
+                            createSpanEvent("manager","cursor","","createManagerView()"));
 
     var showOrder = getOrders();
     $("#innerDisplay").text(showOrder); 
 
-    update_view();
+    updateViewUser();
 }
 
 function logInUnsuccess() {
 
-    alert("Login Failed");
-    update_view();
+    alert(getString("log_in_unsuccess_msg"));
+    updateViewUser();
 }
 
-function reset() {
-
-    $("#vip").hide();
-    $("#manager").hide();
-    $("#staff").hide();
-    $("#display").html("");
-    $("#logInForm").fadeIn(); 
-    update_view();
-}
-
-function update_view() {
-
-    keys = Userdict['keys'];
-    for (idx in keys) {
-        key = keys[idx];
-        $("#" + key).text(get_string(key));
-    };
-}
-
-// We don't update the view the first time until the document is ready
-// loading.
-//
-$(document).ready(function() {
-    update_view();
-})  
 // ===========================================================================
 // END OF FILE
 // ===========================================================================
