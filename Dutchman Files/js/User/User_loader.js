@@ -95,6 +95,7 @@ function addToCart(drinkId, drinkAmount) {
         for(id in OrderDB.cart.drinkId) {
             if(OrderDB.cart.drinkId[id] == drinkId) {
                 OrderDB.cart.drinkAmount[id] += drinkAmount;
+                OrderDB.cart.totalPrice += calculateCost(drinkId, drinkAmount);
                 updateShoppingCartView();
                 return;
             }
@@ -124,6 +125,8 @@ function stdOrder() {
                     };     
             OrderDB.all_orders.push(obj);
             resetCart();
+            updateShoppingCartView();
+            console.log(OrderDB.all_orders);
 }
 
 function resetCart() {

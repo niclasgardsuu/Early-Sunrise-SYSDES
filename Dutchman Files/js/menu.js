@@ -191,6 +191,7 @@ function updateShoppingCartView() {
         </span>
     </div>
     `)
+    document.getElementById("checkout-order").addEventListener("click",stdOrder);
     for(var i = 0; i < OrderDB["cart"]["drinkId"].length; i++) {
         console.log(OrderDB["cart"]);
         var productDiv = createShoppingCartDiv(OrderDB["cart"]["drinkId"][i],OrderDB["cart"]["drinkAmount"][i]);
