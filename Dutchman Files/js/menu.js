@@ -191,11 +191,15 @@ function updateShoppingCartView() {
         </span>
     </div>
     `)
-    for(var i = 0; i < cart.length; i++) {
-        var productDiv = createShoppingCartDiv(cart[i].id,cart[i].count);
+    for(var i = 0; i < OrderDB["cart"]["drinkId"].length; i++) {
+        console.log(OrderDB["cart"]);
+        var productDiv = createShoppingCartDiv(OrderDB["cart"]["drinkId"][i],OrderDB["cart"]["drinkAmount"][i]);
         shoppingCartWindow.appendChild(productDiv);
-        var removeButton = document.getElementById(cart[i].id+"-cart-button");  
-        removeButton.addEventListener("click", removeFromShoppingCart.bind(null,cart[i].id));  
+        var removeButton = document.getElementById(OrderDB["cart"]["drinkId"][i]+"-cart-button");  
+        removeButton.addEventListener("click", function () {
+            resetCart();
+            updateShoppingCartView();
+        });//removeFromShoppingCart.bind(null,OrderDB["cart"]["drinkId"][i]));  
     }
 }
 
@@ -340,7 +344,7 @@ function showProductInfo(id, category) {
                 </div>
             </div>
         `);
-    document.getElementById("product-buy-id").addEventListener("click",addToShoppingCart.bind(null,id));
+    document.getElementById("product-buy-id").addEventListener("click",addToCart.bind(null,id,1));
     document.getElementById("product-manager-remove-product").addEventListener("click", removeProductFromMeny);
     updateView();
 }
@@ -451,7 +455,7 @@ function createProductContainer(name, price, imgSrc, id, category) {
 
     var productBuy = document.createElement("button");
     productBuy.className = "product-buy";
-    productBuy.addEventListener("click", addToShoppingCart.bind(null,id));
+    productBuy.addEventListener("click", addToCart.bind(null,id,1));
 
     var productPrice = document.createElement("span");
     productPrice.className = "product-price-font product-price";

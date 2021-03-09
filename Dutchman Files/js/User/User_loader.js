@@ -85,19 +85,28 @@ function addToCart(drinkId, drinkAmount) {
     var table = modelData['tableNumber'];
     
     if ((isNaN(drinkId) || isNaN(drinkAmount) || (parseInt(drinkAmount) <= 0))) { // Error check on input
+        updateShoppingCartView();
         return successfull;
     }
 
     var currentMaxAmount = OrderDB.cart.maxAmount - parseInt(drinkAmount);
     if(currentMaxAmount >= 0) {
-        
+        OrderDB.cart.maxAmount = currentMaxAmount;
+        for(id in OrderDB.cart.drinkId) {
+            if(OrderDB.cart.drinkId[id] == drinkId) {
+                OrderDB.cart.drinkAmount[id] += drinkAmount;
+                updateShoppingCartView();
+                return;
+            }
+        }
+
         OrderDB.cart.drinkId.push(drinkId);
         OrderDB.cart.drinkAmount.push(drinkAmount);
         OrderDB.cart.price.push(findProductByID(drinkId).pricewithvat);
         OrderDB.cart.totalPrice += calculateCost(drinkId, drinkAmount);
-        OrderDB.cart.maxAmount = currentMaxAmount;
         successfull = true; 
     } 
+    updateShoppingCartView();
     return successfull;
 }
 
@@ -118,7 +127,6 @@ function stdOrder() {
 }
 
 function resetCart() {
-
     OrderDB.cart = { "drinkId": [],
                      "drinkAmount": [],
                      "price": [],
