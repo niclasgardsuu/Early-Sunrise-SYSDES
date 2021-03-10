@@ -25,6 +25,22 @@ dict = {
         "username", 
         "password",
     ],
+    "bartender-ids": 
+    [
+        
+    ],
+    "bartender-classes": 
+    [
+        "bartender-table-h-0",
+        "bartender-table-h-1",
+        "bartender-table-h-2",
+        "bartender-button-n-0",
+        "bartender-button-n-1",
+        "bartender-button-n-2",
+        "bartender-total-price",
+        "bartender-table-name",
+        "bartender-order-name",
+    ],
     "manager-ids": 
     [
         "product-manager-add",
@@ -40,6 +56,7 @@ dict = {
         "product-manager-producent",
         "product-manager-alcohol",
         "product-manager-img",
+        "product-manager-stock",
         "product-manager-main-category",
         "product-manager-add-product",
         // Staff
@@ -53,6 +70,8 @@ dict = {
     "userIds" : 
     [ 
         "manager",
+        "bartender",
+        "notify-security",
         "start_username",
         "log_in_success_msg",
         "log_in_unsuccess_msg",
@@ -98,7 +117,8 @@ dict = {
         "product-manager-remove-product",
         "footnote-copyright-message",
         "checkout-order",
-        "cancel-order"
+        "cancel-order",
+        "table-number"
     ],       
     "pics" : [["flag-pic","flag-alt"]],              // keys for pictures
     "classes": ["product-buy"],
@@ -142,6 +162,7 @@ dict = {
         "product-manager-producent":"Producent",
         "product-manager-alcohol":"Alkoholhalt",
         "product-manager-img":"Bild",
+        "product-manager-stock": "Antal i lager",
         "product-manager-main-category": "Huvudkategori",
         "product-manager-add-product": "Lägg till produkt",
         "footnote-copyright-message": "Den flygande holländaren av © 2021 The Early Sunrise",
@@ -155,8 +176,23 @@ dict = {
         "product-manager-check-category": "Huvudkategori finns inte, ",
         "checkout-order": "KÖP",
         "cancel-order": "KÖP INTE",
+        "table-number": "Bordsnummer: ",
+
+        //bartender view 
+        "bartender-table-h-0": "Dryck",
+        "bartender-table-h-1": "Antal",
+        "bartender-table-h-2": "Pris",
+        "bartender-button-n-0": "Ändra order",
+        "bartender-button-n-1": "Ta bort order",
+        "bartender-button-n-2": "Avsluta order",
+        "bartender-total-price": "Totala priset: ",
+        "bartender-table-name": "Bord: ",
+        "bartender-order-name": "Order: ",
+
 
         "manager": "Chef",
+        "bartender": "Bartender",
+        "notify-security": "Meddela vakter",
         "logIn"                : "Logga in",
         "start_username"       : "Inget",
         "log_in_unsuccess_msg" : "Inloggingen misslyckades!",
@@ -229,6 +265,7 @@ dict = {
         "product-manager-producent":"Producent",
         "product-manager-alcohol":"Alcohol content",
         "product-manager-img":"Picture",
+        "product-manager-stock": "Stock",
         "product-manager-main-category": "Main category",
         "product-manager-add-product": "Add product",
         "footnote-copyright-message": "The Flying Dutchman by © 2021 The Early Sunrise",
@@ -242,8 +279,22 @@ dict = {
         "product-manager-check-category": "Main category does not exist, ",
         "checkout-order": "BUY",
         "cancel-order": "DONT BUY",
+        "table-number": "Tablenumber: ",
+
+        //bartender view 
+        "bartender-table-h-0": "Drink",
+        "bartender-table-h-1": "Amount",
+        "bartender-table-h-2": "Price",
+        "bartender-button-n-0": "Change order",
+        "bartender-button-n-1": "Remove order",
+        "bartender-button-n-2": "Complete order",
+        "bartender-total-price": "Total price: ",
+        "bartender-table-name": "Table ",
+        "bartender-order-name": "Order ",
 
         "manager": "Manager",
+        "bartender": "Bartender",
+        "notify-security": "Notify security",
         "logIn"                : "Log In",
         "start_username"       : "None",
         "log_in_unsuccess_msg" : "Unsuccessful login",

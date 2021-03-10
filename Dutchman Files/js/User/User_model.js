@@ -6,11 +6,12 @@
 // overtime.
 
 
-var modelData = {}
-    modelData['username']     = dict['start_username'];
-    modelData['orderCounter'] = 0;
-    modelData['tableNumber']  = "T1"; // TODO: Placeholder for now
+var modelData = {};
 
+    modelData['username']     = dict['start_username'];
+    modelData['credentials']  = null;
+    modelData['orderCounter'] = 0;
+    modelData['tableNumber']  = 1; // TODO: Placeholder for now
 
 // =====================================================================================================
 // =====================================================================================================

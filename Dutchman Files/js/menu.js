@@ -1,3 +1,162 @@
+function createBartenderView() {
+    var main = document.getElementById("main-window");
+    main.innerHTML = "";
+    var sortedOrders = sortTables();
+    for(var i = 0; i < sortedOrders.length; i++) {
+        //table div
+        var table = document.createElement("div");
+        table.className = "bartender-view-button bartender-view-button-table";
+        var spanTableName = document.createElement("span");
+        spanTableName.className = "bartender-table-name";
+        var spanTable = document.createElement("span");
+        table.appendChild(spanTableName);
+        table.appendChild(spanTable.appendChild(document.createTextNode(sortedOrders[i][0].table)));
+        table.addEventListener("click", toggleDisplaySibling.bind(null, table));
+
+        //order div
+        var orderContainer = document.createElement("div");
+        orderContainer.className = "bartender-order-container";
+        for(var j = 0; j < sortedOrders[i].length; j++) {
+            
+            //gula
+            var order = document.createElement("div");
+            order.className = "bartender-view-button bartender-view-button-order";
+            var spanTable = document.createElement("span");
+            var spanOrderName = document.createElement("span");
+            spanOrderName.className = "bartender-order-name";
+            var spanOrder = document.createElement("span");
+            order.appendChild(spanOrderName);
+            order.appendChild(spanOrder.appendChild(document.createTextNode(sortedOrders[i][j].order_id)));
+            order.addEventListener("click", toggleDisplaySibling.bind(null, order));
+            
+            //tabellen
+            var orderTable = createOrderTable(sortedOrders[i][j]);
+            var showContainer = document.createElement("div");
+            showContainer.className = "bartender-show-container";
+            showContainer.appendChild(orderTable);
+            
+            orderContainer.appendChild(order);
+            orderContainer.appendChild(showContainer);
+        }
+
+        var tableContainer = document.createElement("div");
+        tableContainer.className = "bartender-view-container";
+        tableContainer.appendChild(table);
+        tableContainer.appendChild(orderContainer);
+        main.appendChild(tableContainer);
+
+        
+    }
+    updateViewBartender();
+}
+
+function sortTables() {
+    var list = [];
+    var all = OrderDB.all_orders;
+    
+    if (list.length = 0) {
+        var temp = [];
+        temp.push(all[0]);
+        list.push(temp);
+    }
+
+    for(var i = 0; i < all.length; i++) {
+        var found = false;
+
+        for(var j = 0; j < list.length; j++) {
+            if(list[j][0].table == all[i].table) {
+                list[j].push(all[i]);
+                found = true;
+            } 
+        }
+
+        if (!found) {
+            var temp = [];
+            temp.push(all[i]);
+            list.push(temp);
+        }
+    }
+
+    return list;
+}
+
+function toggleDisplaySibling(element) {
+    element.classList.toggle("tablePressed");
+    var content = element.nextElementSibling;
+    if (!content.classList.contains("bartender-view-show")) {
+        content.classList.add("bartender-view-show")
+    } else {
+        content.classList.remove("bartender-view-show")
+    }
+}
+
+function createOrderTable(order) {
+    var table = document.createElement("table");
+    table.className = "bartender-show-table";
+
+    var tr1 = document.createElement("tr");
+    for(var i = 0; i < 3; i++) {
+        var th = document.createElement("th");
+        th.className = "bartender-table-h-"+i;
+        tr1.appendChild(th);
+    }
+    table.appendChild(tr1);
+
+    for (var i = 0; i < order.drinkId.length; i++) {
+        // Name | Quantity | Price | Button
+        var td1 = document.createElement("td");
+        var product = findProductByID(order.drinkId[i]);
+        td1.appendChild(document.createTextNode(product.name));
+
+        var td2 = document.createElement("td");
+        td2.appendChild(document.createTextNode(order.drinkAmount[i]));
+
+        var td3 = document.createElement("td");
+        td3.appendChild(document.createTextNode(product.pricewithvat));
+
+        var tr = document.createElement("tr");
+        tr.appendChild(td1);
+        tr.appendChild(td2);
+        tr.appendChild(td3);
+        table.appendChild(tr);
+    }
+
+    var tr3 = document.createElement("tr");
+    var td1 = document.createElement("td");
+    var td2 = document.createElement("td");
+    td2.className = "bartender-total-price";
+    var td3 = document.createElement("td");
+    td3.appendChild(document.createTextNode(order.totalPrice));
+    tr3.appendChild(td1);
+    tr3.appendChild(td2);
+    tr3.appendChild(td3);
+    table.appendChild(tr3);
+
+
+    var arr = ["change-order-","remove-order-", "finish-order-"];
+
+    var tr2 = document.createElement("tr");
+    for(var i = 0; i < 3; i++) {
+        var td = document.createElement("td");
+        var button = document.createElement("button");
+        button.id = arr[i] + order.order_id;
+        button.className = "bartender-button-n-"+i;
+        td.appendChild(button);
+        tr2.appendChild(td);
+    }
+    table.appendChild(tr2);
+
+    return table;
+}
+
+function createOrderDiv(order) {
+    console.log(order);
+    var orderDiv = document.createElement("div");
+    orderDiv.id = order.order_id + "-table-order";
+    orderDiv.style.border = "2px";
+    orderDiv.appendChild(document.createTextNode(order.order_id));
+    return orderDiv;
+}
 
 function createManagerView() {
     var main = document.getElementById("main-window");
@@ -31,6 +190,8 @@ function createManagerView() {
                     <dd><input id="product-manager-alcohol-i" placeholder="8.5%" type="text"></dd>
                     <dt id="product-manager-img"></dt>
                     <dd><input id="product-manager-img-i" placeholder="olvi.jpeg" type="text"></dd>
+                    <dt id="product-manager-stock"></dt>
+                    <dd><input id="product-manager-stock-i" type="number"></dd>
                     <dt id="product-manager-main-category"></dt>
                     <dd><input id="product-manager-main-category-i" placeholder="beer" type="text"></dd>
                 </dl>
@@ -140,6 +301,7 @@ function addProductToMeny() {
     var name2 = document.getElementById("product-manager-name2-i").value;
     var pricewithvat = document.getElementById("product-manager-pricewithvat-i").value;
     var volume = document.getElementById("product-manager-volume-i").value;
+                    
     var productgroup = document.getElementById("product-manager-productgroup-i").value;
     var serves = document.getElementById("product-manager-serves-i").value;
     var origin = document.getElementById("product-manager-origin-i").value;
@@ -147,6 +309,7 @@ function addProductToMeny() {
     var producent = document.getElementById("product-manager-producent-i").value;
     var alcoholcontent = document.getElementById("product-manager-alcohol-i").value;
     var img = "./img/" + document.getElementById("product-manager-img-i").value;
+    var stock = document.getElementById("product-manager-stock-i").value;
     var category = document.getElementById("product-manager-main-category-i").value;
 
     var cannotBeEmpty = [articleid, name, pricewithvat, volume, productgroup, serves, origincountry, producent, alcoholcontent];
@@ -166,6 +329,7 @@ function addProductToMeny() {
         "producent": producent,
         "alcoholcontent": alcoholcontent,
         "img": img,
+        "stock": stock,
     }
     drunk[category].push(product);
     $("#product-manager-success-msg").text(name + getString("product-manager-success-msg")).fadeIn();     
@@ -186,12 +350,13 @@ function updateShoppingCartView() {
         <button id="cancel-order">
             ${getString("cancel-order")}
         </button>
-        <span id="total-price">
-            1337:-
+        <span id="table-number">
+            ${getString("table-number")}
         </span>
+        <input id="table-number-input" type="number" max=10 min=1>
     </div>
     `)
-    document.getElementById("checkout-order").addEventListener("click",stdOrder);
+    document.getElementById("checkout-order").addEventListener("click",stdOrder);   
     for(var i = 0; i < OrderDB["cart"]["drinkId"].length; i++) {
         console.log(OrderDB["cart"]);
         var productDiv = createShoppingCartDiv(OrderDB["cart"]["drinkId"][i],OrderDB["cart"]["drinkAmount"][i]);
@@ -225,22 +390,6 @@ function createShoppingCartDiv(id,count) {
     return div;
 }
 
-function addToShoppingCart(product_id) {
-    for(product in cart) {
-        if(cart[product].id == product_id) {
-            cart[product].count = cart[product].count + 1;
-            updateShoppingCartView();
-            return;
-        }
-    }
-    var product = {
-        "id":product_id,
-        "count": 1
-    };
-    cart.push(product);
-    
-    updateShoppingCartView();
-}
 
 function removeFromShoppingCart(product_id) {
     for(product in cart) {
@@ -303,12 +452,22 @@ function showProductInfo(id, category) {
     } 
 
     productContainer.innerHTML = "";    
-    productContainer.insertAdjacentHTML("beforeend", 
-    `<div class="product-info-container-left">
-                <img id="product-info-img" src="${product.img}" class="product-img" alt="">
-            </div>
-            <div class="product-info-container-right">
-                <h1 id="product-info-name" class="product-info-name product-name-font">${product.name}</h1>
+
+    const staffInfo= `
+                <div id="product-manager-view" class="product-info-container-spec">
+                    <h2 id="product-manager"></h2>
+                    <dl class="product-info-spec">
+                        <dt id="product-stock-view"></dt>
+                        <dd>
+                            <input id="product-manager-stock" value="${product.stock}" type="number" max="10000" min="0">
+                        </dd>
+                    </dl>
+                    <button id="product-manager-refill"></button>
+                    <button id="product-manager-remove-product"></button>
+                </div>`;
+
+    const productInfo = 
+                `<h1 id="product-info-name" class="product-info-name product-name-font">${product.name}</h1>
                 <h2 id="product-info-name2" class="product-info-name2 product-name-font">${product.name2}</h2>
                 <span id="product-info-desc" class="product-info-desc">${product.serves + " " + product.volume}</span>
                 <h1 id="product-info-price" class="product-info-price product-price-font">${product.pricewithvat + " kr"}</h1>
@@ -331,22 +490,34 @@ function showProductInfo(id, category) {
                         <dt id="product-spec-articleid"></dt>
                         <dd id="product-info-articleid">${product.articleid}</dd>
                     </dl>
+                </div>`;
+
+    
+    if(modelData["credentials"] == 0) {
+        productContainer.insertAdjacentHTML("beforeend", 
+            `<div class="product-info-container-left">
+                    <img id="product-info-img" src="${product.img}" class="product-img" alt="">
                 </div>
-                <div id="product-manager-view" class="product-info-container-spec">
-                    <h2 id="product-manager"></h2>
-                    <dl class="product-info-spec">
-                        <dt id="product-stock-view"></dt>
-                        <dd>
-                            <input id="product-manager-stock" type="number" max="10000" min="0">
-                        </dd>
-                    </dl>
-                    <button id="product-manager-refill"></button>
-                    <button id="product-manager-remove-product"></button>
+                <div class="product-info-container-right">
+                    ${productInfo}
+                    ${staffInfo}
                 </div>
-            </div>
-        `);
+            `);
+        document.getElementById("product-manager-stock").addEventListener("change", changeStock.bind(null, id, 0));
+        document.getElementById("product-manager-refill").addEventListener("click", changeStock.bind(null, id, 24));
+        document.getElementById("product-manager-remove-product").addEventListener("click", removeProductFromMeny);
+    } else {
+        productContainer.insertAdjacentHTML("beforeend", 
+            `<div class="product-info-container-left">
+                    <img id="product-info-img" src="${product.img}" class="product-img" alt="">
+                </div>
+                <div class="product-info-container-right">
+                    ${productInfo}
+                </div>
+            `);
+    }
+    
     document.getElementById("product-buy-id").addEventListener("click",addToCart.bind(null,id,1));
-    document.getElementById("product-manager-remove-product").addEventListener("click", removeProductFromMeny);
     updateView();
 }
 
@@ -392,7 +563,7 @@ function createProductsByFilter(filterId, category) {
     if (noFilter) {
         createProductsByCategory(category);
     }
-    updateViewClasses();
+    updateViewClasses("classes");
 }
 
 
@@ -402,7 +573,7 @@ function updateViewProducts(category) {
     createFilter(category);
     document.getElementById("product-window").textContent = "";
     createProductsByCategory(category);
-    updateViewClasses();
+    updateViewClasses("classes");
     updateShoppingCartView();
 }
 

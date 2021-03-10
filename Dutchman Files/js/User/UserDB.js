@@ -6,7 +6,7 @@ var OrderDB = {
             "totalPrice": 0,
             "table": "",
             "maxAmount": 10
-        },
+    },
     "vip": [ //alla username med tomma order id ?
         {
             "username": "vipadmin",
@@ -29,39 +29,34 @@ var OrderDB = {
     ],
     "all_orders": [
         {
+            "drinkAmount": [3, 3, 2],
+            "drinkId": ["522586", "1206", "1132"],
             "order_id": 0,
-            "drinkId": [123],
-            "drinkAmount": [1,2,3],
-            "price": [1,2,3,4],
-            "totalPrice" : 1000,
-            "table": "T1",
-            "status": "pending" 
-        },
-        {
-            "order_id": 2,
-            "drinkId": [123],
-            "drinkAmount": [1,2,3],
-            "price": [1,2,3,4],
-            "totalPrice" : 2000,
-            "table": "T2",
-            "status": "pending" 
+            "price": ["23.50", "16.40", "13.90"],
+            "status": "pending",
+            "table": "1",
+            "totalPrice": 143
         }
-    ],
-    "bought":
-        [{
+    ]
+};
+
+/*
+    "bought": [
+        {
             "transaction_id": "328",
             "admin_id": "25",
             "beer_id": "1152803",
             "amount": "4",
             "price": "24.90",
             "timestamp": "2014-10-02 16:05:21"
-        }],
-
-    "sold": [{
+        }
+    ],
+    "sold": [
+        {
         "transaction_id": "1186",
         "user_id": "2",
         "beer_id": "8967303",
         "timestamp": "2014-10-10 19:04:13"
-    }
+        }
     ]
-};
+ */

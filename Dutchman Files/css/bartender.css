@@ -1,0 +1,57 @@
+.bartender-view-container {
+    width: 500px;
+    height: 100%;
+}
+.bartender-view-button {
+    width: 100%;
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bartender-view-show {
+    display: block !important;
+}
+        
+.bartender-view-button-table {
+    background-color: red;
+    height: 50px;
+    font-size: 200%;
+}
+
+.bartender-view-button-order {
+    background-color: yellow;
+    height: 30px;
+    font-size:150%;
+    border-bottom: 2px solid black;
+}
+
+.bartender-order-container {
+    display: none;
+}
+
+.bartender-show-container {
+    display: none;
+}
+
+.bartender-show-table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.bartender-show-table td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+.bartender-show-table tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.bartender-table-name, .bartender-order-name {
+    margin-right: 5px;
+}
