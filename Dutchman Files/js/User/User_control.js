@@ -92,7 +92,8 @@ function logInStaff() {
     document.getElementById("product-info-hide").checked = false;
     $("#loginDisplay").html("");
     $("#loginDisplay").html(createSpanEvent("logOut","cursor","","logOut()") +
-                            createSpanEvent("manager","cursor","","createManagerView()"));
+                            createSpanEvent("manager","cursor","","createManagerView()")+
+                            createSpanEvent("bartender","cursor","","createBartenderView()"));
 
     var showOrder = getOrders();
     $("#innerDisplay").text(showOrder); 

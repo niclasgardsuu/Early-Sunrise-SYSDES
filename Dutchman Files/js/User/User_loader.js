@@ -69,7 +69,9 @@ function addBalance(userName, newAmount) {
 
 function incrementOrder() {
     
+    console.log(modelData['orderCounter']);
     modelData['orderCounter'] += 1;
+    console.log(modelData['orderCounter']);
     return modelData['orderCounter'];
 }
 

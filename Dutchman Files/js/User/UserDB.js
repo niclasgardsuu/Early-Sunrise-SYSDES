@@ -29,21 +29,21 @@ var OrderDB = {
     ],
     "all_orders": [
         {
-            "order_id": 0,
+            "order_id": 10,
             "drinkId": [123],
             "drinkAmount": [1,2,3],
             "price": [1,2,3,4],
             "totalPrice" : 1000,
-            "table": "T1",
+            "table": 1,
             "status": "pending" 
         },
         {
-            "order_id": 2,
+            "order_id": 11,
             "drinkId": [123],
             "drinkAmount": [1,2,3],
             "price": [1,2,3,4],
             "totalPrice" : 2000,
-            "table": "T2",
+            "table": 2,
             "status": "pending" 
         }
     ],

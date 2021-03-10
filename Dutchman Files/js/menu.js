@@ -1,3 +1,41 @@
+function createBartenderView() {
+    var main = document.getElementById("main-window");
+    main.innerHTML = "";
+    for(var i = 0; i < 3; i++) {
+        var tableButton = document.createElement("button");
+        var tableContent = createTableDiv(i);
+        main.appendChild(tableButton);
+        main.appendChild(tableContent);
+        tableButton.addEventListener("click",function() {
+            this.classList.toggle("tablePressed");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        });
+    }
+}
+
+function createTableDiv(tableIndex) {
+    var table = document.createElement("div");
+    for(i in OrderDB.all_orders) {
+        if(OrderDB.all_orders[i].table == tableIndex) {
+            table.appendChild(createOrderDiv(OrderDB.all_orders[i]));
+        } 
+    }
+    return table;
+}
+
+function createOrderDiv(order) {
+    console.log(order);
+    var orderDiv = document.createElement("div");
+    orderDiv.id = order.order_id + "-table-order";
+    orderDiv.style.border = "2px";
+    orderDiv.appendChild(document.createTextNode(order.order_id));
+    return orderDiv;
+}
 
 function createManagerView() {
     var main = document.getElementById("main-window");
@@ -191,7 +229,7 @@ function updateShoppingCartView() {
         </span>
     </div>
     `)
-    document.getElementById("checkout-order").addEventListener("click",stdOrder);
+    document.getElementById("checkout-order").addEventListener("click",stdOrder);   
     for(var i = 0; i < OrderDB["cart"]["drinkId"].length; i++) {
         console.log(OrderDB["cart"]);
         var productDiv = createShoppingCartDiv(OrderDB["cart"]["drinkId"][i],OrderDB["cart"]["drinkAmount"][i]);

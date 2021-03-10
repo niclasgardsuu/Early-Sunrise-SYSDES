@@ -53,6 +53,7 @@ dict = {
     "userIds" : 
     [ 
         "manager",
+        "bartender",
         "start_username",
         "log_in_success_msg",
         "log_in_unsuccess_msg",
@@ -157,6 +158,7 @@ dict = {
         "cancel-order": "KÖP INTE",
 
         "manager": "Chef",
+        "bartender": "Bartender",
         "logIn"                : "Logga in",
         "start_username"       : "Inget",
         "log_in_unsuccess_msg" : "Inloggingen misslyckades!",
@@ -244,6 +246,7 @@ dict = {
         "cancel-order": "DONT BUY",
 
         "manager": "Manager",
+        "bartender": "Bartender",
         "logIn"                : "Log In",
         "start_username"       : "None",
         "log_in_unsuccess_msg" : "Unsuccessful login",
