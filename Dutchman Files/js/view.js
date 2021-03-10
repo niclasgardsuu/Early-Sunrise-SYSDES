@@ -27,8 +27,8 @@ function updateViewIds(id) {
     };
 }
 
-function updateViewClasses() {
-    var name = dict["classes"];
+function updateViewClasses(id) {
+    var name = dict[id];
     for (i in name) {
         var temp = document.getElementsByClassName(name[i]);
         if (temp != null) {
@@ -50,8 +50,8 @@ function updateViewAttribute(attribute, ids) {
 
 function updateViewMain() {
     updateViewIds("main-ids");
-    updateViewPics()
-    updateViewClasses();
+    updateViewPics();
+    updateViewClasses("classes");
 }
 
 function updateViewLogin() {
@@ -63,6 +63,11 @@ function updateViewManager() {
     updateViewIds("manager-ids");
 }
 
+function updateViewBartender() {
+    updateViewIds("bartender-ids");
+    updateViewClasses("bartender-classes");
+}
+
 function updateViewUser() {
     updateViewIds("userIds");
 }
@@ -72,4 +77,5 @@ function updateView() {
     updateViewLogin();
     updateViewManager();
     updateViewUser();
+    updateViewBartender();
 }

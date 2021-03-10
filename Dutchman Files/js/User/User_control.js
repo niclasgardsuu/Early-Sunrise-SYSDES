@@ -93,7 +93,9 @@ function logInStaff() {
     $("#loginDisplay").html("");
     $("#loginDisplay").html(createSpanEvent("logOut","cursor","","logOut()") +
                             createSpanEvent("manager","cursor","","createManagerView()")+
-                            createSpanEvent("bartender","cursor","","createBartenderView()"));
+                            createSpanEvent("bartender","cursor","","createBartenderView()")+
+                            createButton("notify-security", ""));
+
 
     var showOrder = getOrders();
     $("#innerDisplay").text(showOrder); 

@@ -27,7 +27,8 @@ var drunk = {
             "origincountry": "Sverige",
             "producent": "Spendrups",
             "alcoholcontent": "5.3%",
-            "img": "./img/norrlands.png"
+            "img": "./img/norrlands.png",
+            "stock": 0
         }, {
             "articleid": "1206",    
             "name": "Staropramen",
@@ -40,7 +41,8 @@ var drunk = {
             "origincountry": "Tjeckien",
             "producent": "Staropramen",
             "alcoholcontent": "5%",
-            "img": "./img/staropramen.png"
+            "img": "./img/staropramen.png",
+            "stock": 10
         }, {
             "articleid": "522586",
             "name": "Guinness",
@@ -53,7 +55,8 @@ var drunk = {
             "origincountry": "Irland",
             "producent": "Guinness",
             "alcoholcontent": "4.1%",
-            "img": "./img/guinness.png"
+            "img": "./img/guinness.png",
+            "stock": 10
         }, {
             "articleid": "508200",
             "name": "Svensk Stark\u00F6l",
@@ -66,7 +69,8 @@ var drunk = {
             "origincountry": "Sverige",
             "producent": "\u00c3\u2026bro Bryggeri",
             "alcoholcontent": "5.1%",
-            "img": "./img/svensk_stark.png"
+            "img": "./img/svensk_stark.png",
+            "stock": 10
         }, {
             "articleid": "721717",
             "name": "Ten Fidy",
@@ -79,7 +83,8 @@ var drunk = {
             "origincountry": "USA",
             "producent": "Oskar Blues Brewery",
             "alcoholcontent": "10%",
-            "img": "./img/ten_fidy.png"
+            "img": "./img/ten_fidy.png",
+            "stock": 10
         }, {
             "articleid": "1132",
             "name": "Heineken",
@@ -92,7 +97,8 @@ var drunk = {
             "origincountry": "Internationellt m\u00E4rke",
             "producent": "Spendrups",
             "alcoholcontent": "5%",
-            "img": "./img/heineken.png"
+            "img": "./img/heineken.png",
+            "stock": 10
         }, {
             "articleid": "1337",
             "name": "Olvi",
@@ -105,7 +111,8 @@ var drunk = {
             "origincountry": "Finland",
             "producent": "Olvi plc",
             "alcoholcontent": "8.5%",
-            "img": "./img/olvi.jpeg"
+            "img": "./img/olvi.jpeg",
+            "stock": 10
         }
     ],
     "spirits" : [
@@ -121,7 +128,8 @@ var drunk = {
             "origincountry": "Storbritannien",
             "producent": "The Whisky Agency",
             "alcoholcontent": "52.5%",
-            "img": ""
+            "img": "",
+            "stock": 10
         }, {
             "articleid": "850724",
             "name": "Paul John",
@@ -134,7 +142,8 @@ var drunk = {
             "origincountry": "Indien",
             "producent": "John Distilleries",
             "alcoholcontent": "55.2%",
-            "img": ""
+            "img": "",
+            "stock": 10
         },{
             "articleid": "37672",
             "name": "L'H\u00E9raud",
@@ -147,7 +156,8 @@ var drunk = {
             "origincountry": "Frankrike",
             "producent": "Cognac L'H\u00E9raud",
             "alcoholcontent": "40%",
-            "img": ""
+            "img": "",
+            "stock": 10
         },{
             "articleid": "320747",
             "name": "Delamain",
@@ -160,7 +170,8 @@ var drunk = {
             "origincountry": "Frankrike",
             "producent": "Delamain",
             "alcoholcontent": "40%",
-            "img": ""
+            "img": "",
+            "stock": 10
         },{
             "articleid": "225",
             "name": "Martell VS***",
@@ -173,7 +184,8 @@ var drunk = {
             "origincountry": "Frankrike",
             "producent": "Martell",
             "alcoholcontent": "40%",
-            "img": ""
+            "img": "",
+            "stock": 10
         },{
             "articleid": "47035",
             "name": "Captain Morgan",
@@ -186,7 +198,8 @@ var drunk = {
             "origincountry": "Jamaica",
             "producent": "Captain Morgan",
             "alcoholcontent": "40%",
-            "img": ""
+            "img": "",
+            "stock": 10
         },{
             "articleid": "32224",
             "name": "Cacha\u00E97a 51",
@@ -199,7 +212,8 @@ var drunk = {
             "origincountry": "Brasilien",
             "producent": "M\u00FCller de Bebidas",
             "alcoholcontent": "40%",
-            "img": ""
+            "img": "",
+            "stock": 10
         }, {
             "articleid": "701664",
             "name": "Flying Dutchman Rum",
@@ -212,7 +226,8 @@ var drunk = {
             "origincountry": "Nederl\u00E4nderna",
             "producent": "Zuidam Distillers BV",
             "alcoholcontent": "40%",
-            "img": ""
+            "img": "",
+            "stock": 10
             }
         ],
     "wine" : [
@@ -228,7 +243,8 @@ var drunk = {
             "origincountry": "Frankrike",
             "producent": "Tryffelsvinet AB",
             "alcoholcontent": "14%",
-            "img": ""
+            "img": "",
+            "stock": 10
         }, {
             "nr": "9635001",
             "articleid": "686251",
@@ -243,7 +259,8 @@ var drunk = {
             "origincountry": "Australien",
             "producent": "Torbreck Vintners",
             "alcoholcontent": "14.5%",
-            "img": ""
+            "img": "",
+            "stock": 10
         }
     ],
     "non-alcoholic": [
@@ -272,7 +289,8 @@ var drunk = {
             "origincountry": "Frankrike",
             "producent": "Les Vignobles Laurie & Guillau",
             "alcoholcontent": "0%",
-            "img": ""
+            "img": "",
+            "stock": 10
         },{
             "articleid": "539772",
             "name": "Toselli",
@@ -285,7 +303,8 @@ var drunk = {
             "origincountry": "Italien",
             "producent": "Bosca Spa",
             "alcoholcontent": "0.3%",
-            "img": ""
+            "img": "",
+            "stock": 10
         },{
             "articleid": "579221",
             "name": "Maglehem n:o 4",
@@ -298,7 +317,8 @@ var drunk = {
             "origincountry": "Sverige",
             "producent": "Maglehems musteri",
             "alcoholcontent": "0%",
-            "img": ""
+            "img": "",
+            "stock": 10
         },{
             "articleid": "788406",
             "name": "Mikkeller",
@@ -311,7 +331,8 @@ var drunk = {
             "origincountry": "Belgien",
             "producent": "De Proef Brouwerij",
             "alcoholcontent": "0.3%",
-            "img": ""
+            "img": "",
+            "stock": 10
         },{
             "articleid": "790110",
             "name": "Richard Juhlin ",
@@ -324,7 +345,8 @@ var drunk = {
             "origincountry": "Frankrike",
             "producent": "MRG Wines",
             "alcoholcontent": "0%",
-            "img": ""
+            "img": "",
+            "stock": 10
         },{
             "articleid": "864046",
             "name": "Einbecker Brauherren Alkoholfrei",
@@ -337,7 +359,8 @@ var drunk = {
             "origincountry": "Tyskland",
             "producent": "Einbecker Brauhaus",
             "alcoholcontent": "0.5%",
-            "img": ""
+            "img": "",
+            "stock": 10
         },{
             "articleid": "10902",
             "name": "Pepsi",
@@ -350,7 +373,8 @@ var drunk = {
             "origincountry": "AMERICA",
             "producent": "The Coca-Cola Company",
             "alcoholcontent": "Inget",
-            "img": ""
+            "img": "",
+            "stock": 10
         }
     ]
 }
