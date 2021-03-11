@@ -1,6 +1,9 @@
 function createBartenderView() {
     var main = document.getElementById("main-window");
     main.innerHTML = "";
+    var bartenderMainWindow = document.createElement("div");
+    bartenderMainWindow.className = "bartender-main-window";
+
     var sortedOrders = sortTables();
     for(var i = 0; i < sortedOrders.length; i++) {
         //table div
@@ -43,10 +46,9 @@ function createBartenderView() {
         tableContainer.className = "bartender-view-container";
         tableContainer.appendChild(table);
         tableContainer.appendChild(orderContainer);
-        main.appendChild(tableContainer);
-
-        
+        bartenderMainWindow.appendChild(tableContainer);
     }
+    main.appendChild(bartenderMainWindow);
     updateViewBartender();
 }
 
@@ -81,13 +83,9 @@ function sortTables() {
 }
 
 function toggleDisplaySibling(element) {
-    element.classList.toggle("tablePressed");
+    element.classList.toggle("bartender-view-button-order-toggle");
     var content = element.nextElementSibling;
-    if (!content.classList.contains("bartender-view-show")) {
-        content.classList.add("bartender-view-show")
-    } else {
-        content.classList.remove("bartender-view-show")
-    }
+    content.classList.toggle("bartender-view-show");
 }
 
 function createOrderTable(order) {
@@ -121,26 +119,29 @@ function createOrderTable(order) {
         table.appendChild(tr);
     }
 
-    var tr3 = document.createElement("tr");
-    var td1 = document.createElement("td");
-    var td2 = document.createElement("td");
-    td2.className = "bartender-total-price";
-    var td3 = document.createElement("td");
-    td3.appendChild(document.createTextNode(order.totalPrice));
-    tr3.appendChild(td1);
-    tr3.appendChild(td2);
-    tr3.appendChild(td3);
-    table.appendChild(tr3);
+    var totalClass = ["bartender-total", "", ""];
+    var totalData = ["", calculateAmount(order.drinkAmount), order.totalPrice];
+    var tr = document.createElement("tr");
+    for (var i = 0; i < 3; i++) {
+        var td = document.createElement("td");
+        td.className = totalClass[i];
+        td.appendChild(document.createTextNode(totalData[i]));
+        tr.appendChild(td);
+    }
+    table.appendChild(tr);
 
 
-    var arr = ["change-order-","remove-order-", "finish-order-"];
+    var ids = ["change-order-","remove-order-", "finish-order-"];
+    console.log("bann: "+order.order_id);
+    var fun = [revertOrder.bind(null, order.order_id), null, finishOrder.bind(null,order.order_id)];
 
     var tr2 = document.createElement("tr");
-    for(var i = 0; i < 3; i++) {
+    for (var i = 0; i < 3; i++) {
         var td = document.createElement("td");
         var button = document.createElement("button");
-        button.id = arr[i] + order.order_id;
+        button.id = ids[i] + order.order_id;
         button.className = "bartender-button-n-"+i;
+        button.addEventListener("click", fun[i]);
         td.appendChild(button);
         tr2.appendChild(td);
     }
@@ -336,11 +337,11 @@ function addProductToMeny() {
     setTimeout(function() { $("#product-manager-success-msg").fadeOut(); }, 3000);
 }
 
+
 function updateShoppingCartView() {
     //genererar htmlkod för shoppingcart, och rensar det som stod innan
     var shoppingCartWindow = document.getElementById("shopping-cart-window");
     shoppingCartWindow.textContent = "";
-    //var price = totalOrderPrice();
     shoppingCartWindow.insertAdjacentHTML('afterbegin',
     `
     <div id="shopping-cart-options">
@@ -356,16 +357,17 @@ function updateShoppingCartView() {
         <input id="table-number-input" type="number" max=10 min=1>
     </div>
     `)
-    document.getElementById("checkout-order").addEventListener("click",stdOrder);   
-    for(var i = 0; i < OrderDB["cart"]["drinkId"].length; i++) {
-        console.log(OrderDB["cart"]);
-        var productDiv = createShoppingCartDiv(OrderDB["cart"]["drinkId"][i],OrderDB["cart"]["drinkAmount"][i]);
+    document.getElementById("checkout-order").addEventListener("click", stdOrder);   
+    document.getElementById("cancel-order").addEventListener("click", function() {
+        resetCart();
+        updateShoppingCartView();
+    });;   
+
+    for(var i = 0; i < OrderDB.cart.drinkId.length; i++) {
+        var productDiv = createShoppingCartDiv(OrderDB.cart.drinkId[i],OrderDB.cart.drinkAmount[i]);
         shoppingCartWindow.appendChild(productDiv);
-        var removeButton = document.getElementById(OrderDB["cart"]["drinkId"][i]+"-cart-button");  
-        removeButton.addEventListener("click", function () {
-            resetCart();
-            updateShoppingCartView();
-        });//removeFromShoppingCart.bind(null,OrderDB["cart"]["drinkId"][i]));  
+        var removeButton = document.getElementById(OrderDB.cart.drinkId[i]+"-cart-button");  
+        removeButton.addEventListener("click", removeFromCart.bind(null,OrderDB.cart.drinkId[i]));  
     }
 }
 
@@ -389,23 +391,6 @@ function createShoppingCartDiv(id,count) {
     );
     return div;
 }
-
-
-function removeFromShoppingCart(product_id) {
-    for(product in cart) {
-        if(cart[product].id == product_id && cart[product].count > 1) {
-            cart[product].count = cart[product].count - 1;
-            updateShoppingCartView();
-            return;
-        }
-    }
-    const index = indexOfCartProduct(cart,product_id);
-    if (index > -1) {
-      cart.splice(index, 1);
-    }
-    updateShoppingCartView();
-    
-} 
 
 function indexOfCartProduct(cart,id) {
     for(var i = 0; i < cart.length; i++) {
@@ -720,3 +705,10 @@ function createMainCategory() {
     }
 }
 
+
+function updateViewAllProducts() {
+    document.getElementById("main-window").innerHTML = "";
+    createProductView()
+    createAllProducts();
+    updateViewMain();
+}

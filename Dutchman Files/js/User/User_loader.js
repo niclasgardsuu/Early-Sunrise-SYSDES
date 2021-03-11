@@ -70,9 +70,7 @@ function addBalance(userName, newAmount) {
 
 function incrementOrder() {
     
-    console.log(modelData['orderCounter']);
     modelData['orderCounter'] += 1;
-    console.log(modelData['orderCounter']);
     return modelData['orderCounter'];
 }
 
@@ -81,49 +79,45 @@ function setTable(tableId) {
     modelData['tableNumber'] = tableId; // TODO: input
 }
 
+function finishOrder(id) {
+    for (var i = 0; i < OrderDB.all_orders.length; i++) {
+        if (OrderDB.all_orders[i].order_id == id) {
+            OrderDB.all_orders.splice(i, 1);
+            createBartenderView();
+        }
+    }
+}
+
+function calculateAmount(amount) {
+    var result = 0;
+    for(var i = 0; i < amount.length; i++) {
+        result += amount[i];
+    }
+    return result;
+}
+
 function revertOrder(id) {
-    
+    console.log("id that: "+id);
     for (i = 0; i < OrderDB.all_orders.length; i++) {
         if(OrderDB.all_orders[i].order_id == id) {
+            console.log(OrderDB.all_orders[i]);
             var order = { 
                         "drinkId": OrderDB.all_orders[i].drinkId,
                         "drinkAmount": OrderDB.all_orders[i].drinkAmount,
                         "price": OrderDB.all_orders[i].price,
                         "totalPrice" : OrderDB.all_orders[i].totalPrice,
                         "table": OrderDB.all_orders[i].table,
-                        "maxAmount": 10
+                        "maxAmount": 10-calculateAmount(OrderDB.all_orders[i].drinkAmount),
                     };     
             OrderDB.cart = order; 
-        }
-    }
-}
-
-function replaceOrder(id) {
-    for (var i = 0; i < OrderDB.all_orders.length; i++) {
-        if(OrderDB.all_orders[i].order_id == id) {
-            delete OrderDB.all_orders[i];
-        }
-        replaceOrderHelper(id);
-    }
-}
-
-
-function replaceOrderHelper(id) {
-    
-    var order_id = id;
-    var table = modelData['tableNumber'];
-            var obj = { "order_id": order_id,
-                        "drinkId": OrderDB.cart.drinkId,
-                        "drinkAmount": OrderDB.cart.drinkAmount,
-                        "price": OrderDB.cart.price,
-                        "totalPrice" : OrderDB.cart.totalPrice,
-                        "table": document.getElementById("table-number-input").value,
-                        "status": "pending" 
-                    };     
-            OrderDB.all_orders.push(obj);
-            resetCart();
+            var table = OrderDB.all_orders[i].table; 
+            OrderDB.all_orders.splice(i, 1);
+            updateViewAllProducts();
             updateShoppingCartView();
-            console.log(OrderDB.all_orders);
+            document.getElementById("table-number-input").value = table;
+            return;
+        }
+    }
 }
 
 function addToCart(drinkId, drinkAmount) {
@@ -156,40 +150,22 @@ function addToCart(drinkId, drinkAmount) {
     updateShoppingCartView();
     return successfull;
 }
-//TODODODDODO
-function removeFromCart(drinkId, removeAmount) {
-    
-    var successfull = false;
-    
-    if ((isNaN(drinkId) || isNaN(removeAmount) || (parseInt(removeAmount) <= 0))) { // Error check on input
-        updateShoppingCartView();
-        return successfull;
-    }
 
-    var currentAmount = OrderDB.cart.drinkAmount[id]
 
-    if (currentAmount - drinkAmount)
-
-    var currentMaxAmount = OrderDB.cart.maxAmount - parseInt(drinkAmount);
-    if(currentMaxAmount >= 0) {
-        OrderDB.cart.maxAmount = currentMaxAmount;
-        for(id in OrderDB.cart.drinkId) {
-            if(OrderDB.cart.drinkId[id] == drinkId) {
-                OrderDB.cart.drinkAmount[id] += drinkAmount;
-                OrderDB.cart.totalPrice += calculateCost(drinkId, drinkAmount);
-                updateShoppingCartView();
-                return true;
+function removeFromCart(drinkId) {
+    for (var i = 0; i < OrderDB.cart.drinkId.length; i++) {
+        if (OrderDB.cart.drinkId[i] == drinkId) {
+            OrderDB.cart.drinkAmount[i] -= 1;
+            OrderDB.cart.totalPrice -= OrderDB.cart.price;
+            OrderDB.cart.maxAmount++;
+            if (OrderDB.cart.drinkAmount[i] == 0) {
+                OrderDB.cart.drinkId.splice(i, 1);
+                OrderDB.cart.drinkAmount.splice(i, 1);
+                OrderDB.cart.price.splice(i, 1);
             }
+            updateShoppingCartView();
         }
-
-        OrderDB.cart.drinkId.push(drinkId);
-        OrderDB.cart.drinkAmount.push(drinkAmount);
-        OrderDB.cart.price.push(findProductByID(drinkId).pricewithvat);
-        OrderDB.cart.totalPrice += calculateCost(drinkId, drinkAmount);
-        successfull = true; 
-    } 
-    updateShoppingCartView();
-    return successfull;
+    }
 }
 
 function stdOrder() {
@@ -206,7 +182,6 @@ function stdOrder() {
     OrderDB.all_orders.push(obj);
     resetCart();
     updateShoppingCartView();
-    console.log(OrderDB.all_orders);
 }
 
 function resetCart() {
@@ -285,7 +260,6 @@ function changeStock (id, quantity) {
         for (var j = 0; j < drunk[dict.mainCategory[i]].length; j++) {
             if (drunk[dict.mainCategory[i]][j].articleid == id) {
                 if (parseInt(stockAmount) >= 0) {
-                    console.log("hej");
                     var val = parseInt(stockAmount) + quantity;
                     drunk[dict.mainCategory[i]][j].stock = val;
                     document.getElementById("product-manager-stock").value = val;

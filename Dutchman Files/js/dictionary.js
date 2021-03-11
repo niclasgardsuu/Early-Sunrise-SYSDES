@@ -37,7 +37,7 @@ dict = {
         "bartender-button-n-0",
         "bartender-button-n-1",
         "bartender-button-n-2",
-        "bartender-total-price",
+        "bartender-total",
         "bartender-table-name",
         "bartender-order-name",
     ],
@@ -185,7 +185,7 @@ dict = {
         "bartender-button-n-0": "Ändra order",
         "bartender-button-n-1": "Ta bort order",
         "bartender-button-n-2": "Avsluta order",
-        "bartender-total-price": "Totala priset: ",
+        "bartender-total": "Totalt",
         "bartender-table-name": "Bord: ",
         "bartender-order-name": "Order: ",
 
@@ -288,7 +288,7 @@ dict = {
         "bartender-button-n-0": "Change order",
         "bartender-button-n-1": "Remove order",
         "bartender-button-n-2": "Complete order",
-        "bartender-total-price": "Total price: ",
+        "bartender-total": "Total",
         "bartender-table-name": "Table ",
         "bartender-order-name": "Order ",
 

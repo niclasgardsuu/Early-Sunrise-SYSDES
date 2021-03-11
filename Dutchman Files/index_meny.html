@@ -24,10 +24,8 @@
     <script>
 
         $(document).ready(function(){
-            createProductView()
-            createMainCategory();
-            createAllProducts();
-            updateViewMain();
+            createMainCategory()
+            updateViewAllProducts();
             var sel = document.getElementById("select-language");
             sel.addEventListener("change",changeLang.bind(null,sel));
             document.getElementById("login").addEventListener("click", createLoginView);
