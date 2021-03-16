@@ -28,7 +28,7 @@ var drunk = {
             "producent": "Spendrups",
             "alcoholcontent": "5.3%",
             "img": "./img/norrlands.png",
-            "stock": 0
+            "stock": 3
         }, {
             "articleid": "1206",    
             "name": "Staropramen",
@@ -233,7 +233,7 @@ var drunk = {
     "wine" : [
         {
             "articleid": "668007",
-            "name": "Ch\u00E92teau Cambon la Pelouse",
+            "name": "Ch\u00E9teau Cambon la Pelouse",
             "name2": "",
             "pricewithvat": "191.00",
             "volume": null,
@@ -243,7 +243,7 @@ var drunk = {
             "origincountry": "Frankrike",
             "producent": "Tryffelsvinet AB",
             "alcoholcontent": "14%",
-            "img": "",
+            "img": "./img/chateau_la_pelouse.png",
             "stock": 10
         }, {
             "nr": "9635001",
@@ -259,7 +259,7 @@ var drunk = {
             "origincountry": "Australien",
             "producent": "Torbreck Vintners",
             "alcoholcontent": "14.5%",
-            "img": "",
+            "img": "./img/torbreck.png",
             "stock": 10
         }
     ],

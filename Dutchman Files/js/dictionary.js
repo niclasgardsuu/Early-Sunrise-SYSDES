@@ -118,7 +118,8 @@ dict = {
         "footnote-copyright-message",
         "checkout-order",
         "cancel-order",
-        "table-number"
+        "table-number",
+        "shopping-cart-drop-here"
     ],       
     "pics" : [["flag-pic","flag-alt"]],              // keys for pictures
     "classes": ["product-buy"],
@@ -136,6 +137,7 @@ dict = {
         "spirits":"Sprit",
         "wine":"Vin",
         "non-alcoholic":"Alkoholfritt",
+        "shopping-cart-drop-here": "Din varukorg är tom! (Du kan dra en produkt hit)",
         "product-buy": "Lägg i kundvagnen",
         "product-spec": "Specifikationer",
         "product-spec-alcohol": "Alkoholhalt",
@@ -200,31 +202,30 @@ dict = {
         // Log In
         "userN"                : "Användarnamn",
         "passW"                : "Lösenord",
-        "log"                  : "Log In",
+        "log"                  : "Logga in",
         "username"             : "Ange användarnamn", 
         "password"             : "Ange lösenord",
     
         // VIP
-        "balance"              : "Account Balance",
-        "sdrink"               : "Special Drink",
-        "logOut"               : "Log Out",
-        "drinkAmount"          : "Drink Amount",
+        "balance"              : "Pengar i kontot",
+        "sdrink"               : "Specialdrink",
+        "logOut"               : "Logga ut",
+        "drinkAmount"          : "Antal drycker",
         "vipOrder"             : "Vip Order",
         "drinkId"              : "Drink ID",
         
         // Staff
-        "adToAccUserN"         : "Username",
-        "addA"                 : "Add Amount",
-        "addToAcc"             : "Add to account",
-        "staffLogO"            : "Log Out",
+        "adToAccUserN"         : "Användarnamn",
+        "addA"                 : "Lägg till antal",
+        "addToAcc"             : "Lägg till i kontot",
         "completeOrderId"      : "Order Id",
-        "completeOrder"        : "Complete Order",
+        "completeOrder"        : "Färdig order",
        
         // All Customer
         "stdOrder"             : "Order",
         "stdDrinkId"           : "Drink ID",
-        "stdDrinkAmount"       : "Amount",
-        "addToCart"            : "Add to cart",
+        "stdDrinkAmount"       : "Antal",
+        "addToCart"            : "Lägg till i kundvagnen",
 
 
     },
@@ -239,6 +240,7 @@ dict = {
         "spirits": "Spirits",
         "wine": "Wine",
         "non-alcoholic": "Non-alcoholic",
+        "shopping-cart-drop-here": "Your cart is empty! (You can drag over a product here)",
         "product-buy": "Add to cart",
         "product-spec": "Specifications",
         "product-spec-alcohol": "Alcohol content",
@@ -318,7 +320,6 @@ dict = {
         "adToAccUserN"         : "Username",
         "addA"                 : "Add Amount",
         "addToAcc"             : "Add to account",
-        "staffLogO"            : "Log Out",
         "completeOrderId"      : "Order Id",
         "completeOrder"        : "Complete Order",
        

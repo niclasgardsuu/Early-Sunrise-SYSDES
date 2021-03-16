@@ -162,6 +162,10 @@ function createOrderDiv(order) {
 function createManagerView() {
     var main = document.getElementById("main-window");
     main.innerHTML = "";
+    var managerWindow = document.createElement("div");
+    managerWindow.className = "manager-window";
+    var managerContainer = document.createElement("div");
+    managerContainer.className = "manager-container";
 
     const addProduct = 
         `<div class="manager-left-container">
@@ -182,7 +186,7 @@ function createManagerView() {
                     <dt id="product-manager-serves"></dt>
                     <dd><input id="product-manager-serves-i" placeholder="Burk" type="text"></dd>
                     <dt id="product-manager-origin"></dt>
-                    <dd><input id="product-manager-origin-i" pceholder="Helsinki" type="text"></dd>
+                    <dd><input id="product-manager-origin-i" placeholder="Helsinki" type="text"></dd>
                     <dt id="product-manager-origincountry"></dt>
                     <dd><input id="product-manager-origincountry-i" placeholder="Finland" type="text"></dd>
                     <dt id="product-manager-producent"></dt>
@@ -202,7 +206,9 @@ function createManagerView() {
 
     const staff = createStaffLogIn();
 
-    main.insertAdjacentHTML('beforeend', addProduct + staff);
+    managerContainer.insertAdjacentHTML('beforeend', addProduct + staff);
+    managerWindow.appendChild(managerContainer);
+    main.appendChild(managerWindow);
 
     document.getElementById("product-manager-add-product").addEventListener("click", addProductToMeny);
     updateViewManager();
@@ -248,11 +254,34 @@ function createProductView() {
         `<div class="product-flex">
             <div id="filter-window"></div>
             <div id="product-window"></div>
-            <div id="shopping-cart-window" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)"></div>
+            <div id="shopping-cart-window">
+                <div class="shopping-cart-container-top">
+                    <div class="shopping-cart-container-top-top">
+                        <button id="checkout-order">
+                            ${getString("checkout-order")}
+                        </button>
+                        <button id="cancel-order">
+                            ${getString("cancel-order")}
+                        </button>
+                    </div>
+
+                    <div class="shopping-cart-container-top-bottom">
+                        <span id="table-number">
+                            ${getString("table-number")}
+                        </span>
+                        <input id="table-number-input" type="number" max=10 min=1>
+                    </div>
+                </div>
+                <div id="shopping-cart-container-bottom" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)">
+                    
+                </div>
+            </div>
         </div>`
     );
     
 }
+
+   
 
 function removeProductFromMeny() {
     var id = document.getElementById("product-info-articleid").textContent;
@@ -340,34 +369,27 @@ function addProductToMeny() {
 
 function updateShoppingCartView() {
     //genererar htmlkod för shoppingcart, och rensar det som stod innan
-    var shoppingCartWindow = document.getElementById("shopping-cart-window");
-    shoppingCartWindow.textContent = "";
-    shoppingCartWindow.insertAdjacentHTML('afterbegin',
-    `
-    <div id="shopping-cart-options">
-        <button id="checkout-order">
-            ${getString("checkout-order")}
-        </button>
-        <button id="cancel-order">
-            ${getString("cancel-order")}
-        </button>
-        <span id="table-number">
-            ${getString("table-number")}
-        </span>
-        <input id="table-number-input" type="number" max=10 min=1>
-    </div>
-    `)
+    var shoppingBottom = document.getElementById("shopping-cart-container-bottom");
+    shoppingBottom.textContent = "";
+
     document.getElementById("checkout-order").addEventListener("click", stdOrder);   
     document.getElementById("cancel-order").addEventListener("click", function() {
         resetCart();
         updateShoppingCartView();
-    });;   
+    });
 
     for(var i = 0; i < OrderDB.cart.drinkId.length; i++) {
         var productDiv = createShoppingCartDiv(OrderDB.cart.drinkId[i],OrderDB.cart.drinkAmount[i]);
-        shoppingCartWindow.appendChild(productDiv);
+        shoppingBottom.appendChild(productDiv);
         var removeButton = document.getElementById(OrderDB.cart.drinkId[i]+"-cart-button");  
         removeButton.addEventListener("click", removeFromCart.bind(null,OrderDB.cart.drinkId[i]));  
+    }
+
+    if (OrderDB.cart.drinkId.length == 0) {
+        shoppingBottom.insertAdjacentHTML("beforeend",
+                    `<div id="shopping-cart-container-msg" class="shopping-cart-div">
+                        <span id="shopping-cart-drop-here">${getString("shopping-cart-drop-here")}</span>
+                    </div>`);
     }
 }
 
@@ -481,20 +503,30 @@ function showProductInfo(id, category) {
     if(modelData["credentials"] == 0) {
         productContainer.insertAdjacentHTML("beforeend", 
             `<div class="product-info-container-left">
-                    <img id="product-info-img" src="${product.img}" class="product-img" alt="">
+                    <div class="product-info-container-img">
+                        <img id="product-info-img" src="${product.img}" class="product-img" alt="">
+                    </div>
                 </div>
                 <div class="product-info-container-right">
                     ${productInfo}
                     ${staffInfo}
                 </div>
             `);
-        document.getElementById("product-manager-stock").addEventListener("change", changeStock.bind(null, id, 0));
-        document.getElementById("product-manager-refill").addEventListener("click", changeStock.bind(null, id, 24));
+             
+        document.getElementById("product-manager-stock").addEventListener("change", changeStock.bind(null, id, null));
+
+        var refill = document.getElementById("product-manager-refill");
+        refill.addEventListener("click", changeStock.bind(null, id, 24));
+        refill.addEventListener("click", function () {
+            document.getElementById("product-manager-stock").value = parseInt(document.getElementById("product-manager-stock").value) + 24;
+        });
         document.getElementById("product-manager-remove-product").addEventListener("click", removeProductFromMeny);
     } else {
         productContainer.insertAdjacentHTML("beforeend", 
-            `<div class="product-info-container-left">
-                    <img id="product-info-img" src="${product.img}" class="product-img" alt="">
+               `<div class="product-info-container-left">
+                    <div class="product-info-container-img">
+                        <img id="product-info-img" src="${product.img}" class="product-img" alt="">
+                    </div>
                 </div>
                 <div class="product-info-container-right">
                     ${productInfo}
@@ -710,5 +742,6 @@ function updateViewAllProducts() {
     document.getElementById("main-window").innerHTML = "";
     createProductView()
     createAllProducts();
+    updateShoppingCartView();
     updateViewMain();
 }

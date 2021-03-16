@@ -15,7 +15,7 @@ function doInit(func) {
             
         if (credentials == 3) {
             logInVip();
-        } else if (credentials == 0) {
+        } else if (credentials == 0 ) {
             logInStaff();
         } else {
             logInUnsuccess();
@@ -94,7 +94,7 @@ function logInStaff() {
     $("#loginDisplay").html(createSpanEvent("logOut","cursor","","logOut()") +
                             createSpanEvent("manager","cursor","","createManagerView()")+
                             createSpanEvent("bartender","cursor","","createBartenderView()")+
-                            createButton("notify-security", ""));
+                            createSpanEvent("notify-security", "cursor", "", "window.location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'"));
 
 
     var showOrder = getOrders();

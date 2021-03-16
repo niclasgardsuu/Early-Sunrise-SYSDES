@@ -5,7 +5,8 @@ var OrderDB = {
             "price": [],
             "totalPrice": 0,
             "table": "",
-            "maxAmount": 10
+            "maxAmount": 10,
+            "order_id": null
     },
     "vip": [ //alla username med tomma order id ?
         {
@@ -28,15 +29,6 @@ var OrderDB = {
         }
     ],
     "all_orders": [
-        {
-            "drinkAmount": [3, 3, 2],
-            "drinkId": ["522586", "1206", "1132"],
-            "order_id": 0,
-            "price": ["23.50", "16.40", "13.90"],
-            "status": "pending",
-            "table": "1",
-            "totalPrice": 143
-        }
     ]
 };
 
