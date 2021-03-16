@@ -29,6 +29,7 @@
             var sel = document.getElementById("select-language");
             sel.addEventListener("change",changeLang.bind(null,sel));
             document.getElementById("login").addEventListener("click", createLoginView);
+            document.getElementById("main-logo").addEventListener("click", updateViewAllProducts);
         });
 
     </script>
@@ -49,6 +50,8 @@
         <div id="product-info-container-id" class="product-info-container"></div>
     </div>
 
+    <div id="alert-box-container"></div>
+
     <div class="window">
 
         <!--The top menu of the website-->
@@ -67,7 +70,7 @@
         <!--The menu of the website-->
         <div id="menu-window">
             <div class="menu-left">
-                <img id="main-logo" src="./img/fd.jpg"height="60px" width="60px">
+                <img id="main-logo" src="./img/fd.jpg" class="cursor" height="60px" width="60px">
             </div>
             <div class="menu-middle" id="main-category">  
             </div>

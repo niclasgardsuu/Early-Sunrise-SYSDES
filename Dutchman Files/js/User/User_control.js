@@ -100,12 +100,16 @@ function logInStaff() {
     var showOrder = getOrders();
     $("#innerDisplay").text(showOrder); 
 
+    if (theLowestInStock(5).length != 0) {
+        alertBox(getString("less-than-five-warning"));
+    }
+
     updateViewUser();
 }
 
 function logInUnsuccess() {
 
-    alert(getString("log_in_unsuccess_msg"));
+    alertBox(getString("log_in_unsuccess_msg"));
     updateViewUser();
 }
 

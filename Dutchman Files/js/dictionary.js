@@ -57,6 +57,7 @@ dict = {
         "product-manager-alcohol",
         "product-manager-img",
         "product-manager-stock",
+        "product-manager-price",
         "product-manager-main-category",
         "product-manager-add-product",
         // Staff
@@ -166,6 +167,7 @@ dict = {
         "product-manager-alcohol":"Alkoholhalt",
         "product-manager-img":"Bild",
         "product-manager-stock": "Antal i lager",
+        "product-manager-price": "Ändra pris",
         "product-manager-main-category": "Huvudkategori",
         "product-manager-add-product": "Lägg till produkt",
         "product-low-in-stock": "Lågt antal i lager",
@@ -174,10 +176,22 @@ dict = {
         "bye" : "Tack för besöket! Välkommen åter",
         "flag-pic" : "./img/sweden.svg",
         "flag-alt" : "Sverige flagga",
+
         "product-manager-success-msg": " blev tillagd",
-        "product-manager-check-input": "Några inputs kan inte vara tomma, ",
-        "product-manager-check-id": "Id finns redan, ",
-        "product-manager-check-category": "Huvudkategori finns inte, ",
+
+        //warnings
+        "less-than-five-warning": "Varning! Mindre än 5 produkter av en typ finns i lagret!",
+
+        //error messages
+        "product-manager-input-error": "Några inputs kan inte vara tomma, ",
+        "product-manager-id-error": "Id finns redan, ",
+        "product-manager-category-error": "Huvudkategori finns inte, ",
+        "table-number-error": "Du kan bara välja ett bord mellan 1 och 10!",
+        "empty-cart-error": "Din varukorg är tom!",
+        "stock-empty-error": "Varan finns inte i lager längre!",
+        "max-order-error": "Du kan bara beställa 10 produkter!",
+        "unknown-error": "Ett oväntat fel inträffade!",
+
         "checkout-order": "KÖP",
         "cancel-order": "KÖP INTE",
         "table-number": "Bordsnummer: ",
@@ -270,6 +284,7 @@ dict = {
         "product-manager-alcohol":"Alcohol content",
         "product-manager-img":"Picture",
         "product-manager-stock": "Stock",
+        "product-manager-price": "Change price",
         "product-manager-main-category": "Main category",
         "product-manager-add-product": "Add product",
         "product-low-in-stock": "Low in stock",
@@ -278,13 +293,25 @@ dict = {
         "bye": "Nice meeting you! Welcome back!",
         "flag-pic" : "./img/australia.svg",
         "flag-alt" : "Australien flag",
-        "product-manager-success-msg": " got added",
-        "product-manager-check-input": "Some inputs cant be empty, ",
-        "product-manager-check-id": "Id already exist, ",
-        "product-manager-check-category": "Main category does not exist, ",
         "checkout-order": "BUY",
         "cancel-order": "DONT BUY",
         "table-number": "Tablenumber: ",
+
+        "product-manager-success-msg": " blev tillagd",
+
+        //warnings 
+        "less-than-five-warning": "Warning! Less than five products of a type remains!",
+
+        //error messages
+        "product-manager-input-error": "Some inputs cant be empty, ",
+        "product-manager-id-error": "Id already exists, ",
+        "product-manager-category-error": "Maincategory does not exist, ",
+        "table-number-error": "You can only chose a table between 1 and 10!",
+        "empty-cart-error": "Your cart is empty!",
+        "stock-empty-error": "The product is not in stock!",
+        "max-order-error": "You can only order 10 products!",
+        "unknown-error": "An unexpected error happend!",
+
 
         //bartender view 
         "bartender-table-h-0": "Drink",

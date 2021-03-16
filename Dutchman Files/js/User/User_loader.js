@@ -46,40 +46,46 @@ function addToCart(drinkId, drinkAmount) {
     
     var successful = false;
 
-    
-    
+    var currentMaxAmount = OrderDB.cart.maxAmount - parseInt(drinkAmount);
+
+    if (currentMaxAmount < 0) {
+        alertBox(getString("max-order-error"));
+        return successful;
+    }
+
     if ((isNaN(drinkId) || isNaN(drinkAmount) || (parseInt(drinkAmount) <= 0))) { // Error check on input
         updateShoppingCartView();
+        alertBox(getString("unknown-error"));
         return successful;
     }
 
     if (!checkAddToCart(drinkId, drinkAmount)) {
+        alertBox(getString("stock-empty-error"));
         return successful;
     }
 
     if (!changeStock(drinkId, -Math.abs(drinkAmount))) { 
+        alertBox(getString("unknown-error"));
         return successful;
     }
 
-    var currentMaxAmount = OrderDB.cart.maxAmount - parseInt(drinkAmount);
-    if(currentMaxAmount >= 0) {
-        OrderDB.cart.maxAmount = currentMaxAmount;
-        for(id in OrderDB.cart.drinkId) {
-            if(OrderDB.cart.drinkId[id] == drinkId) {
-                OrderDB.cart.drinkAmount[id] += drinkAmount;
-                OrderDB.cart.totalPrice += calculateCost(drinkId, drinkAmount);
-                updateShoppingCartView();
-                return true;
-            }
+    OrderDB.cart.maxAmount = currentMaxAmount;
+    for(id in OrderDB.cart.drinkId) {
+        if(OrderDB.cart.drinkId[id] == drinkId) {
+            OrderDB.cart.drinkAmount[id] += drinkAmount;
+            OrderDB.cart.totalPrice += calculateCost(drinkId, drinkAmount);
+            updateShoppingCartView();
+            return true;
         }
+    }
 
-        OrderDB.cart.drinkId.push(drinkId);
-        OrderDB.cart.drinkAmount.push(drinkAmount);
-        OrderDB.cart.price.push(findProductByID(drinkId).pricewithvat);
-        OrderDB.cart.totalPrice += calculateCost(drinkId, drinkAmount);
-        OrderDB.cart.order_id = null;
-        successful = true; 
-    } 
+    OrderDB.cart.drinkId.push(drinkId);
+    OrderDB.cart.drinkAmount.push(drinkAmount);
+    OrderDB.cart.price.push(findProductByID(drinkId).pricewithvat);
+    OrderDB.cart.totalPrice += calculateCost(drinkId, drinkAmount);
+    OrderDB.cart.order_id = null;
+    successful = true; 
+
     updateShoppingCartView();
     return successful;
 }
@@ -138,10 +144,12 @@ function stdOrder() {
     sucessful = false;
     var tableNumber = document.getElementById("table-number-input").value;
     if ( tableNumber == "" || tableNumber <= 0 || tableNumber > 10) {
+        alertBox(getString("table-number-error"));
         return sucessful;
     }
 
     if (OrderDB.cart.drinkId.length == 0) {
+        alertBox(getString("empty-cart-error"));
         return sucessful;
     }
 
@@ -177,6 +185,8 @@ function clearCart() {
 }
 
 function resetCart() {
+
+    if (OrderDB.cart.drinkId.length == 0) alertBox(getString("empty-cart-error"));
     
     var drinkList = OrderDB.cart.drinkId;
     var amountList = OrderDB.cart.drinkAmount;

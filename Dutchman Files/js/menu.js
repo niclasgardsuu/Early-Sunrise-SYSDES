@@ -158,11 +158,11 @@ function createOrderDiv(order) {
     return orderDiv;
 }
 
-function theLowestInStock() {
+function theLowestInStock(number) {
     var result = [];
     for (i in dict.mainCategory) {
         for (j in drunk[dict.mainCategory[i]]) {
-            if (drunk[dict.mainCategory[i]][j].stock <= 5) {
+            if (drunk[dict.mainCategory[i]][j].stock < number) {
                 result.push(drunk[dict.mainCategory[i]][j]);
             }
         }
@@ -191,7 +191,7 @@ function createLowestInStockDiv(name, stock) {
 }
 
 function createLowestInStockView() {
-    var lowest = theLowestInStock();
+    var lowest = theLowestInStock(5);
     var lowestContainer = document.createElement("div");
     lowestContainer.className = "lowest-in-stock-container";
     var h1 = document.createElement("h1");
@@ -291,7 +291,7 @@ function createLoginView() {
     updateViewLogin();
 }
 
-function createProductView() {
+function createMainView() {
     var main = document.getElementById("main-window");
     main.innerHTML = "";
 
@@ -324,6 +324,11 @@ function createProductView() {
         </div>`
     );
     
+    document.getElementById("checkout-order").addEventListener("click", stdOrder);   
+    document.getElementById("cancel-order").addEventListener("click", function() {
+        resetCart();
+        updateShoppingCartView();
+    });
 }
 
    
@@ -349,22 +354,22 @@ function checkAddProductToMeny(articleid, category, cannotBeEmpty) {
     for (var i = 0; i < cannotBeEmpty.length; i++ ) {
         if (cannotBeEmpty[i] == "") {
             passed = false;
-            msg = getString("product-manager-check-input");
+            msg = getString("product-manager-input-error");
         }
     }
 
     if (findProductByID(articleid) != null){
-        msg += getString("product-manager-check-id");
+        msg += getString("product-manager-id-error");
         passed = false;
     }
 
     if (category != dict.mainCategory[0] && category != dict.mainCategory[1] 
         &&  category != dict.mainCategory[2] && category != dict.mainCategory[3]) {
-        msg += getString("product-manager-check-category");
+        msg += getString("product-manager-category-error");
         passed = false;
     }
 
-    if (!passed) alert(msg);
+    if (!passed) alertBox(msg);
 
     return passed;
 }
@@ -416,12 +421,6 @@ function updateShoppingCartView() {
     //genererar htmlkod för shoppingcart, och rensar det som stod innan
     var shoppingBottom = document.getElementById("shopping-cart-container-bottom");
     shoppingBottom.textContent = "";
-
-    document.getElementById("checkout-order").addEventListener("click", stdOrder);   
-    document.getElementById("cancel-order").addEventListener("click", function() {
-        resetCart();
-        updateShoppingCartView();
-    });
 
     for(var i = 0; i < OrderDB.cart.drinkId.length; i++) {
         var productDiv = createShoppingCartDiv(OrderDB.cart.drinkId[i],OrderDB.cart.drinkAmount[i]);
@@ -513,6 +512,10 @@ function showProductInfo(id, category) {
                         <dd>
                             <input id="product-manager-stock" value="${product.stock}" type="number" max="10000" min="0">
                         </dd>
+                        <dt id="product-manager-price"></dt>
+                        <dd>
+                            <input id="product-manager-price-i" value="${product.pricewithvat}" type="number" max="10000" min="0">
+                        </dd>
                     </dl>
                     <button id="product-manager-refill"></button>
                     <button id="product-manager-remove-product"></button>
@@ -566,6 +569,7 @@ function showProductInfo(id, category) {
             document.getElementById("product-manager-stock").value = parseInt(document.getElementById("product-manager-stock").value) + 24;
         });
         document.getElementById("product-manager-remove-product").addEventListener("click", removeProductFromMeny);
+        document.getElementById("product-manager-price-i").addEventListener("change", changePrice.bind(null, product.articleid, category));
     } else {
         productContainer.insertAdjacentHTML("beforeend", 
                `<div class="product-info-container-left">
@@ -581,6 +585,17 @@ function showProductInfo(id, category) {
     
     document.getElementById("product-buy-id").addEventListener("click",addToCart.bind(null,id,1));
     updateView();
+}
+
+
+function changePrice(id, category) {
+    for (i in drunk[category]) {
+        if (drunk[category][i].articleid == id) {
+            drunk[category][i].pricewithvat = document.getElementById("product-manager-price-i").value;
+        }
+    }
+    showProductInfo(id, category);
+    updateViewProducts(category);
 }
 
 
@@ -630,7 +645,7 @@ function createProductsByFilter(filterId, category) {
 
 
 function updateViewProducts(category) {
-    createProductView();
+    createMainView();
     document.getElementById("filter-window").textContent = "";
     createFilter(category);
     document.getElementById("product-window").textContent = "";
@@ -785,8 +800,50 @@ function createMainCategory() {
 
 function updateViewAllProducts() {
     document.getElementById("main-window").innerHTML = "";
-    createProductView()
+    createMainView()
     createAllProducts();
     updateShoppingCartView();
     updateViewMain();
 }
+
+var alertTimer;
+
+function alertBox(msg) {
+    var container = document.getElementById("alert-box-container");
+
+    var alertBox = document.createElement("div");
+    alertBox.className = "alert-box";
+
+    var alertMsg = document.createElement("span");
+    alertMsg.className = "alert-box-msg";
+    alertMsg.appendChild(document.createTextNode(msg));
+
+    var alertClose = document.createElement("span");
+    alertClose.className = "alert-box-close cursor";
+    alertClose.appendChild(document.createTextNode("x"));
+    alertClose.addEventListener("click", function() {
+        clearTimeout(alertTimer);
+        this.parentNode.remove();
+    });
+  
+    alertBox.appendChild(alertMsg);
+    alertBox.appendChild(alertClose);
+
+    container.appendChild(alertBox);
+
+    if (container.childElementCount > 3) {
+        clearTimeout(alertTimer);
+        removeAlertBox();
+    } else {
+        alerTimer = setTimeout(removeAlertBox, 3000);
+    }
+}
+
+function removeAlertBox() {
+    var container = document.getElementById("alert-box-container");
+    if (container.hasChildNodes()) container.removeChild(container.firstChild);
+}
+
+
+
+
