@@ -65,7 +65,8 @@ dict = {
         "addToAcc",
         "staffLogO",
         "completeOrderId",
-        "completeOrder"
+        "completeOrder",
+        "product-low-in-stock"
     ],
     "userIds" : 
     [ 
@@ -167,6 +168,7 @@ dict = {
         "product-manager-stock": "Antal i lager",
         "product-manager-main-category": "Huvudkategori",
         "product-manager-add-product": "Lägg till produkt",
+        "product-low-in-stock": "Lågt antal i lager",
         "footnote-copyright-message": "Den flygande holländaren av © 2021 The Early Sunrise",
         "hello" : "Välkommen till denna lilla demonstration",
         "bye" : "Tack för besöket! Välkommen åter",
@@ -270,6 +272,7 @@ dict = {
         "product-manager-stock": "Stock",
         "product-manager-main-category": "Main category",
         "product-manager-add-product": "Add product",
+        "product-low-in-stock": "Low in stock",
         "footnote-copyright-message": "The Flying Dutchman by © 2021 The Early Sunrise",
         "hello": "Welcome to this small demonstration",
         "bye": "Nice meeting you! Welcome back!",

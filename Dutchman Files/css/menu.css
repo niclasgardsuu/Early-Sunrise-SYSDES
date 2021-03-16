@@ -535,3 +535,11 @@ button {
     color: var(--product-buy-button-color);
     background-color: var(--product-buy-button-background);
 }
+
+.lowest-in-stock-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    max-width: 800px;
+    width: 90%
+}

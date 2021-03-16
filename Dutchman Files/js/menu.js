@@ -132,8 +132,7 @@ function createOrderTable(order) {
 
 
     var ids = ["change-order-","remove-order-", "finish-order-"];
-    console.log("bann: "+order.order_id);
-    var fun = [revertOrder.bind(null, order.order_id), null, finishOrder.bind(null,order.order_id)];
+    var fun = [revertOrder.bind(null, order.order_id), removeOrder.bind(null, order), finishOrder.bind(null,order.order_id)];
 
     var tr2 = document.createElement("tr");
     for (var i = 0; i < 3; i++) {
@@ -157,6 +156,51 @@ function createOrderDiv(order) {
     orderDiv.style.border = "2px";
     orderDiv.appendChild(document.createTextNode(order.order_id));
     return orderDiv;
+}
+
+function theLowestInStock() {
+    var result = [];
+    for (i in dict.mainCategory) {
+        for (j in drunk[dict.mainCategory[i]]) {
+            if (drunk[dict.mainCategory[i]][j].stock <= 5) {
+                result.push(drunk[dict.mainCategory[i]][j]);
+            }
+        }
+    }
+    return result;
+}
+
+function createLowestInStockDiv(name, stock) {
+    var outer = document.createElement("div");
+    outer.className = "shopping-cart-div";
+    var left = document.createElement("div");
+    left.className = "shopping-cart-div-left";
+    left.appendChild(document.createTextNode(name))
+    var center = document.createElement("div");
+    center.className = "shopping-cart-div-center";
+    center.appendChild(document.createTextNode(stock))
+    /*
+    var right = document.createElement("div");
+    right.className = "shopping-cart-div-right";
+    right.appendChild()
+    */
+
+    outer.appendChild(left);
+    outer.appendChild(center);
+    return outer;
+}
+
+function createLowestInStockView() {
+    var lowest = theLowestInStock();
+    var lowestContainer = document.createElement("div");
+    lowestContainer.className = "lowest-in-stock-container";
+    var h1 = document.createElement("h1");
+    h1.id = "product-low-in-stock";
+    lowestContainer.appendChild(h1);
+    for (i in lowest) {
+        lowestContainer.appendChild(createLowestInStockDiv(lowest[i].name, lowest[i].stock));
+    }
+    return lowestContainer;
 }
 
 function createManagerView() {
@@ -207,6 +251,7 @@ function createManagerView() {
     const staff = createStaffLogIn();
 
     managerContainer.insertAdjacentHTML('beforeend', addProduct + staff);
+    managerContainer.appendChild(createLowestInStockView());
     managerWindow.appendChild(managerContainer);
     main.appendChild(managerWindow);
 

@@ -220,6 +220,14 @@ function getOrders() {
     return orders;
 }
 
+function removeOrder(order) {
+    console.log(order);
+    for (var i = 0; i < order.drinkId.length; i++) {
+        changeStock(order.drinkId[i], order.drinkAmount[i]);
+    }
+    finishOrder(order.order_id);
+}
+
 function finishOrder(orderId) {
 
     for (i = 0; i < OrderDB.all_orders.length; i++) {
