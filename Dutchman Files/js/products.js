@@ -380,7 +380,7 @@ var drunk = {
     "secret": [
         {
             "articleid": "10392",
-            "name": "Super Olvi",
+            "name": "Supa Olvi",
             "name2": "Tuplapukki",
             "pricewithvat": "10.90",
             "volume": "500 ml",
