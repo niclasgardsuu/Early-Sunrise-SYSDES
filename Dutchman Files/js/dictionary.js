@@ -12,7 +12,13 @@ var language = "sv"
 //
 
 dict = {
-    "mainCategory": ["beer","spirits","wine","non-alcoholic"],
+    "mainCategory": 
+    [   
+        "beer",
+        "spirits",
+        "wine",
+        "non-alcoholic"
+    ],
     "login-ids": 
     [
         "userN", 
@@ -101,10 +107,6 @@ dict = {
     "main-ids" : 
     [
         "login",
-        "beer",
-        "spirits",
-        "wine",
-        "non-alcoholic",
         "product-spec",
         "product-spec-alcohol",
         "product-spec-category",
@@ -138,6 +140,7 @@ dict = {
         "beer":"Öl",
         "spirits":"Sprit",
         "wine":"Vin",
+        "secret": "Hemlighet",
         "non-alcoholic":"Alkoholfritt",
         "shopping-cart-drop-here": "Din varukorg är tom! (Du kan dra en produkt hit)",
         "product-buy": "Lägg i kundvagnen",
@@ -255,6 +258,7 @@ dict = {
         "beer": "Beer",
         "spirits": "Spirits",
         "wine": "Wine",
+        "secret": "Secret",
         "non-alcoholic": "Non-alcoholic",
         "shopping-cart-drop-here": "Your cart is empty! (You can drag over a product here)",
         "product-buy": "Add to cart",

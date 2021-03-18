@@ -72,7 +72,12 @@ function updateViewUser() {
     updateViewIds("userIds");
 }
 
+function updateViewMainCategory() {
+    updateViewIds("mainCategory");
+}
+
 function updateView() {
+    updateViewMainCategory();
     updateViewMain();
     updateViewLogin();
     updateViewManager();

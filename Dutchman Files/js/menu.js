@@ -776,10 +776,10 @@ function createFilter(category) {
 
 function createMainCategory() {
     var id = document.getElementById("main-category");
+    id.innerHTML = "";
     for (var i = 0; i < dict.mainCategory.length; i++) {
         //Namn på kategorin
         var name = document.createElement("span");
-        name.appendChild(document.createTextNode(dict.mainCategory[i]));
         name.id = dict.mainCategory[i];
         //Bild på kategorin
         var img = document.createElement("img");
@@ -795,6 +795,7 @@ function createMainCategory() {
         a.addEventListener("click", updateViewProducts.bind(null, dict.mainCategory[i]));
         id.appendChild(a);
     }
+    updateViewMainCategory();
 }
 
 

@@ -376,5 +376,24 @@ var drunk = {
             "img": "",
             "stock": 10
         }
+    ],
+    "secret": [
+        {
+            "articleid": "10392",
+            "name": "Super Olvi",
+            "name2": "Tuplapukki",
+            "pricewithvat": "10.90",
+            "volume": "500 ml",
+            "productgroup": "Öl",
+            "serves": "Flaska",
+            "origin": "Månen",
+            "origincountry": "Vintergatan",
+            "producent": "Aliens",
+            "alcoholcontent": "69.420%",
+            "img": "./img/olvi.jpeg",
+            "stock": 69
+        }
+
     ]
+
 }

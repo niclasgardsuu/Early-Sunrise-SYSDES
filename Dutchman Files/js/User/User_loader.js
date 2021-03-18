@@ -8,6 +8,9 @@ function logIn(userName, passWord) {
 
         if(DB.users[i].username == userName) {
             if(DB.users[i].password == passWord) {
+                //add secret to menu
+                dict.mainCategory.push("secret");
+                createMainCategory();
                 // store the username in modelData
                 modelData['username']    = userName;
                 modelData['credentials'] = DB.users[i].credentials;
@@ -25,7 +28,10 @@ function logOut() {
     $("#loginDisplay").html(createSpanEvent("login", "cursor", "", "createLoginView()"));
     modelData['username']    = dict['start_username'];
     modelData['credentials'] = null;
-    updateViewMain();
+    //remove secret
+    dict.mainCategory.pop();
+    createMainCategory();
+    updateViewAllProducts();
 }
 
 function incrementOrder() {
