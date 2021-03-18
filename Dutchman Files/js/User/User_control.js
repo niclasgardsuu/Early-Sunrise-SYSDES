@@ -45,9 +45,9 @@ function doInit(func) {
 
     if (func == 'vipOrder') {
 
-        drinkId     = document.getElementById('drinkId').value;   
-        drinkAmount = document.getElementById('drinkAmount').value;
-        if (vipOrder(drinkId, drinkAmount)) {
+        productId     = document.getElementById('productId').value;   
+        productAmount = document.getElementById('productAmount').value;
+        if (vipOrder(productId, productAmount)) {
             var combination = getComLock();
             $("#innerDisplay").text("Your code for the fridge: " + combination).fadeIn();
         }
@@ -55,9 +55,9 @@ function doInit(func) {
 
     if (func == 'addToCart') {
     
-        drinkId     = document.getElementById('stdDrinkId').value;   
-        drinkAmount = document.getElementById('stdDrinkAmount').value;
-        if (addToCart(drinkId, drinkAmount)) {
+        productId     = document.getElementById('stdDrinkId').value;   
+        productAmount = document.getElementById('stdDrinkAmount').value;
+        if (addToCart(productId, productAmount)) {
             var showCart = getCart();
             $("#innerDisplay").text(showCart);
         }

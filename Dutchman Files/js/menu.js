@@ -100,14 +100,14 @@ function createOrderTable(order) {
     }
     table.appendChild(tr1);
 
-    for (var i = 0; i < order.drinkId.length; i++) {
+    for (var i = 0; i < order.productId.length; i++) {
         // Name | Quantity | Price | Button
         var td1 = document.createElement("td");
-        var product = findProductByID(order.drinkId[i]);
+        var product = findProductByID(order.productId[i]);
         td1.appendChild(document.createTextNode(product.name));
 
         var td2 = document.createElement("td");
-        td2.appendChild(document.createTextNode(order.drinkAmount[i]));
+        td2.appendChild(document.createTextNode(order.productAmount[i]));
 
         var td3 = document.createElement("td");
         td3.appendChild(document.createTextNode(product.pricewithvat));
@@ -120,7 +120,7 @@ function createOrderTable(order) {
     }
 
     var totalClass = ["bartender-total", "", ""];
-    var totalData = ["", calculateAmount(order.drinkAmount), order.totalPrice];
+    var totalData = ["", calculateAmount(order.productAmount), order.totalPrice];
     var tr = document.createElement("tr");
     for (var i = 0; i < 3; i++) {
         var td = document.createElement("td");
@@ -422,9 +422,9 @@ function updateShoppingCartView() {
     var shoppingBottom = document.getElementById("shopping-cart-container-bottom");
     shoppingBottom.textContent = "";
 
-    for(var i = 0; i < OrderDB.cart.drinkId.length; i++) {
-        var id = OrderDB.cart.drinkId[i];
-        var productDiv = createShoppingCartDiv(id ,OrderDB.cart.drinkAmount[i]);
+    for(var i = 0; i < OrderDB.cart.productId.length; i++) {
+        var id = OrderDB.cart.productId[i];
+        var productDiv = createShoppingCartDiv(id ,OrderDB.cart.productAmount[i]);
         shoppingBottom.appendChild(productDiv);
         var removeButton = document.getElementById(id+"-cart-button");  
 
@@ -436,7 +436,7 @@ function updateShoppingCartView() {
         removeButton.addEventListener("click", doit.bind(null, temp));  
     }
 
-    if (OrderDB.cart.drinkId.length == 0) {
+    if (OrderDB.cart.productId.length == 0) {
         shoppingBottom.insertAdjacentHTML("beforeend",
                     `<div id="shopping-cart-container-msg" class="shopping-cart-div">
                         <span id="shopping-cart-drop-here">${getString("shopping-cart-drop-here")}</span>

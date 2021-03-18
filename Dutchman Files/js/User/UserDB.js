@@ -1,7 +1,7 @@
 var OrderDB = {
     "cart": {
-            "drinkId": [],
-            "drinkAmount": [],
+            "productId": [],
+            "productAmount": [],
             "price": [],
             "totalPrice": 0,
             "table": "",
