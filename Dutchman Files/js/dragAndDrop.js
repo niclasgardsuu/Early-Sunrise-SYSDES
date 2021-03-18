@@ -13,7 +13,11 @@ function dropHandler(ev) {
     ev.preventDefault();
     // Get the id of the target and add the moved element to the target's DOM
     const data = ev.dataTransfer.getData("text/productId");
-    addToCart(data,1);
+    var temp = {
+                execute : addToCart.bind(null, data, 1),
+                unexecute: removeFromCart.bind(null, data, 1)
+            }
+    doit(temp);
     //ev.target.appendChild(document.getElementById(data));
     //updateShoppingCartView();
 }

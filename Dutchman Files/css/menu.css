@@ -77,12 +77,15 @@ body {
 
 .menu-right {
     width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #main-logo {
     width: 125px;
     height: 125px;
-    margin-left: 50px;
+    margin-left: 5%;
 }
 
 
@@ -582,3 +585,8 @@ button {
     color:black;
 }
 
+
+.undo-redo-button {
+    background-color: white;
+    margin-left: 15px;
+}

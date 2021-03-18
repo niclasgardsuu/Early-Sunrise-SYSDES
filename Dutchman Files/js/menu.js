@@ -423,10 +423,17 @@ function updateShoppingCartView() {
     shoppingBottom.textContent = "";
 
     for(var i = 0; i < OrderDB.cart.drinkId.length; i++) {
-        var productDiv = createShoppingCartDiv(OrderDB.cart.drinkId[i],OrderDB.cart.drinkAmount[i]);
+        var id = OrderDB.cart.drinkId[i];
+        var productDiv = createShoppingCartDiv(id ,OrderDB.cart.drinkAmount[i]);
         shoppingBottom.appendChild(productDiv);
-        var removeButton = document.getElementById(OrderDB.cart.drinkId[i]+"-cart-button");  
-        removeButton.addEventListener("click", removeFromCart.bind(null,OrderDB.cart.drinkId[i]));  
+        var removeButton = document.getElementById(id+"-cart-button");  
+
+        var temp = {
+                execute: removeFromCart.bind(null, id, 1),
+                unexecute : addToCart.bind(null, id, 1)
+            }
+
+        removeButton.addEventListener("click", doit.bind(null, temp));  
     }
 
     if (OrderDB.cart.drinkId.length == 0) {
@@ -582,8 +589,13 @@ function showProductInfo(id, category) {
                 </div>
             `);
     }
+
+    var temp = {
+                execute : addToCart.bind(null, id, 1),
+                unexecute: removeFromCart.bind(null, id, 1)
+            }
     
-    document.getElementById("product-buy-id").addEventListener("click",addToCart.bind(null,id,1));
+    document.getElementById("product-buy-id").addEventListener("click", doit.bind(null, temp));
     updateView();
 }
 
@@ -704,7 +716,11 @@ function createProductContainer(name, price, imgSrc, id, category) {
 
     var productBuy = document.createElement("button");
     productBuy.className = "product-buy";
-    productBuy.addEventListener("click", addToCart.bind(null,id,1));
+    var temp = {
+                execute : addToCart.bind(null, id, 1),
+                unexecute: removeFromCart.bind(null, id, 1)
+            }
+    productBuy.addEventListener("click", doit.bind(null, temp));
 
     var productPrice = document.createElement("span");
     productPrice.className = "product-price-font product-price";
@@ -839,6 +855,7 @@ function alertBox(msg) {
         alerTimer = setTimeout(removeAlertBox, 3000);
     }
 }
+
 
 function removeAlertBox() {
     var container = document.getElementById("alert-box-container");

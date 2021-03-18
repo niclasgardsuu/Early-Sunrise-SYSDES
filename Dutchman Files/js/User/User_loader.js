@@ -14,6 +14,7 @@ function logIn(userName, passWord) {
                 // store the username in modelData
                 modelData['username']    = userName;
                 modelData['credentials'] = DB.users[i].credentials;
+                modelData['userID'] = DB.users[i].user_id;
                 return DB.users[i].credentials;
             } else {
                 return (-1);
@@ -40,57 +41,79 @@ function incrementOrder() {
     return modelData['orderCounter'];
 }
 
-function checkAddToCart(drinkId, drinkAmount) {
-    var previousAmount = findProductByID(drinkId).stock; 
-    if (previousAmount - drinkAmount < 0) {
+function checkAddToCart(productId, productAmount) {
+    var previousAmount = findProductByID(productId).stock; 
+    if (previousAmount - productAmount < 0) {
         return false; 
     } 
     return true;
 }
 
-function addToCart(drinkId, drinkAmount) {
+/**EXAMPLE! javadoc jsdoc jdoc
+    skriv din fina beskrivning
+    @param
+    @returns
+    {string}
+    {number}
+    {boolean}
+    {Object}
+    {*} - any type
+*/
+
+
+//Kopiera denna och utgå ifrån den
+/**
+ *  This function will add a product to the shopping cart 
+ * @param {number} productId id of the product
+ * @param {number} productAmount how many of the product you want to add to the shopping cart
+ * @returns {boolean} true if the addition is successful, otherwise false
+*/
+function addToCart(productId, productAmount) {
     
     var successful = false;
 
-    var currentMaxAmount = OrderDB.cart.maxAmount - parseInt(drinkAmount);
+    var currentMaxAmount = OrderDB.cart.maxAmount - parseInt(productAmount);
 
     if (currentMaxAmount < 0) {
         alertBox(getString("max-order-error"));
         return successful;
     }
 
-    if ((isNaN(drinkId) || isNaN(drinkAmount) || (parseInt(drinkAmount) <= 0))) { // Error check on input
+    if ((isNaN(productId) || isNaN(productAmount) || (parseInt(productAmount) <= 0))) { // Error check on input
         updateShoppingCartView();
         alertBox(getString("unknown-error"));
         return successful;
     }
 
-    if (!checkAddToCart(drinkId, drinkAmount)) {
+    if (!checkAddToCart(productId, productAmount)) {
         alertBox(getString("stock-empty-error"));
         return successful;
     }
 
-    if (!changeStock(drinkId, -Math.abs(drinkAmount))) { 
+    if (!changeStock(productId, -Math.abs(productAmount))) { 
         alertBox(getString("unknown-error"));
         return successful;
     }
 
     OrderDB.cart.maxAmount = currentMaxAmount;
-    for(id in OrderDB.cart.drinkId) {
-        if(OrderDB.cart.drinkId[id] == drinkId) {
-            OrderDB.cart.drinkAmount[id] += drinkAmount;
-            OrderDB.cart.totalPrice += calculateCost(drinkId, drinkAmount);
+    for (id in OrderDB.cart.productId) {
+        if(OrderDB.cart.productId[id] == productId) {
+            OrderDB.cart.productAmount[id] += productAmount;
+            OrderDB.cart.totalPrice += calculateCost(productId, productAmount);
             updateShoppingCartView();
             return true;
         }
     }
 
-    OrderDB.cart.drinkId.push(drinkId);
-    OrderDB.cart.drinkAmount.push(drinkAmount);
-    OrderDB.cart.price.push(findProductByID(drinkId).pricewithvat);
-    OrderDB.cart.totalPrice += calculateCost(drinkId, drinkAmount);
+    OrderDB.cart.productId.push(productId);
+    OrderDB.cart.productAmount.push(productAmount);
+    OrderDB.cart.price.push(findProductByID(productId).pricewithvat);
+    OrderDB.cart.totalPrice += calculateCost(productId, productAmount);
     OrderDB.cart.order_id = null;
     successful = true; 
+
+    
+
 
     updateShoppingCartView();
     return successful;
@@ -108,12 +131,12 @@ function revertOrder(id) {
     for (i = 0; i < OrderDB.all_orders.length; i++) {
         if(OrderDB.all_orders[i].order_id == id) {
             var order = { 
-                        "drinkId": OrderDB.all_orders[i].drinkId,
-                        "drinkAmount": OrderDB.all_orders[i].drinkAmount,
+                        "productId": OrderDB.all_orders[i].productId,
+                        "productAmount": OrderDB.all_orders[i].productAmount,
                         "price": OrderDB.all_orders[i].price,
                         "totalPrice" : OrderDB.all_orders[i].totalPrice,
                         "table": OrderDB.all_orders[i].table,
-                        "maxAmount": 10-calculateAmount(OrderDB.all_orders[i].drinkAmount),
+                        "maxAmount": 10-calculateAmount(OrderDB.all_orders[i].productAmount),
                         "order_id": OrderDB.all_orders[i].order_id
                     };     
             OrderDB.cart = order; 
@@ -128,18 +151,23 @@ function revertOrder(id) {
     }
 }
 
-function removeFromCart(drinkId) {
-    for (var i = 0; i < OrderDB.cart.drinkId.length; i++) {
-        if (OrderDB.cart.drinkId[i] == drinkId) {
-            OrderDB.cart.drinkAmount[i] -= 1;
-            OrderDB.cart.totalPrice -= OrderDB.cart.price;
+
+function removeFromCart(productId, count) {
+    for (var i = 0; i < OrderDB.cart.productId.length; i++) {
+        if (OrderDB.cart.productId[i] == productId) {
+            if (OrderDB.cart.productAmount[i] - count < 0) {
+                return false;
+            }
+            OrderDB.cart.productAmount[i] -= count;
+            var removePrice = parseFloat(OrderDB.cart.price[i]) * count;
+            OrderDB.cart.totalPrice -= removePrice;
             OrderDB.cart.maxAmount++;
-            if (OrderDB.cart.drinkAmount[i] == 0) {
-                OrderDB.cart.drinkId.splice(i, 1);
-                OrderDB.cart.drinkAmount.splice(i, 1);
+            if (OrderDB.cart.productAmount[i] == 0) {
+                OrderDB.cart.productId.splice(i, 1);
+                OrderDB.cart.productAmount.splice(i, 1);
                 OrderDB.cart.price.splice(i, 1);
             }
-            changeStock(drinkId, 1);
+            changeStock(productId, count);
             updateShoppingCartView();
         }
     }
@@ -154,7 +182,7 @@ function stdOrder() {
         return sucessful;
     }
 
-    if (OrderDB.cart.drinkId.length == 0) {
+    if (OrderDB.cart.productId.length == 0) {
         alertBox(getString("empty-cart-error"));
         return sucessful;
     }
@@ -165,44 +193,55 @@ function stdOrder() {
     }
 
     var obj = { "order_id": order_id,
-                "drinkId": OrderDB.cart.drinkId,
-                "drinkAmount": OrderDB.cart.drinkAmount,
+                "productId": OrderDB.cart.productId,
+                "productAmount": OrderDB.cart.productAmount,
                 "price": OrderDB.cart.price,
                 "totalPrice" : OrderDB.cart.totalPrice,
                 "table": document.getElementById("table-number-input").value,
                 "status": "pending" 
             };     
     OrderDB.all_orders.push(obj);
+
+    if (modelData["credentials"] == 3) {
+        vipPay();
+    }
+
     clearCart();
     updateShoppingCartView();
     sucessful = true;
     return sucessful;
 }
 
+
+// GOOD FUNC! LOOK!
 function clearCart() {
 
-    OrderDB.cart = { "drinkId": [],
-                     "drinkAmount": [],
+    OrderDB.cart = { "productId": [],
+                     "productAmount": [],
                      "price": [],
                      "totalPrice": 0,
                      "table": "",
                      "maxAmount": 10,
                      "order_id": null};
+
+    //To avoid eavesdropper
+    undostack = [];        
+    redostack = [];        
 }
 
 function resetCart() {
 
-    if (OrderDB.cart.drinkId.length == 0) alertBox(getString("empty-cart-error"));
+    if (OrderDB.cart.productId.length == 0) alertBox(getString("empty-cart-error"));
     
-    var drinkList = OrderDB.cart.drinkId;
-    var amountList = OrderDB.cart.drinkAmount;
+    var drinkList = OrderDB.cart.productId;
+    var amountList = OrderDB.cart.productAmount;
 
     for (var i = 0; i < drinkList; i++) {
         changeStock(drinkList[i], amountList[i]);
     }
 
-    OrderDB.cart = { "drinkId": [],
-                     "drinkAmount": [],
+    OrderDB.cart = { "productId": [],
+                     "productAmount": [],
                      "price": [],
                      "totalPrice": 0,
                      "table": "",
@@ -213,8 +252,8 @@ function resetCart() {
 function getCart() {
 
     var cart = "";
-    cart += ("Drink ID: " + OrderDB.cart.drinkId + 
-                " Amount: " + OrderDB.cart.drinkAmount + 
+    cart += ("Drink ID: " + OrderDB.cart.productId + 
+                " Amount: " + OrderDB.cart.productAmount + 
                 " Cost: " + OrderDB.cart.price + 
                 " Total Cost: " + OrderDB.cart.totalPrice);
     return cart;
@@ -238,8 +277,8 @@ function getOrders() {
 
 function removeOrder(order) {
     console.log(order);
-    for (var i = 0; i < order.drinkId.length; i++) {
-        changeStock(order.drinkId[i], order.drinkAmount[i]);
+    for (var i = 0; i < order.productId.length; i++) {
+        changeStock(order.productId[i], order.productAmount[i]);
     }
     finishOrder(order.order_id);
 }
@@ -280,6 +319,7 @@ function changeStock (id, quantity) {
     return successfull; 
 }
 
+/*
 function vipOrder(beerId, amount) {
 
     username = modelData['username'];
@@ -314,11 +354,12 @@ function vipOrder(beerId, amount) {
     }
     return successfull;
 }
+*/
 
 // Calculates total cost of 1 or more of an item
-function calculateCost(drinkId, amount) {
+function calculateCost(productId, amount) {
     var totalAmount = 0;
-    var getPrice    = findProductByID(drinkId).pricewithvat;
+    var getPrice    = findProductByID(productId).pricewithvat;
     totalAmount     = getPrice * amount;
     return parseFloat(totalAmount);
 }
@@ -333,16 +374,15 @@ function findUserId(userName) {
 }
 
 // Handle payment for VIP customers 
-function vipPay(totalAmount) {
+function vipPay() {
     
-    userName = modelData['username'];
-    var userID = findUserId(userName);
+    var userID = modelData['userID'];
+    var totalAmount = OrderDB.cart.totalPrice;
     for (i = 0; i < DB.account.length; i++) {
         if (DB.account[i].user_id == userID) {
             var accountBalance = DB.account[i].creditSEK;
             if(accountBalance >= totalAmount) {
                 DB.account[i].creditSEK = parseInt(DB.account[i].creditSEK) - parseInt(totalAmount);
-                alert(parseInt(DB.account[i].creditSEK));
                 return true;
             }
         }

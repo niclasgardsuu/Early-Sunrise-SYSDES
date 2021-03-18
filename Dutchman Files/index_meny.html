@@ -14,6 +14,8 @@
     <script type="text/javascript" src="./js/view.js"></script>
     <script type="text/javascript" src="./js/menu.js"></script>
     <script type="text/javascript" src="./js/dragAndDrop.js"></script>
+    <script type="text/javascript" src="./js/undoRedo.js"></script>
+    <script type="text/javascript" src="./js/keybindings.js"></script>
 
     <script type="text/javascript" src="./js/User/UserDB.js"></script>
     <script type="text/javascript" src="./js/User/User_control.js"></script>
@@ -30,6 +32,7 @@
             sel.addEventListener("change",changeLang.bind(null,sel));
             document.getElementById("login").addEventListener("click", createLoginView);
             document.getElementById("main-logo").addEventListener("click", updateViewAllProducts);
+            document.onkeydown = KeyPress;
         });
 
     </script>
@@ -70,11 +73,18 @@
         <!--The menu of the website-->
         <div id="menu-window">
             <div class="menu-left">
-                <img id="main-logo" src="./img/fd.jpg" class="cursor" height="60px" width="60px">
+                <img id="main-logo" src="./img/flying_dutchman_logo.svg" class="cursor" >
             </div>
             <div class="menu-middle" id="main-category">  
             </div>
-            <div class="menu-right"></div>
+            <div class="menu-right">
+                <button class="undo-redo-button">
+                    <img src="./img/undo.svg" onclick="undoit()" alt="undo" width="40px" height="40px">
+                </button>
+                <button class="undo-redo-button">
+                    <img src="./img/redo.svg" onclick="redoit()" alt="redo" width="40px" height="40px">
+                </button>
+            </div>
         </div>
 
 

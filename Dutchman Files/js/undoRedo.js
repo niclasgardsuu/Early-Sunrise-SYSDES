@@ -29,11 +29,13 @@ function doit(funcobj) {
     redostack = [];
 }
 
+
 // ==========================================================================
 // The undoit first pops the function object from the UNDO-stack, then executes
 // UNDO-function and stores the function object on the REDO-stack.
 //
 function undoit() {
+    if (undostack.length == 0) return;
     funcobj = undostack.pop();
     funcobj.unexecute();
     redostack.push(funcobj);
@@ -44,7 +46,10 @@ function undoit() {
 // the EXECUTE-function and then pushes the function object onto the UNDO-stack.
 //
 function redoit() {
+    if (redostack.length == 0) return;
+
     funcobj = redostack.pop();
     funcobj.execute();
     undostack.push(funcobj);
 }
+
