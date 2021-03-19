@@ -2,6 +2,7 @@
 // Loader
 // =====================================================================================================
 
+
 function logIn(userName, passWord) {
 
     for (i = 0; i < DB.users.length; i++) {
@@ -127,6 +128,7 @@ function calculateAmount(amount) {
     return result;
 }
 
+
 function revertOrder(id) {
     for (i = 0; i < OrderDB.all_orders.length; i++) {
         if(OrderDB.all_orders[i].order_id == id) {
@@ -151,7 +153,12 @@ function revertOrder(id) {
     }
 }
 
-
+/**
+ * Removes a specific amount of a certain product from the shopping cart 
+ * @param {number} productId id of the product
+ * @param {number} count how many of the product you want to remove from the shopping cart
+ * @returns {boolean} true if the removal is successful, otherwise false
+*/
 function removeFromCart(productId, count) {
     for (var i = 0; i < OrderDB.cart.productId.length; i++) {
         if (OrderDB.cart.productId[i] == productId) {
@@ -171,8 +178,13 @@ function removeFromCart(productId, count) {
             updateShoppingCartView();
         }
     }
+    return true;
 }
 
+/**
+ * Used to make an order to the bar, based on the shopping carts current content
+ * @returns {boolean} true if the orer is successful, otherwise false
+*/
 function stdOrder() {
     
     sucessful = false;
@@ -212,8 +224,10 @@ function stdOrder() {
     return sucessful;
 }
 
-
-// GOOD FUNC! LOOK!
+/**
+ *  This function will clear a cart from its contents, 
+ *  we also choose to reset our undo-redo stack here for security purposes
+*/
 function clearCart() {
 
     OrderDB.cart = { "productId": [],
@@ -224,11 +238,14 @@ function clearCart() {
                      "maxAmount": 10,
                      "order_id": null};
 
-    //To avoid eavesdropper
+    //To avoid eavesdroppers
     undostack = [];        
     redostack = [];        
 }
 
+/**
+ *  This function will reset the shopping cart by removing all items from it, rendering it empty
+*/
 function resetCart() {
 
     if (OrderDB.cart.productId.length == 0) alertBox(getString("empty-cart-error"));
@@ -249,6 +266,7 @@ function resetCart() {
                      "order_id": null};
 }
 
+//TODO: TA BORT DENNA
 function getCart() {
 
     var cart = "";
@@ -259,8 +277,8 @@ function getCart() {
     return cart;
 }
 
+//TODO: TA BORT DENNA
 function getOrders() {
-
     var orders = "";
     
     for (i = 0; i < OrderDB.all_orders.length; i++) {
@@ -275,6 +293,10 @@ function getOrders() {
     return orders;
 }
 
+/**
+ * Removes an order from the system without completing it/affecting the stock
+ * @param {Object} order the current order that is being handled order
+*/
 function removeOrder(order) {
     console.log(order);
     for (var i = 0; i < order.productId.length; i++) {
@@ -283,6 +305,11 @@ function removeOrder(order) {
     finishOrder(order.order_id);
 }
 
+/**
+ * Completes an order, removing it from the list of orders
+ * @param {number} orderId id of the order
+ * @returns {boolean} true if the was successfully finished/handled, else false
+*/
 function finishOrder(orderId) {
 
     for (i = 0; i < OrderDB.all_orders.length; i++) {
@@ -295,20 +322,26 @@ function finishOrder(orderId) {
     return false;  
 }
 
-function changeStock (id, quantity) {
+/**
+ * Changes the current stock for a certain product 
+ * @param {number} productId id of the product
+ * @param {number} productAmount how many of the product you want to add or remove
+ * @returns {boolean} true if the change in stock was sucessfull, else false
+*/
+function changeStock (productId, productAmount) {
     var successfull = false;
 
     for (var i = 0; i < dict.mainCategory.length; i++) {
         for (var j = 0; j < drunk[dict.mainCategory[i]].length; j++) {
-            if (drunk[dict.mainCategory[i]][j].articleid == id) {
+            if (drunk[dict.mainCategory[i]][j].productId == productId) {
                 var stockAmount = drunk[dict.mainCategory[i]][j].stock;
                 
-                if (quantity == null) {
-                    quantity = parseInt(document.getElementById("product-manager-stock").value);
+                if (productAmount == null) {
+                    productAmount = parseInt(document.getElementById("product-manager-stock").value);
                     stockAmount = 0;
                 }
                 
-                var val = stockAmount + quantity;
+                var val = stockAmount + productAmount;
                 if (val >= 0) {
                     drunk[dict.mainCategory[i]][j].stock = val;
                     successfull = true;
@@ -319,6 +352,7 @@ function changeStock (id, quantity) {
     return successfull; 
 }
 
+//TODO: TA BORT DENNA
 /*
 function vipOrder(beerId, amount) {
 
@@ -356,14 +390,25 @@ function vipOrder(beerId, amount) {
 }
 */
 
-// Calculates total cost of 1 or more of an item
-function calculateCost(productId, amount) {
+/**
+ * Calculates total cost of 1 or more of a certain item
+ * @param {number} productId id of the product
+ * @param {number} productAmount how many of the product you want to calculate for
+ * @returns {number} the total cost of the specific amount of the product
+*/
+function calculateCost(productId, productAmount) {
     var totalAmount = 0;
     var getPrice    = findProductByID(productId).pricewithvat;
-    totalAmount     = getPrice * amount;
+    totalAmount     = getPrice * productAmount;
     return parseFloat(totalAmount);
 }
 
+
+/**
+ * Finds a userID for a specifik user
+ * @param {string} userName the current userName
+ * @returns {string} the userID that corresponds to the input userName
+*/
 function findUserId(userName) {
 
     for (i = 0; i < DB.users.length; i++) {
@@ -373,7 +418,10 @@ function findUserId(userName) {
     }
 }
 
-// Handle payment for VIP customers 
+/**
+ * Handles payment for drinks when a VIP customer is ordering
+ * @returns {boolean} true if the payment is successful, otherwise false
+*/
 function vipPay() {
     
     var userID = modelData['userID'];
@@ -394,6 +442,10 @@ function getComLock() {
     return Math.floor(Math.random() * 1000);
 }
 
+/**
+ * Gets the account balance for the currently logged in user
+ * @returns {string} the current account balance 
+*/
 function getAccountBalance() {
 
     var userID;
@@ -417,7 +469,6 @@ function addBalance(userName, newAmount) {
     var userID;
 
     // First we find the userID in the user data base.
-    //
     for (i = 0; i < DB.users.length; i++) {
         if (DB.users[i].username == userName) {
             userID = DB.users[i].user_id;
@@ -426,7 +477,6 @@ function addBalance(userName, newAmount) {
 
     // Then we match the userID with the account list.
     // and change the account balance.
-    //
     for (i = 0; i < DB.account.length; i++) {   
         if (DB.account[i].user_id == userID) {
             DB.account[i].creditSEK = parseInt(DB.account[i].creditSEK) + parseInt(newAmount);   // This changes the value in the JSON object.
@@ -435,6 +485,7 @@ function addBalance(userName, newAmount) {
     }
 }
 
+//TODO: TA BORT DENNA
 /*
 function decreaseStock (id, amount) {
     var successfull = false;
@@ -452,6 +503,7 @@ function decreaseStock (id, amount) {
     return successfull; 
 }*/
 
+//TODO: TA BORT DENNA
 /*
 function setTable(tableId) {
     
