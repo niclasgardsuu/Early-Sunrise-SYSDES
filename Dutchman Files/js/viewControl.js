@@ -217,7 +217,7 @@ function createMainCategory() {
     var id = document.getElementById("main-category");
     id.innerHTML = "";
     for (var i = 0; i < dict.mainCategory.length; i++) {
-        id.appendChild(createMainCategoryView(dict.mainCategory[i]));
+        id.appendChild(createMainCategoryButton(dict.mainCategory[i]));
     }
     id.firstChild.classList.add("menu-first-category-box");
     updateViewMainCategory();

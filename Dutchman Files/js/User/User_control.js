@@ -16,16 +16,17 @@ function toLogIn() {
 }
 
 /**
- * Provide the view control for the vip account balance
+ * Provide the control view for the Vip account balance
 */
-function balance() {
+function showBalance() {
     balance = getAccountBalance();
+    
     $("#innerDisplay").text(balance).fadeIn();
     setTimeout(function() { $("#innerDisplay").fadeOut(); }, 3000);
 }
 
 /**
- * For adding an amount to the Vip account balance
+ * Adding an amount to the Vip account balance
 */
 function addToAcc() {
 
@@ -37,40 +38,7 @@ function addToAcc() {
 }
 
 /**
- * 
-*/
-function vipOrder() {
-    productId     = document.getElementById('productId').value;   
-    productAmount = document.getElementById('productAmount').value;
-    if (vipOrder(productId, productAmount)) {
-        var combination = getComLock();
-        $("#innerDisplay").text("Your code for the fridge: " + combination).fadeIn();
-    }
-}
-
-/**
- * 
-*/
-function addToCart() {
-    productId     = document.getElementById('stdDrinkId').value;   
-    productAmount = document.getElementById('stdDrinkAmount').value;
-    if (addToCart(productId, productAmount)) {
-        var showCart = getCart();
-        $("#innerDisplay").text(showCart);
-    }
-}
-
-/**
- * 
-*/
-function stdOrder() {
-    stdOrder();
-    var showCart = getCart();
-    $("#innerDisplay").text(showCart);
-}
-
-/**
- * 
+ * Control the log in view for Vip
 */
 function logInVip() {
     document.getElementById("product-info-hide").checked = false;
@@ -80,7 +48,7 @@ function logInVip() {
 }
 
 /**
- * 
+ * Control the view for the log in for staff and manager
 */
 function logInStaff() {
 
@@ -103,7 +71,7 @@ function logInStaff() {
 }
 
 /**
- * 
+ *  Alerts the user if the password or username was entered incorrectly
 */
 function logInUnsuccess() {
 
@@ -112,11 +80,12 @@ function logInUnsuccess() {
 }
 
 /**
- * 
+ *  Log the user out from the website and reset the view to the customer veiw
 */
 function logOut() {
     $("#loginDisplay").html("");
     $("#loginDisplay").html(createSpanEvent("login", "cursor", "", "createLoginView()"));
+
     toLogOut();
     createMainCategory();
     updateViewAllProducts();

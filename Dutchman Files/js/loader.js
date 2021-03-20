@@ -1,7 +1,17 @@
 // =====================================================================================================
-// Loader
+// Loader - API functions for the Flying Dutchman data base.
 // =====================================================================================================
 
+/**EXAMPLE! javadoc jsdoc jdoc
+    skriv din fina beskrivning
+    @param
+    @returns
+    {string}
+    {number}
+    {boolean}
+    {Object}
+    {*} - any type
+*/
 
 /**
  *  The function give an access into the log in process
@@ -49,8 +59,11 @@ function toLogOut() {
     dict.mainCategory.pop();
 }
 
+/**
+ *  Increment the order number by one and update it in the modeldata
+ * @returns {number} an incremented order number
+*/
 function incrementOrder() {
-    
     modelData['orderCounter'] += 1;
     return modelData['orderCounter'];
 }
@@ -68,17 +81,6 @@ function checkAddToCart(productId, productAmount) {
     } 
     return true;
 }
-
-/**EXAMPLE! javadoc jsdoc jdoc
-    skriv din fina beskrivning
-    @param
-    @returns
-    {string}
-    {number}
-    {boolean}
-    {Object}
-    {*} - any type
-*/
 
 /**
  *  This function will add a product to the shopping cart 
@@ -130,9 +132,6 @@ function addToCart(productId, productAmount) {
     OrderDB.cart.order_id = null;
     successful = true; 
 
-    
-
-
     updateShoppingCartView();
     return successful;
 }
@@ -150,7 +149,6 @@ function calculateAmount(amount) {
     }
     return result;
 }
-
 
 /**
  * Puts an order back into the cart for editing 
@@ -275,12 +273,15 @@ function clearCart() {
 */
 function resetCart() {
 
-    if (OrderDB.cart.productId.length == 0) alertBox(getString("empty-cart-error"));
-    
+    if (OrderDB.cart.productId.length == 0) {
+        alertBox(getString("empty-cart-error"));
+        return;
+    }
+    console.log("hur många gånger?");
     var drinkList = OrderDB.cart.productId;
     var amountList = OrderDB.cart.productAmount;
 
-    for (var i = 0; i < drinkList; i++) {
+    for (var i = 0; i < drinkList.length; i++) {
         changeStock(drinkList[i], amountList[i]);
     }
 
@@ -292,7 +293,6 @@ function resetCart() {
                      "maxAmount": 10,
                      "order_id": null};
 }
-
 
 /**
  * Removes an order from the system without completing it/affecting the stock
@@ -315,6 +315,7 @@ function finishOrder(orderId) {
 
     for (i = 0; i < OrderDB.all_orders.length; i++) {
         if(OrderDB.all_orders[i].order_id == orderId) {
+            OrderDB.accounting.income += OrderDB.all_orders[i].totalPrice;
             OrderDB.all_orders.splice(i, 1);
             createBartenderView();
             return true; 
@@ -334,7 +335,7 @@ function changeStock (productId, productAmount) {
 
     for (var i = 0; i < dict.mainCategory.length; i++) {
         for (var j = 0; j < drunk[dict.mainCategory[i]].length; j++) {
-            console.log("varje iterering");
+            console.log(productId);
             if (drunk[dict.mainCategory[i]][j].articleid == productId) {
                 console.log("hittade produkten");
                 var stockAmount = drunk[dict.mainCategory[i]][j].stock;
@@ -371,7 +372,6 @@ function calculateCost(productId, productAmount) {
     return parseFloat(totalAmount);
 }
 
-
 /**
  * Finds a userID for a specifik user
  * @param {string} userName the current userName
@@ -406,6 +406,10 @@ function vipPay() {
     return false;
 }
 
+/**
+ * Gets a combination lock for the frigde
+ * @returns {number} a combination lock
+*/
 function getComLock() { 
     return Math.floor(Math.random() * 1000);
 }
@@ -431,9 +435,15 @@ function getAccountBalance() {
     }
 }
 
-function addBalance(userName, newAmount) {
+/**
+ * Add new balance to a vip account balance
+ * @param {string} userName a username
+ * @param {number} amount an amount
+ * @returns {number} a new account balance
+*/
+function addBalance(userName, amount) {
 
-    if(isNaN(newAmount)) {
+    if(isNaN(amount)) {
     
         // We use this variable to store the userID, since that is the link between the two data bases.
         var userID;
@@ -449,7 +459,7 @@ function addBalance(userName, newAmount) {
         // and change the account balance.
         for (i = 0; i < DB.account.length; i++) {   
             if (DB.account[i].user_id == userID) {
-                DB.account[i].creditSEK = parseInt(DB.account[i].creditSEK) + parseInt(newAmount);   // This changes the value in the JSON object.
+                DB.account[i].creditSEK = parseInt(DB.account[i].creditSEK) + parseInt(amount);   // This changes the value in the JSON object.
                 return DB.account[i].creditSEK;
             }
         }
@@ -564,6 +574,15 @@ function getFilter(category) {
         }
     }
     return filter;
+}
+
+/**
+ *  This function will calculate profit by comparing expenses and incomes
+ * @returns {number} the profit
+ */
+function calculateProfit() {
+    var profit = OrderDB.account.income - OrderDB.accounting.expenses;
+    return profit;
 }
 
 // =====================================================================================================

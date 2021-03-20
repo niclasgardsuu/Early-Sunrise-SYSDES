@@ -74,7 +74,10 @@ dict = {
         "staffLogO",
         "completeOrderId",
         "completeOrder",
-        "product-low-in-stock"
+        "product-low-in-stock",
+        "expenses",
+        "income",
+        "profit"
     ],
     "userIds" : 
     [ 
@@ -243,6 +246,9 @@ dict = {
         "addToAcc"             : "Lägg till i kontot",
         "completeOrderId"      : "Order Id",
         "completeOrder"        : "Färdig order",
+        "expenses"             : "Utgifter:",
+        "income"               : "Inkomst:",
+        "profit"               : "Vinst:",
        
         // All Customer
         "stdOrder"             : "Order",
@@ -362,6 +368,9 @@ dict = {
         "addToAcc"             : "Add to account",
         "completeOrderId"      : "Order Id",
         "completeOrder"        : "Complete Order",
+        "expenses"             : "Expenses:",
+        "income"               : "Income:",
+        "profit"               : "Profit:",
        
         // All Customer
         "stdOrder"             : "Order",

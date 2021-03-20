@@ -1,3 +1,85 @@
+
+/**
+ *  Create div specific for adding currency
+ * @returns {HTMLElement} a div
+*/
+function createAddCurrency() {
+    
+    return `
+    <div id="add-currency">
+        <div id="username-add-currency">
+            <dl class="product-info-spec">
+                <dt id="adToAccUserN"></dt>
+                <input id="adToAccUsername" placeholder="User" type="text" max="100000" min="0">
+            </dl>
+        </div>
+        <div id="amount-add-currency">
+            <dl class="product-info-spec">
+                <dt id="addA"></dt>
+                <input id="addAmount" placeholder="Amount" type="text" max="100000" min="0">
+            </dl>
+        </div>
+        <button id="addToAcc" onclick="addToAcc"></button>
+    </div>
+    `
+}
+
+/**
+ *  Create div specific for vip with the log in
+ * @returns {HTMLElement} a div
+*/
+function createVipLogIn() {
+
+    var vip = document.createElement("div")
+    vip.id="vip";
+
+    var logout = document.createElement("span");
+    logout.id = "logOut";
+    logout.classList = "cursor";
+    logout.addEventListener("click",logOut);
+    vip.appendChild(logout);
+
+    var balButton = document.createElement("button");    main.innerHTML = "";
+    balButton.id = "balance";
+    balButton.classList = "cursor";
+    balButton.addEventListener("click",showBalance);
+    vip.appendChild(balButton);
+
+    var inner = document.createElement("span");
+    inner.id = "innerDisplay";
+    vip.appendChild(inner);
+
+    return vip;
+}
+
+/**
+ *  Create an attribute element
+ * @param {string} attr an attribute
+ * @param {string} content a content
+ * @returns {HTMLElement} an attribute element
+*/
+function createAttribute(attr,content) {
+    if (content == "") {
+        return "";
+    } else {
+        return attr + "=" + content + " ";
+    }
+}
+
+/**
+ *  Create a span with an even element
+ * @param {string} id an id
+ * @param {string} classname a classname
+ * @param {string} content a content
+ * @param {string} _function a function
+ * @returns {string} a string of a span with an even
+*/
+function createSpanEvent(id, classname, content, _function) {
+    idString = createAttribute("id", id);
+    classString = createAttribute("class", classname);
+    return "<span " + idString + classString + "onclick="+_function+">" + content + "</span>";
+}    
+
 /**
  *  This function will generate a view to display all the currently active orders
 */
@@ -24,7 +106,7 @@ function createBartenderView() {
         orderContainer.className = "bartender-order-container";
         for(var j = 0; j < sortedOrders[i].length; j++) {
             
-            //gula
+            //the order id button
             var order = document.createElement("div");
             order.className = "bartender-view-button bartender-view-button-order";
             var spanTable = document.createElement("span");
@@ -35,7 +117,7 @@ function createBartenderView() {
             order.appendChild(spanOrder.appendChild(document.createTextNode(sortedOrders[i][j].order_id)));
             order.addEventListener("click", toggleDisplaySibling.bind(null, order));
             
-            //tabellen
+            //table with products
             var orderTable = createOrderTable(sortedOrders[i][j]);
             var showContainer = document.createElement("div");
             showContainer.className = "bartender-show-container";
@@ -54,6 +136,8 @@ function createBartenderView() {
     main.appendChild(bartenderMainWindow);
     updateViewBartender();
 }
+
+
 
 /**
  * This function will create a table with the headers product, quantity and price
@@ -147,10 +231,10 @@ function createLowestInStockDiv(name, stock) {
     outer.className = "shopping-cart-div";
     var left = document.createElement("div");
     left.className = "shopping-cart-div-left";
-    left.appendChild(document.createTextNode(name))
+    left.appendChild(document.createTextNode(name));
     var center = document.createElement("div");
     center.className = "shopping-cart-div-center";
-    center.appendChild(document.createTextNode(stock))
+    center.appendChild(document.createTextNode(stock));
     /*
     var right = document.createElement("div");
     right.className = "shopping-cart-div-right";
@@ -211,15 +295,45 @@ function createManagerView() {
             <span id="product-manager-success-msg"></span>
         </div>`;
 
-    const staff = createStaffLogIn();
+    const staff = createAddCurrency();
+    const income = createProfitTable();
 
-    managerContainer.insertAdjacentHTML('beforeend', addProduct + staff);
+    managerContainer.insertAdjacentHTML('beforeend', `
+        <div id="manager-top-container">` +
+            addProduct +
+            `<div class="manager-right-container">` + 
+                staff + income +
+            `</div>` +
+        `</div>`);
     managerContainer.appendChild(createLowestInStockView());
     managerWindow.appendChild(managerContainer);
     main.appendChild(managerWindow);
 
     document.getElementById("product-manager-add-product").addEventListener("click", addProductToMeny);
     updateViewManager();
+}
+
+/**
+ * Creates a table displaying income, expenses and profit
+ */
+function createProfitTable() {
+    var expenses = parseFloat((OrderDB.accounting.expenses).toFixed(2));
+    var income = parseFloat((OrderDB.accounting.income).toFixed(2));
+    var profit = parseFloat((income - expenses).toFixed(2));
+    return `
+    <table class="bartender-show-table" style="margin-top: 20px">
+    <tr>
+        <td id="expenses"></td>
+        <td>`+expenses+`</td>
+    <tr>
+        <td id="income"></td>
+        <td>`+income+`</td>
+    </tr>
+    <tr>
+        <td id="profit"></td>
+        <td >`+profit+`</td>
+    </tr>
+    `
 }
 
 /**
@@ -297,6 +411,7 @@ function createMainView() {
     document.getElementById("cancel-order").addEventListener("click", function() {
         resetCart();
         updateShoppingCartView();
+        console.log("test");
     });
 }
 
@@ -337,75 +452,56 @@ function createShoppingCartDiv(id,count) {
  * @returns {HTMLElement} true if the addition is successful, otherwise false
 */
 function createProductContainer(name, price, imgSrc, id, category) {
-    /*
-    <div class="product-container-top">
-        <div class="product-container-top-top">
-            <span class="product-name">Norrlands Guld</span>
-        </div>
-        <div class="product-container-top-bottom">
-            <img src="./img/beer.svg" alt="">
-        </div>
-    </div>
-    */
+    
+    //Upper part of the product container
+        var img = document.createElement("img");
+        img.setAttribute("src",imgSrc);
+        img.className = "product-img";
 
-    var img = document.createElement("img");
-    img.setAttribute("src",imgSrc);
-    img.className = "product-img";
+        var productContainerTopTop = document.createElement("div");
+        productContainerTopTop.className = "product-container-top-top";
+        productContainerTopTop.appendChild(img);
 
-    var productContainerTopTop = document.createElement("div");
-    productContainerTopTop.className = "product-container-top-top";
-    productContainerTopTop.appendChild(img);
+        var productName = document.createElement("span");
+        productName.className = "product-name product-name-font";
+        productName.appendChild(document.createTextNode(name));
 
-    var productName = document.createElement("span");
-    productName.className = "product-name product-name-font";
-    productName.appendChild(document.createTextNode(name));
-
-    var productContainerTopBottom = document.createElement("div");
-    productContainerTopBottom.className = "product-container-top-bottom";
-    productContainerTopBottom.appendChild(productName);
+        var productContainerTopBottom = document.createElement("div");
+        productContainerTopBottom.className = "product-container-top-bottom";
+        productContainerTopBottom.appendChild(productName);
 
     var productContainerTop = document.createElement("div");
     productContainerTop.className = "product-container-top";
     productContainerTop.addEventListener("click", showProductInfo.bind(null, id, category));
     productContainerTop.appendChild(productContainerTopTop);
     productContainerTop.appendChild(productContainerTopBottom);
+    //End of upper part
 
-    /*
-    <div class="product-container-bottom">
-        <div class="product-container-bottom-left">
-            <span class="product-price">
-                7:90
-            </span>
-        </div>
-        <div class="product-container-bottom-right">
-            <button class="product-buy">Köp</button>
-        </div>
-    </div>
-    */
 
-    var productBuy = document.createElement("button");
-    productBuy.className = "product-buy";
-    var temp = {
-                execute : addToCart.bind(null, id, 1),
-                unexecute: removeFromCart.bind(null, id, 1)
-            }
-    productBuy.addEventListener("click", doit.bind(null, temp));
+    //Lower part of the product container
+        var productBuy = document.createElement("button");
+        productBuy.className = "product-buy";
+        var temp = {
+                   execute : addToCart.bind(null, id, 1),
+                    unexecute: removeFromCart.bind(null, id, 1)
+                }
+        productBuy.addEventListener("click", doit.bind(null, temp));
 
-    var productPrice = document.createElement("span");
-    productPrice.className = "product-price-font product-price";
-    productPrice.appendChild(document.createTextNode(price+" kr"));
+        var productPrice = document.createElement("span");
+        productPrice.className = "product-price-font product-price";
+        productPrice.appendChild(document.createTextNode(price+" kr"));
     
-    var productContainerBottomTop= document.createElement("div");
-    var productContainerBottomBottom= document.createElement("div");
-    productContainerBottomTop.className = "product-container-bottom-top";
-    productContainerBottomTop.appendChild(productPrice);
-    productContainerBottomBottom.className = "product-container-bottom-bottom";
-    productContainerBottomBottom.appendChild(productBuy);
+        var productContainerBottomTop= document.createElement("div");
+        var productContainerBottomBottom= document.createElement("div");
+        productContainerBottomTop.className = "product-container-bottom-top";
+        productContainerBottomTop.appendChild(productPrice);
+        productContainerBottomBottom.className = "product-container-bottom-bottom";
+        productContainerBottomBottom.appendChild(productBuy);
 
-    var productContainerBottom = document.createElement("div");
-    productContainerBottom.className = "product-container-bottom";
-    productContainerBottom.appendChild(productContainerBottomTop);
-    productContainerBottom.appendChild(productContainerBottomBottom);
+        var productContainerBottom = document.createElement("div");
+        productContainerBottom.className = "product-container-bottom";
+        productContainerBottom.appendChild(productContainerBottomTop);
+        productContainerBottom.appendChild(productContainerBottomBottom);
 
     var productContainer = document.createElement("div");
     productContainer.className = "product-container";
@@ -414,6 +510,7 @@ function createProductContainer(name, price, imgSrc, id, category) {
     productContainer.draggable = "true";
     productContainer.addEventListener("dragstart", dragstartHandler);
     productContainer.id = id;
+    //End of lower part
 
     return productContainer;
 }
@@ -446,7 +543,12 @@ function createFilterView(category, array ,id) {
     return container;
 }
 
-function createMainCategoryView(mainCategory) {
+/**
+ *  Creates a button for displaying products in a category
+ * @param {string} mainCategory the category
+ * @returns {HTMLElement} the button
+ */
+function createMainCategoryButton(mainCategory) {
     //Namn på kategorin
     var name = document.createElement("span");
     name.id = mainCategory;
@@ -464,7 +566,11 @@ function createMainCategoryView(mainCategory) {
     a.addEventListener("click", updateViewProducts.bind(null, mainCategory));
     return a;
 }
-
+/**
+ * Creates a element that displays an alert
+ * @param {string} msg the alert message that is displayed
+ * @returns {HTMLElement} the alert object
+ */
 function createAlertBoxView(msg) {
     var alertBox = document.createElement("div");
     alertBox.className = "alert-box";
@@ -487,8 +593,8 @@ function createAlertBoxView(msg) {
 
 /**
  *  Creates an element for displaying the filter buttons for a specfic catefory
- * @param {string} product the product that will be shown
- * @return {HTMLElement} the base view off 
+ * @param {Object} product the product that will be shown
+ * @return {string} HTML code of the element
  */
 function createShowProductBaseView(product) {
     return `<div class="product-info-container-left">
@@ -501,6 +607,14 @@ function createShowProductBaseView(product) {
     `;
 }
 
+/**
+ *  Creates a window that displays information about a product
+ * @param {Object} product the product
+ * @param {string} origin where the product is from
+ * @param {string} allergens what allergens are in the product
+ * @param {string} category what category the product belongs in
+ * @returns {string} HTML code of the window element
+ */
 function createProductInfoView(product, origin, allergens, category) {
     return productInfo = 
             `<h1 id="product-info-name" class="product-info-name product-name-font">${product.name}</h1>
@@ -529,6 +643,11 @@ function createProductInfoView(product, origin, allergens, category) {
             </div>`;
 }
 
+/**
+ *  Generates information about a product that should only be known to a bartender or manager
+ * @param {Object} product the product
+ * @returns {string} the HTML code of the info
+ */
 function createStaffInfoView(product) {
     return `
             <div id="product-manager-view" class="product-info-container-spec">
@@ -549,3 +668,59 @@ function createStaffInfoView(product) {
 
 }
 
+
+/**
+ *  Create div specific for vip with the log in
+ * @returns {HTMLElement} a div
+*/
+function createVipLogIn() {
+    //div containing everything
+    var vip = document.createElement("div")
+    vip.id="vip";
+
+    //span that can be pressed to log out
+    var logout = document.createElement("span");
+    logout.id = "logOut";
+    logout.classList = "cursor";
+    logout.addEventListener("click",logOut);
+    vip.appendChild(logout);
+
+    //button to display balance
+    var balButton = document.createElement("button");
+    balButton.id = "balance";
+    balButton.classList = "cursor";
+    balButton.addEventListener("click",showBalance);
+    vip.appendChild(balButton);
+
+    //span that shows the balance
+    var inner = document.createElement("span");
+    inner.id = "innerDisplay";
+    vip.appendChild(inner);
+
+    return vip;
+}
+
+/**
+ *  Create div specific for adding currency
+ * @returns {HTMLElement} the div
+*/
+function createAddCurrency() {
+    
+    return `
+    <div id="add-currency">
+        <div id="username-add-currency">
+            <dl class="product-info-spec">
+                <dt id="adToAccUserN"></dt>
+                <input id="adToAccUsername" placeholder="User" type="text" max="100000" min="0">
+            </dl>
+        </div>
+        <div id="amount-add-currency">
+            <dl class="product-info-spec">
+                <dt id="addA"></dt>
+                <input id="addAmount" placeholder="Amount" type="text" max="100000" min="0">
+            </dl>
+        </div>
+        <button id="addToAcc" onclick="addToAcc"></button>
+    </div>
+    `
+}

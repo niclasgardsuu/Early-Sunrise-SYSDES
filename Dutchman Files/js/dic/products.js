@@ -1,18 +1,6 @@
 /*
-articleid
-name
-name2
-pricewithvat
-productgroup
-productgroup
-origin
-origincountry
-volume
-alcoholcontent
-producent
-img
-*/
-
+ *  Storage for all the products being sold in the bar 
+ */
 var drunk = {
     "beer":[
         {

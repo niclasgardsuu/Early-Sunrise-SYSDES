@@ -1,3 +1,9 @@
+////////////////////////////////////////////////////////
+//
+//  Stores data about all the current orders, and the shopping cart. also keeps track of the income and expenses
+//
+////////////////////////////////////////////////////////
+
 var OrderDB = {
     "cart": {
             "productId": [],
@@ -12,7 +18,7 @@ var OrderDB = {
     ],
      "accounting": {
         "income": 0,
-        "expenses": 0
+        "expenses": 3840
     }
 };
 

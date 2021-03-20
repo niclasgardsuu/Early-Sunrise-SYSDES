@@ -520,12 +520,16 @@ button {
     padding: 20px;
 }
 
+#manager-top-container {
+    display: flex;
+}
+
 .manager-left-container {
-    width: 50%;
+    width: 80%;
 }
 
 .manager-right-container {
-    width: 50%;
+    width: 80%;
 }
 #product-manager-success-msg {
     margin-left: 3px;
