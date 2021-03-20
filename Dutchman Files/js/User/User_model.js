@@ -10,7 +10,7 @@ var modelData = {};
 
     modelData['username']     = dict['start_username'];
     modelData['credentials']  = null;
-    modelData['userID'] = null;
+    modelData['userID']       = null;
     modelData['orderCounter'] = 0;
     modelData['tableNumber']  = 1; 
     

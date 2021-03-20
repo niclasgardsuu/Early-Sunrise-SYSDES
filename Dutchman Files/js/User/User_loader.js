@@ -3,6 +3,11 @@
 // =====================================================================================================
 
 
+/**
+ *  The function give an access into the log in process
+ * @param {string} userName the username of the user account
+ * @param {string} passWord the password of the user account
+*/
 function logIn(userName, passWord) {
 
     for (i = 0; i < DB.users.length; i++) {
@@ -15,25 +20,33 @@ function logIn(userName, passWord) {
                 // store the username in modelData
                 modelData['username']    = userName;
                 modelData['credentials'] = DB.users[i].credentials;
-                modelData['userID'] = DB.users[i].user_id;
-                return DB.users[i].credentials;
+                modelData['userID']      = DB.users[i].user_id;
+                credentials              = DB.users[i].credentials;
+        
+                if (credentials == 3) {
+                    logInVip();
+                    return;
+                } else if (credentials == 0 ) {
+                    logInStaff();
+                    return;
+                }
             } else {
-                return (-1);
+                logInUnsuccess();
+                return;
             }
         }
     }
-    return (-1);
+    logInUnsuccess();
 }
 
-function logOut() {
-    $("#loginDisplay").html("");
-    $("#loginDisplay").html(createSpanEvent("login", "cursor", "", "createLoginView()"));
+/**
+ *  The function give an access into the log out process
+*/
+function toLogOut() {
     modelData['username']    = dict['start_username'];
     modelData['credentials'] = null;
     //remove secret
     dict.mainCategory.pop();
-    createMainCategory();
-    updateViewAllProducts();
 }
 
 function incrementOrder() {
@@ -42,6 +55,12 @@ function incrementOrder() {
     return modelData['orderCounter'];
 }
 
+/**
+ *  This function will check if a product has enough stock to be added to the cart
+ * @param {number} productId id of the product
+ * @param {number} productAmount how many of the product you want to add to the shopping cart
+ * @returns {boolean} true if there is enough stock to be added
+*/
 function checkAddToCart(productId, productAmount) {
     var previousAmount = findProductByID(productId).stock; 
     if (previousAmount - productAmount < 0) {
@@ -61,8 +80,6 @@ function checkAddToCart(productId, productAmount) {
     {*} - any type
 */
 
-
-//Kopiera denna och utgå ifrån den
 /**
  *  This function will add a product to the shopping cart 
  * @param {number} productId id of the product
@@ -120,6 +137,12 @@ function addToCart(productId, productAmount) {
     return successful;
 }
 
+
+/**
+ * Calculate total amount of products in the cart
+ * @param {number} amount array of all separate product amounts
+ * @returns {number} total amount of products
+*/
 function calculateAmount(amount) {
     var result = 0;
     for(var i = 0; i < amount.length; i++) {
@@ -129,6 +152,10 @@ function calculateAmount(amount) {
 }
 
 
+/**
+ * Puts an order back into the cart for editing 
+ * @param {number} id The ID of the order
+*/
 function revertOrder(id) {
     for (i = 0; i < OrderDB.all_orders.length; i++) {
         if(OrderDB.all_orders[i].order_id == id) {
@@ -333,7 +360,9 @@ function changeStock (productId, productAmount) {
 
     for (var i = 0; i < dict.mainCategory.length; i++) {
         for (var j = 0; j < drunk[dict.mainCategory[i]].length; j++) {
-            if (drunk[dict.mainCategory[i]][j].productId == productId) {
+            console.log("varje iterering");
+            if (drunk[dict.mainCategory[i]][j].articleid == productId) {
+                console.log("hittade produkten");
                 var stockAmount = drunk[dict.mainCategory[i]][j].stock;
                 
                 if (productAmount == null) {
@@ -342,8 +371,10 @@ function changeStock (productId, productAmount) {
                 }
                 
                 var val = stockAmount + productAmount;
+                console.log(val);
                 if (val >= 0) {
                     drunk[dict.mainCategory[i]][j].stock = val;
+                    console.log("den borde komma hit");
                     successfull = true;
                 } 
             }
@@ -364,13 +395,13 @@ function vipOrder(beerId, amount) {
 
     for (i = 0; i < OrderDB.vip.length; i++) {   
         if (OrderDB.vip[i].username == username) {
-            
+
             vipOrderId = OrderDB.vip[i].order_id; 
 
             if (vipOrderId == "") { // Create new order
 
                 OrderDB.vip[i].order_id = incrementOrder();
-               
+
                 for (j = 0; j < OrderDB.all_orders.length; j++) {   
 
                     if (OrderDB.all_orders[j].order_id == "") {

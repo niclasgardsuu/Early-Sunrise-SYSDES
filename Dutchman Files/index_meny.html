@@ -2,25 +2,49 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>The Flying Dutchman</title>
-    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<!--
     <link rel="stylesheet" href="./css/menu.css">
     <link rel="stylesheet" href="./css/login.css">
     <link rel="stylesheet" href="./css/bartender.css">
     <script type="text/javascript" src="DBLoaded.js"></script>
-    <script type="text/javascript" src="./js/products.js"></script> <script type="text/javascript" src="./js/productAllergens.js"></script> <script type="text/javascript" src="./js/dictionary.js"></script>
+    <script type="text/javascript" src="./js/products.js"></script> 
+    <script type="text/javascript" src="./js/productAllergens.js"></script> 
+    <script type="text/javascript" src="./js/dictionary.js"></script>
     <script type="text/javascript" src="./js/view.js"></script>
     <script type="text/javascript" src="./js/menu.js"></script>
     <script type="text/javascript" src="./js/dragAndDrop.js"></script>
     <script type="text/javascript" src="./js/undoRedo.js"></script>
     <script type="text/javascript" src="./js/keybindings.js"></script>
+    <script type="text/javascript" src="./js/view/createView.js"></script>
+    <script type="text/javascript" src="./js/control/viewControl.js"></script>
 
     <script type="text/javascript" src="./js/User/UserDB.js"></script>
     <script type="text/javascript" src="./js/User/User_control.js"></script>
     <script type="text/javascript" src="./js/User/User_creation.js"></script>
     <script type="text/javascript" src="./js/User/User_loader.js"></script>
     <script type="text/javascript" src="./js/User/User_model.js"></script>
+     -->
+    <title id="title-website"></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <script type="text/javascript" src="./js/dic/DBLoaded.js"></script>
+    <script type="text/javascript" src="./js/dic/dictionary.js"></script>
+    <script type="text/javascript" src="./js/dic/OrderDB.js"></script>
+    <script type="text/javascript" src="./js/dic/productAllergens.js"></script>
+    <script type="text/javascript" src="./js/dic/products.js"></script>
+    <script type="text/javascript" src="./js/dic/view.js"></script>
+    <script type="text/javascript" src="./js/lib/dragAndDrop.js"></script>
+    <script type="text/javascript" src="./js/lib/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="./js/lib/keybindings.js"></script>
+    <script type="text/javascript" src="./js/lib/undoRedo.js"></script>
+    <script type="text/javascript" src="./js/User/User_control.js"></script>
+    <script type="text/javascript" src="./js/User/User_creation.js"></script>
+    <script type="text/javascript" src="./js/User/User_model.js"></script>
+    <script type="text/javascript" src="./js/createView.js"></script>
+    <script type="text/javascript" src="./js/loader.js"></script>
+    <script type="text/javascript" src="./js/menu.js"></script>
+    <script type="text/javascript" src="./js/viewControl.js"></script>
 
     <script>
 
@@ -80,7 +104,7 @@
                 <button class="undo-redo-button">
                     <img src="./img/undo.svg" onclick="undoit()" alt="undo" width="40px" height="40px">
                 </button>
-                <button class="undo-redo-button">
+                <button class="undo-redo-button undo-redo-button-between">
                     <img src="./img/redo.svg" onclick="redoit()" alt="redo" width="40px" height="40px">
                 </button>
             </div>

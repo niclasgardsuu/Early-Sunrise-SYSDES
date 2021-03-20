@@ -4,16 +4,18 @@
 // To create Attribute/div/span/Input/Button etc.
 
 function createStaffLogIn() {
-
+    
     return createDiv("","manager-right-container",       
                 createSpan  ("adToAccUserN","","") +
                 createInput ("adToAccUsername") +
                 createSpan  ("addA","","") +
                 createInput ("addAmount") +
-                createButton("addToAcc", "addToAcc") + 
-                createInput ("completeOrderId") +
-                createButton("completeOrder", "completeOrder") +
-                createSpan  ("innerDisplay","","")
+                createButton("addToAcc", "addToAcc") +
+                createSpan  ("innerDisplay","","") 
+
+            //TODO fix style ?
+            //   createDl("adToAccUserN", "adToAccUsername") + 
+            //   createDl("addA", "addAmount")
             );
 }
 
@@ -22,14 +24,19 @@ function createVipLogIn() {
     return createDiv("vip","", 
                 createSpanEvent  ("logOut","cursor","", "logOut()")+
                 createButton("balance", "balance") + 
-                createButton("sdrink", "sdrink") +
                 createButton("logOut", "logOut") +
-                createInput ("drinkId") +
-                createInput ("drinkAmount") +
-                createButton("vipOrder", "vipOrder") + 
                 createSpan  ("innerDisplay","","") +
                 createDiv   ("cart","","")
             );
+}
+
+//TODO
+function createDl(id, funcId) {
+
+    return `<dl class="product-info-spec">` +
+            "<dd><input id=" + id + " placeholder=" + id + " type=" + "text" + "></dd>" +
+            "<dt id=" + funcId + "></dt>" +
+            "</dl>";
 }
 
 function createLabel(id) {
@@ -41,8 +48,7 @@ function createInput(id) {
 }
 
 function createButton(id, onclick) {
-    return "<button id=" + id + " onclick=doInit("+ "'" + id + "'" + ")></button>";
-
+    return "<button id=" + id + " onclick= " + id + "()></button>";
 }
 
 function createAttribute(attr,content) {
