@@ -24,6 +24,7 @@ function updateShoppingCartView() {
 
     for(var i = 0; i < OrderDB.cart.productId.length; i++) {
         var id = OrderDB.cart.productId[i];
+        console.log(id);
         var productDiv = createShoppingCartDiv(id ,OrderDB.cart.productAmount[i]);
         shoppingBottom.appendChild(productDiv);
         var removeButton = document.getElementById(id+"-cart-button");  

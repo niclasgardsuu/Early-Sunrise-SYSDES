@@ -12,6 +12,7 @@ var language = "sv"
 //
 
 dict = {
+    "start_username":"none",
     "mainCategory": 
     [   
         "beer",
@@ -106,7 +107,8 @@ dict = {
         "stdOrder",
         "stdDrinkId",
         "stdDrinkAmount",
-        "addToCart"
+        "addToCart",
+        "bar"
     ], 
     "main-ids" : 
     [
@@ -224,6 +226,7 @@ dict = {
         "logIn"                : "Logga in",
         "start_username"       : "Inget",
         "log_in_unsuccess_msg" : "Inloggingen misslyckades!",
+        "your-secret-code"     : "Din hemliga kod är ",
     
         // Log In
         "userN"                : "Användarnamn",
@@ -255,6 +258,7 @@ dict = {
         "stdDrinkId"           : "Drink ID",
         "stdDrinkAmount"       : "Antal",
         "addToCart"            : "Lägg till i kundvagnen",
+        "bar"                  : "Baren"
 
 
     },
@@ -346,6 +350,7 @@ dict = {
         "logIn"                : "Log In",
         "start_username"       : "None",
         "log_in_unsuccess_msg" : "Unsuccessful login",
+        "your-secret-code"     : "Your secret code is ",
     
         // Log In
         "userN"                : "Username",
@@ -377,6 +382,7 @@ dict = {
         "stdDrinkId"           : "Drink ID",
         "stdDrinkAmount"       : "Amount",
         "addToCart"            : "Add to cart",
+        "bar"                  : "Bar"
     },
 }
 

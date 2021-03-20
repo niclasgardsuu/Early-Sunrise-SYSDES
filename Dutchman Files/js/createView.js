@@ -397,7 +397,12 @@ function createMainView() {
                         <span id="table-number">
                             ${getString("table-number")}
                         </span>
-                        <input id="table-number-input" type="number" max=10 min=1>
+                        <select name id="table-number-select">
+                            <option value="0" id="bar"></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select> `+/*<input id="table-number-input" type="number" max=10 min=1>*/`
                     </div>
                 </div>
                 <div id="shopping-cart-container-bottom" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)">

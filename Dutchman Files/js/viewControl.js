@@ -190,6 +190,7 @@ function updateViewProducts(category) {
     createProductsByCategory(category);
     updateViewClasses("classes");
     updateShoppingCartView();
+    updateView();
 }
 
 /**

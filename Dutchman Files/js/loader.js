@@ -164,7 +164,8 @@ function revertOrder(id) {
                         "totalPrice" : OrderDB.all_orders[i].totalPrice,
                         "table": OrderDB.all_orders[i].table,
                         "maxAmount": 10-calculateAmount(OrderDB.all_orders[i].productAmount),
-                        "order_id": OrderDB.all_orders[i].order_id
+                        "order_id": OrderDB.all_orders[i].order_id,
+                        "username": OrderDB.all_orders[i].username
                     };     
             OrderDB.cart = order; 
             var table = OrderDB.all_orders[i].table; 
@@ -172,7 +173,7 @@ function revertOrder(id) {
             OrderDB.all_orders.splice(i, 1);
             updateViewAllProducts();
             updateShoppingCartView();
-            document.getElementById("table-number-input").value = table;
+            document.getElementById("table-number-select").value = table;
             return;
         }
     }
@@ -208,13 +209,26 @@ function removeFromCart(productId, count) {
 
 /**
  * Used to make an order to the bar, based on the shopping carts current content
- * @returns {boolean} true if the orer is successful, otherwise false
+ * @returns {Array} true if the orer is successful, otherwise false
 */
 function stdOrder() {
     
+    var username;
+    if(OrderDB.cart.username == null) {
+        username = modelData["username"];
+    } else {
+        username = OrderDB.cart.username;
+    }
+            
+
     sucessful = false;
-    var tableNumber = document.getElementById("table-number-input").value;
-    if ( tableNumber == "" || tableNumber <= 0 || tableNumber > 10) {
+    var tableSelect = document.getElementById("table-number-select");
+    var tableNumber = tableSelect.options[tableSelect.selectedIndex].value;
+    console.log(tableNumber);
+
+
+
+    if ( tableNumber == "" || tableNumber < 0 || tableNumber > 10) {
         alertBox(getString("table-number-error"));
         return sucessful;
     }
@@ -229,12 +243,13 @@ function stdOrder() {
         order_id = incrementOrder();
     }
 
-    var obj = { "order_id": order_id,
+    var obj = { "username": username,
+                "order_id": order_id,
                 "productId": OrderDB.cart.productId,
                 "productAmount": OrderDB.cart.productAmount,
                 "price": OrderDB.cart.price,
                 "totalPrice" : OrderDB.cart.totalPrice,
-                "table": document.getElementById("table-number-input").value,
+                "table": tableNumber,
                 "status": "pending" 
             };     
     OrderDB.all_orders.push(obj);
@@ -243,11 +258,23 @@ function stdOrder() {
         vipPay();
     }
 
+    if(username != "none") {
+        for(var i = 0; i < OrderDB.cart.productId.length; i++) {
+            for(var j = 0; j < drunk["secret"].length; j++) {
+                if(OrderDB.cart.productId[i] == drunk["secret"][j].articleid) {
+                    alertBox(getString("your-secret-code") + getComLock());
+                }
+            }
+        }
+    }
     clearCart();
     updateShoppingCartView();
     sucessful = true;
+
     return sucessful;
 }
+
+
 
 /**
  *  This function will clear a cart from its contents, 
@@ -303,6 +330,8 @@ function removeOrder(order) {
     for (var i = 0; i < order.productId.length; i++) {
         changeStock(order.productId[i], order.productAmount[i]);
     }
+    console.log(order);
+    addBalance(order.username,order.totalPrice);
     finishOrder(order.order_id);
 }
 
@@ -312,7 +341,6 @@ function removeOrder(order) {
  * @returns {boolean} true if the was successfully finished/handled, else false
 */
 function finishOrder(orderId) {
-
     for (i = 0; i < OrderDB.all_orders.length; i++) {
         if(OrderDB.all_orders[i].order_id == orderId) {
             OrderDB.accounting.income += OrderDB.all_orders[i].totalPrice;
@@ -442,8 +470,8 @@ function getAccountBalance() {
  * @returns {number} a new account balance
 */
 function addBalance(userName, amount) {
-
-    if(isNaN(amount)) {
+        
+    if(!isNaN(amount)) {
     
         // We use this variable to store the userID, since that is the link between the two data bases.
         var userID;
@@ -454,7 +482,7 @@ function addBalance(userName, amount) {
                 userID = DB.users[i].user_id;
             }
         }
-
+        alertBox(userID);
         // Then we match the userID with the account list.
         // and change the account balance.
         for (i = 0; i < DB.account.length; i++) {   
@@ -537,13 +565,17 @@ function indexOfCartProduct(cart,id) {
  * @returns {object} the product
  */
 function findProductByID(id) {
+    dict.mainCategory.push("secret");
     for (var i = 0; i < dict.mainCategory.length; i++) {
         for (var j = 0; j < drunk[dict.mainCategory[i]].length; j++) {
             if (drunk[dict.mainCategory[i]][j].articleid == id) {
-                return drunk[dict.mainCategory[i]][j];
+                var product = drunk[dict.mainCategory[i]][j];
+                dict.mainCategory.pop();
+                return product;
             }
         }
     } 
+    dict.mainCategory.pop();
     return null;
 }
 
