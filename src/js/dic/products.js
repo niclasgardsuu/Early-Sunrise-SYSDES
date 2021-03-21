@@ -105,20 +105,6 @@ var drunk = {
     ],
     "spirits" : [
         {
-            "articleid": "560847",
-            "name": "The Whisky Agency",
-            "name2": "Laphroaig",
-            "pricewithvat": "725.00",
-            "volume": null,
-            "productgroup": "Whiskey, Malt",
-            "serves": "Flaska",
-            "origin": "Skottland, Islay",
-            "origincountry": "Storbritannien",
-            "producent": "The Whisky Agency",
-            "alcoholcontent": "52.5%",
-            "img": "",
-            "stock": 10
-        }, {
             "articleid": "850724",
             "name": "Paul John",
             "name2": "Classic Select Cask",
@@ -130,7 +116,7 @@ var drunk = {
             "origincountry": "Indien",
             "producent": "John Distilleries",
             "alcoholcontent": "55.2%",
-            "img": "",
+            "img": "../img/paul_john.png",
             "stock": 10
         },{
             "articleid": "37672",
@@ -144,7 +130,7 @@ var drunk = {
             "origincountry": "Frankrike",
             "producent": "Cognac L'H\u00E9raud",
             "alcoholcontent": "40%",
-            "img": "",
+            "img": "../img/lheraud.png",
             "stock": 10
         },{
             "articleid": "320747",
@@ -158,7 +144,7 @@ var drunk = {
             "origincountry": "Frankrike",
             "producent": "Delamain",
             "alcoholcontent": "40%",
-            "img": "",
+            "img": "../img/delamain_vesper.jpg",
             "stock": 10
         },{
             "articleid": "225",
@@ -172,7 +158,7 @@ var drunk = {
             "origincountry": "Frankrike",
             "producent": "Martell",
             "alcoholcontent": "40%",
-            "img": "",
+            "img": "../img/martell.png",
             "stock": 10
         },{
             "articleid": "47035",
@@ -186,21 +172,7 @@ var drunk = {
             "origincountry": "Jamaica",
             "producent": "Captain Morgan",
             "alcoholcontent": "40%",
-            "img": "",
-            "stock": 10
-        },{
-            "articleid": "32224",
-            "name": "Cacha\u00E97a 51",
-            "name2": "",
-            "pricewithvat": "249.00",
-            "volume": null,
-            "productgroup": "Rom, Ljus",
-            "serves": "Flaska",
-            "origin": "",
-            "origincountry": "Brasilien",
-            "producent": "M\u00FCller de Bebidas",
-            "alcoholcontent": "40%",
-            "img": "",
+            "img": "../img/captain_morgan.png",
             "stock": 10
         }, {
             "articleid": "701664",
@@ -214,7 +186,7 @@ var drunk = {
             "origincountry": "Nederl\u00E4nderna",
             "producent": "Zuidam Distillers BV",
             "alcoholcontent": "40%",
-            "img": "",
+            "img": "../img/flying_dutchman_rum.jpg",
             "stock": 10
             }
         ],
@@ -264,7 +236,8 @@ var drunk = {
             "origincountry": "Tyskland",
             "producent": "Stralsunder Brauerei",
             "alcoholcontent": "0.2%",
-            "img": ""
+            "img": "../img/stortebeker.png",
+            "stock": 29 
         },{
             "articleid": "603008",
             "name": "Jus de Raisin",
@@ -277,21 +250,7 @@ var drunk = {
             "origincountry": "Frankrike",
             "producent": "Les Vignobles Laurie & Guillau",
             "alcoholcontent": "0%",
-            "img": "",
-            "stock": 10
-        },{
-            "articleid": "539772",
-            "name": "Toselli",
-            "name2": "Spumante",
-            "pricewithvat": "34.00",
-            "volume": null,
-            "productgroup": "Mousserande",
-            "serves": "Flaska",
-            "origin": "",
-            "origincountry": "Italien",
-            "producent": "Bosca Spa",
-            "alcoholcontent": "0.3%",
-            "img": "",
+            "img": "../img/jus_raisin.png",
             "stock": 10
         },{
             "articleid": "579221",
@@ -305,7 +264,7 @@ var drunk = {
             "origincountry": "Sverige",
             "producent": "Maglehems musteri",
             "alcoholcontent": "0%",
-            "img": "",
+            "img": "../img/maglehem.png",
             "stock": 10
         },{
             "articleid": "788406",
@@ -319,13 +278,13 @@ var drunk = {
             "origincountry": "Belgien",
             "producent": "De Proef Brouwerij",
             "alcoholcontent": "0.3%",
-            "img": "",
+            "img": "../img/mikkeller.png",
             "stock": 10
         },{
             "articleid": "790110",
-            "name": "Richard Juhlin ",
+            "name": "Oddbird By Richard Juhlin",
             "name2": "Blanc de Blancs Non-Alcoholic Sparkling Wine",
-            "pricewithvat": "89.00",
+            "pricewithvat": "94.00",
             "volume": null,
             "productgroup": "Mousserande",
             "serves": "Flaska",
@@ -333,7 +292,7 @@ var drunk = {
             "origincountry": "Frankrike",
             "producent": "MRG Wines",
             "alcoholcontent": "0%",
-            "img": "",
+            "img": "../img/oddbird_by_richard_juhlin.png",
             "stock": 10
         },{
             "articleid": "864046",
@@ -347,7 +306,7 @@ var drunk = {
             "origincountry": "Tyskland",
             "producent": "Einbecker Brauhaus",
             "alcoholcontent": "0.5%",
-            "img": "",
+            "img": "../img/einbecker_brauherren.png",
             "stock": 10
         },{
             "articleid": "10902",
@@ -361,7 +320,7 @@ var drunk = {
             "origincountry": "AMERICA",
             "producent": "The Coca-Cola Company",
             "alcoholcontent": "Inget",
-            "img": "",
+            "img": "../img/pepsi.jpg",
             "stock": 10
         }
     ],
