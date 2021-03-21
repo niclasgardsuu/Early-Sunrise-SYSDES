@@ -33,8 +33,6 @@ function addToAcc() {
     userName  = document.getElementById('adToAccUsername');   
     newAmount = document.getElementById('addAmount');
     changed   = addBalance(userName.value, newAmount.value);
-    $("#innerDisplay").text(changed).fadeIn();
-    setTimeout(function() { $("#innerDisplay").fadeOut(); }, 3000);
 }
 
 /**
