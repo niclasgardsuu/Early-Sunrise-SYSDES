@@ -10,6 +10,7 @@
     {number}
     {boolean}
     {Object}
+    {HTMLElement}
     {*} - any type
 */
 

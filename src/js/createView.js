@@ -400,7 +400,7 @@ function createShoppingCartDiv(id,count) {
         `+count+`
     </div>
     <div class="shopping-cart-div-right" id="`+id+`-cart-button">
-
+        <img src="../img/close.svg">
     </div>
     `
     );

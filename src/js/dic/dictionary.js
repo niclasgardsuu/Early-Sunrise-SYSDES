@@ -204,8 +204,8 @@ dict = {
         "max-order-error": "Du kan bara beställa 10 produkter!",
         "unknown-error": "Ett oväntat fel inträffade!",
 
-        "checkout-order": "KÖP",
-        "cancel-order": "KÖP INTE",
+        "checkout-order": "Köp",
+        "cancel-order": "Rensa korgen",
         "table-number": "Bordsnummer: ",
 
         //bartender view 
@@ -313,8 +313,8 @@ dict = {
         "bye": "Nice meeting you! Welcome back!",
         "flag-pic" : "../img/australia.svg",
         "flag-alt" : "Australien flag",
-        "checkout-order": "BUY",
-        "cancel-order": "DONT BUY",
+        "checkout-order": "Buy",
+        "cancel-order": "Clear cart",
         "table-number": "Tablenumber: ",
 
         "product-manager-success-msg": " blev tillagd",
