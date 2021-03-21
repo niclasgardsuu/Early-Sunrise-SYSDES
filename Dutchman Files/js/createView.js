@@ -220,6 +220,20 @@ function createOrderDiv(order) {
     return orderDiv;
 }
 
+
+/**
+ * This function will create the heading for lowest in stock
+ * @returns {HTMLElement} a div 
+*/
+function createLowestInStockHeading() {
+    var lowestContainer = document.createElement("div");
+    lowestContainer.className = "lowest-in-stock-container";
+    var h1 = document.createElement("h1");
+    h1.id = "product-low-in-stock";
+    lowestContainer.appendChild(h1);
+    return lowestContainer;
+}
+
 /**
  * This function will create a div with all the lowest stock objects
  * @param {string} name the name that will be displayed in the div
@@ -446,6 +460,16 @@ function createShoppingCartDiv(id,count) {
     );
     return div;
 }
+
+/**
+ * Creates the view when there is nothing in the shopping cart
+ */
+function createEmptyShoppingCart() {
+    return `<div id="shopping-cart-container-msg" class="shopping-cart-div">
+                <span id="shopping-cart-drop-here">${getString("shopping-cart-drop-here")}</span>
+            </div>`
+}
+
 
 /**
  *  This function will create a product shown in the menu

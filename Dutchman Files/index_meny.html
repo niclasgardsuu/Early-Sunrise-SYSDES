@@ -2,28 +2,6 @@
 <html lang="en">
 
 <head>
-<!--
-    <link rel="stylesheet" href="./css/menu.css">
-    <link rel="stylesheet" href="./css/login.css">
-    <link rel="stylesheet" href="./css/bartender.css">
-    <script type="text/javascript" src="DBLoaded.js"></script>
-    <script type="text/javascript" src="./js/products.js"></script> 
-    <script type="text/javascript" src="./js/productAllergens.js"></script> 
-    <script type="text/javascript" src="./js/dictionary.js"></script>
-    <script type="text/javascript" src="./js/view.js"></script>
-    <script type="text/javascript" src="./js/menu.js"></script>
-    <script type="text/javascript" src="./js/dragAndDrop.js"></script>
-    <script type="text/javascript" src="./js/undoRedo.js"></script>
-    <script type="text/javascript" src="./js/keybindings.js"></script>
-    <script type="text/javascript" src="./js/view/createView.js"></script>
-    <script type="text/javascript" src="./js/control/viewControl.js"></script>
-
-    <script type="text/javascript" src="./js/User/UserDB.js"></script>
-    <script type="text/javascript" src="./js/User/User_control.js"></script>
-    <script type="text/javascript" src="./js/User/User_creation.js"></script>
-    <script type="text/javascript" src="./js/User/User_loader.js"></script>
-    <script type="text/javascript" src="./js/User/User_model.js"></script>
-     -->
     <title id="title-website"></title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -42,7 +20,6 @@
     <script type="text/javascript" src="./js/User/User_model.js"></script>
     <script type="text/javascript" src="./js/createView.js"></script>
     <script type="text/javascript" src="./js/loader.js"></script>
-    <script type="text/javascript" src="./js/menu.js"></script>
     <script type="text/javascript" src="./js/viewControl.js"></script>
 
     <script>
@@ -53,7 +30,6 @@
             var sel = document.getElementById("select-language");
             sel.addEventListener("change",changeLang.bind(null,sel));
             document.getElementById("login").addEventListener("click", createLoginView);
-            document.getElementById("main-logo").addEventListener("click", updateViewAllProducts);
             document.onkeydown = KeyPress;
             updateView();
         });
@@ -93,12 +69,13 @@
             </div>
         </div>
         
+        
         <!--The menu of the website-->
         <div id="menu-window">
             <div class="menu-left">
-                <img id="main-logo" src="./img/logo.svg" class="cursor" >
             </div>
             <div class="menu-middle" id="main-category">  
+                
             </div>
             <div class="menu-right">
                 <button class="undo-redo-button">
