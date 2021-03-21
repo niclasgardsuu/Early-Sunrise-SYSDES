@@ -186,7 +186,7 @@ dict = {
         "footnote-copyright-message": "Den flygande holländaren av © 2021 The Early Sunrise",
         "hello" : "Välkommen till denna lilla demonstration",
         "bye" : "Tack för besöket! Välkommen åter",
-        "flag-pic" : "./img/sweden.svg",
+        "flag-pic" : "../img/sweden.svg",
         "flag-alt" : "Sverige flagga",
 
         "product-manager-success-msg": " blev tillagd",
@@ -311,7 +311,7 @@ dict = {
         "footnote-copyright-message": "The Flying Dutchman by © 2021 The Early Sunrise",
         "hello": "Welcome to this small demonstration",
         "bye": "Nice meeting you! Welcome back!",
-        "flag-pic" : "./img/australia.svg",
+        "flag-pic" : "../img/australia.svg",
         "flag-alt" : "Australien flag",
         "checkout-order": "BUY",
         "cancel-order": "DONT BUY",

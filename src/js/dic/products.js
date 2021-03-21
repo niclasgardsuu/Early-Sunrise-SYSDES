@@ -15,7 +15,7 @@ var drunk = {
             "origincountry": "Sverige",
             "producent": "Spendrups",
             "alcoholcontent": "5.3%",
-            "img": "./img/norrlands.png",
+            "img": "../img/norrlands.png",
             "stock": 3
         }, {
             "articleid": "1206",    
@@ -29,7 +29,7 @@ var drunk = {
             "origincountry": "Tjeckien",
             "producent": "Staropramen",
             "alcoholcontent": "5%",
-            "img": "./img/staropramen.png",
+            "img": "../img/staropramen.png",
             "stock": 10
         }, {
             "articleid": "522586",
@@ -43,7 +43,7 @@ var drunk = {
             "origincountry": "Irland",
             "producent": "Guinness",
             "alcoholcontent": "4.1%",
-            "img": "./img/guinness.png",
+            "img": "../img/guinness.png",
             "stock": 10
         }, {
             "articleid": "508200",
@@ -57,7 +57,7 @@ var drunk = {
             "origincountry": "Sverige",
             "producent": "\u00c3\u2026bro Bryggeri",
             "alcoholcontent": "5.1%",
-            "img": "./img/svensk_stark.png",
+            "img": "../img/svensk_stark.png",
             "stock": 10
         }, {
             "articleid": "721717",
@@ -71,7 +71,7 @@ var drunk = {
             "origincountry": "USA",
             "producent": "Oskar Blues Brewery",
             "alcoholcontent": "10%",
-            "img": "./img/ten_fidy.png",
+            "img": "../img/ten_fidy.png",
             "stock": 10
         }, {
             "articleid": "1132",
@@ -85,7 +85,7 @@ var drunk = {
             "origincountry": "Internationellt m\u00E4rke",
             "producent": "Spendrups",
             "alcoholcontent": "5%",
-            "img": "./img/heineken.png",
+            "img": "../img/heineken.png",
             "stock": 10
         }, {
             "articleid": "1337",
@@ -99,7 +99,7 @@ var drunk = {
             "origincountry": "Finland",
             "producent": "Olvi plc",
             "alcoholcontent": "8.5%",
-            "img": "./img/olvi.jpeg",
+            "img": "../img/olvi.jpeg",
             "stock": 10
         }
     ],
@@ -231,7 +231,7 @@ var drunk = {
             "origincountry": "Frankrike",
             "producent": "Tryffelsvinet AB",
             "alcoholcontent": "14%",
-            "img": "./img/chateau_la_pelouse.png",
+            "img": "../img/chateau_la_pelouse.png",
             "stock": 10
         }, {
             "nr": "9635001",
@@ -247,7 +247,7 @@ var drunk = {
             "origincountry": "Australien",
             "producent": "Torbreck Vintners",
             "alcoholcontent": "14.5%",
-            "img": "./img/torbreck.png",
+            "img": "../img/torbreck.png",
             "stock": 10
         }
     ],
@@ -378,7 +378,7 @@ var drunk = {
             "origincountry": "Vintergatan",
             "producent": "Aliens",
             "alcoholcontent": "69.420%",
-            "img": "./img/olvi.jpeg",
+            "img": "../img/olvi.jpeg",
             "stock": 69
         }
 
@@ -396,7 +396,7 @@ var drunk = {
             "origincountry": "Sverige",
             "producent": "Arla",
             "alcoholcontent": "",
-            "img": "./img/burgare.png",
+            "img": "../img/burgare.png",
             "stock": 69
         },{
             "articleid": "85555",
@@ -410,7 +410,7 @@ var drunk = {
             "origincountry": "Italien",
             "producent": "Dominos",
             "alcoholcontent": "Inget",
-            "img": "./img/vesuvio.png",
+            "img": "../img/vesuvio.png",
             "stock": 10
         },{
             "articleid": "85666",
@@ -424,7 +424,7 @@ var drunk = {
             "origincountry": "Mexiko",
             "producent": "ICA",
             "alcoholcontent": "Inget",
-            "img": "./img/nachos.png",
+            "img": "../img/nachos.png",
             "stock": 10
         }
 

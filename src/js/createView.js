@@ -1,57 +1,3 @@
-
-/**
- *  Create div specific for adding currency
- * @returns {HTMLElement} a div
-*/
-function createAddCurrency() {
-    
-    return `
-    <div id="add-currency">
-        <div id="username-add-currency">
-            <dl class="product-info-spec">
-                <dt id="adToAccUserN"></dt>
-                <input id="adToAccUsername" placeholder="User" type="text" max="100000" min="0">
-            </dl>
-        </div>
-        <div id="amount-add-currency">
-            <dl class="product-info-spec">
-                <dt id="addA"></dt>
-                <input id="addAmount" placeholder="Amount" type="text" max="100000" min="0">
-            </dl>
-        </div>
-        <button id="addToAcc" onclick="addToAcc"></button>
-    </div>
-    `
-}
-
-/**
- *  Create div specific for vip with the log in
- * @returns {HTMLElement} a div
-*/
-function createVipLogIn() {
-
-    var vip = document.createElement("div")
-    vip.id="vip";
-
-    var logout = document.createElement("span");
-    logout.id = "logOut";
-    logout.classList = "cursor";
-    logout.addEventListener("click",logOut);
-    vip.appendChild(logout);
-
-    var balButton = document.createElement("button");    main.innerHTML = "";
-    balButton.id = "balance";
-    balButton.classList = "cursor";
-    balButton.addEventListener("click",showBalance);
-    vip.appendChild(balButton);
-
-    var inner = document.createElement("span");
-    inner.id = "innerDisplay";
-    vip.appendChild(inner);
-
-    return vip;
-}
-
 /**
  *  Create an attribute element
  * @param {string} attr an attribute
@@ -583,7 +529,7 @@ function createMainCategoryButton(mainCategory) {
     name.id = mainCategory;
     //Bild på kategorin
     var img = document.createElement("img");
-    img.src = "./img/" + mainCategory + ".svg";
+    img.src = "../img/" + mainCategory + ".svg";
     img.className = "menu-category-img";
 
     //länk för kategorin
@@ -621,14 +567,14 @@ function createAlertBoxView(msg) {
 }
 
 /**
- *  Creates an element for displaying the filter buttons for a specfic catefory
+ *  Creates an element for displaying the filter buttons for a specfic category
  * @param {Object} product the product that will be shown
  * @return {string} HTML code of the element
  */
 function createShowProductBaseView(product) {
     return `<div class="product-info-container-left">
             <div class="product-info-container-img">
-                <img id="product-info-img" src="${product.img}" class="product-img" alt="">
+                <img id="product-info-img" src="../img/${product.img}" class="product-img" alt="">
             </div>
         </div>
         <div id="product-info-container-right">
