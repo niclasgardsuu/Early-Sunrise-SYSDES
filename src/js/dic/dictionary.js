@@ -193,7 +193,7 @@ dict = {
 
         //warnings
         "less-than-five-warning": "Varning! Mindre än 5 produkter av en typ finns i lagret!",
-        "order-notification": "Order in queue",
+        "order-notification": "Order i kö",
         //error messages
         "product-manager-input-error": "Några inputs kan inte vara tomma, ",
         "product-manager-id-error": "Id finns redan, ",
@@ -258,7 +258,11 @@ dict = {
         "stdDrinkId"           : "Drink ID",
         "stdDrinkAmount"       : "Antal",
         "addToCart"            : "Lägg till i kundvagnen",
-        "bar"                  : "Baren"
+        "bar"                  : "Baren",
+
+        // Security 
+        "call-security-msg": "Aina kommer om några minuter, HÅLL UT!"
+
 
 
     },
@@ -321,6 +325,8 @@ dict = {
 
         //warnings 
         "less-than-five-warning": "Warning! Less than five products of a type remains!",
+        "order-notification": "Order in queue",
+        
 
         //error messages
         "product-manager-input-error": "Some inputs cant be empty, ",
@@ -341,7 +347,7 @@ dict = {
         "bartender-button-n-1": "Remove order",
         "bartender-button-n-2": "Complete order",
         "bartender-total": "Total",
-        "bartender-table-name": "Table ",
+        "bartender-table-name": "Table: ",
         "bartender-order-name": "Order ",
 
         "manager": "Manager",
@@ -382,7 +388,10 @@ dict = {
         "stdDrinkId"           : "Drink ID",
         "stdDrinkAmount"       : "Amount",
         "addToCart"            : "Add to cart",
-        "bar"                  : "Bar"
+        "bar"                  : "Bar",
+
+        // Security
+        "call-security-msg": "Security will be here soon!"
     },
 }
 

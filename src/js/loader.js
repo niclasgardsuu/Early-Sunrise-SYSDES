@@ -96,23 +96,23 @@ function addToCart(productId, productAmount) {
     var currentMaxAmount = OrderDB.cart.maxAmount - parseInt(productAmount);
 
     if (currentMaxAmount < 0) {
-        alertBox(getString("max-order-error"));
+        alertBox(getString("max-order-error"), 3000);
         return successful;
     }
 
     if ((isNaN(productId) || isNaN(productAmount) || (parseInt(productAmount) <= 0))) { // Error check on input
         updateShoppingCartView();
-        alertBox(getString("unknown-error"));
+        alertBox(getString("unknown-error"), 3000);
         return successful;
     }
 
     if (!checkAddToCart(productId, productAmount)) {
-        alertBox(getString("stock-empty-error"));
+        alertBox(getString("stock-empty-error"), 3000);
         return successful;
     }
 
     if (!changeStock(productId, -Math.abs(productAmount))) { 
-        alertBox(getString("unknown-error"));
+        alertBox(getString("unknown-error"), 3000);
         return successful;
     }
 
@@ -225,17 +225,16 @@ function stdOrder() {
     sucessful = false;
     var tableSelect = document.getElementById("table-number-select");
     var tableNumber = tableSelect.options[tableSelect.selectedIndex].value;
-    console.log(tableNumber);
 
 
 
     if ( tableNumber == "" || tableNumber < 0 || tableNumber > 10) {
-        alertBox(getString("table-number-error"));
+        alertBox(getString("table-number-error"), 3000);
         return sucessful;
     }
 
     if (OrderDB.cart.productId.length == 0) {
-        alertBox(getString("empty-cart-error"));
+        alertBox(getString("empty-cart-error"), 3000);
         return sucessful;
     }
 
@@ -263,7 +262,7 @@ function stdOrder() {
         for(var i = 0; i < OrderDB.cart.productId.length; i++) {
             for(var j = 0; j < drunk["secret"].length; j++) {
                 if(OrderDB.cart.productId[i] == drunk["secret"][j].articleid) {
-                    alertBox(getString("your-secret-code") + getComLock());
+                    alertBox(getString("your-secret-code") + getComLock(), 7500);
                 }
             }
         }
@@ -302,10 +301,9 @@ function clearCart() {
 function resetCart() {
 
     if (OrderDB.cart.productId.length == 0) {
-        alertBox(getString("empty-cart-error"));
+        alertBox(getString("empty-cart-error"), 3000);
         return;
     }
-    console.log("hur många gånger?");
     var drinkList = OrderDB.cart.productId;
     var amountList = OrderDB.cart.productAmount;
 
@@ -327,11 +325,9 @@ function resetCart() {
  * @param {Object} order the current order that is being handled order
 */
 function removeOrder(order) {
-    console.log(order);
     for (var i = 0; i < order.productId.length; i++) {
         changeStock(order.productId[i], order.productAmount[i]);
     }
-    console.log(order);
     addBalance(order.username,order.totalPrice);
     finishOrder(order.order_id);
 }
@@ -364,9 +360,7 @@ function changeStock (productId, productAmount) {
 
     for (var i = 0; i < dict.mainCategory.length; i++) {
         for (var j = 0; j < drunk[dict.mainCategory[i]].length; j++) {
-            console.log(productId);
             if (drunk[dict.mainCategory[i]][j].articleid == productId) {
-                console.log("hittade produkten");
                 var stockAmount = drunk[dict.mainCategory[i]][j].stock;
                 
                 if (productAmount == null) {
@@ -375,10 +369,8 @@ function changeStock (productId, productAmount) {
                 }
                 
                 var val = stockAmount + productAmount;
-                console.log(val);
                 if (val >= 0) {
                     drunk[dict.mainCategory[i]][j].stock = val;
-                    console.log("den borde komma hit");
                     successfull = true;
                 } 
             }
@@ -483,7 +475,6 @@ function addBalance(userName, amount) {
                 userID = DB.users[i].user_id;
             }
         }
-        alertBox(userID);
         // Then we match the userID with the account list.
         // and change the account balance.
         for (i = 0; i < DB.account.length; i++) {   

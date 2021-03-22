@@ -55,17 +55,25 @@ function logInStaff() {
     $("#loginDisplay").html(createSpanEvent("logOut","cursor","","logOut()") +
                             createSpanEvent("manager","cursor","","createManagerView()")+
                             createSpanEvent("bartender","cursor","","createBartenderView()")+
-                            createSpanEvent("notify-security", "cursor", "", "window.location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'"));
+                            createSpanEvent("notify-security", "cursor", "", "rickRolled()"));
 
     if (theLowestInStock(5).length != 0) {
-        alertBox(getString("less-than-five-warning"));
+        alertBox(getString("less-than-five-warning"), 5000);
     } 
 
     if(OrderDB.all_orders.length != 0) {
-        alertBox(getString("order-notification"));
+        alertBox(getString("order-notification"), 5000);
     }
 
     updateViewUser();
+}
+
+/**
+ * Rick rolls the user
+*/
+function rickRolled() {
+    alertBox(getString("call-security-msg"), 5000);
+    setTimeout(function () {window.location.href="https://www.youtube.com/watch?v=QtBDL8EiNZo";}, 5500);
 }
 
 /**
@@ -73,7 +81,7 @@ function logInStaff() {
 */
 function logInUnsuccess() {
 
-    alertBox(getString("log_in_unsuccess_msg"));
+    alertBox(getString("log_in_unsuccess_msg"), 3000);
     updateViewUser();
 }
 

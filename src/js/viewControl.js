@@ -55,7 +55,7 @@ function checkAddProductToMeny(articleid, category, cannotBeEmpty) {
         passed = false;
     }
 
-    if (!passed) alertBox(msg);
+    if (!passed) alertBox(msg, 3000);
 
     return passed;
 }
@@ -238,15 +238,16 @@ function updateViewAllProducts() {
 /**
  *  This function will alert the user with a box with a message stating the fault
  * @param {string} msg the message that will be shown
+ * @param {string} time the time in ms that the alert box will be shown
 */
-function alertBox(msg) {
+function alertBox(msg, time) {
     var container = document.getElementById("alert-box-container");
     container.appendChild(createAlertBoxView(msg));
 
     if (container.childElementCount > 3) {
         removeAlertBox();
     } else {
-        setTimeout(removeAlertBox, 3000);
+        setTimeout(removeAlertBox, time);
     }
 }
 
@@ -319,7 +320,6 @@ function updateShoppingCartView() {
 
     for(var i = 0; i < OrderDB.cart.productId.length; i++) {
         var id = OrderDB.cart.productId[i];
-        console.log(id);
         var productDiv = createShoppingCartDiv(id ,OrderDB.cart.productAmount[i]);
         shoppingBottom.appendChild(productDiv);
         var removeButton = document.getElementById(id+"-cart-button");  
@@ -347,5 +347,5 @@ function createLowestInStockView() {
     for (i in lowest) {
         lowestContainer.appendChild(createLowestInStockDiv(lowest[i].name, lowest[i].stock));
     }
-    return lowestContainer;
+    return lowestContainer.outerHTML;
 }

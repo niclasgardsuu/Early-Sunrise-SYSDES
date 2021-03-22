@@ -43,10 +43,18 @@ function createBartenderView() {
         var spanTableName = document.createElement("span");
         spanTableName.className = "bartender-table-name";
         var spanTable = document.createElement("span");
-        table.appendChild(spanTableName);
-        table.appendChild(spanTable.appendChild(document.createTextNode(sortedOrders[i][0].table)));
-        table.addEventListener("click", toggleDisplaySibling.bind(null, table));
+        var tableNumber = sortedOrders[i][0].table;
+        if(tableNumber != 0) {
+            table.appendChild(spanTableName);
+            table.appendChild(spanTable.appendChild(document.createTextNode(tableNumber)));
+        } else {
+            var bar = document.createElement("span");
+            bar.id = "bar";
+            bar.appendChild(document.createTextNode(getString("bar")));
+            table.appendChild(spanTable.appendChild(bar));
+        }
 
+        table.addEventListener("click", toggleDisplaySibling.bind(null, table));
         //order div
         var orderContainer = document.createElement("div");
         orderContainer.className = "bartender-order-container";
@@ -158,7 +166,6 @@ function createOrderTable(order) {
  * @returns {HTMLElement} a div 
 */
 function createOrderDiv(order) {
-    console.log(order);
     var orderDiv = document.createElement("div");
     orderDiv.id = order.order_id + "-table-order";
     orderDiv.style.border = "2px";
@@ -257,15 +264,15 @@ function createManagerView() {
 
     const staff = createAddCurrency();
     const income = createProfitTable();
+    const stock = createLowestInStockView();
 
     managerContainer.insertAdjacentHTML('beforeend', `
         <div id="manager-top-container">` +
             addProduct +
             `<div class="manager-right-container">` + 
-                staff + income +
+                staff + income + stock +
             `</div>` +
         `</div>`);
-    managerContainer.appendChild(createLowestInStockView());
     managerWindow.appendChild(managerContainer);
     main.appendChild(managerWindow);
 
@@ -293,6 +300,7 @@ function createProfitTable() {
         <td id="profit"></td>
         <td >`+profit+`</td>
     </tr>
+    </table>
     `
 }
 
@@ -376,7 +384,6 @@ function createMainView() {
     document.getElementById("cancel-order").addEventListener("click", function() {
         resetCart();
         updateShoppingCartView();
-        console.log("test");
     });
 }
 

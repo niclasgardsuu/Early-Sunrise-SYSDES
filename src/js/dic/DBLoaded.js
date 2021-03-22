@@ -1,3 +1,6 @@
+/*
+ *  List of valid users and VIP customers credits 
+ */
 var DB = {
     "users": [
         {

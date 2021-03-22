@@ -1,0 +1,427 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=utf-8"> <style>
+	.KEYW {color: #933;}
+	.COMM {color: #bbb; font-style: italic;}
+	.NUMB {color: #393;}
+	.STRN {color: #393;}
+	.REGX {color: #339;}
+	.line {border-right: 1px dotted #666; color: #666; font-style: normal;}
+	</style></head><body><pre><span class='line'>  1</span> <span class="COMM">// ==========================================================================</span><span class="WHIT">
+<span class='line'>  2</span> </span><span class="COMM">// We need to have a variable that controls which language to use.</span><span class="WHIT">
+<span class='line'>  3</span> </span><span class="COMM">// In this file we only show the simplest version of language change.</span><span class="WHIT">
+<span class='line'>  4</span> </span><span class="COMM">// How to do this with more than two languages, is left as an</span><span class="WHIT">
+<span class='line'>  5</span> </span><span class="COMM">// exercise.</span><span class="WHIT">
+<span class='line'>  6</span> </span><span class="COMM">//</span><span class="WHIT">
+<span class='line'>  7</span> </span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">language</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="STRN">"sv"</span><span class="WHIT">
+<span class='line'>  8</span> 
+<span class='line'>  9</span> </span><span class="COMM">// ==========================================================================</span><span class="WHIT">
+<span class='line'> 10</span> </span><span class="COMM">// The dictionary consists of a simple JSON structure. It also keeps</span><span class="WHIT">
+<span class='line'> 11</span> </span><span class="COMM">// track of the different keys that are available  for IDs.</span><span class="WHIT">
+<span class='line'> 12</span> </span><span class="COMM">//</span><span class="WHIT">
+<span class='line'> 13</span> 
+<span class='line'> 14</span> </span><span class="NAME">dict</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'> 15</span> </span><span class="WHIT">    </span><span class="STRN">"start_username"</span><span class="PUNC">:</span><span class="STRN">"none"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 16</span> </span><span class="WHIT">    </span><span class="STRN">"mainCategory"</span><span class="PUNC">:</span><span class="WHIT"> 
+<span class='line'> 17</span>     </span><span class="PUNC">[</span><span class="WHIT">   
+<span class='line'> 18</span>         </span><span class="STRN">"beer"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 19</span> </span><span class="WHIT">        </span><span class="STRN">"spirits"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 20</span> </span><span class="WHIT">        </span><span class="STRN">"wine"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 21</span> </span><span class="WHIT">        </span><span class="STRN">"non-alcoholic"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 22</span> </span><span class="WHIT">        </span><span class="STRN">"food"</span><span class="WHIT">
+<span class='line'> 23</span> </span><span class="WHIT">    </span><span class="PUNC">]</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 24</span> </span><span class="WHIT">    </span><span class="STRN">"login-ids"</span><span class="PUNC">:</span><span class="WHIT"> 
+<span class='line'> 25</span>     </span><span class="PUNC">[</span><span class="WHIT">
+<span class='line'> 26</span> </span><span class="WHIT">        </span><span class="STRN">"userN"</span><span class="PUNC">,</span><span class="WHIT"> 
+<span class='line'> 27</span>         </span><span class="STRN">"passW"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 28</span> </span><span class="WHIT">        </span><span class="STRN">"logIn"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 29</span> </span><span class="WHIT">        </span><span class="STRN">"log_in_unsuccess_msg"</span><span class="WHIT">
+<span class='line'> 30</span> </span><span class="WHIT">    </span><span class="PUNC">]</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 31</span> </span><span class="WHIT">    </span><span class="STRN">"login-placeholder"</span><span class="PUNC">:</span><span class="WHIT"> 
+<span class='line'> 32</span>     </span><span class="PUNC">[</span><span class="WHIT">
+<span class='line'> 33</span> </span><span class="WHIT">        </span><span class="STRN">"username"</span><span class="PUNC">,</span><span class="WHIT"> 
+<span class='line'> 34</span>         </span><span class="STRN">"password"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 35</span> </span><span class="WHIT">    </span><span class="PUNC">]</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 36</span> </span><span class="WHIT">    </span><span class="STRN">"bartender-ids"</span><span class="PUNC">:</span><span class="WHIT"> 
+<span class='line'> 37</span>     </span><span class="PUNC">[</span><span class="WHIT">
+<span class='line'> 38</span> </span><span class="WHIT">        
+<span class='line'> 39</span>     </span><span class="PUNC">]</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 40</span> </span><span class="WHIT">    </span><span class="STRN">"bartender-classes"</span><span class="PUNC">:</span><span class="WHIT"> 
+<span class='line'> 41</span>     </span><span class="PUNC">[</span><span class="WHIT">
+<span class='line'> 42</span> </span><span class="WHIT">        </span><span class="STRN">"bartender-table-h-0"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 43</span> </span><span class="WHIT">        </span><span class="STRN">"bartender-table-h-1"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 44</span> </span><span class="WHIT">        </span><span class="STRN">"bartender-table-h-2"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 45</span> </span><span class="WHIT">        </span><span class="STRN">"bartender-button-n-0"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 46</span> </span><span class="WHIT">        </span><span class="STRN">"bartender-button-n-1"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 47</span> </span><span class="WHIT">        </span><span class="STRN">"bartender-button-n-2"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 48</span> </span><span class="WHIT">        </span><span class="STRN">"bartender-total"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 49</span> </span><span class="WHIT">        </span><span class="STRN">"bartender-table-name"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 50</span> </span><span class="WHIT">        </span><span class="STRN">"bartender-order-name"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 51</span> </span><span class="WHIT">    </span><span class="PUNC">]</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 52</span> </span><span class="WHIT">    </span><span class="STRN">"manager-ids"</span><span class="PUNC">:</span><span class="WHIT"> 
+<span class='line'> 53</span>     </span><span class="PUNC">[</span><span class="WHIT">
+<span class='line'> 54</span> </span><span class="WHIT">        </span><span class="STRN">"product-manager-add"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 55</span> </span><span class="WHIT">        </span><span class="STRN">"product-manager-articleid"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 56</span> </span><span class="WHIT">        </span><span class="STRN">"product-manager-name"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 57</span> </span><span class="WHIT">        </span><span class="STRN">"product-manager-name2"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 58</span> </span><span class="WHIT">        </span><span class="STRN">"product-manager-pricewithvat"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 59</span> </span><span class="WHIT">        </span><span class="STRN">"product-manager-volume"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 60</span> </span><span class="WHIT">        </span><span class="STRN">"product-manager-productgroup"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 61</span> </span><span class="WHIT">        </span><span class="STRN">"product-manager-serves"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 62</span> </span><span class="WHIT">        </span><span class="STRN">"product-manager-origin"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 63</span> </span><span class="WHIT">        </span><span class="STRN">"product-manager-origincountry"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 64</span> </span><span class="WHIT">        </span><span class="STRN">"product-manager-producent"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 65</span> </span><span class="WHIT">        </span><span class="STRN">"product-manager-alcohol"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 66</span> </span><span class="WHIT">        </span><span class="STRN">"product-manager-img"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 67</span> </span><span class="WHIT">        </span><span class="STRN">"product-manager-stock"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 68</span> </span><span class="WHIT">        </span><span class="STRN">"product-manager-price"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 69</span> </span><span class="WHIT">        </span><span class="STRN">"product-manager-main-category"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 70</span> </span><span class="WHIT">        </span><span class="STRN">"product-manager-add-product"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 71</span> </span><span class="WHIT">        </span><span class="COMM">// Staff</span><span class="WHIT">
+<span class='line'> 72</span> </span><span class="WHIT">        </span><span class="STRN">"adToAccUserN"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 73</span> </span><span class="WHIT">        </span><span class="STRN">"addA"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 74</span> </span><span class="WHIT">        </span><span class="STRN">"addToAcc"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 75</span> </span><span class="WHIT">        </span><span class="STRN">"staffLogO"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 76</span> </span><span class="WHIT">        </span><span class="STRN">"completeOrderId"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 77</span> </span><span class="WHIT">        </span><span class="STRN">"completeOrder"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 78</span> </span><span class="WHIT">        </span><span class="STRN">"product-low-in-stock"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 79</span> </span><span class="WHIT">        </span><span class="STRN">"expenses"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 80</span> </span><span class="WHIT">        </span><span class="STRN">"income"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 81</span> </span><span class="WHIT">        </span><span class="STRN">"profit"</span><span class="WHIT">
+<span class='line'> 82</span> </span><span class="WHIT">    </span><span class="PUNC">]</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 83</span> </span><span class="WHIT">    </span><span class="STRN">"userIds"</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> 
+<span class='line'> 84</span>     </span><span class="PUNC">[</span><span class="WHIT"> 
+<span class='line'> 85</span>         </span><span class="STRN">"manager"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 86</span> </span><span class="WHIT">        </span><span class="STRN">"bartender"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 87</span> </span><span class="WHIT">        </span><span class="STRN">"notify-security"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 88</span> </span><span class="WHIT">        </span><span class="STRN">"start_username"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 89</span> </span><span class="WHIT">        </span><span class="STRN">"log_in_success_msg"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 90</span> </span><span class="WHIT">        </span><span class="STRN">"log_in_unsuccess_msg"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 91</span> 
+<span class='line'> 92</span> </span><span class="WHIT">        </span><span class="COMM">// Log In</span><span class="WHIT">
+<span class='line'> 93</span> </span><span class="WHIT">        </span><span class="STRN">"logIn"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 94</span> </span><span class="WHIT">        </span><span class="STRN">"userN"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 95</span> </span><span class="WHIT">        </span><span class="STRN">"passW"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 96</span> </span><span class="WHIT">        </span><span class="STRN">"log"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 97</span> 
+<span class='line'> 98</span> </span><span class="WHIT">        </span><span class="COMM">// VIP</span><span class="WHIT">
+<span class='line'> 99</span> </span><span class="WHIT">        </span><span class="STRN">"balance"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>100</span> </span><span class="WHIT">        </span><span class="STRN">"sdrink"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>101</span> </span><span class="WHIT">        </span><span class="STRN">"logOut"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>102</span> </span><span class="WHIT">        </span><span class="STRN">"drinkAmount"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>103</span> </span><span class="WHIT">        </span><span class="STRN">"vipOrder"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>104</span> </span><span class="WHIT">        </span><span class="STRN">"drinkId"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>105</span> </span><span class="WHIT">            
+<span class='line'>106</span>         </span><span class="COMM">// All Customer</span><span class="WHIT">
+<span class='line'>107</span> </span><span class="WHIT">        </span><span class="STRN">"stdOrder"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>108</span> </span><span class="WHIT">        </span><span class="STRN">"stdDrinkId"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>109</span> </span><span class="WHIT">        </span><span class="STRN">"stdDrinkAmount"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>110</span> </span><span class="WHIT">        </span><span class="STRN">"addToCart"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>111</span> </span><span class="WHIT">        </span><span class="STRN">"bar"</span><span class="WHIT">
+<span class='line'>112</span> </span><span class="WHIT">    </span><span class="PUNC">]</span><span class="PUNC">,</span><span class="WHIT"> 
+<span class='line'>113</span>     </span><span class="STRN">"main-ids"</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> 
+<span class='line'>114</span>     </span><span class="PUNC">[</span><span class="WHIT">
+<span class='line'>115</span> </span><span class="WHIT">        </span><span class="STRN">"title-website"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>116</span> </span><span class="WHIT">        </span><span class="STRN">"login"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>117</span> </span><span class="WHIT">        </span><span class="STRN">"product-spec"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>118</span> </span><span class="WHIT">        </span><span class="STRN">"product-spec-alcohol"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>119</span> </span><span class="WHIT">        </span><span class="STRN">"product-spec-category"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>120</span> </span><span class="WHIT">        </span><span class="STRN">"product-spec-type"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>121</span> </span><span class="WHIT">        </span><span class="STRN">"product-spec-producent"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>122</span> </span><span class="WHIT">        </span><span class="STRN">"product-spec-origin"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>123</span> </span><span class="WHIT">        </span><span class="STRN">"product-spec-allergens"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>124</span> </span><span class="WHIT">        </span><span class="STRN">"product-spec-articleid"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>125</span> </span><span class="WHIT">        </span><span class="STRN">"product-stock-view"</span><span class="PUNC">,</span><span class="WHIT"> 
+<span class='line'>126</span>         </span><span class="STRN">"product-manager-refill"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>127</span> </span><span class="WHIT">        </span><span class="STRN">"product-manager"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>128</span> </span><span class="WHIT">        </span><span class="STRN">"product-manager-remove-product"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>129</span> </span><span class="WHIT">        </span><span class="STRN">"footnote-copyright-message"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>130</span> </span><span class="WHIT">        </span><span class="STRN">"checkout-order"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>131</span> </span><span class="WHIT">        </span><span class="STRN">"cancel-order"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>132</span> </span><span class="WHIT">        </span><span class="STRN">"table-number"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>133</span> </span><span class="WHIT">        </span><span class="STRN">"shopping-cart-drop-here"</span><span class="WHIT">
+<span class='line'>134</span> </span><span class="WHIT">    </span><span class="PUNC">]</span><span class="PUNC">,</span><span class="WHIT">       
+<span class='line'>135</span>     </span><span class="STRN">"pics"</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="PUNC">[</span><span class="PUNC">[</span><span class="STRN">"flag-pic"</span><span class="PUNC">,</span><span class="STRN">"flag-alt"</span><span class="PUNC">]</span><span class="PUNC">]</span><span class="PUNC">,</span><span class="WHIT">              </span><span class="COMM">// keys for pictures</span><span class="WHIT">
+<span class='line'>136</span> </span><span class="WHIT">    </span><span class="STRN">"classes"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="PUNC">[</span><span class="STRN">"product-buy"</span><span class="PUNC">]</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>137</span> </span><span class="WHIT">                                    </span><span class="COMM">// pictures have to be</span><span class="WHIT">
+<span class='line'>138</span> </span><span class="WHIT">                                    </span><span class="COMM">// handled in a special way.</span><span class="WHIT">
+<span class='line'>139</span> 
+<span class='line'>140</span> </span><span class="WHIT">    </span><span class="COMM">// We use one JSON substructure for each language. If we have</span><span class="WHIT">
+<span class='line'>141</span> </span><span class="WHIT">    </span><span class="COMM">// many different languages and a large set of strings we might</span><span class="WHIT">
+<span class='line'>142</span> </span><span class="WHIT">    </span><span class="COMM">// need to store a JSON file for each language to be loaded on</span><span class="WHIT">
+<span class='line'>143</span> </span><span class="WHIT">    </span><span class="COMM">// request.</span><span class="WHIT">
+<span class='line'>144</span> </span><span class="WHIT">    </span><span class="COMM">//</span><span class="WHIT">
+<span class='line'>145</span> </span><span class="WHIT">    </span><span class="STRN">"sv"</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>146</span> </span><span class="WHIT">        </span><span class="STRN">"title-website"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Den Flygande Holländaren"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>147</span> </span><span class="WHIT">        </span><span class="STRN">"login"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Logga in"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>148</span> </span><span class="WHIT">        </span><span class="STRN">"beer"</span><span class="PUNC">:</span><span class="STRN">"Öl"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>149</span> </span><span class="WHIT">        </span><span class="STRN">"spirits"</span><span class="PUNC">:</span><span class="STRN">"Sprit"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>150</span> </span><span class="WHIT">        </span><span class="STRN">"wine"</span><span class="PUNC">:</span><span class="STRN">"Vin"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>151</span> </span><span class="WHIT">        </span><span class="STRN">"secret"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Hemlighet"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>152</span> </span><span class="WHIT">        </span><span class="STRN">"food"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Mat"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>153</span> </span><span class="WHIT">        </span><span class="STRN">"non-alcoholic"</span><span class="PUNC">:</span><span class="STRN">"Alkoholfritt"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>154</span> </span><span class="WHIT">        </span><span class="STRN">"shopping-cart-drop-here"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Din varukorg är tom! (Du kan dra en produkt hit)"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>155</span> </span><span class="WHIT">        </span><span class="STRN">"product-buy"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Lägg i kundvagnen"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>156</span> </span><span class="WHIT">        </span><span class="STRN">"product-spec"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Specifikationer"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>157</span> </span><span class="WHIT">        </span><span class="STRN">"product-spec-alcohol"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Alkoholhalt"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>158</span> </span><span class="WHIT">        </span><span class="STRN">"product-spec-category"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Kategori"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>159</span> </span><span class="WHIT">        </span><span class="STRN">"product-spec-type"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Typ"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>160</span> </span><span class="WHIT">        </span><span class="STRN">"product-spec-producent"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Producent"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>161</span> </span><span class="WHIT">        </span><span class="STRN">"product-spec-origin"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Ursprung"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>162</span> </span><span class="WHIT">        </span><span class="STRN">"product-spec-allergens"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Allergener"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>163</span> </span><span class="WHIT">        </span><span class="STRN">"product-spec-articleid"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Artikel id"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>164</span> </span><span class="WHIT">        </span><span class="STRN">"product-manager"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Produkt chef"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>165</span> </span><span class="WHIT">        </span><span class="STRN">"product-stock-view"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Lager antal"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>166</span> </span><span class="WHIT">        </span><span class="STRN">"product-manager-refill"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Återfyll produkten"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>167</span> </span><span class="WHIT">        </span><span class="STRN">"product-manager-remove-product"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Ta bort produkten"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>168</span> </span><span class="WHIT">        </span><span class="STRN">"product-manager-add"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Lägg till produkt"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>169</span> </span><span class="WHIT">        </span><span class="STRN">"product-manager-articleid"</span><span class="PUNC">:</span><span class="STRN">"Artikel id"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>170</span> </span><span class="WHIT">        </span><span class="STRN">"product-manager-name"</span><span class="PUNC">:</span><span class="STRN">"Namn"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>171</span> </span><span class="WHIT">        </span><span class="STRN">"product-manager-name2"</span><span class="PUNC">:</span><span class="STRN">"Andra namnet"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>172</span> </span><span class="WHIT">        </span><span class="STRN">"product-manager-pricewithvat"</span><span class="PUNC">:</span><span class="STRN">"Pris inkl moms"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>173</span> </span><span class="WHIT">        </span><span class="STRN">"product-manager-volume"</span><span class="PUNC">:</span><span class="STRN">"Volym"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>174</span> </span><span class="WHIT">        </span><span class="STRN">"product-manager-productgroup"</span><span class="PUNC">:</span><span class="STRN">"Produkt grupp"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>175</span> </span><span class="WHIT">        </span><span class="STRN">"product-manager-serves"</span><span class="PUNC">:</span><span class="STRN">"Serveras som"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>176</span> </span><span class="WHIT">        </span><span class="STRN">"product-manager-origin"</span><span class="PUNC">:</span><span class="STRN">"Ursprung"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>177</span> </span><span class="WHIT">        </span><span class="STRN">"product-manager-origincountry"</span><span class="PUNC">:</span><span class="STRN">"Ursprungsland"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>178</span> </span><span class="WHIT">        </span><span class="STRN">"product-manager-producent"</span><span class="PUNC">:</span><span class="STRN">"Producent"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>179</span> </span><span class="WHIT">        </span><span class="STRN">"product-manager-alcohol"</span><span class="PUNC">:</span><span class="STRN">"Alkoholhalt"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>180</span> </span><span class="WHIT">        </span><span class="STRN">"product-manager-img"</span><span class="PUNC">:</span><span class="STRN">"Bild"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>181</span> </span><span class="WHIT">        </span><span class="STRN">"product-manager-stock"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Antal i lager"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>182</span> </span><span class="WHIT">        </span><span class="STRN">"product-manager-price"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Ändra pris"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>183</span> </span><span class="WHIT">        </span><span class="STRN">"product-manager-main-category"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Huvudkategori"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>184</span> </span><span class="WHIT">        </span><span class="STRN">"product-manager-add-product"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Lägg till produkt"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>185</span> </span><span class="WHIT">        </span><span class="STRN">"product-low-in-stock"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Lågt antal i lager"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>186</span> </span><span class="WHIT">        </span><span class="STRN">"footnote-copyright-message"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Den flygande holländaren av © 2021 The Early Sunrise"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>187</span> </span><span class="WHIT">        </span><span class="STRN">"hello"</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Välkommen till denna lilla demonstration"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>188</span> </span><span class="WHIT">        </span><span class="STRN">"bye"</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Tack för besöket! Välkommen åter"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>189</span> </span><span class="WHIT">        </span><span class="STRN">"flag-pic"</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"../img/sweden.svg"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>190</span> </span><span class="WHIT">        </span><span class="STRN">"flag-alt"</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Sverige flagga"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>191</span> 
+<span class='line'>192</span> </span><span class="WHIT">        </span><span class="STRN">"product-manager-success-msg"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">" blev tillagd"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>193</span> 
+<span class='line'>194</span> </span><span class="WHIT">        </span><span class="COMM">//warnings</span><span class="WHIT">
+<span class='line'>195</span> </span><span class="WHIT">        </span><span class="STRN">"less-than-five-warning"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Varning! Mindre än 5 produkter av en typ finns i lagret!"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>196</span> </span><span class="WHIT">        </span><span class="STRN">"order-notification"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Order i kö"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>197</span> </span><span class="WHIT">        </span><span class="COMM">//error messages</span><span class="WHIT">
+<span class='line'>198</span> </span><span class="WHIT">        </span><span class="STRN">"product-manager-input-error"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Några inputs kan inte vara tomma, "</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>199</span> </span><span class="WHIT">        </span><span class="STRN">"product-manager-id-error"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Id finns redan, "</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>200</span> </span><span class="WHIT">        </span><span class="STRN">"product-manager-category-error"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Huvudkategori finns inte, "</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>201</span> </span><span class="WHIT">        </span><span class="STRN">"table-number-error"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Du kan bara välja ett bord mellan 1 och 10!"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>202</span> </span><span class="WHIT">        </span><span class="STRN">"empty-cart-error"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Din varukorg är tom!"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>203</span> </span><span class="WHIT">        </span><span class="STRN">"stock-empty-error"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Varan finns inte i lager längre!"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>204</span> </span><span class="WHIT">        </span><span class="STRN">"max-order-error"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Du kan bara beställa 10 produkter!"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>205</span> </span><span class="WHIT">        </span><span class="STRN">"unknown-error"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Ett oväntat fel inträffade!"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>206</span> 
+<span class='line'>207</span> </span><span class="WHIT">        </span><span class="STRN">"checkout-order"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Köp"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>208</span> </span><span class="WHIT">        </span><span class="STRN">"cancel-order"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Rensa korgen"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>209</span> </span><span class="WHIT">        </span><span class="STRN">"table-number"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Bordsnummer: "</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>210</span> 
+<span class='line'>211</span> </span><span class="WHIT">        </span><span class="COMM">//bartender view </span><span class="WHIT">
+<span class='line'>212</span> </span><span class="WHIT">        </span><span class="STRN">"bartender-table-h-0"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Produkt"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>213</span> </span><span class="WHIT">        </span><span class="STRN">"bartender-table-h-1"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Antal"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>214</span> </span><span class="WHIT">        </span><span class="STRN">"bartender-table-h-2"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Pris"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>215</span> </span><span class="WHIT">        </span><span class="STRN">"bartender-button-n-0"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Ändra order"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>216</span> </span><span class="WHIT">        </span><span class="STRN">"bartender-button-n-1"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Ta bort order"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>217</span> </span><span class="WHIT">        </span><span class="STRN">"bartender-button-n-2"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Avsluta order"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>218</span> </span><span class="WHIT">        </span><span class="STRN">"bartender-total"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Totalt"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>219</span> </span><span class="WHIT">        </span><span class="STRN">"bartender-table-name"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Bord: "</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>220</span> </span><span class="WHIT">        </span><span class="STRN">"bartender-order-name"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Order: "</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>221</span> 
+<span class='line'>222</span> 
+<span class='line'>223</span> </span><span class="WHIT">        </span><span class="STRN">"manager"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Chef"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>224</span> </span><span class="WHIT">        </span><span class="STRN">"bartender"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Bartender"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>225</span> </span><span class="WHIT">        </span><span class="STRN">"notify-security"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Meddela vakter"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>226</span> </span><span class="WHIT">        </span><span class="STRN">"logIn"</span><span class="WHIT">                </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Logga in"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>227</span> </span><span class="WHIT">        </span><span class="STRN">"start_username"</span><span class="WHIT">       </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Inget"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>228</span> </span><span class="WHIT">        </span><span class="STRN">"log_in_unsuccess_msg"</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Inloggingen misslyckades!"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>229</span> </span><span class="WHIT">        </span><span class="STRN">"your-secret-code"</span><span class="WHIT">     </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Din hemliga kod är "</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>230</span> </span><span class="WHIT">    
+<span class='line'>231</span>         </span><span class="COMM">// Log In</span><span class="WHIT">
+<span class='line'>232</span> </span><span class="WHIT">        </span><span class="STRN">"userN"</span><span class="WHIT">                </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Användarnamn"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>233</span> </span><span class="WHIT">        </span><span class="STRN">"passW"</span><span class="WHIT">                </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Lösenord"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>234</span> </span><span class="WHIT">        </span><span class="STRN">"log"</span><span class="WHIT">                  </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Logga in"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>235</span> </span><span class="WHIT">        </span><span class="STRN">"username"</span><span class="WHIT">             </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Ange användarnamn"</span><span class="PUNC">,</span><span class="WHIT"> 
+<span class='line'>236</span>         </span><span class="STRN">"password"</span><span class="WHIT">             </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Ange lösenord"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>237</span> </span><span class="WHIT">    
+<span class='line'>238</span>         </span><span class="COMM">// VIP</span><span class="WHIT">
+<span class='line'>239</span> </span><span class="WHIT">        </span><span class="STRN">"balance"</span><span class="WHIT">              </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Pengar i kontot"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>240</span> </span><span class="WHIT">        </span><span class="STRN">"sdrink"</span><span class="WHIT">               </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Specialdrink"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>241</span> </span><span class="WHIT">        </span><span class="STRN">"logOut"</span><span class="WHIT">               </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Logga ut"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>242</span> </span><span class="WHIT">        </span><span class="STRN">"drinkAmount"</span><span class="WHIT">          </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Antal drycker"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>243</span> </span><span class="WHIT">        </span><span class="STRN">"vipOrder"</span><span class="WHIT">             </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Vip Order"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>244</span> </span><span class="WHIT">        </span><span class="STRN">"drinkId"</span><span class="WHIT">              </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Drink ID"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>245</span> </span><span class="WHIT">        
+<span class='line'>246</span>         </span><span class="COMM">// Staff</span><span class="WHIT">
+<span class='line'>247</span> </span><span class="WHIT">        </span><span class="STRN">"adToAccUserN"</span><span class="WHIT">         </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Användarnamn"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>248</span> </span><span class="WHIT">        </span><span class="STRN">"addA"</span><span class="WHIT">                 </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Lägg till antal"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>249</span> </span><span class="WHIT">        </span><span class="STRN">"addToAcc"</span><span class="WHIT">             </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Lägg till i kontot"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>250</span> </span><span class="WHIT">        </span><span class="STRN">"completeOrderId"</span><span class="WHIT">      </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Order Id"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>251</span> </span><span class="WHIT">        </span><span class="STRN">"completeOrder"</span><span class="WHIT">        </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Färdig order"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>252</span> </span><span class="WHIT">        </span><span class="STRN">"expenses"</span><span class="WHIT">             </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Utgifter:"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>253</span> </span><span class="WHIT">        </span><span class="STRN">"income"</span><span class="WHIT">               </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Inkomst:"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>254</span> </span><span class="WHIT">        </span><span class="STRN">"profit"</span><span class="WHIT">               </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Vinst:"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>255</span> </span><span class="WHIT">       
+<span class='line'>256</span>         </span><span class="COMM">// All Customer</span><span class="WHIT">
+<span class='line'>257</span> </span><span class="WHIT">        </span><span class="STRN">"stdOrder"</span><span class="WHIT">             </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Order"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>258</span> </span><span class="WHIT">        </span><span class="STRN">"stdDrinkId"</span><span class="WHIT">           </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Drink ID"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>259</span> </span><span class="WHIT">        </span><span class="STRN">"stdDrinkAmount"</span><span class="WHIT">       </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Antal"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>260</span> </span><span class="WHIT">        </span><span class="STRN">"addToCart"</span><span class="WHIT">            </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Lägg till i kundvagnen"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>261</span> </span><span class="WHIT">        </span><span class="STRN">"bar"</span><span class="WHIT">                  </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Baren"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>262</span> 
+<span class='line'>263</span> </span><span class="WHIT">        </span><span class="COMM">// Security </span><span class="WHIT">
+<span class='line'>264</span> </span><span class="WHIT">        </span><span class="STRN">"call-security-msg"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Aina kommer om några minuter, HÅLL UT!"</span><span class="WHIT">
+<span class='line'>265</span> 
+<span class='line'>266</span> 
+<span class='line'>267</span> 
+<span class='line'>268</span> </span><span class="WHIT">    </span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>269</span> </span><span class="WHIT">    </span><span class="STRN">"en"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>270</span> </span><span class="WHIT">        </span><span class="STRN">"title-website"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"The Flying Dutchman"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>271</span> </span><span class="WHIT">        </span><span class="STRN">"login"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Login"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>272</span> </span><span class="WHIT">        </span><span class="STRN">"userN"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Username"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>273</span> </span><span class="WHIT">        </span><span class="STRN">"passW"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Password"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>274</span> </span><span class="WHIT">        </span><span class="STRN">"username"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Enter username"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>275</span> </span><span class="WHIT">        </span><span class="STRN">"password"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Enter password"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>276</span> </span><span class="WHIT">        </span><span class="STRN">"logIn"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Login"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>277</span> </span><span class="WHIT">        </span><span class="STRN">"beer"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Beer"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>278</span> </span><span class="WHIT">        </span><span class="STRN">"spirits"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Spirits"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>279</span> </span><span class="WHIT">        </span><span class="STRN">"wine"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Wine"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>280</span> </span><span class="WHIT">        </span><span class="STRN">"secret"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Secret"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>281</span> </span><span class="WHIT">        </span><span class="STRN">"food"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Food"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>282</span> </span><span class="WHIT">        </span><span class="STRN">"non-alcoholic"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Non-alcoholic"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>283</span> </span><span class="WHIT">        </span><span class="STRN">"shopping-cart-drop-here"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Your cart is empty! (You can drag over a product here)"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>284</span> </span><span class="WHIT">        </span><span class="STRN">"product-buy"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Add to cart"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>285</span> </span><span class="WHIT">        </span><span class="STRN">"product-spec"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Specifications"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>286</span> </span><span class="WHIT">        </span><span class="STRN">"product-spec-alcohol"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Alcohol content"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>287</span> </span><span class="WHIT">        </span><span class="STRN">"product-spec-category"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Category"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>288</span> </span><span class="WHIT">        </span><span class="STRN">"product-spec-type"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Type"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>289</span> </span><span class="WHIT">        </span><span class="STRN">"product-spec-producent"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Producent"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>290</span> </span><span class="WHIT">        </span><span class="STRN">"product-spec-origin"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Origin"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>291</span> </span><span class="WHIT">        </span><span class="STRN">"product-spec-allergens"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Allergens"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>292</span> </span><span class="WHIT">        </span><span class="STRN">"product-spec-articleid"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Article id"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>293</span> </span><span class="WHIT">        </span><span class="STRN">"product-manager"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Product manager"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>294</span> </span><span class="WHIT">        </span><span class="STRN">"product-stock-view"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Stock"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>295</span> </span><span class="WHIT">        </span><span class="STRN">"product-manager-refill"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Refill product"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>296</span> </span><span class="WHIT">        </span><span class="STRN">"product-manager-remove-product"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Remove product"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>297</span> </span><span class="WHIT">        </span><span class="STRN">"product-manager-add"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Add product"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>298</span> </span><span class="WHIT">        </span><span class="STRN">"product-manager-articleid"</span><span class="PUNC">:</span><span class="STRN">"Article id"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>299</span> </span><span class="WHIT">        </span><span class="STRN">"product-manager-name"</span><span class="PUNC">:</span><span class="STRN">"Name"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>300</span> </span><span class="WHIT">        </span><span class="STRN">"product-manager-name2"</span><span class="PUNC">:</span><span class="STRN">"Second name"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>301</span> </span><span class="WHIT">        </span><span class="STRN">"product-manager-pricewithvat"</span><span class="PUNC">:</span><span class="STRN">"Price with vat"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>302</span> </span><span class="WHIT">        </span><span class="STRN">"product-manager-volume"</span><span class="PUNC">:</span><span class="STRN">"Volume"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>303</span> </span><span class="WHIT">        </span><span class="STRN">"product-manager-productgroup"</span><span class="PUNC">:</span><span class="STRN">"Product group"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>304</span> </span><span class="WHIT">        </span><span class="STRN">"product-manager-serves"</span><span class="PUNC">:</span><span class="STRN">"Serves like"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>305</span> </span><span class="WHIT">        </span><span class="STRN">"product-manager-origin"</span><span class="PUNC">:</span><span class="STRN">"Origin"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>306</span> </span><span class="WHIT">        </span><span class="STRN">"product-manager-origincountry"</span><span class="PUNC">:</span><span class="STRN">"Origin country"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>307</span> </span><span class="WHIT">        </span><span class="STRN">"product-manager-producent"</span><span class="PUNC">:</span><span class="STRN">"Producent"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>308</span> </span><span class="WHIT">        </span><span class="STRN">"product-manager-alcohol"</span><span class="PUNC">:</span><span class="STRN">"Alcohol content"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>309</span> </span><span class="WHIT">        </span><span class="STRN">"product-manager-img"</span><span class="PUNC">:</span><span class="STRN">"Picture"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>310</span> </span><span class="WHIT">        </span><span class="STRN">"product-manager-stock"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Stock"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>311</span> </span><span class="WHIT">        </span><span class="STRN">"product-manager-price"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Change price"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>312</span> </span><span class="WHIT">        </span><span class="STRN">"product-manager-main-category"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Main category"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>313</span> </span><span class="WHIT">        </span><span class="STRN">"product-manager-add-product"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Add product"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>314</span> </span><span class="WHIT">        </span><span class="STRN">"product-low-in-stock"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Low in stock"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>315</span> </span><span class="WHIT">        </span><span class="STRN">"footnote-copyright-message"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"The Flying Dutchman by © 2021 The Early Sunrise"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>316</span> </span><span class="WHIT">        </span><span class="STRN">"hello"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Welcome to this small demonstration"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>317</span> </span><span class="WHIT">        </span><span class="STRN">"bye"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Nice meeting you! Welcome back!"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>318</span> </span><span class="WHIT">        </span><span class="STRN">"flag-pic"</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"../img/australia.svg"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>319</span> </span><span class="WHIT">        </span><span class="STRN">"flag-alt"</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Australien flag"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>320</span> </span><span class="WHIT">        </span><span class="STRN">"checkout-order"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Buy"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>321</span> </span><span class="WHIT">        </span><span class="STRN">"cancel-order"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Clear cart"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>322</span> </span><span class="WHIT">        </span><span class="STRN">"table-number"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Tablenumber: "</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>323</span> 
+<span class='line'>324</span> </span><span class="WHIT">        </span><span class="STRN">"product-manager-success-msg"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">" blev tillagd"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>325</span> 
+<span class='line'>326</span> </span><span class="WHIT">        </span><span class="COMM">//warnings </span><span class="WHIT">
+<span class='line'>327</span> </span><span class="WHIT">        </span><span class="STRN">"less-than-five-warning"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Warning! Less than five products of a type remains!"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>328</span> </span><span class="WHIT">        </span><span class="STRN">"order-notification"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Order in queue"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>329</span> </span><span class="WHIT">        
+<span class='line'>330</span> 
+<span class='line'>331</span>         </span><span class="COMM">//error messages</span><span class="WHIT">
+<span class='line'>332</span> </span><span class="WHIT">        </span><span class="STRN">"product-manager-input-error"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Some inputs cant be empty, "</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>333</span> </span><span class="WHIT">        </span><span class="STRN">"product-manager-id-error"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Id already exists, "</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>334</span> </span><span class="WHIT">        </span><span class="STRN">"product-manager-category-error"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Maincategory does not exist, "</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>335</span> </span><span class="WHIT">        </span><span class="STRN">"table-number-error"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"You can only chose a table between 1 and 10!"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>336</span> </span><span class="WHIT">        </span><span class="STRN">"empty-cart-error"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Your cart is empty!"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>337</span> </span><span class="WHIT">        </span><span class="STRN">"stock-empty-error"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"The product is not in stock!"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>338</span> </span><span class="WHIT">        </span><span class="STRN">"max-order-error"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"You can only order 10 products!"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>339</span> </span><span class="WHIT">        </span><span class="STRN">"unknown-error"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"An unexpected error happend!"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>340</span> 
+<span class='line'>341</span> 
+<span class='line'>342</span> </span><span class="WHIT">        </span><span class="COMM">//bartender view </span><span class="WHIT">
+<span class='line'>343</span> </span><span class="WHIT">        </span><span class="STRN">"bartender-table-h-0"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Product"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>344</span> </span><span class="WHIT">        </span><span class="STRN">"bartender-table-h-1"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Amount"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>345</span> </span><span class="WHIT">        </span><span class="STRN">"bartender-table-h-2"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Price"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>346</span> </span><span class="WHIT">        </span><span class="STRN">"bartender-button-n-0"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Change order"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>347</span> </span><span class="WHIT">        </span><span class="STRN">"bartender-button-n-1"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Remove order"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>348</span> </span><span class="WHIT">        </span><span class="STRN">"bartender-button-n-2"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Complete order"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>349</span> </span><span class="WHIT">        </span><span class="STRN">"bartender-total"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Total"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>350</span> </span><span class="WHIT">        </span><span class="STRN">"bartender-table-name"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Table: "</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>351</span> </span><span class="WHIT">        </span><span class="STRN">"bartender-order-name"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Order "</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>352</span> 
+<span class='line'>353</span> </span><span class="WHIT">        </span><span class="STRN">"manager"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Manager"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>354</span> </span><span class="WHIT">        </span><span class="STRN">"bartender"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Bartender"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>355</span> </span><span class="WHIT">        </span><span class="STRN">"notify-security"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Notify security"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>356</span> </span><span class="WHIT">        </span><span class="STRN">"logIn"</span><span class="WHIT">                </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Log In"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>357</span> </span><span class="WHIT">        </span><span class="STRN">"start_username"</span><span class="WHIT">       </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"None"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>358</span> </span><span class="WHIT">        </span><span class="STRN">"log_in_unsuccess_msg"</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Unsuccessful login"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>359</span> </span><span class="WHIT">        </span><span class="STRN">"your-secret-code"</span><span class="WHIT">     </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Your secret code is "</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>360</span> </span><span class="WHIT">    
+<span class='line'>361</span>         </span><span class="COMM">// Log In</span><span class="WHIT">
+<span class='line'>362</span> </span><span class="WHIT">        </span><span class="STRN">"userN"</span><span class="WHIT">                </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Username"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>363</span> </span><span class="WHIT">        </span><span class="STRN">"passW"</span><span class="WHIT">                </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Password"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>364</span> </span><span class="WHIT">        </span><span class="STRN">"log"</span><span class="WHIT">                  </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Log In"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>365</span> </span><span class="WHIT">        </span><span class="STRN">"username"</span><span class="WHIT">             </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Enter username"</span><span class="PUNC">,</span><span class="WHIT"> 
+<span class='line'>366</span>         </span><span class="STRN">"password"</span><span class="WHIT">             </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Enter password"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>367</span> </span><span class="WHIT">    
+<span class='line'>368</span>         </span><span class="COMM">// VIP</span><span class="WHIT">
+<span class='line'>369</span> </span><span class="WHIT">        </span><span class="STRN">"balance"</span><span class="WHIT">              </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Account Balance"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>370</span> </span><span class="WHIT">        </span><span class="STRN">"sdrink"</span><span class="WHIT">               </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Special Drink"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>371</span> </span><span class="WHIT">        </span><span class="STRN">"logOut"</span><span class="WHIT">               </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Log Out"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>372</span> </span><span class="WHIT">        </span><span class="STRN">"drinkAmount"</span><span class="WHIT">          </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Drink Amount"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>373</span> </span><span class="WHIT">        </span><span class="STRN">"vipOrder"</span><span class="WHIT">             </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Vip Order"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>374</span> </span><span class="WHIT">        </span><span class="STRN">"drinkId"</span><span class="WHIT">              </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Drink ID"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>375</span> </span><span class="WHIT">        
+<span class='line'>376</span>         </span><span class="COMM">// Staff</span><span class="WHIT">
+<span class='line'>377</span> </span><span class="WHIT">        </span><span class="STRN">"adToAccUserN"</span><span class="WHIT">         </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Username"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>378</span> </span><span class="WHIT">        </span><span class="STRN">"addA"</span><span class="WHIT">                 </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Add Amount"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>379</span> </span><span class="WHIT">        </span><span class="STRN">"addToAcc"</span><span class="WHIT">             </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Add to account"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>380</span> </span><span class="WHIT">        </span><span class="STRN">"completeOrderId"</span><span class="WHIT">      </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Order Id"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>381</span> </span><span class="WHIT">        </span><span class="STRN">"completeOrder"</span><span class="WHIT">        </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Complete Order"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>382</span> </span><span class="WHIT">        </span><span class="STRN">"expenses"</span><span class="WHIT">             </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Expenses:"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>383</span> </span><span class="WHIT">        </span><span class="STRN">"income"</span><span class="WHIT">               </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Income:"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>384</span> </span><span class="WHIT">        </span><span class="STRN">"profit"</span><span class="WHIT">               </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Profit:"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>385</span> </span><span class="WHIT">       
+<span class='line'>386</span>         </span><span class="COMM">// All Customer</span><span class="WHIT">
+<span class='line'>387</span> </span><span class="WHIT">        </span><span class="STRN">"stdOrder"</span><span class="WHIT">             </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Order"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>388</span> </span><span class="WHIT">        </span><span class="STRN">"stdDrinkId"</span><span class="WHIT">           </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Drink ID"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>389</span> </span><span class="WHIT">        </span><span class="STRN">"stdDrinkAmount"</span><span class="WHIT">       </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Amount"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>390</span> </span><span class="WHIT">        </span><span class="STRN">"addToCart"</span><span class="WHIT">            </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Add to cart"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>391</span> </span><span class="WHIT">        </span><span class="STRN">"bar"</span><span class="WHIT">                  </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Bar"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>392</span> 
+<span class='line'>393</span> </span><span class="WHIT">        </span><span class="COMM">// Security</span><span class="WHIT">
+<span class='line'>394</span> </span><span class="WHIT">        </span><span class="STRN">"call-security-msg"</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Security will be here soon!"</span><span class="WHIT">
+<span class='line'>395</span> </span><span class="WHIT">    </span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>396</span> </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>397</span> 
+<span class='line'>398</span> </span><span class="COMM">// This function will return the appropriate string for each</span><span class="WHIT">
+<span class='line'>399</span> </span><span class="COMM">// key. The language handling is made "automatic".</span><span class="WHIT">
+<span class='line'>400</span> </span><span class="COMM">//</span><span class="WHIT">
+<span class='line'>401</span> </span><span class="KEYW">function</span><span class="WHIT"> </span><span class="NAME">getString</span><span class="PUNC">(</span><span class="NAME">key</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>402</span> </span><span class="WHIT">    </span><span class="KEYW">return</span><span class="WHIT"> </span><span class="NAME">dict</span><span class="PUNC">[</span><span class="NAME">language</span><span class="PUNC">]</span><span class="PUNC">[</span><span class="NAME">key</span><span class="PUNC">]</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>403</span> </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>404</span> 
+<span class='line'>405</span> </span><span class="COMM">// This function is the simplest possible. However, in order</span><span class="WHIT">
+<span class='line'>406</span> </span><span class="COMM">// to handle many different languages it will not be sufficient.</span><span class="WHIT">
+<span class='line'>407</span> </span><span class="COMM">// The necessary change should not be difficult to implement.</span><span class="WHIT">
+<span class='line'>408</span> </span><span class="COMM">//</span><span class="WHIT">
+<span class='line'>409</span> </span><span class="COMM">// After each language change, we will need to update the view, to propagate</span><span class="WHIT">
+<span class='line'>410</span> </span><span class="COMM">// the change to the whole view.</span><span class="WHIT">
+<span class='line'>411</span> </span><span class="COMM">//</span><span class="WHIT">
+<span class='line'>412</span> </span><span class="KEYW">function</span><span class="WHIT"> </span><span class="NAME">changeLang</span><span class="PUNC">(</span><span class="NAME">sel</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>413</span> </span><span class="WHIT">    </span><span class="NAME">language</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">sel.options</span><span class="PUNC">[</span><span class="NAME">sel.selectedIndex</span><span class="PUNC">]</span><span class="PUNC">.</span><span class="NAME">value</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>414</span> </span><span class="WHIT">    </span><span class="NAME">updateView</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>415</span> </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>416</span> 
+<span class='line'>417</span> </span><span class="COMM">// ==========================================================================</span><span class="WHIT">
+<span class='line'>418</span> </span><span class="COMM">// END OF FILE</span><span class="WHIT">
+<span class='line'>419</span> </span><span class="COMM">// ==========================================================================</span><span class="WHIT">
+<span class='line'>420</span> </span></pre></body></html>

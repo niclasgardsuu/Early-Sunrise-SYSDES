@@ -25,6 +25,10 @@ let redostack = [];
 //
 function doit(funcobj) {
     funcobj.execute();
+    //remove the oldest function if the stack is larger than 10
+    if(undostack.length == 10) {
+        undostack.shift();
+    }
     undostack.push(funcobj);
     redostack = [];
 }

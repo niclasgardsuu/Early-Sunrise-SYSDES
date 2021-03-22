@@ -1,3 +1,6 @@
+/*
+ *  List of allergens present in sold products 
+ */
 var allergensDB = {
     "products" :
     [

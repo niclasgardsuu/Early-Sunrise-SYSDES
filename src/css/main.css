@@ -67,6 +67,7 @@ button {
     background-image: var(--main-window-background);
     background-color: grey;
     min-height: 1000px;
+    padding-bottom: 1%;
 }
 
 .footnote-window {
@@ -746,7 +747,6 @@ button {
 
 .product-flex {
     display: flex;
-    padding-bottom: 20px;
 }
 /*RANDOM END*/
 
@@ -801,6 +801,19 @@ button {
     #shopping-cart-window {
         width: 30%;
     }
+}
+
+/*Make the website not break*/
+@media only screen and (max-width:755px) { 
+    .window {
+        width: 755px;
+        overflow-x: auto;
+    }
+
+    #menu-window {
+        overflow-x: auto;
+    }
+
 }
 /*MEDIA QUERIES END*/
 
